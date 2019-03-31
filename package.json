@@ -1,0 +1,36 @@
+{
+  "name": "vyz",
+  "description": "Collection of React components to build cool data visualizations",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Luca Falasco",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "del-dist": "lerna exec --parallel -- del-cli dist",
+    "prebuild": "yarn del-dist",
+    "build": "lerna exec --scope vyz* -- tsc",
+    "start": "cd packages/vyz-storybook && yarn storybook",
+    "format": "prettier --write 'packages/*/src/**/{*.js,*.ts*}'",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "del-cli": "^1.1.0",
+    "husky": "^0.14.3",
+    "lerna": "^2.9.0",
+    "lint-staged": "^7.0.2",
+    "prettier": "^1.16.4"
+  },
+  "lint-staged": {
+    "*.ts*": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
