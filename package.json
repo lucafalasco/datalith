@@ -16,15 +16,16 @@
     "del-dist": "lerna exec --parallel -- del-cli dist",
     "prebuild": "yarn del-dist",
     "build": "lerna exec --scope vyz* -- tsc",
+    "build-storybook": "cd packages/vyz-storybook && yarn build-storybook",
     "start": "cd packages/vyz-storybook && yarn storybook",
     "format": "prettier --write 'packages/*/src/**/{*.js,*.ts*}'",
     "precommit": "lint-staged"
   },
   "devDependencies": {
     "del-cli": "^1.1.0",
-    "husky": "^0.14.3",
-    "lerna": "^2.9.0",
-    "lint-staged": "^7.0.2",
+    "husky": "^1.3.1",
+    "lerna": "^3.13.1",
+    "lint-staged": "^8.1.5",
     "prettier": "^1.16.4"
   },
   "lint-staged": {
