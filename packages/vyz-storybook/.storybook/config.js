@@ -5,6 +5,7 @@ import theme from './theme'
 addParameters({
   options: {
     theme,
+    showPanel: false,
   },
 })
 

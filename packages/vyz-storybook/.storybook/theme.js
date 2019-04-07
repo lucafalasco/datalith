@@ -21,7 +21,7 @@ export default create({
   fontCode: 'Monaco, monospace',
 
   // Text colors
-  textColor: '#FFFFFF',
+  textColor: '#7f7f7f',
   textInverseColor: '#FFFFFF',
 
   // Toolbar default and active colors
