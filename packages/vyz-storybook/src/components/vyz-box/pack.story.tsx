@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
-import { Pack } from '../../../vyz-box/src/components/Pack'
-import { genDateValue } from '../scripts'
+import { Pack } from '../../../../vyz-box/src/components/Pack'
+import { genDateValue } from '../../scripts'
 
 const width = window.innerWidth
 const height = window.innerHeight

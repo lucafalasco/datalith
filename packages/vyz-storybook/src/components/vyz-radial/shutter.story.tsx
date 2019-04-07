@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
-import { Shutter } from '../../../vyz-radial/src/components/Shutter'
-import { genDateValue } from '../scripts'
+import { Shutter } from '../../../../vyz-radial/src/components/Shutter'
+import { genDateValue } from '../../scripts'
 
 const width = window.innerWidth
 const height = window.innerHeight

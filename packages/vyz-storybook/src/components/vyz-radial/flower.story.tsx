@@ -2,8 +2,9 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
-import { Flower } from '../../../vyz-radial/src/components/Flower'
-import { genDateValue } from '../scripts'
+import { Flower } from '../../../../vyz-radial/src/components/Flower'
+import notes from '../../../../vyz-radial/src/components/Flower/README.md'
+import { genDateValue } from '../../scripts'
 
 const width = window.innerWidth
 const height = window.innerHeight
@@ -17,10 +18,15 @@ const yScale = scaleLinear()
   .range([0, Math.min(width, height) * 0.3])
 
 storiesOf('vyz-radial/Flower', module)
-  .add('default', () => {
-    const data = defaultData.map(d => yScale(d.value))
-    return <Flower width={width} height={height} data={data} />
-  })
+  .add(
+    'default',
+    () => {
+      const data = defaultData.map(d => yScale(d.value))
+      return <Flower width={width} height={height} data={data} />
+    },
+
+    { notes },
+  )
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
 
