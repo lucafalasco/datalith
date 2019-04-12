@@ -18,15 +18,11 @@ const yScale = scaleLinear()
 
 storiesOf('vyz-radial/Flower', module)
   .add('default', () => {
-    const data = defaultData.map(d => ({
-      y: yScale(d.value),
-    }))
+    const data = defaultData.map(d => yScale(d.value))
     return <Flower width={width} height={height} data={data} />
   })
   .add('stroke', () => {
-    const data = defaultData.map(d => ({
-      y: yScale(d.value),
-    }))
+    const data = defaultData.map(d => yScale(d.value))
 
     return <Flower width={width} height={height} data={data} stroke fill={false} />
   })
@@ -66,8 +62,8 @@ storiesOf('vyz-radial/Flower', module)
         height={height}
         data={data}
         tooltip={({ v, y }) =>
-          `<p><b>Date:</b> <u>${v.toLocaleDateString()}</u></p> 
-        <p><b>Value:</b> ${yScale.invert(y).toFixed(2)}</p>`
+          `<p><b>Date:</b><u>${v.toLocaleDateString()}</u></p> 
+        <p><b>Value:</b>${yScale.invert(Number(y)).toFixed(2)}</p>`
         }
       />
     )

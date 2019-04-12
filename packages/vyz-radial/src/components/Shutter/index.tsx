@@ -2,6 +2,7 @@ import { sortBy } from 'lodash'
 import { range } from 'lodash'
 import * as React from 'react'
 import * as Tooltip from 'react-tooltip'
+import { DatumDiscrete, DatumVyz, isDatumVyz } from 'vyz-util'
 
 const DEFAULT_COLOR = '#000000'
 interface Props {
@@ -21,7 +22,7 @@ interface Props {
    * Data must be defined as an array of objects defined like this:
    * { v?: any, y?: number, z?: string }
    */
-  data: Datum[]
+  data: DatumDiscrete[]
   /**
    * Center of the visualization
    */
@@ -34,7 +35,7 @@ interface Props {
   /**
    * Optional function to sort elements
    */
-  sortFn?: (d: Datum) => any
+  sortFn?: (d: DatumDiscrete) => any
   /**
    * Whether to add the fill color
    */
@@ -46,13 +47,7 @@ interface Props {
   /**
    * An optional function that returns an HTML string to be display as the element is hovered
    */
-  tooltip?: (d: Datum) => string
-}
-
-interface Datum {
-  v?: any
-  y?: number
-  z?: string
+  tooltip?: (d: DatumVyz & DatumDiscrete) => string
 }
 
 interface Coords {
@@ -67,7 +62,7 @@ interface Polygon {
 }
 
 interface PolygonProps {
-  datum: Datum
+  datum: DatumDiscrete
   dataLength: number
   radiusInner: number
   radiusOuter: number
@@ -75,7 +70,7 @@ interface PolygonProps {
   center: { x: number; y: number }
   stroke?: boolean
   fill?: boolean
-  tooltip?: (d: Datum) => string
+  tooltip?: (d: DatumDiscrete) => string
 }
 
 function createPolygon(n: number, radius: number, offsetRad: number, center: Coords): Coords[] {
@@ -114,9 +109,10 @@ const Polygon = ({
   const j = index === dataLength - 1 ? 0 : index + 1
   const d = { p0: polygonBig[index], p1: polygonBig[j], p2: polygonSmall[index] }
 
+  const color = isDatumVyz(datum) ? datum.z || DEFAULT_COLOR : datum
   const polygonStyle = {
-    fill: fill ? datum.z || DEFAULT_COLOR : 'transparent',
-    stroke: stroke ? datum.z || DEFAULT_COLOR : 'transparent',
+    fill: fill ? color : 'transparent',
+    stroke: stroke ? color : 'transparent',
   }
 
   const points = getPolygonPoints(d)
@@ -130,7 +126,7 @@ const Polygon = ({
 
 export class Shutter extends React.Component<Props> {
   static defaultProps = {
-    sortFn: (d: Datum) => d,
+    sortFn: (d: DatumDiscrete) => d,
     stroke: false,
     fill: true,
   }
@@ -162,7 +158,7 @@ export class Shutter extends React.Component<Props> {
           height={height}
           style={{ shapeRendering: 'geometricPrecision' }}
         >
-          {(sortBy(data, sortFn!) as Datum[]).map((datum, i) => (
+          {(sortBy(data, sortFn!) as DatumDiscrete[]).map((datum, i) => (
             <Polygon
               key={i}
               index={i}

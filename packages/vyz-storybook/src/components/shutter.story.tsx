@@ -19,15 +19,11 @@ const zScale = scaleLinear()
 
 storiesOf('vyz-radial/Shutter', module)
   .add('default', () => {
-    const data = defaultData.map(d => ({
-      z: `rgba(0,0,0,${zScale(d.value)})`,
-    }))
+    const data = defaultData.map(d => `rgba(0,0,0,${zScale(d.value)})`)
     return <Shutter width={width} height={height} data={data} />
   })
   .add('stroke', () => {
-    const data = defaultData.map(d => ({
-      z: `rgba(0,0,0,${zScale(d.value)})`,
-    }))
+    const data = defaultData.map(d => `rgba(0,0,0,${zScale(d.value)})`)
 
     return <Shutter width={width} height={height} data={data} stroke fill={false} />
   })
@@ -42,10 +38,9 @@ storiesOf('vyz-radial/Shutter', module)
     return <Shutter width={width} height={height} data={data} sortFn={sortFn} stroke />
   })
   .add('animated', () => {
-    const data = defaultData.map((d, i) => ({
-      z: i % 2 ? 'rgb(22, 82, 240)' : 'rgba(22, 82, 240, 0.6)',
-    }))
+    const data = defaultData.map((d, i) => (i % 2 ? 'rgb(22, 82, 240)' : 'rgba(22, 82, 240, 0.6)'))
     const radiusTo = (Math.min(width, height) / 2) * 0.7 - 50
+
     return (
       <Spring from={{ radius: 0 }} to={{ radius: radiusTo }}>
         {props => {

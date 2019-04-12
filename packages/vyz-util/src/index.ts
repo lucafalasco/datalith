@@ -1,12 +1,16 @@
-export type DatumNumeric = number
 export interface DatumVyz {
   v?: any
-  y: number
+  y?: number
   z?: string
 }
 
-export type Datum = DatumNumeric | DatumVyz
+export type DatumContinuous = DatumVyz | number
+export type DatumDiscrete = DatumVyz | string
 
-export function isDatumVyz(datum: Datum): datum is DatumVyz {
-  return (datum as DatumVyz).hasOwnProperty('y')
+export function isDatumVyz(datum: DatumContinuous | DatumDiscrete): datum is DatumVyz {
+  return (
+    (datum as DatumVyz).hasOwnProperty('v') ||
+    (datum as DatumVyz).hasOwnProperty('y') ||
+    (datum as DatumVyz).hasOwnProperty('z')
+  )
 }
