@@ -72,8 +72,8 @@ storiesOf('vyz-box/Ripple', module)
         height={height}
         data={data}
         tooltip={({ v, y }) =>
-          `<p><b>Date:</b> <u>${v.toLocaleDateString()}</u></p> 
-        <p><b>Value:</b> ${yScale.invert(Number(y)).toFixed(2)}</p>`
+          `<p><b>Date:</b><u>${v.toLocaleDateString()}</u></p> 
+        <p><b>Value:</b>${yScale.invert(Number(y)).toFixed(2)}</p>`
         }
       />
     )

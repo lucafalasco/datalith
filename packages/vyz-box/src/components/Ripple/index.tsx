@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as Tooltip from 'react-tooltip'
 import { DatumContinuous, DatumVyz, isDatumVyz } from 'vyz-util'
+import normalize from './normalize'
 
 const DEFAULT_COLOR = '#000000'
 const DEFAULT_RADIUS_LENGTH = 10
@@ -47,6 +48,8 @@ interface Center {
 
 interface CircleProps {
   datum: DatumContinuous
+  dataLength: number
+  index: number
   center: Center
   maxY: number
   stroke?: boolean
@@ -54,11 +57,12 @@ interface CircleProps {
   tooltip?: (d: DatumContinuous) => string
 }
 
-const Circle = ({ datum, center, maxY, stroke, fill, tooltip }: CircleProps) => {
+const Circle = ({ datum, dataLength, index, center, maxY, stroke, fill, tooltip }: CircleProps) => {
   const color = isDatumVyz(datum) ? datum.z || DEFAULT_COLOR : DEFAULT_COLOR
   const style = {
     fill: fill ? color : 'transparent',
     stroke: stroke ? color : 'transparent',
+    fillOpacity: normalize(index, 0, dataLength),
   }
 
   const radius = isDatumVyz(datum) ? datum.y || DEFAULT_RADIUS_LENGTH : datum
@@ -107,11 +111,14 @@ export class Ripple extends React.Component<Props> {
             .map((datum, i) => (
               <Circle
                 key={i}
+                index={i}
                 maxY={maxY}
                 datum={datum}
+                dataLength={data.length}
                 fill={fill}
                 stroke={stroke}
                 center={center}
+                tooltip={tooltip}
               />
             ))}
         </svg>
