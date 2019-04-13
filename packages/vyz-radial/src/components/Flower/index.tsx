@@ -1,6 +1,7 @@
 import { sortBy } from 'lodash'
 import * as React from 'react'
 import * as Tooltip from 'react-tooltip'
+import { DatumContinuous, DatumVyz, isDatumVyz } from 'vyz-util'
 
 const DEFAULT_COLOR = '#000000'
 interface Props {
@@ -20,7 +21,7 @@ interface Props {
    * Data must be defined as an array of objects defined like this:
    * { v?: any, y: number, z?: string }
    */
-  data: Datum[]
+  data: DatumContinuous[]
   /**
    * Center of the visualization
    */
@@ -32,7 +33,7 @@ interface Props {
   /**
    * Optional function to sort elements
    */
-  sortFn?: (d: Datum) => any
+  sortFn?: (d: DatumContinuous) => any
   /**
    * Whether to add the fill color
    */
@@ -44,24 +45,18 @@ interface Props {
   /**
    * An optional function that returns an HTML string to be display as the element is hovered
    */
-  tooltip?: (d: Datum) => string
-}
-
-interface Datum {
-  v?: any
-  y: number
-  z?: string
+  tooltip?: (d: DatumVyz & number) => string
 }
 
 interface PolygonProps {
-  datum: Datum
+  datum: DatumContinuous
   dataLength: number
   padding: number
   index: number
   center: { x: number; y: number }
   stroke?: boolean
   fill?: boolean
-  tooltip?: (d: Datum) => string
+  tooltip?: (d: DatumContinuous) => string
 }
 
 const getPolygonPoints = ({ index, value, center: { x, y }, padding, dataLength }): string => {
@@ -103,15 +98,15 @@ const Polygon = ({
   fill,
   tooltip,
 }: PolygonProps) => {
+  const color = isDatumVyz(datum) ? datum.z || DEFAULT_COLOR : DEFAULT_COLOR
   const style = {
-    fill: fill ? datum.z || DEFAULT_COLOR : 'transparent',
-    stroke: stroke ? datum.z || DEFAULT_COLOR : 'transparent',
+    fill: fill ? color : 'transparent',
+    stroke: stroke ? color : 'transparent',
   }
-
   const polygonPoints = getPolygonPoints({
     index,
     dataLength,
-    value: datum.y,
+    value: isDatumVyz(datum) ? datum.y : datum,
     padding,
     center,
   })
@@ -125,7 +120,7 @@ const Polygon = ({
 
 export class Flower extends React.Component<Props> {
   static defaultProps = {
-    sortFn: (d: Datum) => d,
+    sortFn: (d: DatumContinuous) => d,
     stroke: false,
     fill: true,
     padding: 40,
@@ -156,7 +151,7 @@ export class Flower extends React.Component<Props> {
           height={height}
           style={{ shapeRendering: 'geometricPrecision' }}
         >
-          {(sortBy(data, sortFn!) as Datum[]).map((datum, i) => (
+          {(sortBy(data, sortFn!) as DatumContinuous[]).map((datum, i) => (
             <Polygon
               key={i}
               index={i}

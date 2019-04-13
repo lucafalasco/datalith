@@ -18,9 +18,7 @@ const yScale = scaleLinear()
 
 storiesOf('vyz-box/Ripple', module)
   .add('default', () => {
-    const data = defaultData.map(d => ({
-      y: yScale(d.value),
-    }))
+    const data = defaultData.map(d => yScale(d.value))
     return <Ripple width={width} height={height} data={data} />
   })
   .add('colors', () => {
@@ -31,9 +29,7 @@ storiesOf('vyz-box/Ripple', module)
     return <Ripple width={width} height={height} data={data} />
   })
   .add('stroke', () => {
-    const data = defaultData.map(d => ({
-      y: yScale(d.value),
-    }))
+    const data = defaultData.map(d => yScale(d.value))
 
     return <Ripple width={width} height={height} data={data} stroke fill={false} />
   })
@@ -77,7 +73,7 @@ storiesOf('vyz-box/Ripple', module)
         data={data}
         tooltip={({ v, y }) =>
           `<p><b>Date:</b> <u>${v.toLocaleDateString()}</u></p> 
-        <p><b>Value:</b> ${yScale.invert(y).toFixed(2)}</p>`
+        <p><b>Value:</b> ${yScale.invert(Number(y)).toFixed(2)}</p>`
         }
       />
     )
