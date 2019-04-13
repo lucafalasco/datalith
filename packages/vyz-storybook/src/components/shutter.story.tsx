@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
-import { Shutter } from '../../../vyz-radial/src/components/Shutter/'
+import { Shutter } from '../../../vyz-radial/src/components/Shutter'
 import { genDateValue } from '../scripts'
 
 const width = window.innerWidth
@@ -15,7 +15,6 @@ const y = d => d.value
 const zScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
   .range([0, 1])
-  .nice()
 
 storiesOf('vyz-radial/Shutter', module)
   .add('default', () => {
@@ -28,14 +27,14 @@ storiesOf('vyz-radial/Shutter', module)
     return <Shutter width={width} height={height} data={data} stroke fill={false} />
   })
   .add('sorted', () => {
-    const data = defaultData.map((d, i) => ({
-      y: d.value,
-      z: `rgba(0,0,0,${zScale(d.value)})`,
-    }))
+    const data = defaultData
+      .map(d => ({
+        y: d.value,
+        z: `rgba(0,0,0,${zScale(d.value)})`,
+      }))
+      .sort((a, b) => b.y - a.y)
 
-    const sortFn = d => d.y
-
-    return <Shutter width={width} height={height} data={data} sortFn={sortFn} stroke />
+    return <Shutter width={width} height={height} data={data} stroke />
   })
   .add('animated', () => {
     const data = defaultData.map((d, i) => (i % 2 ? 'rgb(22, 82, 240)' : 'rgba(22, 82, 240, 0.6)'))
@@ -52,8 +51,8 @@ storiesOf('vyz-radial/Shutter', module)
   .add('tooltip', () => {
     const data = defaultData.map(d => ({
       v: d.date,
-      y: zScale(d.value),
-      z: `rgba(0,0,0,${zScale(d.value)})`,
+      y: parseFloat(zScale(d.value).toFixed(2)),
+      z: `rgba(0,0,0,${zScale(d.value).toFixed(2)})`,
     }))
     return (
       <Shutter
@@ -62,8 +61,8 @@ storiesOf('vyz-radial/Shutter', module)
         data={data}
         tooltip={({ v, y, z }) =>
           `<p><b>Date:</b> <u>${v.toLocaleDateString()}</u></p>
-        <p><b>Value:</b> ${y!.toFixed(2)}</p>
-        <p><b>Color:</b> ${z}</p>`
+        <p><b>Value:</b>${y}</p>
+        <p><b>Color:</b>${z}</p>`
         }
       />
     )

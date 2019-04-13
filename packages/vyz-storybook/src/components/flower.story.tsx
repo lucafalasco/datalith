@@ -27,14 +27,14 @@ storiesOf('vyz-radial/Flower', module)
     return <Flower width={width} height={height} data={data} stroke fill={false} />
   })
   .add('sorted', () => {
-    const data = defaultData.map((d, i) => ({
-      y: yScale(d.value),
-      z: `rgba(0,0,0,0.${i + 1})`,
-    }))
+    const data = defaultData
+      .map((d, i) => ({
+        y: yScale(d.value),
+        z: `rgba(0,0,0,0.${i + 1})`,
+      }))
+      .sort((a, b) => b.y - a.y)
 
-    const sortFn = d => d.y
-
-    return <Flower width={width} height={height} data={data} sortFn={sortFn} />
+    return <Flower width={width} height={height} data={data} />
   })
   .add('animated', () => {
     return (
