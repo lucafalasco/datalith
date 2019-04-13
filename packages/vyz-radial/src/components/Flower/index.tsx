@@ -1,4 +1,3 @@
-import { sortBy } from 'lodash'
 import * as React from 'react'
 import * as Tooltip from 'react-tooltip'
 import { DatumContinuous, DatumVyz, isDatumVyz } from 'vyz-util'
@@ -30,10 +29,6 @@ interface Props {
    * Padding between elements and from the center
    */
   padding?: number
-  /**
-   * Optional function to sort elements
-   */
-  sortFn?: (d: DatumContinuous) => any
   /**
    * Whether to add the fill color
    */
@@ -120,7 +115,6 @@ const Polygon = ({
 
 export class Flower extends React.Component<Props> {
   static defaultProps = {
-    sortFn: (d: DatumContinuous) => d,
     stroke: false,
     fill: true,
     padding: 40,
@@ -133,7 +127,6 @@ export class Flower extends React.Component<Props> {
       data,
       width,
       height,
-      sortFn,
       stroke,
       fill,
       padding,
@@ -151,7 +144,7 @@ export class Flower extends React.Component<Props> {
           height={height}
           style={{ shapeRendering: 'geometricPrecision' }}
         >
-          {(sortBy(data, sortFn!) as DatumContinuous[]).map((datum, i) => (
+          {data.map((datum, i) => (
             <Polygon
               key={i}
               index={i}

@@ -1,4 +1,3 @@
-import { sortBy } from 'lodash'
 import { range } from 'lodash'
 import * as React from 'react'
 import * as Tooltip from 'react-tooltip'
@@ -32,10 +31,6 @@ interface Props {
    */
   radiusInner?: number
   radiusOuter?: number
-  /**
-   * Optional function to sort elements
-   */
-  sortFn?: (d: DatumDiscrete) => any
   /**
    * Whether to add the fill color
    */
@@ -126,7 +121,6 @@ const Polygon = ({
 
 export class Shutter extends React.Component<Props> {
   static defaultProps = {
-    sortFn: (d: DatumDiscrete) => d,
     stroke: false,
     fill: true,
   }
@@ -139,7 +133,6 @@ export class Shutter extends React.Component<Props> {
       data,
       width,
       height,
-      sortFn,
       stroke,
       fill,
       radiusInner = defaultRadius - 50,
@@ -158,7 +151,7 @@ export class Shutter extends React.Component<Props> {
           height={height}
           style={{ shapeRendering: 'geometricPrecision' }}
         >
-          {(sortBy(data, sortFn!) as DatumDiscrete[]).map((datum, i) => (
+          {data.map((datum, i) => (
             <Polygon
               key={i}
               index={i}

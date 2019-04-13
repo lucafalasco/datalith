@@ -107,7 +107,16 @@ export class Pack extends React.Component<Props> {
             )`}
           >
             {pack.packBoxes.map((box, i) => {
-              return <Box key={i} datum={data[box.i]} box={box} fill={fill} stroke={stroke} />
+              return (
+                <Box
+                  key={i}
+                  datum={data[box.i]}
+                  box={box}
+                  fill={fill}
+                  stroke={stroke}
+                  tooltip={tooltip}
+                />
+              )
             })}
           </g>
         </svg>
