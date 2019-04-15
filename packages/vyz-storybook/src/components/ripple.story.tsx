@@ -7,7 +7,7 @@ import { genDateValue } from '../scripts'
 
 const width = window.innerWidth
 const height = window.innerHeight
-const defaultData = genDateValue(20)
+const defaultData = genDateValue(10)
 
 const y = d => d.value
 
@@ -43,10 +43,13 @@ storiesOf('vyz-box/Ripple', module)
         to={{ y: defaultData.map(y), centerY: height / 2, index: defaultData.length - 1 }}
       >
         {props => {
-          const data = defaultData.slice(0, props.index).map((d, i) => ({
-            y: yScale(props.y[i]),
-            z: i % 2 ? 'gray' : 'black',
-          }))
+          const data = defaultData
+            .map((d, i) => ({
+              y: yScale(props.y[i]),
+              z: 'black',
+            }))
+            .sort((a, b) => b.y - a.y)
+            .slice(0, props.index)
 
           return (
             <Ripple
