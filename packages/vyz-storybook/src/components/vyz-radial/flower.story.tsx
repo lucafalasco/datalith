@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
-import { Flower } from '../../../../vyz-radial/src/components/Flower'
-import notes from '../../../../vyz-radial/src/components/Flower/README.md'
+import { Flower } from 'vyz-radial/src/components/Flower'
+import notes from 'vyz-radial/src/components/Flower/README.md'
 import { genDateValue } from '../../scripts'
 
 const width = window.innerWidth
@@ -18,15 +18,11 @@ const yScale = scaleLinear()
   .range([0, Math.min(width, height) * 0.3])
 
 storiesOf('vyz-radial/Flower', module)
-  .add(
-    'default',
-    () => {
-      const data = defaultData.map(d => yScale(d.value))
-      return <Flower width={width} height={height} data={data} />
-    },
-
-    { notes },
-  )
+  .addParameters({ notes })
+  .add('default', () => {
+    const data = defaultData.map(d => yScale(d.value))
+    return <Flower width={width} height={height} data={data} />
+  })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
 
@@ -68,8 +64,8 @@ storiesOf('vyz-radial/Flower', module)
         height={height}
         data={data}
         tooltip={({ v, y }) =>
-          `<p><b>Date:</b><u>${v.toLocaleDateString()}</u></p> 
-        <p><b>Value:</b>${yScale.invert(Number(y)).toFixed(2)}</p>`
+          `<p><b>Date: </b><u>${v.toLocaleDateString()}</u></p> 
+        <p><b>Value: </b>${yScale.invert(Number(y)).toFixed(2)}</p>`
         }
       />
     )
