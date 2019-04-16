@@ -18,7 +18,7 @@ export default create({
   // Fonts
   fontBase:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
-  fontCode: 'Monaco, monospace',
+  fontCode: 'Menlo, monospace',
 
   // Text colors
   textColor: '#7f7f7f',
