@@ -44,7 +44,7 @@
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-test-renderer": "^16.8.5",
-    "typescript": "^3.4.2"
+    "typescript": "^3.4.3"
   },
   "peerDependencies": {
     "react": "^15.0.0-0 || ^16.0.0-0"
