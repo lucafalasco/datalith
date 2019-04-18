@@ -2,7 +2,8 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
-import { Pack } from '../../../../vyz-box/src/components/Pack'
+import { Pack } from 'vyz-box/src/components/Pack'
+import notes from 'vyz-box/src/components/Pack/README.md'
 import { genDateValue } from '../../scripts'
 
 const width = window.innerWidth
@@ -22,6 +23,7 @@ const zScale = scaleLinear()
   .nice()
 
 storiesOf('vyz-box/Pack', module)
+  .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => ({
       y: yScale(d.value),

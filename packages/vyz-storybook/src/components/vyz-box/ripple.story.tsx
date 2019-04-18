@@ -2,7 +2,8 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
-import { Ripple } from '../../../../vyz-box/src/components/Ripple'
+import { Ripple } from 'vyz-box/src/components/Ripple'
+import notes from 'vyz-box/src/components/Ripple/README.md'
 import { genDateValue } from '../../scripts'
 
 const width = window.innerWidth
@@ -17,6 +18,7 @@ const yScale = scaleLinear()
   .range([0, Math.min(width, height) * 0.3])
 
 storiesOf('vyz-box/Ripple', module)
+  .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => yScale(d.value))
     return <Ripple width={width} height={height} data={data} />
