@@ -4,7 +4,7 @@
 
 #### Collection of React components to build cool data visualizations
 
-#### ⚠️ This is still alpha stage software
+#### ⚠️ This project is at an early stage
 
 ## Getting Started
 
