@@ -1,0 +1,59 @@
+{
+  "name": "vyz-map",
+  "version": "0.0.1",
+  "description": "vyz map",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "files": [
+    "lib",
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucafalasco/vyz.git"
+  },
+  "keywords": [
+    "vyz",
+    "react",
+    "d3",
+    "visualizations",
+    "charts"
+  ],
+  "author": "@lucafalasco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucafalasco/vyz/issues"
+  },
+  "homepage": "https://github.com/lucafalasco/vyz#readme",
+  "dependencies": {
+    "d3-array": "^2.1.0",
+    "d3-geo": "^1.11.3",
+    "d3-scale": "^3.0.0",
+    "lodash": "^4.17.11",
+    "react-tooltip": "^3.10.0",
+    "vyz-util": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/d3-array": "^2.0.0",
+    "@types/d3-geo": "^1.11.1",
+    "@types/d3-scale": "^2.1.1",
+    "@types/lodash": "^4.14.123",
+    "@types/react-tooltip": "^3.9.2",
+    "raf": "^3.4.1",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-test-renderer": "^16.8.5",
+    "typescript": "^3.4.3"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0-0 || ^16.0.0-0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
