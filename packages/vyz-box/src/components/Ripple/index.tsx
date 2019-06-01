@@ -6,38 +6,25 @@ import normalize from './normalize'
 const DEFAULT_COLOR = '#000000'
 const DEFAULT_RADIUS_LENGTH = 10
 interface Props {
-  /**
-   * Pass custom css classes to the SVG element
-   */
+  /** Custom css classes to pass to the SVG element */
   className?: string
-  /**
-   * Width of the SVG
-   */
+  /** Width of the SVG */
   width: number
-  /**
-   * Height of the SVG
-   */
+  /** Height of the SVG */
   height: number
   /**
-   * Data must be defined as an array of objects defined like this:
-   * {v: any, y: number, y2?: number, z?: string, z2?: string}
+   * Data can be one of:
+   * * `Array<{ v?: any, y?: number, z?: string }>`
+   * * `Array<number>`
    */
   data: DatumContinuous[]
-  /**
-   * Center of the visualization
-   */
+  /** Center of the dataviz */
   center?: { x: number; y: number }
-  /**
-   * Whether to add the fill color
-   */
+  /** Whether to add the fill color */
   fill?: boolean
-  /**
-   * Whether to add the stroke color
-   */
+  /** Whether to add the stroke color */
   stroke?: boolean
-  /**
-   * An optional function that returns an HTML string to be display as the element is hovered
-   */
+  /** Return HTML or text as a string to show on element mouseover */
   tooltip?: (d: DatumVyz & number) => string
 }
 

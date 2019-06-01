@@ -18,10 +18,10 @@ export default create({
   // Fonts
   fontBase:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
-  fontCode: 'Monaco, monospace',
+  fontCode: 'Menlo, monospace',
 
   // Text colors
-  textColor: '#FFFFFF',
+  textColor: '#7f7f7f',
   textInverseColor: '#FFFFFF',
 
   // Toolbar default and active colors

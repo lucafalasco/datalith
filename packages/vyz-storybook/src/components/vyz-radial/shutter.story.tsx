@@ -2,8 +2,9 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
-import { Shutter } from '../../../vyz-radial/src/components/Shutter'
-import { genDateValue } from '../scripts'
+import { Shutter } from 'vyz-radial/src/components/Shutter'
+import notes from 'vyz-radial/src/components/Shutter/README.md'
+import { genDateValue } from '../../scripts'
 
 const width = window.innerWidth
 const height = window.innerHeight
@@ -17,6 +18,7 @@ const zScale = scaleLinear()
   .range([0, 1])
 
 storiesOf('vyz-radial/Shutter', module)
+  .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => `rgba(0,0,0,${zScale(d.value)})`)
     return <Shutter width={width} height={height} data={data} />
