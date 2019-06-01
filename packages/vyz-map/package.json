@@ -36,6 +36,7 @@
     "d3-scale": "^3.0.0",
     "lodash": "^4.17.11",
     "react-tooltip": "^3.10.0",
+    "topojson": "^3.0.2",
     "vyz-util": "0.0.1"
   },
   "devDependencies": {
@@ -44,6 +45,7 @@
     "@types/d3-scale": "^2.1.1",
     "@types/lodash": "^4.14.123",
     "@types/react-tooltip": "^3.9.2",
+    "@types/topojson": "^3.2.2",
     "raf": "^3.4.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",

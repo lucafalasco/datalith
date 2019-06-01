@@ -1,8 +1,26 @@
+import { max } from 'd3-array'
+import { geoEqualEarth, geoPath, GeoProjection } from 'd3-geo'
+import { scaleLinear } from 'd3-scale'
+import { FeatureCollection, MultiPolygon, Polygon } from 'geojson'
+import { groupBy, map, sum } from 'lodash'
 import * as React from 'react'
-import * as Tooltip from 'react-tooltip'
+import Tooltip from 'react-tooltip'
 import { DatumContinuous, DatumVyz, isDatumVyz } from 'vyz-util'
+import dotMap from './dotMap'
+import { flatGeometry, isPointInsidePolygon } from './geometry'
 
 const DEFAULT_COLOR = '#000000'
+
+function findFeatureId(
+  coords: [number, number],
+  collection: FeatureCollection<Polygon | MultiPolygon>,
+): number | string {
+  const match = collection.features.find(f =>
+    isPointInsidePolygon(coords, flatGeometry(f.geometry)),
+  )
+  return match && match.id ? match.id : 0
+}
+
 interface Props {
   /** Custom css classes to pass to the SVG element */
   className?: string
@@ -15,9 +33,15 @@ interface Props {
    * * `Array<{ v?: any, y?: number, z?: string }>`
    * * `Array<number>`
    */
-  data: DatumContinuous[]
+  data: DatumVyz[]
+  /** GeoJson */
+  featureCollection: FeatureCollection
+  /** GeoProjection */
+  projection?: GeoProjection
   /** Center of the dataviz */
   center?: { x: number; y: number }
+  /** Grid cell dimension */
+  side?: number
   /** Whether to add the fill color */
   fill?: boolean
   /** Whether to add the stroke color */
@@ -46,6 +70,28 @@ export class DotMap extends React.Component<Props> {
   static defaultProps = {
     stroke: false,
     fill: true,
+    side: 5,
+    projection: geoEqualEarth(),
+  }
+
+  getDotMapData(data: DatumVyz[]): Map<string | number, number> {
+    const { featureCollection } = this.props
+
+    // get flat featureId to value map
+    const featureIdToValuesFlat = data.map(d => [
+      findFeatureId([d.v[0], d.v[1]], featureCollection as FeatureCollection<
+        Polygon | MultiPolygon
+      >),
+      d.y,
+    ])
+
+    // aggregate values with same featureId
+    const featureIdToValues = map(groupBy(featureIdToValuesFlat, d => d[0]), (d, k) => [
+      k,
+      sum(d.map(a => a[1])),
+    ])
+
+    return new Map(featureIdToValues as [])
   }
 
   render() {
@@ -53,7 +99,10 @@ export class DotMap extends React.Component<Props> {
       className,
       tooltip,
       data,
+      featureCollection,
+      projection = geoEqualEarth(),
       width,
+      side = 5,
       height,
       stroke,
       fill,
@@ -63,23 +112,35 @@ export class DotMap extends React.Component<Props> {
       },
     } = this.props
 
+    // DEBUG
+    // const path = geoPath().projection(projection)
+    // const features = (featureCollection as FeatureCollection).features
+
+    const dotMapData = dotMap({
+      width,
+      height,
+      side,
+      projection,
+      data: this.getDotMapData(data),
+      featureCollection: featureCollection as FeatureCollection,
+    })
+
+    const radius = scaleLinear()
+      .domain([0, max(dotMapData, d => Math.sqrt(d.value)) as number])
+      .range([1, side * 0.5])
+
     return (
       <>
         <svg className={className} width={width} height={height}>
-          {data.map((datum, i) => (
-            // <Circle
-            //   key={i}
-            //   index={i}
-            //   maxY={maxY}
-            //   datum={datum}
-            //   dataLength={data.length}
-            //   fill={fill}
-            //   stroke={stroke}
-            //   center={center}
-            //   tooltip={tooltip}
-            // />
-            <g key={i} />
-          ))}
+          <g>
+            {/* DEBUG */}
+            {/* {features.map((f, i) => (
+              <path key={i} d={path(f) as string} fill="none" stroke="black" strokeWidth="0.1" />
+            ))} */}
+            {dotMapData.map((d, i) => (
+              <circle key={i} cx={d.x} cy={d.y} r={radius(Math.sqrt(d.value))} />
+            ))}
+          </g>
         </svg>
         <Tooltip html />
       </>
