@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as Tooltip from 'react-tooltip'
+import Tooltip from 'react-tooltip'
 import { DatumContinuous, DatumVyz, isDatumVyz } from 'vyz-util'
 import normalize from './normalize'
 

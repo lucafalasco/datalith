@@ -1,6 +1,6 @@
 import { range } from 'lodash'
 import * as React from 'react'
-import * as Tooltip from 'react-tooltip'
+import Tooltip from 'react-tooltip'
 import { DatumDiscrete, DatumVyz, isDatumVyz } from 'vyz-util'
 
 const DEFAULT_COLOR = '#000000'

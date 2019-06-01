@@ -14,7 +14,8 @@
     "quotemark": false,
     "semicolon": false,
     "trailing-comma": true,
-    "no-console": false
+    "no-console": false,
+    "no-bitwise": false
   },
   "linterOptions": {
     "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
