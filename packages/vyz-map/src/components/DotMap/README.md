@@ -2,10 +2,12 @@
 
 ```jsx
 <DotMap
-  className="ripple"
+  className="dot-map"
   width={width}
   height={height}
+  side={5}
   data={data}
-  center={x: width / 2, y: height / 2}
+  featureCollection={world}
+  projection={projection}
 />
 ```

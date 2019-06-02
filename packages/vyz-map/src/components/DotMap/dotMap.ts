@@ -48,7 +48,7 @@ export default function dotMap({
   side = 5,
   key = 'id',
 }: DotMapConfig) {
-  const grid: Map<string, { keys: string[]; x: number; y: number }> = new Map()
+  const grid: Map<string, { keys: string[]; x: number; y: number; featureId: string }> = new Map()
   const features = featureCollection.features
 
   projection.fitSize([width, height], featureCollection)
@@ -90,7 +90,7 @@ export default function dotMap({
           const y = side * j
           const isInside = polygons.some(polygon => isPointInsidePolygon([x, y], polygon))
           if (isInside) {
-            grid.set(i + ',' + j, { keys: value, x, y })
+            grid.set(i + ',' + j, { keys: value, x, y, featureId: f[key] })
           }
         })
       } else {
@@ -137,5 +137,6 @@ export default function dotMap({
       value: density(d.keys),
       x: d.x,
       y: d.y,
+      featureId: d.featureId,
     }))
 }
