@@ -1,7 +1,8 @@
+import { geoEqualEarth } from 'd3-geo'
 import * as React from 'react'
 import { GridMap, GridMapProps } from '../GridMap'
 
-export class DotMap extends React.Component<GridMapProps> {
+export class PixelMap extends React.Component<GridMapProps> {
   render() {
     const {
       className,
@@ -29,7 +30,13 @@ export class DotMap extends React.Component<GridMapProps> {
         fill={fill}
         tooltip={tooltip}
         customRender={({ x, y, value }, defaultProps) => (
-          <circle cx={x} cy={y} r={value} {...defaultProps} />
+          <rect
+            x={x - value / 2}
+            y={y - value / 2}
+            width={value}
+            height={value}
+            {...defaultProps}
+          />
         )}
       />
     )

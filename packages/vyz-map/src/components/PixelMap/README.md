@@ -1,8 +1,8 @@
-# \<DotMap \/>
+# \<PixelMap \/>
 
 ```jsx
-<DotMap
-  className="dot-map"
+<PixelMap
+  className="pixel-map"
   width={width}
   height={height}
   side={5}

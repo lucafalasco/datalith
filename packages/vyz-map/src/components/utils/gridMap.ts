@@ -27,7 +27,7 @@ const subGrid = (box: [[number, number], [number, number]], side: number) => {
   }
 }
 
-interface DotMapConfig {
+interface GridMapConfig {
   projection: GeoProjection // d3.geo projection
   data: Map<string | number, number> // d3.map() mapping key to data
   featureCollection: FeatureCollection // array of map features
@@ -38,7 +38,7 @@ interface DotMapConfig {
   key?: string // name of the attribute mapping features to data
 }
 
-export default function dotMap({
+export default function gridMap({
   projection,
   data,
   featureCollection,
@@ -47,7 +47,7 @@ export default function dotMap({
   height = 1000,
   side = 5,
   key = 'id',
-}: DotMapConfig) {
+}: GridMapConfig) {
   const grid: Map<string, { keys: string[]; x: number; y: number; featureId: string }> = new Map()
   const features = featureCollection.features
 
