@@ -1,7 +1,7 @@
 {
   "name": "@datalith/storybook",
   "description": "datalith storybook",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Luca Falasco",
   "license": "MIT",
   "main": "dist/index.js",
@@ -17,17 +17,17 @@
     "build-storybook": "build-storybook -s ./public -o ../../docs"
   },
   "dependencies": {
+    "@datalith/dotmap": "^0.1.0",
+    "@datalith/flower": "^0.1.0",
+    "@datalith/gridmap": "^0.1.0",
+    "@datalith/hexmap": "^0.1.0",
+    "@datalith/pack": "^0.1.0",
+    "@datalith/pixelmap": "^0.1.0",
+    "@datalith/ripple": "^0.1.0",
+    "@datalith/shutter": "^0.1.0",
+    "@datalith/util": "^0.1.0",
     "d3-array": "^2.0.3",
-    "react-spring": "^8.0.19",
-    "@datalith/dotmap": "0.0.1",
-    "@datalith/flower": "0.0.1",
-    "@datalith/gridmap": "0.0.1",
-    "@datalith/hexmap": "0.0.1",
-    "@datalith/pack": "0.0.1",
-    "@datalith/pixelmap": "0.0.1",
-    "@datalith/ripple": "0.0.1",
-    "@datalith/shutter": "0.0.1",
-    "@datalith/util": "0.0.1"
+    "react-spring": "^8.0.19"
   },
   "peerDependencies": {
     "react": "^16.x",

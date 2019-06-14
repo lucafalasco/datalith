@@ -1,6 +1,6 @@
 {
   "name": "@datalith/dotmap",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "datalith dotmap",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -30,15 +30,15 @@
   },
   "homepage": "https://github.com/lucafalasco/datalith#readme",
   "dependencies": {
+    "@datalith/gridmap": "^0.1.0",
+    "@datalith/util": "^0.1.0",
     "d3-array": "^2.1.0",
     "d3-geo": "^1.11.3",
     "d3-scale": "^3.0.0",
     "lodash": "^4.17.11",
     "react-tooltip": "^3.10.0",
     "topojson": "^3.0.2",
-    "us-atlas": "^2.1.0",
-    "@datalith/gridmap": "0.0.1",
-    "@datalith/util": "0.0.1"
+    "us-atlas": "^2.1.0"
   },
   "devDependencies": {
     "@types/d3-array": "^2.0.0",
