@@ -37,6 +37,7 @@
     "lodash": "^4.17.11",
     "react-tooltip": "^3.10.0",
     "topojson": "^3.0.2",
+    "us-atlas": "^2.1.0",
     "vyz-util": "0.0.1"
   },
   "devDependencies": {

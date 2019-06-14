@@ -4,50 +4,39 @@ import * as React from 'react'
 import { feature, WorldAtlas } from 'topojson'
 import { GridMap } from 'vyz-map/src/components/GridMap'
 import notes from 'vyz-map/src/components/GridMap/README.md'
-import us from 'vyz-map/src/components/json/us-geo.json'
-import worldTopology from 'vyz-map/src/components/json/world.json'
-// import { genDateValue } from '../../scripts'
+import italyTopology from 'vyz-map/src/json/italy.json'
+import { genCoordsValueIt } from '../../scripts'
+
+interface ItalyAtlas extends TopoJSON.Topology {
+  objects: {
+    sub: TopoJSON.GeometryCollection
+  }
+}
+
+const italyAtlas = italyTopology as any
 
 const width = window.innerWidth
 const height = window.innerHeight
-// const defaultData = genDateValue(200)
-const data = [
-  {
-    v: [12.4964, 41.9028], // rome
-    y: 10,
-    z: 'blue',
-  },
-  {
-    v: [12.4964, 41.9027], // rome
-    y: 20,
-    z: 'blue',
-  },
-  {
-    v: [-74.006, 40.7128], // new york
-    y: 25,
-    z: 'red',
-  },
-  {
-    v: [139.839478, 35.652832], // tokyo
-    y: 5,
-    z: 'purple',
-  },
-]
-
+const defaultData = genCoordsValueIt(2000)
 const side = 5
-const world = feature(worldTopology as WorldAtlas, (worldTopology as WorldAtlas).objects.countries)
+const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)
 const projection = geoNaturalEarth1()
 
 storiesOf('vyz-map/GridMap', module)
   .addParameters({ notes })
   .add('custom - cross', () => {
+    const data = defaultData.map(d => ({
+      v: [d.lng, d.lat],
+      y: d.value,
+    }))
+
     return (
       <GridMap
         width={width}
         height={height}
         side={side}
         data={data}
-        featureCollection={world}
+        featureCollection={italy}
         projection={projection}
         stroke
         customRender={({ x, y, value }, defaultProps) => (
@@ -64,13 +53,18 @@ storiesOf('vyz-map/GridMap', module)
     )
   })
   .add('custom - text', () => {
+    const data = defaultData.map(d => ({
+      v: [d.lng, d.lat],
+      y: d.value,
+    }))
+
     return (
       <GridMap
         width={width}
         height={height}
         side={side}
         data={data}
-        featureCollection={world}
+        featureCollection={italy}
         projection={projection}
         customRender={({ x, y, datum }, defaultProps) => (
           <text
@@ -88,13 +82,18 @@ storiesOf('vyz-map/GridMap', module)
     )
   })
   .add('custom - triangles', () => {
+    const data = defaultData.map(d => ({
+      v: [d.lng, d.lat],
+      y: d.value,
+    }))
+
     return (
       <GridMap
         width={width}
         height={height}
         side={side}
         data={data}
-        featureCollection={world}
+        featureCollection={italy}
         projection={projection}
         stroke
         customRender={({ x, y, value }, defaultProps) => (
@@ -110,21 +109,3 @@ storiesOf('vyz-map/GridMap', module)
       />
     )
   })
-// .add('animated', () => {
-//   return (
-//     <Spring from={{ y: data.map(d => 3) }} to={{ y: data.map(d => d.y) }}>
-//       {props => {
-//         return (
-//           <GridMap
-//             width={width}
-//             height={height}
-//             side={5}
-//             data={data.map((d, i) => ({ ...d, y: props.y[i] }))}
-//             featureCollection={world}
-//             projection={projection}
-//           />
-//         )
-//       }}
-//     </Spring>
-//   )
-// })

@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { GridMap, GridMapProps } from '../GridMap'
 
-export class DotMap extends React.Component<GridMapProps> {
+export type DotMapProps = Omit<GridMapProps, 'customRender'>
+export class DotMap extends React.Component<DotMapProps> {
   render() {
     const {
       className,
@@ -10,7 +11,7 @@ export class DotMap extends React.Component<GridMapProps> {
       featureCollection,
       projection,
       width,
-      side = 5,
+      side,
       height,
       stroke,
       fill,

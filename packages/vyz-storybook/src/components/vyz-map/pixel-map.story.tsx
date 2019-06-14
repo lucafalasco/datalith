@@ -1,65 +1,59 @@
 import { storiesOf } from '@storybook/react'
-import { geoNaturalEarth1, geoOrthographic } from 'd3-geo'
+import { geoNaturalEarth1 } from 'd3-geo'
 import * as React from 'react'
-import { feature, WorldAtlas } from 'topojson'
-import us from 'vyz-map/src/components/json/us-geo.json'
-import worldTopology from 'vyz-map/src/components/json/world.json'
+import { feature } from 'topojson'
 import { PixelMap } from 'vyz-map/src/components/PixelMap'
 import notes from 'vyz-map/src/components/PixelMap/README.md'
-// import { genDateValue } from '../../scripts'
+import italyTopology from 'vyz-map/src/json/italy.json'
+import { genCoordsValueIt } from '../../scripts'
+
+interface ItalyAtlas extends TopoJSON.Topology {
+  objects: {
+    sub: TopoJSON.GeometryCollection
+  }
+}
+
+const italyAtlas = italyTopology as any
 
 const width = window.innerWidth
 const height = window.innerHeight
-// const defaultData = genDateValue(200)
-const data = [
-  {
-    v: [12.4964, 41.9028], // rome
-    y: 10,
-    z: 'blue',
-  },
-  {
-    v: [12.4964, 41.9027], // rome
-    y: 20,
-    z: 'blue',
-  },
-  {
-    v: [-74.006, 40.7128], // new york
-    y: 25,
-    z: 'red',
-  },
-  {
-    v: [139.839478, 35.652832], // tokyo
-    y: 5,
-    z: 'purple',
-  },
-]
-
+const defaultData = genCoordsValueIt(2000)
 const side = 5
-const world = feature(worldTopology as WorldAtlas, (worldTopology as WorldAtlas).objects.countries)
+const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)
 const projection = geoNaturalEarth1()
 
 storiesOf('vyz-map/PixelMap', module)
   .addParameters({ notes })
   .add('default', () => {
+    const data = defaultData.map(d => ({
+      v: [d.lng, d.lat],
+      y: d.value,
+    }))
+
     return (
       <PixelMap
         width={width}
         height={height}
         side={side}
         data={data}
-        featureCollection={world}
+        featureCollection={italy}
         projection={projection}
       />
     )
   })
   .add('stroke', () => {
+    const data = defaultData.map(d => ({
+      v: [d.lng, d.lat],
+      y: d.value,
+    }))
+
     return (
       <PixelMap
         width={width}
         height={height}
         side={side}
         data={data}
-        featureCollection={world}
+        featureCollection={italy}
         projection={projection}
         stroke
         fill={false}
@@ -67,18 +61,20 @@ storiesOf('vyz-map/PixelMap', module)
     )
   })
   .add('tooltip', () => {
+    const data = defaultData.map(d => ({
+      v: [d.lng, d.lat],
+      y: d.value,
+    }))
+
     return (
       <PixelMap
         width={width}
         height={height}
         side={side}
         data={data}
-        featureCollection={world}
+        featureCollection={italy}
         projection={projection}
-        tooltip={({ v, y, z }) =>
-          `<p><b>Value: </b>${y}</p>
-          <p><b>Color: </b>${z}</p>`
-        }
+        tooltip={({ v, y, z }) => `<p><b>Value: </b>${y && y.toFixed(2)}</p>`}
       />
     )
   })

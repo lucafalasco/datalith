@@ -1,22 +1,15 @@
 import { max } from 'd3-array'
-import { geoEqualEarth, geoPath, GeoProjection } from 'd3-geo'
+import { geoNaturalEarth1, geoPath, GeoProjection } from 'd3-geo'
 import { scaleLinear } from 'd3-scale'
 import { FeatureCollection } from 'geojson'
 import { groupBy, map, sum } from 'lodash'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 import { DatumVyz } from 'vyz-util'
-import { flatGeometry, isPointInsidePolygon } from '../utils/geometry'
-import gridMap from '../utils/gridMap'
+import { flatGeometry, isPointInsidePolygon } from '../../utils/geometry'
+import gridMap from '../../utils/gridMap'
 
 const DEFAULT_COLOR = '#000000'
-
-function findFeatureId(coords: [number, number], collection: FeatureCollection): number | string {
-  const match = collection.features.find(f =>
-    isPointInsidePolygon(coords, flatGeometry(f.geometry)),
-  )
-  return match && match.id ? match.id : 0
-}
 
 export interface GridMapProps {
   /** Custom css classes to pass to the SVG element */
@@ -44,7 +37,7 @@ export interface GridMapProps {
   tooltip?: (d: DatumVyz & number) => string
   /** Return custom element to render as data point */
   customRender?: (
-    d: { x: number; y: number; value: number; datum?: DatumVyz },
+    d: { x: number; y: number; i: number; j: number; value: number; datum?: DatumVyz },
     props: any,
   ) => JSX.Element
 }
@@ -72,17 +65,25 @@ export class GridMap extends React.Component<GridMapProps> {
     stroke: false,
     fill: true,
     side: 5,
-    projection: geoEqualEarth(),
+    projection: geoNaturalEarth1(),
   }
 
-  getFeatureIdToValues(data: DatumVyz[]): Map<string | number, number> {
+  getFeatureIdToValues(
+    data: DatumVyz[],
+    featureIdToDatum: Map<string, DatumVyz>,
+  ): Map<string, number> {
     const { featureCollection } = this.props
+    const featureIdToValuesFlat: Array<[string, number]> = []
 
-    // get flat featureId to value map
-    const featureIdToValuesFlat = data.map(d => [
-      findFeatureId([d.v[0], d.v[1]], featureCollection),
-      d.y,
-    ])
+    // get flat featureId to value map and set featureIdToDatum
+    featureCollection.features.forEach(f => {
+      const res = data.find(d => isPointInsidePolygon([d.v[0], d.v[1]], flatGeometry(f.geometry)))
+
+      if (res && f.id) {
+        featureIdToDatum.set(f.id.toString(), res)
+        featureIdToValuesFlat.push([f.id.toString(), res.y as number])
+      }
+    })
 
     // aggregate values with same featureId
     const featureIdToValues = map(groupBy(featureIdToValuesFlat, d => d[0]), (d, k) => [
@@ -99,7 +100,7 @@ export class GridMap extends React.Component<GridMapProps> {
       tooltip,
       data,
       featureCollection,
-      projection = geoEqualEarth(),
+      projection = geoNaturalEarth1(),
       width,
       side = 5,
       height,
@@ -108,7 +109,8 @@ export class GridMap extends React.Component<GridMapProps> {
       customRender,
     } = this.props
 
-    const featureIdToValues = this.getFeatureIdToValues(data)
+    const featureIdToDatum = new Map<string, DatumVyz>()
+    const featureIdToValues = this.getFeatureIdToValues(data, featureIdToDatum)
     const gridMapData = gridMap({
       width,
       height,
@@ -135,29 +137,11 @@ export class GridMap extends React.Component<GridMapProps> {
               <path key={i} d={path(f) as string} fill="none" stroke="black" strokeWidth="0.1" />
             ))} */}
             {gridMapData.map((d, i) => {
-              function getDatum() {
-                if (d.value === 0) {
-                  return undefined
-                }
-
-                const dataFilteredByFeatureId = data.filter(
-                  datum =>
-                    findFeatureId(
-                      [datum.v[0], datum.v[1]],
-                      featureCollection as FeatureCollection,
-                    ) === d.featureId,
-                )
-
-                return dataFilteredByFeatureId.length > 1
-                  ? { ...dataFilteredByFeatureId[0], y: sum(dataFilteredByFeatureId.map(d => d.y)) }
-                  : dataFilteredByFeatureId[0]
-              }
-
-              const datum = getDatum()
+              const datum = featureIdToDatum.get(d.featureId)
               const value = yScale(Math.sqrt(d.value))
               const defaultRender = props => <circle cx={d.x} cy={d.y} r={value} {...props} />
               const render = customRender
-                ? props => customRender({ x: d.x, y: d.y, value, datum }, props)
+                ? props => customRender({ x: d.x, y: d.y, i: d.i, j: d.j, value, datum }, props)
                 : defaultRender
 
               return (

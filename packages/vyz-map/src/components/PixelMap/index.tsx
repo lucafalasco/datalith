@@ -2,7 +2,8 @@ import { geoEqualEarth } from 'd3-geo'
 import * as React from 'react'
 import { GridMap, GridMapProps } from '../GridMap'
 
-export class PixelMap extends React.Component<GridMapProps> {
+export type PixelMapProps = Omit<GridMapProps, 'customRender'>
+export class PixelMap extends React.Component<PixelMapProps> {
   render() {
     const {
       className,
@@ -11,7 +12,7 @@ export class PixelMap extends React.Component<GridMapProps> {
       featureCollection,
       projection,
       width,
-      side = 5,
+      side,
       height,
       stroke,
       fill,
