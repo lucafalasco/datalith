@@ -1,20 +1,45 @@
-<p align="center">
-  <img src="./assets/logo.svg" />
+<p align="center" style="margin: 100px;">
+  <img src="./assets/logo.svg" width="500px"/>
 </p>
 
-#### Collection of React components to build cool data visualizations
+#### A Collection of React components to build beautiful data visualizations
 
 #### ⚠️ This project is at an early stage
 
-## Getting Started
+## Installation
+
+```
+yarn add @datalith/shutter @datalith/hexmap @datalith/ripple
+```
+
+To install all modules as a single package:
+
+```
+yarn add datalith
+```
+
+## Development
+
+### Getting Started
 
 ```bash
 $ yarn
-$ yarn build
+$ ./node_modules/.bin/lerna bootstrap
+```
+
+### Start dev environment (Storybook)
+
+```bash
 $ yarn start
 ```
 
-## Prettify the entire monorepo
+### Build for production
+
+```bash
+$ yarn build
+```
+
+### Prettify the entire monorepo
 
 ```bash
 $ yarn format
