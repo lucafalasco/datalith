@@ -1,0 +1,54 @@
+{
+  "name": "datalith",
+  "version": "0.0.1",
+  "description": "Collection of React components to build cool data visualizations",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucafalasco/datalith.git"
+  },
+  "keywords": [
+    "datalith",
+    "react",
+    "d3",
+    "visualizations",
+    "charts"
+  ],
+  "author": "@lucafalasco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucafalasco/datalith/issues"
+  },
+  "homepage": "https://github.com/lucafalasco/datalith#readme",
+  "dependencies": {
+    "@datalith/dotmap": "0.0.1",
+    "@datalith/flower": "0.0.1",
+    "@datalith/gridmap": "0.0.1",
+    "@datalith/hexmap": "0.0.1",
+    "@datalith/pack": "0.0.1",
+    "@datalith/pixelmap": "0.0.1",
+    "@datalith/ripple": "0.0.1",
+    "@datalith/shutter": "0.0.1",
+    "@datalith/util": "0.0.1"
+  },
+  "devDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "typescript": "^3.5.1"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0-0 || ^16.0.0-0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@datalith/util",
+  "version": "0.0.1",
+  "description": "datalith util",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucafalasco/datalith.git"
+  },
+  "keywords": [
+    "datalith",
+    "visualizations",
+    "charts"
+  ],
+  "author": "@lucafalasco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucafalasco/datalith/issues"
+  },
+  "homepage": "https://github.com/lucafalasco/datalith#readme",
+  "devDependencies": {
+    "typescript": "^3.5.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

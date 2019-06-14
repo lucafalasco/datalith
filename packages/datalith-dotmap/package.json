@@ -1,0 +1,62 @@
+{
+  "name": "@datalith/dotmap",
+  "version": "0.0.1",
+  "description": "datalith dotmap",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucafalasco/datalith.git"
+  },
+  "keywords": [
+    "datalith",
+    "react",
+    "d3",
+    "visualizations",
+    "charts"
+  ],
+  "author": "@lucafalasco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucafalasco/datalith/issues"
+  },
+  "homepage": "https://github.com/lucafalasco/datalith#readme",
+  "dependencies": {
+    "d3-array": "^2.1.0",
+    "d3-geo": "^1.11.3",
+    "d3-scale": "^3.0.0",
+    "lodash": "^4.17.11",
+    "react-tooltip": "^3.10.0",
+    "topojson": "^3.0.2",
+    "us-atlas": "^2.1.0",
+    "@datalith/gridmap": "0.0.1",
+    "@datalith/util": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/d3-array": "^2.0.0",
+    "@types/d3-geo": "^1.11.1",
+    "@types/d3-scale": "^2.1.1",
+    "@types/lodash": "^4.14.123",
+    "@types/react-tooltip": "^3.9.2",
+    "@types/topojson": "^3.2.2",
+    "raf": "^3.4.1",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-test-renderer": "^16.8.5",
+    "typescript": "^3.5.1"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0-0 || ^16.0.0-0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

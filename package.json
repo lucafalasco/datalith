@@ -1,5 +1,5 @@
 {
-  "name": "vyz",
+  "name": "datalith",
   "description": "Collection of React components to build cool data visualizations",
   "version": "0.0.1",
   "private": true,
@@ -9,15 +9,12 @@
     "type": "git",
     "url": ""
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "del-dist": "lerna exec --parallel -- del-cli dist",
     "prebuild": "yarn del-dist",
-    "build": "lerna exec --scope vyz* -- tsc",
-    "build-storybook": "cd packages/vyz-storybook && yarn build-storybook",
-    "start": "cd packages/vyz-storybook && yarn storybook",
+    "build": "lerna exec --scope datalith* -- tsc",
+    "build-storybook": "cd packages/datalith-storybook && yarn build-storybook",
+    "start": "cd packages/datalith-storybook && yarn storybook",
     "format": "prettier --write 'packages/*/src/**/{*.js,*.ts*}'",
     "precommit": "lint-staged"
   },
