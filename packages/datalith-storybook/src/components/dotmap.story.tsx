@@ -1,4 +1,4 @@
-import { DotMap } from '@datalith/dotmap'
+import { DotMap } from '@datalith/dotmap/src'
 import notes from '@datalith/dotmap/src/components/DotMap/README.md'
 import italyTopology from '@datalith/gridmap/src/json/italy.json'
 import { storiesOf } from '@storybook/react'

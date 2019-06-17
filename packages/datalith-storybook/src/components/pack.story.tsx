@@ -1,5 +1,5 @@
-import { Pack } from '@datalith/pack'
 import notes from '@datalith/pack/README.md'
+import { Pack } from '@datalith/pack/src'
 import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'

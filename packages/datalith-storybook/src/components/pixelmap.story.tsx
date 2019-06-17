@@ -1,5 +1,5 @@
 import italyTopology from '@datalith/gridmap/src/json/italy.json'
-import { PixelMap } from '@datalith/pixelmap'
+import { PixelMap } from '@datalith/pixelmap/src'
 import notes from '@datalith/pixelmap/src/components/PixelMap/README.md'
 import { storiesOf } from '@storybook/react'
 import { geoNaturalEarth1 } from 'd3-geo'

@@ -1,5 +1,5 @@
 import italyTopology from '@datalith/gridmap/src/json/italy.json'
-import { HexMap } from '@datalith/hexmap'
+import { HexMap } from '@datalith/hexmap/src'
 import notes from '@datalith/hexmap/src/components/HexMap/README.md'
 import { storiesOf } from '@storybook/react'
 import { geoNaturalEarth1 } from 'd3-geo'

@@ -1,5 +1,5 @@
-import { Shutter } from '@datalith/shutter'
 import notes from '@datalith/shutter/README.md'
+import { Shutter } from '@datalith/shutter/src'
 import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'

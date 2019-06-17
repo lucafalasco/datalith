@@ -1,4 +1,4 @@
-import { HexMapWorld } from '@datalith/hexmap'
+import { HexMapWorld } from '@datalith/hexmap/src'
 import notes from '@datalith/hexmap/src/components/HexMapWorld/README.md'
 import { storiesOf } from '@storybook/react'
 import { geoOrthographic } from 'd3-geo'

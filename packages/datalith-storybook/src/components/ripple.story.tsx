@@ -1,5 +1,5 @@
-import { Ripple } from '@datalith/ripple'
 import notes from '@datalith/ripple/README.md'
+import { Ripple } from '@datalith/ripple/src'
 import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'

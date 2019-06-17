@@ -1,6 +1,6 @@
+import { DatumContinuous, Datumdatalith, isDatumdatalith } from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
-import { DatumContinuous, Datumdatalith, isDatumdatalith } from '@datalith/util'
 import generatePack from './generatePack'
 
 const DEFAULT_COLOR = '#000000'

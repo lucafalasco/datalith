@@ -1,4 +1,4 @@
-import { PixelMapUs } from '@datalith/pixelmap'
+import { PixelMapUs } from '@datalith/pixelmap/src'
 import notes from '@datalith/pixelmap/src/components/PixelMapUs/README.md'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'

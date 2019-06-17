@@ -1,4 +1,4 @@
-import { GridMapUs } from '@datalith/gridmap'
+import { GridMapUs } from '@datalith/gridmap/src'
 import notes from '@datalith/gridmap/src/components/GridMapUs/README.md'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'

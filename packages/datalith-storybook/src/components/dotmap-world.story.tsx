@@ -1,4 +1,4 @@
-import { DotMapWorld } from '@datalith/dotmap'
+import { DotMapWorld } from '@datalith/dotmap/src'
 import notes from '@datalith/dotmap/src/components/DotMapWorld/README.md'
 import { storiesOf } from '@storybook/react'
 import { geoOrthographic } from 'd3-geo'

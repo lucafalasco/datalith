@@ -1,4 +1,4 @@
-import { PixelMapWorld } from '@datalith/pixelmap'
+import { PixelMapWorld } from '@datalith/pixelmap/src'
 import notes from '@datalith/pixelmap/src/components/PixelMapWorld/README.md'
 import { storiesOf } from '@storybook/react'
 import { geoOrthographic } from 'd3-geo'

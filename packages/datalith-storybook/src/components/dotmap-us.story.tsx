@@ -1,4 +1,4 @@
-import { DotMapUs } from '@datalith/dotmap'
+import { DotMapUs } from '@datalith/dotmap/src'
 import notes from '@datalith/dotmap/src/components/DotMapUs/README.md'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'

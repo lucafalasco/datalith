@@ -1,5 +1,5 @@
-import { Flower } from '@datalith/flower'
 import notes from '@datalith/flower/README.md'
+import { Flower } from '@datalith/flower/src'
 import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'

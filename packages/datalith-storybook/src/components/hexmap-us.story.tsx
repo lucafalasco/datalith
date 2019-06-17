@@ -1,4 +1,4 @@
-import { HexMapUs } from '@datalith/hexmap'
+import { HexMapUs } from '@datalith/hexmap/src'
 import notes from '@datalith/hexmap/src/components/HexMapUs/README.md'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
