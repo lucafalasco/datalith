@@ -9,32 +9,9 @@ const us = feature(usTopology, usTopology.objects.counties)
 type HexMapUsProps = Omit<HexMapProps, 'featureCollection'>
 
 export class HexMapUs extends React.Component<HexMapUsProps> {
-  render() {
-    const {
-      className,
-      tooltip,
-      data,
-      projection = geoAlbersUsa(),
-      width,
-      side,
-      height,
-      stroke,
-      fill,
-    } = this.props
+  static defaultProps = HexMap.defaultProps
 
-    return (
-      <HexMap
-        className={className}
-        width={width}
-        height={height}
-        side={side}
-        data={data}
-        featureCollection={us}
-        projection={projection}
-        stroke={stroke}
-        fill={fill}
-        tooltip={tooltip}
-      />
-    )
+  render() {
+    return <HexMap {...this.props} projection={geoAlbersUsa()} featureCollection={us} />
   }
 }

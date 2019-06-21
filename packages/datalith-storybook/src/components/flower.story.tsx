@@ -20,52 +20,53 @@ const yScale = scaleLinear()
 storiesOf('Flower', module)
   .addParameters({ notes })
   .add('default', () => {
-    const data = defaultData.map(d => yScale(d.value))
-    return <Flower width={width} height={height} data={data} />
+    return <Flower width={width} height={height} data={defaultData} value={d => yScale(d.value)} />
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
-
     return <Flower width={width} height={height} data={data} stroke fill={false} />
   })
   .add('sorted', () => {
-    const data = defaultData
-      .map((d, i) => ({
-        y: yScale(d.value),
-        z: `rgba(0,0,0,0.${i + 1})`,
-      }))
-      .sort((a, b) => b.y - a.y)
+    const data = [...defaultData].sort((a, b) => b.value - a.value)
 
-    return <Flower width={width} height={height} data={data} />
-  })
-  .add('animated', () => {
-    return (
-      <Spring from={{ y: defaultData.map(d => 0) }} to={{ y: defaultData.map(y) }}>
-        {props => {
-          const data = defaultData.map((d, i) => ({
-            y: yScale(props.y[i]),
-            z: i % 2 ? 'gray' : 'black',
-          }))
-
-          return <Flower width={width} height={height} data={data} />
-        }}
-      </Spring>
-    )
-  })
-  .add('tooltip', () => {
-    const data = defaultData.map(d => ({
-      v: d.date,
-      y: yScale(d.value),
-      z: 'rgb(22, 82, 240)',
-    }))
     return (
       <Flower
         width={width}
         height={height}
         data={data}
-        tooltip={({ v, y }) =>
-          `<p><b>Date: </b><u>${v.toLocaleDateString()}</u></p> 
-        <p><b>Value: </b>${yScale.invert(Number(y)).toFixed(2)}</p>`
+        value={d => yScale(d.value)}
+        color={(d, i) => `rgba(0,0,0,0.${i + 1})`}
+      />
+    )
+  })
+  .add('animated', () => {
+    return (
+      <Spring from={{ value: defaultData.map(d => 0) }} to={{ value: defaultData.map(y) }}>
+        {props => {
+          return (
+            <Flower
+              width={width}
+              height={height}
+              data={defaultData}
+              value={(d, i) => yScale(props.value[i])}
+              color={(d, i) => (i % 2 ? 'rgb(22, 82, 240)' : '#fff')}
+            />
+          )
+        }}
+      </Spring>
+    )
+  })
+  .add('tooltip', () => {
+    return (
+      <Flower
+        width={width}
+        height={height}
+        data={defaultData}
+        value={d => yScale(d.value)}
+        color="rgb(22, 82, 240)"
+        tooltip={({ date, value }) =>
+          `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
+          <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
         }
       />
     )

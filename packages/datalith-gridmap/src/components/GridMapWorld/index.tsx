@@ -9,34 +9,9 @@ const worldAtlas = feature(worldTopology, worldTopology.objects.countries)
 type GridMapWorldProps = Omit<GridMapProps, 'featureCollection'>
 
 export class GridMapWorld extends React.Component<GridMapWorldProps> {
-  render() {
-    const {
-      className,
-      tooltip,
-      data,
-      projection,
-      width,
-      side,
-      height,
-      stroke,
-      fill,
-      customRender,
-    } = this.props
+  static defaultProps = GridMap.defaultProps
 
-    return (
-      <GridMap
-        className={className}
-        width={width}
-        height={height}
-        side={side}
-        data={data}
-        featureCollection={worldAtlas}
-        projection={projection}
-        stroke={stroke}
-        fill={fill}
-        customRender={customRender}
-        tooltip={tooltip}
-      />
-    )
+  render() {
+    return <GridMap {...this.props} featureCollection={worldAtlas} />
   }
 }

@@ -8,7 +8,7 @@ import { genDateValue } from '../scripts'
 
 const width = window.innerWidth
 const height = window.innerHeight
-const defaultData = genDateValue(200)
+const defaultData = genDateValue(700)
 
 const y = d => d.value
 
@@ -25,24 +25,29 @@ const zScale = scaleLinear()
 storiesOf('Pack', module)
   .addParameters({ notes })
   .add('default', () => {
-    const data = defaultData.map(d => ({
-      y: yScale(d.value),
-      z: `rgba(0,0,0,${zScale(d.value2)})`,
-    }))
-    return <Pack width={width} height={height} data={data} />
+    return (
+      <Pack
+        width={width}
+        height={height}
+        data={defaultData}
+        value={d => yScale(d.value)}
+        color={d => `rgba(0,0,0,${zScale(d.value2)})`}
+      />
+    )
   })
   .add('colors', () => {
-    const data = defaultData.map((d, i) => ({
-      y: yScale(d.value),
-      z: i % 2 ? 'rgb(22, 82, 240)' : 'rgba(22, 82, 240, 0.6)',
-    }))
-    return <Pack width={width} height={height} data={data} />
+    return (
+      <Pack
+        width={width}
+        height={height}
+        data={defaultData}
+        value={d => yScale(d.value)}
+        color={(d, i) => (i % 2 ? 'rgb(22, 82, 240)' : '#fff')}
+      />
+    )
   })
   .add('stroke', () => {
-    const data = defaultData.map(d => ({
-      y: yScale(d.value),
-    }))
-
+    const data = defaultData.map(d => yScale(d.value))
     return <Pack width={width} height={height} data={data} stroke fill={false} />
   })
   .add('animated', () => {
@@ -54,30 +59,32 @@ storiesOf('Pack', module)
         to={{ index: defaultData.length - 1 }}
       >
         {props => {
-          const data = sortedData.slice(0, props.index).map((d, i) => ({
-            y: yScale(d.value),
-            z: `rgba(0,0,0,${zScale(d.value2)})`,
-          }))
+          const data = sortedData.slice(0, props.index)
 
-          return <Pack width={width} height={height} data={data} />
+          return (
+            <Pack
+              width={width}
+              height={height}
+              data={data}
+              value={d => yScale(d.value)}
+              color={d => `rgba(0,0,0,${zScale(d.value2)})`}
+            />
+          )
         }}
       </Spring>
     )
   })
   .add('tooltip', () => {
-    const data = defaultData.map(d => ({
-      v: d.date,
-      y: yScale(d.value),
-      z: `rgba(0,0,0,${zScale(d.value)})`,
-    }))
     return (
       <Pack
         width={width}
         height={height}
-        data={data}
-        tooltip={({ v, y }) =>
-          `<p><b>Date:</b><u>${v.toLocaleDateString()}</u></p> 
-        <p><b>Value:</b>${yScale.invert(Number(y)).toFixed(2)}</p>`
+        data={defaultData}
+        value={d => yScale(d.value)}
+        color={d => `rgba(0,0,0,${zScale(d.value)})`}
+        tooltip={({ date, value }) =>
+          `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
+          <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
         }
       />
     )

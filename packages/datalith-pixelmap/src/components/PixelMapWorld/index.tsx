@@ -8,22 +8,9 @@ const world = feature(worldTopology, worldTopology.objects.countries)
 type PixelMapWorldProps = Omit<PixelMapProps, 'featureCollection'>
 
 export class PixelMapWorld extends React.Component<PixelMapWorldProps> {
-  render() {
-    const { className, tooltip, data, projection, width, side, height, stroke, fill } = this.props
+  static defaultProps = PixelMap.defaultProps
 
-    return (
-      <PixelMap
-        className={className}
-        width={width}
-        height={height}
-        side={side}
-        data={data}
-        featureCollection={world}
-        projection={projection}
-        stroke={stroke}
-        fill={fill}
-        tooltip={tooltip}
-      />
-    )
+  render() {
+    return <PixelMap {...this.props} featureCollection={world} />
   }
 }

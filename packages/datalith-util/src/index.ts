@@ -1,16 +1,15 @@
-export interface Datumdatalith {
-  v?: any
-  y?: number
-  z?: string
-}
+import { isFunction } from 'lodash'
 
-export type DatumContinuous = Datumdatalith | number
-export type DatumDiscrete = Datumdatalith | string
+export type Datum = any
 
-export function isDatumdatalith(datum: DatumContinuous | DatumDiscrete): datum is Datumdatalith {
-  return (
-    (datum as Datumdatalith).hasOwnProperty('v') ||
-    (datum as Datumdatalith).hasOwnProperty('y') ||
-    (datum as Datumdatalith).hasOwnProperty('z')
-  )
+type ContinuousAccessor = (d: Datum, i: number) => number
+type DiscreteAccessor = (d: Datum, i: number) => string
+type CoordsAccessor = (d: Datum, i: number) => [number, number]
+
+export type Value = ContinuousAccessor | number
+export type Color = DiscreteAccessor | string
+export type Coords = CoordsAccessor | [number, number]
+
+export function callOrGetValue<T>(funcOrValue: ((...args: any) => T) | T, ...args: any) {
+  return isFunction(funcOrValue) ? funcOrValue(...args) : funcOrValue
 }

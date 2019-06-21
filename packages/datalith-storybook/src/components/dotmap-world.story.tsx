@@ -13,49 +13,53 @@ const side = 5
 storiesOf('DotMap/DotMapWorld', module)
   .addParameters({ notes })
   .add('natural earth', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
-    return <DotMapWorld width={width} height={height} side={side} data={data} />
-  })
-  .add('orthographic', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <DotMapWorld
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
+      />
+    )
+  })
+  .add('orthographic', () => {
+    return (
+      <DotMapWorld
+        width={width}
+        height={height}
+        side={side}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
         projection={geoOrthographic()}
       />
     )
   })
   .add('stroke', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
-    return <DotMapWorld width={width} height={height} side={side} data={data} stroke fill={false} />
-  })
-  .add('tooltip', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <DotMapWorld
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
+        stroke
+        fill={false}
+      />
+    )
+  })
+  .add('tooltip', () => {
+    return (
+      <DotMapWorld
+        width={width}
+        height={height}
+        side={side}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
         tooltip={({ v, y, z }) => `<p><b>Value: </b>${y && y.toFixed(2)}</p>`}
       />
     )

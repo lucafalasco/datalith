@@ -1,7 +1,7 @@
+import { callOrGetValue, Color, Datum } from '@datalith/util'
 import { range } from 'lodash'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
-import { DatumDiscrete, Datumdatalith, isDatumdatalith } from '@datalith/util'
 
 const DEFAULT_COLOR = '#000000'
 interface Props {
@@ -11,22 +11,20 @@ interface Props {
   width: number
   /** Height of the SVG */
   height: number
-  /**
-   * Data can be one of:
-   * * `Array<{ v?: any, y?: number, z?: string }>`
-   * * `Array<string>`
-   */
-  data: DatumDiscrete[]
-  /** Center of the visualization */
-  center?: { x: number; y: number }
+  /** Data array */
+  data: Datum[]
+  /** Color Accessor */
+  color: Color
+  /** Add the fill color */
+  fill: boolean
+  /** Add the stroke color */
+  stroke: boolean
   radiusInner?: number
   radiusOuter?: number
-  /** Whether to add the fill color */
-  fill: boolean
-  /** Whether to add the stroke color */
-  stroke?: boolean
+  /** Center of the visualization */
+  center?: { x: number; y: number }
   /** Return HTML or text as a string to show on element mouseover */
-  tooltip?: (d: Datumdatalith & DatumDiscrete) => string
+  tooltip?: (d: Datum) => string
 }
 
 interface Coords {
@@ -41,15 +39,16 @@ interface Polygon {
 }
 
 interface PolygonProps {
-  datum: DatumDiscrete
+  datum: Datum
+  color: Color
+  index: number
   dataLength: number
+  fill: boolean
+  stroke: boolean
   radiusInner: number
   radiusOuter: number
-  index: number
   center: { x: number; y: number }
-  stroke?: boolean
-  fill?: boolean
-  tooltip?: (d: DatumDiscrete) => string
+  tooltip?: (d: Datum) => string
 }
 
 function createPolygon(n: number, radius: number, offsetRad: number, center: Coords): Coords[] {
@@ -69,13 +68,14 @@ const getPolygonPoints = (polygon: Polygon): string => {
 
 const Polygon = ({
   datum,
+  color: colorAccessor,
   dataLength,
   index,
   center,
   radiusInner,
   radiusOuter,
-  stroke,
   fill,
+  stroke,
   tooltip,
 }: PolygonProps) => {
   const theta = 0 // Angle (deg) that determines how the entire shutter is rotated: increasing theta will rotate the entire shutter counterclockwise
@@ -88,7 +88,7 @@ const Polygon = ({
   const j = index === dataLength - 1 ? 0 : index + 1
   const d = { p0: polygonBig[index], p1: polygonBig[j], p2: polygonSmall[index] }
 
-  const color = isDatumdatalith(datum) ? datum.z || DEFAULT_COLOR : datum
+  const color = callOrGetValue(colorAccessor, datum, index)
   const polygonStyle = {
     fill: fill ? color : 'transparent',
     stroke: stroke ? color : 'transparent',
@@ -105,20 +105,22 @@ const Polygon = ({
 
 export class Shutter extends React.Component<Props> {
   static defaultProps = {
-    stroke: false,
+    color: DEFAULT_COLOR,
     fill: true,
+    stroke: false,
   }
 
   render() {
     const defaultRadius = (Math.min(this.props.width, this.props.height) / 2) * 0.7
     const {
       className,
-      tooltip,
       data,
+      color,
       width,
       height,
-      stroke,
       fill,
+      stroke,
+      tooltip,
       radiusInner = defaultRadius * 0.8,
       radiusOuter = defaultRadius,
       center = {
@@ -141,11 +143,12 @@ export class Shutter extends React.Component<Props> {
               index={i}
               center={center}
               datum={datum}
+              color={color}
               dataLength={data.length}
               radiusInner={radiusInner}
               radiusOuter={radiusOuter}
-              stroke={stroke}
               fill={fill}
+              stroke={stroke}
               tooltip={tooltip}
             />
           ))}

@@ -3,36 +3,16 @@ import * as React from 'react'
 
 export type HexMapProps = Omit<GridMapProps, 'customRender'>
 export class HexMap extends React.Component<HexMapProps> {
-  render() {
-    const {
-      className,
-      tooltip,
-      data,
-      featureCollection,
-      projection,
-      width,
-      side = 5,
-      height,
-      stroke,
-      fill,
-    } = this.props
+  static defaultProps = GridMap.defaultProps
 
+  render() {
     return (
       <GridMap
-        className={className}
-        width={width}
-        height={height}
-        side={side}
-        data={data}
-        featureCollection={featureCollection}
-        projection={projection}
-        stroke={stroke}
-        fill={fill}
-        tooltip={tooltip}
-        customRender={({ x, y, j, value }, defaultProps) => {
+        {...this.props}
+        customRender={({ x, y, j, value }, props) => {
           const sqrt3 = Math.sqrt(3)
           // apply offset to x coordinate based on row index (j)
-          x = j % 2 ? x : x + side / 2
+          x = j % 2 ? x : x + this.props.side / 2
 
           return (
             <polygon
@@ -45,7 +25,7 @@ export class HexMap extends React.Component<HexMapProps> {
                 ${x + (sqrt3 * value) / 2} ${y + value / 2}
                 ${x} ${y + value}
               `}
-              {...defaultProps}
+              {...props}
             />
           )
         }}

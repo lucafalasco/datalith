@@ -25,34 +25,28 @@ const projection = geoNaturalEarth1()
 storiesOf('DotMap/DotMap', module)
   .addParameters({ notes })
   .add('default', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <DotMap
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
         featureCollection={italy}
         projection={projection}
       />
     )
   })
   .add('stroke', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <DotMap
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
         featureCollection={italy}
         projection={projection}
         stroke
@@ -61,17 +55,14 @@ storiesOf('DotMap/DotMap', module)
     )
   })
   .add('tooltip', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <DotMap
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
         featureCollection={italy}
         projection={projection}
         tooltip={({ v, y, z }) => `<p><b>Value: </b>${y && y.toFixed(2)}</p>`}
