@@ -62,5 +62,7 @@
     "tslint-react": "^4.0.0",
     "typescript": "^3.5.1"
   },
-  "gitHead": "0105e6e2ec377fea191acb01fa842d7758ce200f"
+  "publishConfig": {
+    "access": "public"
+  }
 }
