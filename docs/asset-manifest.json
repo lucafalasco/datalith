@@ -1,10 +1,10 @@
 {
-  "main.js": "/main.67997135b3b2464f97d4.bundle.js",
-  "main.js.map": "/main.67997135b3b2464f97d4.bundle.js.map",
-  "runtime~main.js": "/runtime~main.67997135b3b2464f97d4.bundle.js",
-  "runtime~main.js.map": "/runtime~main.67997135b3b2464f97d4.bundle.js.map",
-  "vendors~main.js": "/vendors~main.67997135b3b2464f97d4.bundle.js",
-  "vendors~main.js.map": "/vendors~main.67997135b3b2464f97d4.bundle.js.map",
+  "main.js": "/main.529197c4c27d80857b7e.bundle.js",
+  "main.js.map": "/main.529197c4c27d80857b7e.bundle.js.map",
+  "runtime~main.js": "/runtime~main.529197c4c27d80857b7e.bundle.js",
+  "runtime~main.js.map": "/runtime~main.529197c4c27d80857b7e.bundle.js.map",
+  "vendors~main.js": "/vendors~main.529197c4c27d80857b7e.bundle.js",
+  "vendors~main.js.map": "/vendors~main.529197c4c27d80857b7e.bundle.js.map",
   "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMap/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMap/index.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapUs/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapUs/index.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapWorld/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapWorld/index.d.ts",
@@ -47,7 +47,7 @@
   "../packages/datalith-storybook/dist/types/datalith-storybook/src/components/shutter.story.d.ts": "/../packages/datalith-storybook/dist/types/datalith-storybook/src/components/shutter.story.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-storybook/src/scripts/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-storybook/src/scripts/index.d.ts",
   "iframe.html": "/iframe.html",
-  "precache-manifest.5c5f46e815ae3f8750750ea7d03f5aa5.js": "/precache-manifest.5c5f46e815ae3f8750750ea7d03f5aa5.js",
+  "precache-manifest.aa12ccb62a10ab5c8f768c4bb4c2a966.js": "/precache-manifest.aa12ccb62a10ab5c8f768c4bb4c2a966.js",
   "service-worker.js": "/service-worker.js",
-  "static/media/logo.svg": "/static/media/logo.2b019931.svg"
+  "static/media/logo.svg": "/static/media/logo.642bb9f4.svg"
 }

@@ -1,5 +1,5 @@
-<p align="center" style="margin: 100px;">
-  <img src="./assets/logo.svg" width="500px"/>
+<p align="center">
+  <img src="./assets/logo.svg" width="500px" style="margin: 100px;"/>
 </p>
 
 #### A Collection of React components to build beautiful data visualizations

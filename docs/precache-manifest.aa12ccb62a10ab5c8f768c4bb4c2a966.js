@@ -4,24 +4,24 @@ self.__precacheManifest = [
     "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapUs/index.d.ts"
   },
   {
-    "url": "main.67997135b3b2464f97d4.bundle.js"
+    "url": "main.529197c4c27d80857b7e.bundle.js"
   },
   {
-    "url": "vendors~main.67997135b3b2464f97d4.bundle.js"
+    "url": "vendors~main.529197c4c27d80857b7e.bundle.js"
   },
   {
-    "revision": "2b0199318c1c9c7b73a113ebb807ba4a",
-    "url": "static/media/logo.2b019931.svg"
+    "revision": "642bb9f4f270f40a13e17b1b6f841f64",
+    "url": "static/media/logo.642bb9f4.svg"
   },
   {
-    "url": "runtime~main.67997135b3b2464f97d4.bundle.js"
+    "url": "runtime~main.529197c4c27d80857b7e.bundle.js"
   },
   {
     "revision": "36c20fdc295e8ec4cf53c40c5e5772e7",
     "url": "../packages/datalith-storybook/dist/types/datalith-flower/src/index.d.ts"
   },
   {
-    "revision": "d7d1171cea3f9ad49ab4c4fe13d85c10",
+    "revision": "2ade08179997ba525f3b721798092b8b",
     "url": "iframe.html"
   },
   {
