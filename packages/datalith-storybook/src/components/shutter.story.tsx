@@ -34,7 +34,8 @@ storiesOf('Shutter', module)
     return <Shutter width={width} height={height} data={data} stroke fill={false} />
   })
   .add('sorted', () => {
-    const data = defaultData.sort((a, b) => b.value - a.value)
+    const data = [...defaultData].sort((a, b) => b.value - a.value)
+
     return (
       <Shutter
         width={width}
@@ -46,7 +47,7 @@ storiesOf('Shutter', module)
     )
   })
   .add('animated', () => {
-    const data = defaultData.map((d, i) => (i % 2 ? 'rgb(22, 82, 240)' : 'rgba(22, 82, 240, 0.6)'))
+    const data = defaultData.map(d => `rgba(22, 82, 240, ${zScale(d.value).toFixed(2)}`)
     const radiusTo = (Math.min(width, height) / 2) * 0.7 - 50
 
     return (
@@ -63,11 +64,11 @@ storiesOf('Shutter', module)
         width={width}
         height={height}
         data={defaultData}
-        color={d => `rgba(0,0,0,${zScale(d.value).toFixed(2)}`}
+        color={d => `rgba(0,0,0,${zScale(d.value)})`}
         tooltip={({ date, value }) =>
-          `<p><b>Date:</b><u>${date.toLocaleDateString()}</u></p>
-          <p><b>Value:</b>${parseFloat(zScale(value).toFixed(2))}</p>
-          <p><b>Color:</b> rgba(0,0,0,${zScale(value).toFixed(2)})</p>`
+          `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
+          <p><b>Value: </b>${parseFloat(zScale(value).toFixed(2))}</p>
+          <p><b>Color: </b> rgba(0,0,0,${zScale(value).toFixed(2)})</p>`
         }
       />
     )

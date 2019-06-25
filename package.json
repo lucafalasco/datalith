@@ -16,7 +16,7 @@
     "build": "lerna exec --scope datalith* -- tsc",
     "build-storybook": "cd packages/datalith-storybook && yarn build-storybook",
     "start": "cd packages/datalith-storybook && yarn storybook",
-    "format": "prettier --write 'packages/*/src/**/{*.js,*.ts*}'",
+    "format": "prettier --write 'packages/*/src/**/{*.js,*.ts*,*.md}'",
     "precommit": "lint-staged"
   },
   "devDependencies": {

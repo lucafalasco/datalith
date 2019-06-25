@@ -105,7 +105,7 @@ const Polygon = ({
 
 export class Shutter extends React.Component<Props> {
   static defaultProps = {
-    color: DEFAULT_COLOR,
+    color: d => d,
     fill: true,
     stroke: false,
   }
