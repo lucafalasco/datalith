@@ -8,22 +8,9 @@ const world = feature(worldTopology, worldTopology.objects.countries)
 type DotMapWorldProps = Omit<DotMapProps, 'featureCollection'>
 
 export class DotMapWorld extends React.Component<DotMapWorldProps> {
-  render() {
-    const { className, tooltip, data, projection, width, side, height, stroke, fill } = this.props
+  static defaultProps = DotMap.defaultProps
 
-    return (
-      <DotMap
-        className={className}
-        width={width}
-        height={height}
-        side={side}
-        data={data}
-        featureCollection={world}
-        projection={projection}
-        stroke={stroke}
-        fill={fill}
-        tooltip={tooltip}
-      />
-    )
+  render() {
+    return <DotMap {...this.props} featureCollection={world} />
   }
 }

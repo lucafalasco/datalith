@@ -9,32 +9,9 @@ const us = feature(usTopology, usTopology.objects.counties)
 type PixelMapUsProps = Omit<PixelMapProps, 'featureCollection'>
 
 export class PixelMapUs extends React.Component<PixelMapUsProps> {
-  render() {
-    const {
-      className,
-      tooltip,
-      data,
-      projection = geoAlbersUsa(),
-      width,
-      side,
-      height,
-      stroke,
-      fill,
-    } = this.props
+  static defaultProps = PixelMap.defaultProps
 
-    return (
-      <PixelMap
-        className={className}
-        width={width}
-        height={height}
-        side={side}
-        data={data}
-        featureCollection={us}
-        projection={projection}
-        stroke={stroke}
-        fill={fill}
-        tooltip={tooltip}
-      />
-    )
+  render() {
+    return <PixelMap {...this.props} projection={geoAlbersUsa()} featureCollection={us} />
   }
 }

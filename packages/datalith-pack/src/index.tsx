@@ -1,10 +1,9 @@
-import { DatumContinuous, Datumdatalith, isDatumdatalith } from '@datalith/util'
+import { callOrGetValue, Color, Datum, Value } from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 import generatePack from './generatePack'
 
 const DEFAULT_COLOR = '#000000'
-const DEFAULT_SIDE_LENGTH = 10
 interface Props {
   /** Custom css classes to pass to the SVG element */
   className?: string
@@ -12,20 +11,20 @@ interface Props {
   width: number
   /** Height of the SVG */
   height: number
-  /**
-   * Data can be one of:
-   * * `Array<{ v?: any, y?: number, z?: string }>`
-   * * `Array<number>`
-   */
-  data: DatumContinuous[]
+  /** Data array */
+  data: Datum[]
+  /** Value Accessor */
+  value: Value
+  /** Color Accessor */
+  color: Color
+  /** Whether to add the fill color */
+  fill: boolean
+  /** Whether to add the stroke color */
+  stroke: boolean
   /** Center of the dataviz */
   center?: { x: number; y: number }
-  /** Whether to add the fill color */
-  fill?: boolean
-  /** Whether to add the stroke color */
-  stroke?: boolean
   /** Return HTML or text as a string to show on element mouseover */
-  tooltip?: (d: Datumdatalith & number) => string
+  tooltip?: (d: Datum) => string
 }
 
 interface Box {
@@ -36,15 +35,17 @@ interface Box {
 }
 
 interface BoxProps {
-  datum: DatumContinuous
+  datum: Datum
+  color: Color
   box: Box
-  stroke?: boolean
-  fill?: boolean
-  tooltip?: (d: DatumContinuous) => string
+  index: number
+  fill: boolean
+  stroke: boolean
+  tooltip?: (d: Datum) => string
 }
 
-const Box = ({ datum, box, stroke, fill, tooltip }: BoxProps) => {
-  const color = isDatumdatalith(datum) ? datum.z || DEFAULT_COLOR : DEFAULT_COLOR
+const Box = ({ datum, box, index, fill, stroke, color: colorAccessor, tooltip }: BoxProps) => {
+  const color = callOrGetValue(colorAccessor, datum, index)
   const style = {
     fill: fill ? color : 'transparent',
     stroke: stroke ? color : 'transparent',
@@ -59,19 +60,23 @@ const Box = ({ datum, box, stroke, fill, tooltip }: BoxProps) => {
 
 export class Pack extends React.Component<Props> {
   static defaultProps = {
-    stroke: false,
+    value: d => d,
+    color: DEFAULT_COLOR,
     fill: true,
+    stroke: false,
   }
 
   render() {
     const {
       className,
-      tooltip,
       data,
+      value,
+      color,
       width,
       height,
-      stroke,
       fill,
+      stroke,
+      tooltip,
       center = {
         x: this.props.width / 2,
         y: this.props.height / 2,
@@ -79,7 +84,7 @@ export class Pack extends React.Component<Props> {
     } = this.props
 
     const boxes = data.map((datum, i) => {
-      const sideLength = isDatumdatalith(datum) ? datum.y || DEFAULT_SIDE_LENGTH : datum
+      const sideLength = callOrGetValue(value, datum, i)
       return { w: sideLength, h: sideLength, i }
     })
     const pack = generatePack(boxes)
@@ -97,7 +102,9 @@ export class Pack extends React.Component<Props> {
               return (
                 <Box
                   key={i}
+                  index={i}
                   datum={data[box.i]}
+                  color={color}
                   box={box}
                   fill={fill}
                   stroke={stroke}

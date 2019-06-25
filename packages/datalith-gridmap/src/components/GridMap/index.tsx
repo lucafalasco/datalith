@@ -1,4 +1,4 @@
-import { Datumdatalith } from '@datalith/util'
+import { callOrGetValue, Color, Coords, Datum, Value } from '@datalith/util'
 import { max } from 'd3-array'
 import { geoNaturalEarth1, geoPath, GeoProjection } from 'd3-geo'
 import { scaleLinear } from 'd3-scale'
@@ -10,6 +10,7 @@ import { flatGeometry, isPointInsidePolygon } from '../../utils/geometry'
 import gridMap from '../../utils/gridMap'
 
 const DEFAULT_COLOR = '#000000'
+const DEFAULT_VALUE = 10
 
 export interface GridMapProps {
   /** Custom css classes to pass to the SVG element */
@@ -18,40 +19,51 @@ export interface GridMapProps {
   width: number
   /** Height of the SVG */
   height: number
-  /**
-   * Data has to be defined like this:
-   * * `Array<{ v: [number, number], y: number, z?: string }>`
-   */
-  data: Datumdatalith[]
+  /** Data array */
+  data: Datum[]
+  /** Value Accessor */
+  value: Value
+  /** Color Accessor */
+  color: Color
+  /** Coords Accessor */
+  coords: Coords
   /** GeoJson */
   featureCollection: FeatureCollection
   /** GeoProjection */
-  projection?: GeoProjection
+  projection: GeoProjection
   /** Grid cell dimension */
-  side?: number
+  side: number
   /** Whether to add the fill color */
-  fill?: boolean
+  fill: boolean
   /** Whether to add the stroke color */
-  stroke?: boolean
+  stroke: boolean
   /** Return HTML or text as a string to show on element mouseover */
-  tooltip?: (d: Datumdatalith & number) => string
+  tooltip?: (d: Datum) => string
   /** Return custom element to render as data point */
   customRender?: (
-    d: { x: number; y: number; i: number; j: number; value: number; datum?: Datumdatalith },
+    d: { x: number; y: number; i: number; j: number; value: number; datum?: Datum },
     props: any,
   ) => JSX.Element
 }
 
 interface VisualElementProps {
-  datum?: Datumdatalith
-  stroke?: boolean
-  fill?: boolean
-  tooltip?: (d: Datumdatalith) => string
+  datum?: Datum
+  color: Color
+  fill: boolean
+  stroke: boolean
+  tooltip?: (d: Datum) => string
   render(props: any): JSX.Element
 }
 
-const VisualElement = ({ datum, stroke, fill, tooltip, render: Element }: VisualElementProps) => {
-  const color = (datum && datum.z) || DEFAULT_COLOR
+const VisualElement = ({
+  datum,
+  color: colorAccessor,
+  stroke,
+  fill,
+  tooltip,
+  render: Element,
+}: VisualElementProps) => {
+  const color = callOrGetValue(colorAccessor, datum)
   const style = {
     fill: fill ? color : 'transparent',
     stroke: stroke ? color : 'transparent',
@@ -61,27 +73,30 @@ const VisualElement = ({ datum, stroke, fill, tooltip, render: Element }: Visual
 }
 
 export class GridMap extends React.Component<GridMapProps> {
-  static defaultProps = {
-    stroke: false,
+  static defaultProps: Partial<GridMapProps> = {
+    value: DEFAULT_VALUE,
+    color: DEFAULT_COLOR,
+    coords: d => d,
     fill: true,
+    stroke: false,
     side: 5,
     projection: geoNaturalEarth1(),
   }
 
-  getFeatureIdToValues(
-    data: Datumdatalith[],
-    featureIdToDatum: Map<string, Datumdatalith>,
-  ): Map<string, number> {
-    const { featureCollection } = this.props
+  getFeatureIdToValues(data: Datum[], featureIdToDatum: Map<string, Datum>): Map<string, number> {
+    const { featureCollection, coords: coordsAccessor, value } = this.props
     const featureIdToValuesFlat: Array<[string, number]> = []
 
     // get flat featureId to value map and set featureIdToDatum
     featureCollection.features.forEach(f => {
-      const res = data.find(d => isPointInsidePolygon([d.v[0], d.v[1]], flatGeometry(f.geometry)))
+      const res = data.find((d, i) => {
+        const coords = callOrGetValue(coordsAccessor, d, i)
+        return isPointInsidePolygon([coords[0], coords[1]], flatGeometry(f.geometry))
+      })
 
       if (res && f.id) {
         featureIdToDatum.set(f.id.toString(), res)
-        featureIdToValuesFlat.push([f.id.toString(), res.y as number])
+        featureIdToValuesFlat.push([f.id.toString(), callOrGetValue(value, res) as number])
       }
     })
 
@@ -97,19 +112,21 @@ export class GridMap extends React.Component<GridMapProps> {
   render() {
     const {
       className,
-      tooltip,
       data,
+      value,
+      color,
       featureCollection,
-      projection = geoNaturalEarth1(),
+      projection,
       width,
-      side = 5,
+      side,
       height,
-      stroke,
       fill,
+      stroke,
+      tooltip,
       customRender,
     } = this.props
 
-    const featureIdToDatum = new Map<string, Datumdatalith>()
+    const featureIdToDatum = new Map<string, Datum>()
     const featureIdToValues = this.getFeatureIdToValues(data, featureIdToDatum)
     const gridMapData = gridMap({
       width,
@@ -121,7 +138,7 @@ export class GridMap extends React.Component<GridMapProps> {
     })
 
     const yScale = scaleLinear()
-      .domain([0, max(gridMapData, d => Math.sqrt(d.value)) as number])
+      .domain([0, max(gridMapData, (d, i) => Math.sqrt(callOrGetValue(value, d, i))) as number])
       .range([1, side * 0.5])
 
     // DEBUG
@@ -138,15 +155,17 @@ export class GridMap extends React.Component<GridMapProps> {
             ))} */}
             {gridMapData.map((d, i) => {
               const datum = featureIdToDatum.get(d.featureId)
-              const value = yScale(Math.sqrt(d.value))
-              const defaultRender = props => <circle cx={d.x} cy={d.y} r={value} {...props} />
+              const dimension = yScale(Math.sqrt(callOrGetValue(value, d)))
+              const defaultRender = props => <circle cx={d.x} cy={d.y} r={dimension} {...props} />
               const render = customRender
-                ? props => customRender({ x: d.x, y: d.y, i: d.i, j: d.j, value, datum }, props)
+                ? props =>
+                    customRender({ x: d.x, y: d.y, i: d.i, j: d.j, value: dimension, datum }, props)
                 : defaultRender
 
               return (
                 <VisualElement
                   datum={datum}
+                  color={color}
                   key={i}
                   fill={fill}
                   stroke={stroke}

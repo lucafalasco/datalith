@@ -20,26 +20,34 @@ const zScale = scaleLinear()
 storiesOf('Shutter', module)
   .addParameters({ notes })
   .add('default', () => {
-    const data = defaultData.map(d => `rgba(0,0,0,${zScale(d.value)})`)
-    return <Shutter width={width} height={height} data={data} />
+    return (
+      <Shutter
+        width={width}
+        height={height}
+        data={defaultData}
+        color={d => `rgba(0,0,0,${zScale(d.value)})`}
+      />
+    )
   })
   .add('stroke', () => {
     const data = defaultData.map(d => `rgba(0,0,0,${zScale(d.value)})`)
-
     return <Shutter width={width} height={height} data={data} stroke fill={false} />
   })
   .add('sorted', () => {
-    const data = defaultData
-      .map(d => ({
-        y: d.value,
-        z: `rgba(0,0,0,${zScale(d.value)})`,
-      }))
-      .sort((a, b) => b.y - a.y)
+    const data = [...defaultData].sort((a, b) => b.value - a.value)
 
-    return <Shutter width={width} height={height} data={data} stroke />
+    return (
+      <Shutter
+        width={width}
+        height={height}
+        data={data}
+        color={d => `rgba(0,0,0,${zScale(d.value)})`}
+        stroke
+      />
+    )
   })
   .add('animated', () => {
-    const data = defaultData.map((d, i) => (i % 2 ? 'rgb(22, 82, 240)' : 'rgba(22, 82, 240, 0.6)'))
+    const data = defaultData.map(d => `rgba(22, 82, 240, ${zScale(d.value).toFixed(2)}`)
     const radiusTo = (Math.min(width, height) / 2) * 0.7 - 50
 
     return (
@@ -51,20 +59,16 @@ storiesOf('Shutter', module)
     )
   })
   .add('tooltip', () => {
-    const data = defaultData.map(d => ({
-      v: d.date,
-      y: parseFloat(zScale(d.value).toFixed(2)),
-      z: `rgba(0,0,0,${zScale(d.value).toFixed(2)})`,
-    }))
     return (
       <Shutter
         width={width}
         height={height}
-        data={data}
-        tooltip={({ v, y, z }) =>
-          `<p><b>Date:</b> <u>${v.toLocaleDateString()}</u></p>
-        <p><b>Value:</b>${y}</p>
-        <p><b>Color:</b>${z}</p>`
+        data={defaultData}
+        color={d => `rgba(0,0,0,${zScale(d.value)})`}
+        tooltip={({ date, value }) =>
+          `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
+          <p><b>Value: </b>${parseFloat(zScale(value).toFixed(2))}</p>
+          <p><b>Color: </b> rgba(0,0,0,${zScale(value).toFixed(2)})</p>`
         }
       />
     )

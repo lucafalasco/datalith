@@ -8,7 +8,7 @@ import { genDateValue } from '../scripts'
 
 const width = window.innerWidth
 const height = window.innerHeight
-const defaultData = genDateValue(10)
+const defaultData = genDateValue(20)
 
 const y = d => d.value
 
@@ -24,15 +24,18 @@ storiesOf('Ripple', module)
     return <Ripple width={width} height={height} data={data} />
   })
   .add('colors', () => {
-    const data = defaultData.map((d, i) => ({
-      y: yScale(d.value),
-      z: i % 2 ? 'rgb(22, 82, 240)' : 'rgba(22, 82, 240, 0.6)',
-    }))
-    return <Ripple width={width} height={height} data={data} />
+    return (
+      <Ripple
+        width={width}
+        height={height}
+        data={defaultData}
+        value={d => yScale(d.value)}
+        color={(d, i) => (i % 2 ? 'rgb(22, 82, 240)' : '#fff')}
+      />
+    )
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
-
     return <Ripple width={width} height={height} data={data} stroke fill={false} />
   })
   .add('animated', () => {
@@ -41,23 +44,19 @@ storiesOf('Ripple', module)
     return (
       <Spring
         config={{ duration: 1000, easing: t => t * (2 - t) }}
-        from={{ y: defaultData.map(d => 0), centerY: height / 2 + maxY, index: 0 }}
-        to={{ y: defaultData.map(y), centerY: height / 2, index: defaultData.length - 1 }}
+        from={{ value: defaultData.map(d => 0), centerY: height / 2 + maxY, index: 0 }}
+        to={{ value: defaultData.map(y), centerY: height / 2, index: defaultData.length - 1 }}
       >
         {props => {
-          const data = defaultData
-            .map((d, i) => ({
-              y: yScale(props.y[i]),
-              z: 'black',
-            }))
-            .sort((a, b) => b.y - a.y)
-            .slice(0, props.index)
+          const data = defaultData.slice(0, props.index)
 
           return (
             <Ripple
               width={width}
               height={height}
               data={data}
+              value={(d, i) => yScale(props.value[i])}
+              color="#000"
               center={{ x: width / 2, y: props.centerY }}
             />
           )
@@ -66,19 +65,16 @@ storiesOf('Ripple', module)
     )
   })
   .add('tooltip', () => {
-    const data = defaultData.map(d => ({
-      v: d.date,
-      y: yScale(d.value),
-      z: 'rgb(22, 82, 240)',
-    }))
     return (
       <Ripple
         width={width}
         height={height}
-        data={data}
-        tooltip={({ v, y }) =>
-          `<p><b>Date:</b><u>${v.toLocaleDateString()}</u></p> 
-        <p><b>Value:</b>${yScale.invert(Number(y)).toFixed(2)}</p>`
+        data={defaultData}
+        value={d => yScale(d.value)}
+        color="rgb(22, 82, 240)"
+        tooltip={({ date, value }) =>
+          `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
+          <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
         }
       />
     )

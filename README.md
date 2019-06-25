@@ -8,13 +8,13 @@
 
 ## Installation
 
-```
+```sh
 yarn add @datalith/shutter @datalith/hexmap @datalith/ripple
 ```
 
 To install all modules as a single package:
 
-```
+```sh
 yarn add datalith
 ```
 

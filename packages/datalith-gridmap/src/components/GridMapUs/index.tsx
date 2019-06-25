@@ -10,34 +10,9 @@ const usAtlas = feature(usTopology, usTopology.objects.counties)
 type GridMapUsProps = Omit<GridMapProps, 'featureCollection'>
 
 export class GridMapUs extends React.Component<GridMapUsProps> {
-  render() {
-    const {
-      className,
-      tooltip,
-      data,
-      projection = geoAlbersUsa(),
-      width,
-      side,
-      height,
-      stroke,
-      fill,
-      customRender,
-    } = this.props
+  static defaultProps = GridMap.defaultProps
 
-    return (
-      <GridMap
-        className={className}
-        width={width}
-        height={height}
-        side={side}
-        data={data}
-        featureCollection={usAtlas}
-        projection={projection}
-        stroke={stroke}
-        fill={fill}
-        customRender={customRender}
-        tooltip={tooltip}
-      />
-    )
+  render() {
+    return <GridMap {...this.props} featureCollection={usAtlas} projection={geoAlbersUsa()} />
   }
 }

@@ -9,32 +9,9 @@ const us = feature(usTopology, usTopology.objects.counties)
 type DotMapUsProps = Omit<DotMapProps, 'featureCollection'>
 
 export class DotMapUs extends React.Component<DotMapUsProps> {
-  render() {
-    const {
-      className,
-      tooltip,
-      data,
-      projection = geoAlbersUsa(),
-      width,
-      side,
-      height,
-      stroke,
-      fill,
-    } = this.props
+  static defaultProps = DotMap.defaultProps
 
-    return (
-      <DotMap
-        className={className}
-        width={width}
-        height={height}
-        side={side}
-        data={data}
-        featureCollection={us}
-        projection={projection}
-        stroke={stroke}
-        fill={fill}
-        tooltip={tooltip}
-      />
-    )
+  render() {
+    return <DotMap {...this.props} projection={geoAlbersUsa()} featureCollection={us} />
   }
 }

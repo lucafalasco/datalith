@@ -25,17 +25,15 @@ const projection = geoNaturalEarth1()
 storiesOf('GridMap/GridMap', module)
   .addParameters({ notes })
   .add('custom - cross', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <GridMap
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
+        color="rgb(22, 82, 240)"
         featureCollection={italy}
         projection={projection}
         stroke
@@ -53,10 +51,7 @@ storiesOf('GridMap/GridMap', module)
     )
   })
   .add('custom - text', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
+    const data = defaultData.map(d => [d.lng, d.lat])
 
     return (
       <GridMap
@@ -64,6 +59,7 @@ storiesOf('GridMap/GridMap', module)
         height={height}
         side={side}
         data={data}
+        color={d => (d ? 'rgb(22, 82, 240)' : '#000')}
         featureCollection={italy}
         projection={projection}
         customRender={({ x, y, datum }, defaultProps) => (
@@ -72,27 +68,25 @@ storiesOf('GridMap/GridMap', module)
             y={y}
             textAnchor="middle"
             fontSize={5}
+            fontWeight={500}
             alignmentBaseline="middle"
             {...defaultProps}
           >
-            {datum ? 1 : 0}
+            {datum ? '|' : '―'}
           </text>
         )}
       />
     )
   })
   .add('custom - triangles', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <GridMap
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
         featureCollection={italy}
         projection={projection}
         stroke

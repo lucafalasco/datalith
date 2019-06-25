@@ -1,4 +1,4 @@
-import { DatumContinuous, Datumdatalith, isDatumdatalith } from '@datalith/util'
+import { callOrGetValue, Color, Datum, Value } from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 
@@ -10,33 +10,35 @@ interface Props {
   width: number
   /** Height of the SVG */
   height: number
-  /**
-   * Data can be one of:
-   * * `Array<{ v?: any, y?: number, z?: string }>`
-   * * `Array<number>`
-   */
-  data: DatumContinuous[]
+  /** Data array */
+  data: Datum[]
+  /** Value Accessor */
+  value: Value
+  /** Color Accessor */
+  color: Color
+  /** Padding between elements */
+  padding: number
+  /** Add the fill color */
+  fill: boolean
+  /** Add the stroke color */
+  stroke: boolean
   /** Center of the dataviz */
   center?: { x: number; y: number }
-  /** Padding between elements */
-  padding?: number
-  /** Whether to add the fill color */
-  fill?: boolean
-  /** Whether to add the stroke color */
-  stroke?: boolean
   /** Return HTML or text as a string to show on element mouseover */
-  tooltip?: (d: Datumdatalith & number) => string
+  tooltip?: (d: Datum) => string
 }
 
 interface PolygonProps {
-  datum: DatumContinuous
+  datum: Datum
+  value: Value
+  color: Color
+  index: number
   dataLength: number
   padding: number
-  index: number
+  fill: boolean
+  stroke: boolean
   center: { x: number; y: number }
-  stroke?: boolean
-  fill?: boolean
-  tooltip?: (d: DatumContinuous) => string
+  tooltip?: (d: Datum) => string
 }
 
 const getPolygonPoints = ({ index, value, center: { x, y }, padding, dataLength }): string => {
@@ -70,15 +72,18 @@ const getPolygonPoints = ({ index, value, center: { x, y }, padding, dataLength 
 
 const Polygon = ({
   datum,
+  value: valueAccessor,
+  color: colorAccessor,
   dataLength,
   index,
   center,
   padding,
-  stroke,
   fill,
+  stroke,
   tooltip,
 }: PolygonProps) => {
-  const color = isDatumdatalith(datum) ? datum.z || DEFAULT_COLOR : DEFAULT_COLOR
+  const color = callOrGetValue(colorAccessor, datum, index)
+
   const style = {
     fill: fill ? color : 'transparent',
     stroke: stroke ? color : 'transparent',
@@ -86,7 +91,7 @@ const Polygon = ({
   const polygonPoints = getPolygonPoints({
     index,
     dataLength,
-    value: isDatumdatalith(datum) ? datum.y : datum,
+    value: callOrGetValue(valueAccessor, datum, index),
     padding,
     center,
   })
@@ -100,21 +105,25 @@ const Polygon = ({
 
 export class Flower extends React.Component<Props> {
   static defaultProps = {
-    stroke: false,
+    value: d => d,
+    color: DEFAULT_COLOR,
     fill: true,
+    stroke: false,
     padding: 40,
   }
 
   render() {
     const {
       className,
-      tooltip,
       data,
+      value,
+      color,
       width,
       height,
-      stroke,
       fill,
+      stroke,
       padding,
+      tooltip,
       center = {
         x: this.props.width / 2,
         y: this.props.height / 2,
@@ -135,10 +144,12 @@ export class Flower extends React.Component<Props> {
               index={i}
               center={center}
               datum={datum}
+              value={value}
+              color={color}
               dataLength={data.length}
-              padding={padding!}
-              stroke={stroke}
+              padding={padding}
               fill={fill}
+              stroke={stroke}
               tooltip={tooltip}
             />
           ))}

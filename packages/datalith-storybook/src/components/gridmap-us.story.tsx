@@ -12,17 +12,14 @@ const side = 5
 storiesOf('GridMap/GridMapUs', module)
   .addParameters({ notes })
   .add('custom - cross', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <GridMapUs
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
         stroke
         customRender={({ x, y, value }, defaultProps) => (
           <path
@@ -38,17 +35,14 @@ storiesOf('GridMap/GridMapUs', module)
     )
   })
   .add('custom - text', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <GridMapUs
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
         customRender={({ x, y, datum }, defaultProps) => (
           <text
             x={x}
@@ -65,17 +59,14 @@ storiesOf('GridMap/GridMapUs', module)
     )
   })
   .add('custom - triangles', () => {
-    const data = defaultData.map(d => ({
-      v: [d.lng, d.lat],
-      y: d.value,
-    }))
-
     return (
       <GridMapUs
         width={width}
         height={height}
         side={side}
-        data={data}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={d => d.value}
         stroke
         customRender={({ x, y, value }, defaultProps) => (
           <path

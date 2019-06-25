@@ -1,10 +1,9 @@
+import { callOrGetValue, Color, Datum, Value } from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
-import { DatumContinuous, Datumdatalith, isDatumdatalith } from '@datalith/util'
 import normalize from './normalize'
 
 const DEFAULT_COLOR = '#000000'
-const DEFAULT_RADIUS_LENGTH = 10
 interface Props {
   /** Custom css classes to pass to the SVG element */
   className?: string
@@ -12,20 +11,20 @@ interface Props {
   width: number
   /** Height of the SVG */
   height: number
-  /**
-   * Data can be one of:
-   * * `Array<{ v?: any, y?: number, z?: string }>`
-   * * `Array<number>`
-   */
-  data: DatumContinuous[]
+  /** Data array */
+  data: Datum[]
+  /** Value Accessor */
+  value: Value
+  /** Color Accessor */
+  color: Color
+  /** Add the fill color */
+  fill: boolean
+  /** Add the stroke color */
+  stroke: boolean
   /** Center of the dataviz */
   center?: { x: number; y: number }
-  /** Whether to add the fill color */
-  fill?: boolean
-  /** Whether to add the stroke color */
-  stroke?: boolean
   /** Return HTML or text as a string to show on element mouseover */
-  tooltip?: (d: Datumdatalith & number) => string
+  tooltip?: (d: Datum) => string
 }
 
 interface Center {
@@ -34,25 +33,39 @@ interface Center {
 }
 
 interface CircleProps {
-  datum: DatumContinuous
+  datum: Datum
+  value: Value
+  color: Color
   dataLength: number
   index: number
   center: Center
   maxY: number
-  stroke?: boolean
-  fill?: boolean
-  tooltip?: (d: DatumContinuous) => string
+  fill: boolean
+  stroke: boolean
+  tooltip?: (d: Datum) => string
 }
 
-const Circle = ({ datum, dataLength, index, center, maxY, stroke, fill, tooltip }: CircleProps) => {
-  const color = isDatumdatalith(datum) ? datum.z || DEFAULT_COLOR : DEFAULT_COLOR
+const Circle = ({
+  datum,
+  color: colorAccessor,
+  value: valueAccessor,
+  dataLength,
+  index,
+  center,
+  maxY,
+  fill,
+  stroke,
+  tooltip,
+}: CircleProps) => {
+  const color = callOrGetValue(colorAccessor, datum, index)
+
   const style = {
     fill: fill ? color : 'transparent',
     stroke: stroke ? color : 'transparent',
     fillOpacity: normalize(index, 0, dataLength),
   }
 
-  const radius = isDatumdatalith(datum) ? datum.y || DEFAULT_RADIUS_LENGTH : datum
+  const radius = callOrGetValue(valueAccessor, datum, index)
 
   return (
     <g data-tip={tooltip && tooltip(datum)}>
@@ -63,8 +76,10 @@ const Circle = ({ datum, dataLength, index, center, maxY, stroke, fill, tooltip 
 
 export class Ripple extends React.Component<Props> {
   static defaultProps = {
-    stroke: false,
+    value: d => d,
+    color: DEFAULT_COLOR,
     fill: true,
+    stroke: false,
   }
 
   render() {
@@ -72,35 +87,33 @@ export class Ripple extends React.Component<Props> {
       className,
       tooltip,
       data,
+      value,
+      color,
       width,
       height,
-      stroke,
       fill,
+      stroke,
       center = {
         x: this.props.width / 2,
         y: this.props.height / 2,
       },
     } = this.props
 
-    const maxY = Math.max(
-      ...data.map(datum => (isDatumdatalith(datum) ? datum.y || DEFAULT_RADIUS_LENGTH : datum)),
-    )
+    const maxY = Math.max(...data.map((datum, i) => callOrGetValue(value, datum, i)))
 
     return (
       <>
         <svg className={className} width={width} height={height}>
           {data
-            .sort(
-              (a, b) =>
-                (isDatumdatalith(b) ? b.y || DEFAULT_RADIUS_LENGTH : b) -
-                (isDatumdatalith(a) ? a.y || DEFAULT_RADIUS_LENGTH : a),
-            )
+            .sort((a, b) => callOrGetValue(value, b) - callOrGetValue(value, a, 0))
             .map((datum, i) => (
               <Circle
                 key={i}
                 index={i}
                 maxY={maxY}
                 datum={datum}
+                value={value}
+                color={color}
                 dataLength={data.length}
                 fill={fill}
                 stroke={stroke}

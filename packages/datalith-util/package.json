@@ -27,6 +27,9 @@
     "url": "https://github.com/lucafalasco/datalith/issues"
   },
   "homepage": "https://github.com/lucafalasco/datalith#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
   "devDependencies": {
     "typescript": "^3.5.1"
   },
