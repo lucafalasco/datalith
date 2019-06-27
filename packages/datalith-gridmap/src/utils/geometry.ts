@@ -1,5 +1,3 @@
-import { Geometry, Polygon, Position } from 'geojson'
-
 export function isPointInsidePolygon(point: [number, number], polygon: number[][]): boolean {
   // ray-casting algorithm based on
   // http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
@@ -23,27 +21,4 @@ export function isPointInsidePolygon(point: [number, number], polygon: number[][
     j = i
   }
   return inside
-}
-
-export function flatGeometry(geometry: Geometry): Array<[number, number]> {
-  const flattenPolygon = (coords: Polygon['coordinates']) => {
-    return coords.reduce((accumulator, currentValue) =>
-      accumulator.concat([[0, 0]].concat(currentValue)),
-    )
-  }
-
-  let result: Position[] = []
-  switch (geometry.type) {
-    case 'Polygon':
-      result = flattenPolygon(geometry.coordinates)
-      break
-    case 'MultiPolygon':
-      result = flattenPolygon(geometry.coordinates.map(coordinates => flattenPolygon(coordinates)))
-      break
-    default:
-      throw new Error(
-        `Found incompatible 'geometry.type' for GeoJson: Type '${geometry.type}' is not supported`,
-      )
-  }
-  return [[0, 0]].concat(result.concat([[0, 0]])) as Array<[number, number]>
 }
