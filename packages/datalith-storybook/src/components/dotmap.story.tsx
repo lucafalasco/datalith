@@ -22,7 +22,7 @@ const side = 5
 const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)
 const projection = geoNaturalEarth1()
 
-storiesOf('DotMap/DotMap', module)
+storiesOf('DotMap', module)
   .addParameters({ notes })
   .add('default', () => {
     return (
@@ -65,7 +65,7 @@ storiesOf('DotMap/DotMap', module)
         value={d => d.value}
         featureCollection={italy}
         projection={projection}
-        tooltip={({ v, y, z }) => `<p><b>Value: </b>${y && y.toFixed(2)}</p>`}
+        tooltip={({ value }) => `<p><b>Value: </b>${value.toFixed(2)}</p>`}
       />
     )
   })

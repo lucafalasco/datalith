@@ -1,7 +1,33 @@
+import { callOrGetValue, Coords, Datum, Value } from '@datalith/util'
+import flatten from '@turf/flatten'
+import { GeometryCollection } from '@turf/helpers'
 import { sum } from 'd3-array'
 import { geoPath, GeoProjection } from 'd3-geo'
-import { FeatureCollection } from 'geojson'
+import { Feature, FeatureCollection } from 'geojson'
 import { isPointInsidePolygon } from './geometry'
+
+function getFeatureIdToValues(
+  data: Datum[],
+  feature: Feature,
+  featureIdToValues: Map<string, number>,
+  featureIdToDatum: Map<string, Datum>,
+  coordsAccessor: Coords,
+  valueAccessor: Value,
+) {
+  const res = data.find((d, i) => {
+    const coords = callOrGetValue(coordsAccessor, d, i)
+    const flattened = flatten(feature as Feature<GeometryCollection>)
+    const polygon = flattened.features[0].geometry.coordinates[0] as Array<[number, number]>
+    return isPointInsidePolygon([coords[0], coords[1]], polygon)
+  })
+
+  if (res && feature.id) {
+    const featureIdValue = featureIdToValues.get(feature.id.toString())
+    const value = callOrGetValue(valueAccessor, res) as number
+    featureIdToDatum.set(feature.id.toString(), res)
+    featureIdToValues.set(feature.id.toString(), featureIdValue ? featureIdValue + value : value)
+  }
+}
 
 const range = (left: number, right: number, inclusive: boolean) => {
   const range: number[] = []
@@ -29,7 +55,9 @@ const subGrid = (box: [[number, number], [number, number]], side: number) => {
 
 interface GridMapConfig {
   projection: GeoProjection // d3.geo projection
-  data: Map<string | number, number> // d3.map() mapping key to data
+  data: Datum[] // d3.map() mapping key to data
+  coords: Coords
+  value: Value
   featureCollection: FeatureCollection // array of map features
   isDensity?: boolean // set to `true` if data define a density
   width?: number
@@ -41,6 +69,8 @@ interface GridMapConfig {
 export default function gridMap({
   projection,
   data,
+  coords: coordsAccessor,
+  value: valueAccessor,
   featureCollection,
   isDensity = true,
   width = 1000,
@@ -53,6 +83,8 @@ export default function gridMap({
     { keys: string[]; x: number; y: number; i: number; j: number; featureId: string }
   > = new Map()
   const features = featureCollection.features
+  const featureIdToValues = new Map<string, number>()
+  const featureIdToDatum = new Map<string, Datum>()
 
   projection.fitSize([width, height], featureCollection)
   const path = geoPath().projection(projection)
@@ -66,6 +98,14 @@ export default function gridMap({
 
   // define the grid
   features.map((f, i) => {
+    getFeatureIdToValues(
+      data,
+      f,
+      featureIdToValues,
+      featureIdToDatum,
+      coordsAccessor,
+      valueAccessor,
+    )
     const g = f.geometry
     if (g.type === 'Polygon' || g.type === 'MultiPolygon') {
       const box = path.bounds(f)
@@ -124,9 +164,9 @@ export default function gridMap({
     let num: number
 
     if (isDensity) {
-      num = sum(keys.map(j => (data.get(j) as number) * (area.get(j) as number)))
+      num = sum(keys.map(j => (featureIdToValues.get(j) as number) * (area.get(j) as number)))
     } else {
-      num = sum(keys.map(j => data.get(j)))
+      num = sum(keys.map(j => featureIdToValues.get(j)))
     }
 
     const den = sum(keys.map(j => area.get(j)))
@@ -147,5 +187,6 @@ export default function gridMap({
       j: d.j,
       value: density(d.keys),
       featureId: d.featureId,
+      datum: featureIdToDatum.get(d.featureId),
     }))
 }

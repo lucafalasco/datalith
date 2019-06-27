@@ -10,7 +10,7 @@ const height = window.innerHeight
 const defaultData = genCoordsValue(2000)
 const side = 5
 
-storiesOf('DotMap/DotMapWorld', module)
+storiesOf('DotMapWorld', module)
   .addParameters({ notes })
   .add('natural earth', () => {
     return (
@@ -60,7 +60,7 @@ storiesOf('DotMap/DotMapWorld', module)
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
-        tooltip={({ v, y, z }) => `<p><b>Value: </b>${y && y.toFixed(2)}</p>`}
+        tooltip={({ value }) => `<p><b>Value: </b>${value.toFixed(2)}</p>`}
       />
     )
   })

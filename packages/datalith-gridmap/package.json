@@ -31,6 +31,7 @@
   "homepage": "https://github.com/lucafalasco/datalith#readme",
   "dependencies": {
     "@datalith/util": "^0.2.0",
+    "@turf/flatten": "^5.1.5",
     "d3-array": "^2.1.0",
     "d3-geo": "^1.11.3",
     "d3-scale": "^3.0.0",
