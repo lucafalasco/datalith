@@ -9,7 +9,7 @@ const height = window.innerHeight
 const defaultData = genCoordsValueUs(2000)
 const side = 5
 
-storiesOf('GridMap/GridMapUs', module)
+storiesOf('GridMapUs', module)
   .addParameters({ notes })
   .add('custom - cross', () => {
     return (
@@ -52,7 +52,7 @@ storiesOf('GridMap/GridMapUs', module)
             alignmentBaseline="middle"
             {...defaultProps}
           >
-            {datum ? 1 : 0}
+            {datum ? '|' : '―'}
           </text>
         )}
       />
