@@ -47,7 +47,7 @@ storiesOf('Shutter', module)
     )
   })
   .add('animated', () => {
-    const data = defaultData.map(d => `rgba(22, 82, 240, ${zScale(d.value).toFixed(2)}`)
+    const data = defaultData.map(d => `rgba(4, 255, 191, ${zScale(d.value).toFixed(2)}`)
     const radiusTo = (Math.min(width, height) / 2) * 0.7 - 50
 
     return (

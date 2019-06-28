@@ -33,7 +33,7 @@ storiesOf('GridMap', module)
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
-        color="rgb(22, 82, 240)"
+        color="#04FFBF"
         featureCollection={italy}
         projection={projection}
         stroke
@@ -59,7 +59,7 @@ storiesOf('GridMap', module)
         height={height}
         side={side}
         data={data}
-        color={d => (d ? 'rgb(22, 82, 240)' : '#000')}
+        color={d => (d ? '#04FFBF' : '#000')}
         featureCollection={italy}
         projection={projection}
         customRender={({ x, y, datum }, defaultProps) => (

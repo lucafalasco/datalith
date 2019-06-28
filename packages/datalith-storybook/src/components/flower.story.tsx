@@ -49,7 +49,7 @@ storiesOf('Flower', module)
               height={height}
               data={defaultData}
               value={(d, i) => yScale(props.value[i])}
-              color={(d, i) => (i % 2 ? 'rgb(22, 82, 240)' : '#fff')}
+              color={(d, i) => (i % 2 ? '#04FFBF' : '#00d09b')}
             />
           )
         }}
@@ -63,7 +63,7 @@ storiesOf('Flower', module)
         height={height}
         data={defaultData}
         value={d => yScale(d.value)}
-        color="rgb(22, 82, 240)"
+        color="#04FFBF"
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`

@@ -1,27 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "12ae0047d1814e9fc87dc273ee776daa",
-    "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapUs/index.d.ts"
+    "revision": "a14ad01be9fd76ee75634f3e657ef678",
+    "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMap/index.d.ts"
   },
   {
-    "url": "main.76783f732d846c066f4b.bundle.js"
+    "url": "main.943f3badaa9fb9a95ffb.bundle.js"
   },
   {
-    "url": "vendors~main.76783f732d846c066f4b.bundle.js"
+    "url": "vendors~main.943f3badaa9fb9a95ffb.bundle.js"
   },
   {
     "revision": "642bb9f4f270f40a13e17b1b6f841f64",
     "url": "static/media/logo.642bb9f4.svg"
   },
   {
-    "url": "runtime~main.76783f732d846c066f4b.bundle.js"
+    "url": "runtime~main.943f3badaa9fb9a95ffb.bundle.js"
   },
   {
     "revision": "36c20fdc295e8ec4cf53c40c5e5772e7",
     "url": "../packages/datalith-storybook/dist/types/datalith-flower/src/index.d.ts"
   },
   {
-    "revision": "907b58a1b89e70943c65ed2a56b8f15a",
+    "revision": "bcb613a96a5d69b40325855c50f8f03c",
     "url": "iframe.html"
   },
   {
@@ -85,8 +85,8 @@ self.__precacheManifest = [
     "url": "../packages/datalith-storybook/dist/types/datalith-storybook/src/components/gridmap-us.story.d.ts"
   },
   {
-    "revision": "2e91f24c2349002b82aacbca27253539",
-    "url": "../packages/datalith-storybook/dist/types/datalith-hexmap/src/components/HexMapUs/index.d.ts"
+    "revision": "be5147ba691c6a8a94bd30468dd2055a",
+    "url": "../packages/datalith-storybook/dist/types/datalith-hexmap/src/components/HexMap/index.d.ts"
   },
   {
     "revision": "36337892d7554232f98847fa0640276b",
@@ -101,16 +101,16 @@ self.__precacheManifest = [
     "url": "../packages/datalith-storybook/dist/types/datalith-hexmap/src/components/HexMapWorld/index.d.ts"
   },
   {
-    "revision": "2840b21107bbc65f5264fd36a9914ee6",
-    "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapWorld/index.d.ts"
+    "revision": "9a15985b967a3b0941b0592a04597816",
+    "url": "../packages/datalith-storybook/dist/types/datalith-storybook/src/components/dotmap-us.story.d.ts"
+  },
+  {
+    "revision": "6ad2efd1ba1fc60055498b9147d6203e",
+    "url": "../packages/datalith-storybook/dist/types/datalith-pack/src/index.d.ts"
   },
   {
     "revision": "ed6758d77001f5037df58c6fcd65ac45",
     "url": "../packages/datalith-storybook/dist/types/datalith-gridmap/src/components/GridMap/index.d.ts"
-  },
-  {
-    "revision": "d621937e01a6e5f9d75a73f7971848e2",
-    "url": "../packages/datalith-storybook/dist/types/datalith-gridmap/src/utils/gridMap.d.ts"
   },
   {
     "revision": "b9b6e0e5f8782faeae761eefe6171c5d",
@@ -129,20 +129,20 @@ self.__precacheManifest = [
     "url": "../packages/datalith-storybook/dist/types/datalith-hexmap/src/index.d.ts"
   },
   {
-    "revision": "be5147ba691c6a8a94bd30468dd2055a",
-    "url": "../packages/datalith-storybook/dist/types/datalith-hexmap/src/components/HexMap/index.d.ts"
+    "revision": "3a7b5028dd972caf7b0d3954f0fbdeb7",
+    "url": "../packages/datalith-storybook/dist/types/datalith-shutter/src/index.d.ts"
   },
   {
-    "revision": "9a15985b967a3b0941b0592a04597816",
-    "url": "../packages/datalith-storybook/dist/types/datalith-storybook/src/components/dotmap-us.story.d.ts"
+    "revision": "2e91f24c2349002b82aacbca27253539",
+    "url": "../packages/datalith-storybook/dist/types/datalith-hexmap/src/components/HexMapUs/index.d.ts"
   },
   {
-    "revision": "a2baa2c4c1f63a4860a97d7c9fbfab2b",
-    "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/index.d.ts"
+    "revision": "c4e42df9ebfe5d807bb2c30e5a1557b7",
+    "url": "../packages/datalith-storybook/dist/types/datalith-ripple/src/index.d.ts"
   },
   {
-    "revision": "6ad2efd1ba1fc60055498b9147d6203e",
-    "url": "../packages/datalith-storybook/dist/types/datalith-pack/src/index.d.ts"
+    "revision": "d621937e01a6e5f9d75a73f7971848e2",
+    "url": "../packages/datalith-storybook/dist/types/datalith-gridmap/src/utils/gridMap.d.ts"
   },
   {
     "revision": "58414794fdb416930af500d02f7fd86a",
@@ -165,19 +165,15 @@ self.__precacheManifest = [
     "url": "../packages/datalith-storybook/dist/types/datalith-pixelmap/src/components/PixelMapWorld/index.d.ts"
   },
   {
-    "revision": "c4e42df9ebfe5d807bb2c30e5a1557b7",
-    "url": "../packages/datalith-storybook/dist/types/datalith-ripple/src/index.d.ts"
+    "revision": "a2baa2c4c1f63a4860a97d7c9fbfab2b",
+    "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/index.d.ts"
   },
   {
-    "revision": "6002358c748c71675dfbdba6d1afefa2",
-    "url": "../packages/datalith-storybook/dist/types/datalith-ripple/src/normalize.d.ts"
+    "revision": "2840b21107bbc65f5264fd36a9914ee6",
+    "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapWorld/index.d.ts"
   },
   {
-    "revision": "3a7b5028dd972caf7b0d3954f0fbdeb7",
-    "url": "../packages/datalith-storybook/dist/types/datalith-shutter/src/index.d.ts"
-  },
-  {
-    "revision": "a14ad01be9fd76ee75634f3e657ef678",
-    "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMap/index.d.ts"
+    "revision": "12ae0047d1814e9fc87dc273ee776daa",
+    "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapUs/index.d.ts"
   }
 ];

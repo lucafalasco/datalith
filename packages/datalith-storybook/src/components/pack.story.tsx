@@ -1,5 +1,6 @@
 import notes from '@datalith/pack/README.md'
 import { Pack } from '@datalith/pack/src'
+import { normalize } from '@datalith/util'
 import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
@@ -42,7 +43,9 @@ storiesOf('Pack', module)
         height={height}
         data={defaultData}
         value={d => yScale(d.value)}
-        color={(d, i) => (i % 2 ? 'rgb(22, 82, 240)' : '#fff')}
+        color={() => {
+          return `rgba(4, 255, 191, ${normalize(Math.random(), 0, 1)}`
+        }}
       />
     )
   })
@@ -51,7 +54,7 @@ storiesOf('Pack', module)
     return <Pack width={width} height={height} data={data} stroke fill={false} />
   })
   .add('animated', () => {
-    const sortedData = defaultData.sort((a, b) => b.value - b.value)
+    const sortedData = [...defaultData].sort((a, b) => b.value - a.value)
     return (
       <Spring
         config={{ duration: 2000 }}

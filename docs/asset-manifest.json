@@ -1,10 +1,10 @@
 {
-  "main.js": "/main.76783f732d846c066f4b.bundle.js",
-  "main.js.map": "/main.76783f732d846c066f4b.bundle.js.map",
-  "runtime~main.js": "/runtime~main.76783f732d846c066f4b.bundle.js",
-  "runtime~main.js.map": "/runtime~main.76783f732d846c066f4b.bundle.js.map",
-  "vendors~main.js": "/vendors~main.76783f732d846c066f4b.bundle.js",
-  "vendors~main.js.map": "/vendors~main.76783f732d846c066f4b.bundle.js.map",
+  "main.js": "/main.943f3badaa9fb9a95ffb.bundle.js",
+  "main.js.map": "/main.943f3badaa9fb9a95ffb.bundle.js.map",
+  "runtime~main.js": "/runtime~main.943f3badaa9fb9a95ffb.bundle.js",
+  "runtime~main.js.map": "/runtime~main.943f3badaa9fb9a95ffb.bundle.js.map",
+  "vendors~main.js": "/vendors~main.943f3badaa9fb9a95ffb.bundle.js",
+  "vendors~main.js.map": "/vendors~main.943f3badaa9fb9a95ffb.bundle.js.map",
   "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMap/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMap/index.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapUs/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapUs/index.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapWorld/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMapWorld/index.d.ts",
@@ -27,7 +27,6 @@
   "../packages/datalith-storybook/dist/types/datalith-pixelmap/src/components/PixelMapWorld/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-pixelmap/src/components/PixelMapWorld/index.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-pixelmap/src/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-pixelmap/src/index.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-ripple/src/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-ripple/src/index.d.ts",
-  "../packages/datalith-storybook/dist/types/datalith-ripple/src/normalize.d.ts": "/../packages/datalith-storybook/dist/types/datalith-ripple/src/normalize.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-shutter/src/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-shutter/src/index.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-storybook/src/components/dotmap-us.story.d.ts": "/../packages/datalith-storybook/dist/types/datalith-storybook/src/components/dotmap-us.story.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-storybook/src/components/dotmap-world.story.d.ts": "/../packages/datalith-storybook/dist/types/datalith-storybook/src/components/dotmap-world.story.d.ts",
@@ -47,7 +46,7 @@
   "../packages/datalith-storybook/dist/types/datalith-storybook/src/components/shutter.story.d.ts": "/../packages/datalith-storybook/dist/types/datalith-storybook/src/components/shutter.story.d.ts",
   "../packages/datalith-storybook/dist/types/datalith-storybook/src/scripts/index.d.ts": "/../packages/datalith-storybook/dist/types/datalith-storybook/src/scripts/index.d.ts",
   "iframe.html": "/iframe.html",
-  "precache-manifest.6bf7aa038f3f29ea2faa7f0a2b2b7bd7.js": "/precache-manifest.6bf7aa038f3f29ea2faa7f0a2b2b7bd7.js",
+  "precache-manifest.b8a19e7db2054343881b742034cb9921.js": "/precache-manifest.b8a19e7db2054343881b742034cb9921.js",
   "service-worker.js": "/service-worker.js",
   "static/media/logo.svg": "/static/media/logo.642bb9f4.svg"
 }

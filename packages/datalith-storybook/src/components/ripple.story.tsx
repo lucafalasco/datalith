@@ -1,5 +1,6 @@
 import notes from '@datalith/ripple/README.md'
 import { Ripple } from '@datalith/ripple/src'
+import { normalize } from '@datalith/util'
 import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
@@ -30,7 +31,7 @@ storiesOf('Ripple', module)
         height={height}
         data={defaultData}
         value={d => yScale(d.value)}
-        color={(d, i) => (i % 2 ? 'rgb(22, 82, 240)' : '#fff')}
+        color={(d, i) => (i % 2 ? '#04ffbf' : '#f7f7f7')}
       />
     )
   })
@@ -40,15 +41,16 @@ storiesOf('Ripple', module)
   })
   .add('animated', () => {
     const maxY = Math.max(...defaultData.map(d => yScale(d.value)))
+    const sortedData = [...defaultData].sort((a, b) => b.value - a.value)
 
     return (
       <Spring
         config={{ duration: 1000, easing: t => t * (2 - t) }}
-        from={{ value: defaultData.map(d => 0), centerY: height / 2 + maxY, index: 0 }}
-        to={{ value: defaultData.map(y), centerY: height / 2, index: defaultData.length - 1 }}
+        from={{ value: sortedData.map(d => 0), index: 0 }}
+        to={{ value: sortedData.map(y), index: sortedData.length - 1 }}
       >
         {props => {
-          const data = defaultData.slice(0, props.index)
+          const data = sortedData.slice(0, props.index)
 
           return (
             <Ripple
@@ -56,8 +58,6 @@ storiesOf('Ripple', module)
               height={height}
               data={data}
               value={(d, i) => yScale(props.value[i])}
-              color="#000"
-              center={{ x: width / 2, y: props.centerY }}
             />
           )
         }}
@@ -71,7 +71,7 @@ storiesOf('Ripple', module)
         height={height}
         data={defaultData}
         value={d => yScale(d.value)}
-        color="rgb(22, 82, 240)"
+        color={(d, i) => `rgba(4, 255, 191, ${normalize(i, 0, defaultData.length)}`}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
