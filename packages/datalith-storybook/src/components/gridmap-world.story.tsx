@@ -49,6 +49,7 @@ storiesOf('GridMapWorld', module)
             y={y}
             textAnchor="middle"
             fontSize={5}
+            fontWeight={700}
             alignmentBaseline="middle"
             {...defaultProps}
           >

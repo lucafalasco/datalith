@@ -24,7 +24,17 @@ storiesOf('Flower', module)
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
-    return <Flower width={width} height={height} data={data} stroke fill={false} />
+    return (
+      <Flower
+        style={{ backgroundColor: '#303030' }}
+        width={width}
+        height={height}
+        data={data}
+        color="#fff"
+        stroke
+        fill={false}
+      />
+    )
   })
   .add('sorted', () => {
     const data = [...defaultData].sort((a, b) => b.value - a.value)

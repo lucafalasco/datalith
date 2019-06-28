@@ -6,6 +6,8 @@ const DEFAULT_COLOR = '#000000'
 interface Props {
   /** Custom css classes to pass to the SVG element */
   className?: string
+  /** Custom style object to apply to the SVG */
+  style?: React.CSSProperties
   /** Width of the SVG */
   width: number
   /** Height of the SVG */
@@ -115,6 +117,7 @@ export class Flower extends React.Component<Props> {
   render() {
     const {
       className,
+      style,
       data,
       value,
       color,
@@ -132,12 +135,7 @@ export class Flower extends React.Component<Props> {
 
     return (
       <>
-        <svg
-          className={className}
-          width={width}
-          height={height}
-          style={{ shapeRendering: 'geometricPrecision' }}
-        >
+        <svg className={className} style={style} width={width} height={height}>
           {data.map((datum, i) => (
             <Polygon
               key={i}

@@ -53,7 +53,15 @@ storiesOf('Shutter', module)
     return (
       <Spring from={{ radius: 0 }} to={{ radius: radiusTo }}>
         {props => {
-          return <Shutter width={width} height={height} data={data} radiusInner={props.radius} />
+          return (
+            <Shutter
+              style={{ backgroundColor: '#303030' }}
+              width={width}
+              height={height}
+              data={data}
+              radiusInner={props.radius}
+            />
+          )
         }}
       </Spring>
     )

@@ -7,6 +7,8 @@ const DEFAULT_COLOR = '#000000'
 interface Props {
   /** Custom css classes to pass to the SVG element */
   className?: string
+  /** Custom style object to apply to the SVG */
+  style?: React.CSSProperties
   /** Width of the SVG */
   width: number
   /** Height of the SVG */
@@ -114,6 +116,7 @@ export class Shutter extends React.Component<Props> {
     const defaultRadius = (Math.min(this.props.width, this.props.height) / 2) * 0.7
     const {
       className,
+      style,
       data,
       color,
       width,
@@ -131,12 +134,7 @@ export class Shutter extends React.Component<Props> {
 
     return (
       <>
-        <svg
-          className={className}
-          width={width}
-          height={height}
-          style={{ shapeRendering: 'geometricPrecision' }}
-        >
+        <svg className={className} style={style} width={width} height={height}>
           {data.map((datum, i) => (
             <Polygon
               key={i}

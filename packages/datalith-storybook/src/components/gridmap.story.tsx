@@ -27,9 +27,9 @@ storiesOf('GridMap', module)
   .add('custom - cross', () => {
     return (
       <GridMap
+        style={{ backgroundColor: '#303030' }}
         width={width}
         height={height}
-        side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
@@ -55,11 +55,12 @@ storiesOf('GridMap', module)
 
     return (
       <GridMap
+        style={{ backgroundColor: '#303030' }}
         width={width}
         height={height}
         side={side}
         data={data}
-        color={d => (d ? '#04FFBF' : '#000')}
+        color={d => (d ? '#04FFBF' : '#fff')}
         featureCollection={italy}
         projection={projection}
         customRender={({ x, y, datum }, defaultProps) => (
@@ -68,7 +69,7 @@ storiesOf('GridMap', module)
             y={y}
             textAnchor="middle"
             fontSize={5}
-            fontWeight={500}
+            fontWeight={700}
             alignmentBaseline="middle"
             {...defaultProps}
           >

@@ -7,6 +7,8 @@ const DEFAULT_COLOR = '#000000'
 interface Props {
   /** Custom css classes to pass to the SVG element */
   className?: string
+  /** Custom style object to apply to the SVG */
+  style?: React.CSSProperties
   /** Width of the SVG */
   width: number
   /** Height of the SVG */
@@ -69,6 +71,7 @@ export class Pack extends React.Component<Props> {
   render() {
     const {
       className,
+      style,
       data,
       value,
       color,
@@ -91,7 +94,7 @@ export class Pack extends React.Component<Props> {
 
     return (
       <>
-        <svg className={className} width={width} height={height}>
+        <svg className={className} style={style} width={width} height={height}>
           <g
             transform={`translate(
               ${center.x - pack.boundingBox.w / 2},

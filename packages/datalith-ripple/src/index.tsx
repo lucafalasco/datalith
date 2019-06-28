@@ -7,6 +7,8 @@ const DEFAULT_COLOR = '#000000'
 interface Props {
   /** Custom css classes to pass to the SVG element */
   className?: string
+  /** Custom style object to apply to the SVG */
+  style?: React.CSSProperties
   /** Width of the SVG */
   width: number
   /** Height of the SVG */
@@ -83,6 +85,7 @@ export class Ripple extends React.Component<Props> {
   render() {
     const {
       className,
+      style,
       tooltip,
       data,
       value,
@@ -99,7 +102,7 @@ export class Ripple extends React.Component<Props> {
 
     return (
       <>
-        <svg className={className} width={width} height={height}>
+        <svg className={className} style={style} width={width} height={height}>
           {data
             .sort((a, b) => callOrGetValue(value, b) - callOrGetValue(value, a, 0))
             .map((datum, i) => (

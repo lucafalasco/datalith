@@ -11,6 +11,7 @@ yarn add @datalith/hexmap
 | Name                        | Default              | Type                                                | Description                                                  |
 | :-------------------------- | :------------------- | :-------------------------------------------------- | :----------------------------------------------------------- |
 | className                   |                      | `string`                                            | Custom css classes to pass to the SVG                        |
+| style                       |                      | `React.CSSProperties`                               | Custom style object to apply to the SVG                      |
 | <b>width \*</b>             |                      | `number`                                            | Width of the SVG                                             |
 | <b>height \*</b>            |                      | `number`                                            | Height of the SVG                                            |
 | <b>data \*</b>              |                      | `Array<Datum>` or `Array<[number, number]>`         | Array of data                                                |
@@ -29,6 +30,7 @@ yarn add @datalith/hexmap
 | Name             | Default          | Type                                        | Description                                                  |
 | :--------------- | :--------------- | :------------------------------------------ | :----------------------------------------------------------- |
 | className        |                  | `string`                                    | Custom css classes to pass to the SVG                        |
+| style            |                  | `React.CSSProperties`                       | Custom style object to apply to the SVG                      |
 | <b>width \*</b>  |                  | `number`                                    | Width of the SVG                                             |
 | <b>height \*</b> |                  | `number`                                    | Height of the SVG                                            |
 | <b>data \*</b>   |                  | `Array<Datum>` or `Array<[number, number]>` | Array of data                                                |
@@ -43,6 +45,7 @@ yarn add @datalith/hexmap
 | Name             | Default              | Type                                                | Description                                                  |
 | :--------------- | :------------------- | :-------------------------------------------------- | :----------------------------------------------------------- |
 | className        |                      | `string`                                            | Custom css classes to pass to the SVG                        |
+| style            |                      | `React.CSSProperties`                               | Custom style object to apply to the SVG                      |
 | <b>width \*</b>  |                      | `number`                                            | Width of the SVG                                             |
 | <b>height \*</b> |                      | `number`                                            | Height of the SVG                                            |
 | <b>data \*</b>   |                      | `Array<Datum>` or `Array<[number, number]>`         | Array of data                                                |

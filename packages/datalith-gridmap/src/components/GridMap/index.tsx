@@ -13,6 +13,8 @@ const DEFAULT_VALUE = 10
 export interface GridMapProps {
   /** Custom css classes to pass to the SVG element */
   className?: string
+  /** Custom style object to apply to the SVG */
+  style?: React.CSSProperties
   /** Width of the SVG */
   width: number
   /** Height of the SVG */
@@ -84,6 +86,7 @@ export class GridMap extends React.Component<GridMapProps> {
   render() {
     const {
       className,
+      style,
       data,
       coords,
       value,
@@ -120,7 +123,7 @@ export class GridMap extends React.Component<GridMapProps> {
 
     return (
       <>
-        <svg className={className} width={width} height={height}>
+        <svg className={className} style={style} width={width} height={height}>
           <g>
             {/* DEBUG */}
             {/* {features.map((f, i) => (
