@@ -1,7 +1,7 @@
 {
   "name": "@datalith/storybook",
   "description": "datalith storybook",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Luca Falasco",
   "license": "MIT",
   "main": "dist/index.js",
@@ -17,15 +17,15 @@
     "build-storybook": "build-storybook -s ./public -o ../../docs"
   },
   "dependencies": {
-    "@datalith/dotmap": "^0.2.0",
-    "@datalith/flower": "^0.2.0",
-    "@datalith/gridmap": "^0.2.0",
-    "@datalith/hexmap": "^0.2.0",
-    "@datalith/pack": "^0.2.0",
-    "@datalith/pixelmap": "^0.2.0",
-    "@datalith/ripple": "^0.2.0",
-    "@datalith/shutter": "^0.2.0",
-    "@datalith/util": "^0.2.0",
+    "@datalith/dotmap": "^0.3.0",
+    "@datalith/flower": "^0.3.0",
+    "@datalith/gridmap": "^0.3.0",
+    "@datalith/hexmap": "^0.3.0",
+    "@datalith/pack": "^0.3.0",
+    "@datalith/pixelmap": "^0.3.0",
+    "@datalith/ripple": "^0.3.0",
+    "@datalith/shutter": "^0.3.0",
+    "@datalith/util": "^0.3.0",
     "d3-array": "^2.0.3",
     "react-spring": "^8.0.19"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@datalith/dotmap",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "datalith dotmap",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/lucafalasco/datalith#readme",
   "dependencies": {
-    "@datalith/gridmap": "^0.2.0",
-    "@datalith/util": "^0.2.0",
+    "@datalith/gridmap": "^0.3.0",
+    "@datalith/util": "^0.3.0",
     "d3-array": "^2.1.0",
     "d3-geo": "^1.11.3",
     "d3-scale": "^3.0.0",
