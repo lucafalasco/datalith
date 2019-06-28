@@ -1,7 +1,7 @@
 import { callOrGetValue, Color, Datum, Value } from '@datalith/util'
+import { normalize } from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
-import normalize from './normalize'
 
 const DEFAULT_COLOR = '#000000'
 interface Props {
@@ -39,7 +39,6 @@ interface CircleProps {
   dataLength: number
   index: number
   center: Center
-  maxY: number
   fill: boolean
   stroke: boolean
   tooltip?: (d: Datum) => string
@@ -52,7 +51,6 @@ const Circle = ({
   dataLength,
   index,
   center,
-  maxY,
   fill,
   stroke,
   tooltip,
@@ -62,14 +60,14 @@ const Circle = ({
   const style = {
     fill: fill ? color : 'transparent',
     stroke: stroke ? color : 'transparent',
-    fillOpacity: normalize(index, 0, dataLength),
+    fillOpacity: color === DEFAULT_COLOR ? normalize(index, 0, dataLength) : undefined,
   }
 
   const radius = callOrGetValue(valueAccessor, datum, index)
 
   return (
     <g data-tip={tooltip && tooltip(datum)}>
-      <circle style={style} cx={center.x} cy={center.y + (maxY - radius)} r={radius} />
+      <circle style={style} cx={center.x} cy={center.y} r={radius} />
     </g>
   )
 }
@@ -99,8 +97,6 @@ export class Ripple extends React.Component<Props> {
       },
     } = this.props
 
-    const maxY = Math.max(...data.map((datum, i) => callOrGetValue(value, datum, i)))
-
     return (
       <>
         <svg className={className} width={width} height={height}>
@@ -110,7 +106,6 @@ export class Ripple extends React.Component<Props> {
               <Circle
                 key={i}
                 index={i}
-                maxY={maxY}
                 datum={datum}
                 value={value}
                 color={color}
