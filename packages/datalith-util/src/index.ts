@@ -13,3 +13,7 @@ export type Coords = CoordsAccessor | [number, number]
 export function callOrGetValue<T>(funcOrValue: ((...args: any) => T) | T, ...args: any) {
   return isFunction(funcOrValue) ? funcOrValue(...args) : funcOrValue
 }
+
+export function normalize(n: number, min: number, max: number) {
+  return (n - min) / (max - min)
+}
