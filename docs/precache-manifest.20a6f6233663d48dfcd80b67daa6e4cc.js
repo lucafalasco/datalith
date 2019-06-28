@@ -4,24 +4,24 @@ self.__precacheManifest = [
     "url": "../packages/datalith-storybook/dist/types/datalith-dotmap/src/components/DotMap/index.d.ts"
   },
   {
-    "url": "main.943f3badaa9fb9a95ffb.bundle.js"
+    "url": "main.4767ec29633be584565a.bundle.js"
   },
   {
-    "url": "vendors~main.943f3badaa9fb9a95ffb.bundle.js"
+    "url": "vendors~main.4767ec29633be584565a.bundle.js"
   },
   {
     "revision": "642bb9f4f270f40a13e17b1b6f841f64",
     "url": "static/media/logo.642bb9f4.svg"
   },
   {
-    "url": "runtime~main.943f3badaa9fb9a95ffb.bundle.js"
+    "url": "runtime~main.4767ec29633be584565a.bundle.js"
   },
   {
-    "revision": "36c20fdc295e8ec4cf53c40c5e5772e7",
+    "revision": "c4dd58d95011f6fed208e6c751afd93b",
     "url": "../packages/datalith-storybook/dist/types/datalith-flower/src/index.d.ts"
   },
   {
-    "revision": "bcb613a96a5d69b40325855c50f8f03c",
+    "revision": "0ce281d56336c719aa33322972c74ae5",
     "url": "iframe.html"
   },
   {
@@ -105,11 +105,11 @@ self.__precacheManifest = [
     "url": "../packages/datalith-storybook/dist/types/datalith-storybook/src/components/dotmap-us.story.d.ts"
   },
   {
-    "revision": "6ad2efd1ba1fc60055498b9147d6203e",
+    "revision": "e93f250075637683362853e061a05e5f",
     "url": "../packages/datalith-storybook/dist/types/datalith-pack/src/index.d.ts"
   },
   {
-    "revision": "ed6758d77001f5037df58c6fcd65ac45",
+    "revision": "31c2c1b4675366c1a0cd7f303f1bd0e9",
     "url": "../packages/datalith-storybook/dist/types/datalith-gridmap/src/components/GridMap/index.d.ts"
   },
   {
@@ -129,7 +129,7 @@ self.__precacheManifest = [
     "url": "../packages/datalith-storybook/dist/types/datalith-hexmap/src/index.d.ts"
   },
   {
-    "revision": "3a7b5028dd972caf7b0d3954f0fbdeb7",
+    "revision": "c70272e234de7cdf4a88431cbaba5cf4",
     "url": "../packages/datalith-storybook/dist/types/datalith-shutter/src/index.d.ts"
   },
   {
@@ -137,7 +137,7 @@ self.__precacheManifest = [
     "url": "../packages/datalith-storybook/dist/types/datalith-hexmap/src/components/HexMapUs/index.d.ts"
   },
   {
-    "revision": "c4e42df9ebfe5d807bb2c30e5a1557b7",
+    "revision": "c8241e94b1366fcdc0951bfccd23189d",
     "url": "../packages/datalith-storybook/dist/types/datalith-ripple/src/index.d.ts"
   },
   {
