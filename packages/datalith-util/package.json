@@ -28,7 +28,8 @@
   },
   "homepage": "https://github.com/lucafalasco/datalith#readme",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "react-sizeme": "^2.6.7"
   },
   "devDependencies": {
     "typescript": "^3.5.1"
