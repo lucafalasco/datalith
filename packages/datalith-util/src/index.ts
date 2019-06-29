@@ -1,4 +1,5 @@
 import { isFunction } from 'lodash'
+import ResponsiveWrapper from './ResponsiveWrapper'
 
 export type Datum = any
 
@@ -17,3 +18,21 @@ export function callOrGetValue<T>(funcOrValue: ((...args: any) => T) | T, ...arg
 export function normalize(n: number, min: number, max: number) {
   return (n - min) / (max - min)
 }
+export interface CommonProps {
+  /** Custom css classes to pass to the SVG element */
+  className?: string
+  /** Custom style object to apply to the SVG */
+  style?: React.CSSProperties
+  /** Data array */
+  data: Datum[]
+  /** Width and Height of the SVG */
+  size: { width: number; height: number }
+  /** Add the fill color */
+  fill: boolean
+  /** Add the stroke color */
+  stroke: boolean
+  /** Return HTML or text as a string to show on element mouseover */
+  tooltip?: (d: Datum) => string
+}
+
+export { ResponsiveWrapper }
