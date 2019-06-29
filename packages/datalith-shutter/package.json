@@ -1,6 +1,6 @@
 {
   "name": "@datalith/shutter",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "datalith shutter",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/lucafalasco/datalith#readme",
   "dependencies": {
-    "@datalith/util": "^0.3.0",
+    "@datalith/util": "^0.4.0",
     "d3-scale": "^3.0.0",
     "lodash": "^4.17.11",
     "react-tooltip": "^3.10.0"
