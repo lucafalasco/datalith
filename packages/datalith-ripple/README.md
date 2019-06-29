@@ -7,18 +7,12 @@ yarn add @datalith/ripple
 ## Docs
 
 ```jsx
-<Ripple
-  className="ripple"
-  width={width}
-  height={height}
-  data={data}
-  center={x: width / 2, y: height / 2}
-/>
+<Ripple className="ripple" data={data} />
 ```
 
 | Name           | Default                         | Type                                | Description                                                  |
 | :------------- | :------------------------------ | :---------------------------------- | :----------------------------------------------------------- |
-| className      |                                 | `string`                            | Custom css classes to pass to the SVG                        |
+| className      |                                 | `string`                            | Custom css classes to apply to the SVG                       |
 | style          |                                 | `React.CSSProperties`               | Custom style object to apply to the SVG                      |
 | size           |                                 | `{ width: number; height: number }` | Width and Height of the SVG                                  |
 | <b>data \*</b> |                                 | `Array<Datum>` or `Array<number>`   | Array of data                                                |

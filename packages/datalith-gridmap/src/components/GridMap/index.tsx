@@ -46,7 +46,7 @@ interface VisualElementProps {
   fill: boolean
   stroke: boolean
   tooltip?: (d: Datum) => string
-  render(props: any): JSX.Element
+  render: (props: any) => JSX.Element
 }
 
 const VisualElement = ({

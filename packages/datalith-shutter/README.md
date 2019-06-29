@@ -7,20 +7,12 @@ yarn add @datalith/shutter
 ## Docs
 
 ```jsx
-<Shutter
-  className="shutter"
-  width={width}
-  height={height}
-  data={data}
-  center={x: width / 2, y: height / 2}
-  radiusOuter={100}
-  radiusInner={80}
-/>
+<Shutter className="shutter" data={data} radiusOuter={100} radiusInner={80} />
 ```
 
 | Name           | Default                               | Type                                | Description                                                  |
 | :------------- | :------------------------------------ | :---------------------------------- | :----------------------------------------------------------- |
-| className      |                                       | `string`                            | Custom css classes to pass to the SVG                        |
+| className      |                                       | `string`                            | Custom css classes to apply to the SVG                       |
 | style          |                                       | `React.CSSProperties`               | Custom style object to apply to the SVG                      |
 | size           |                                       | `{ width: number; height: number }` | Width and Height of the SVG                                  |
 | <b>data \*</b> |                                       | `Array<Datum>` or `Array<string>`   | Array of data                                                |

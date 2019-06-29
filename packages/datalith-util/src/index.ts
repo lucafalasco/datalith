@@ -19,7 +19,7 @@ export function normalize(n: number, min: number, max: number) {
   return (n - min) / (max - min)
 }
 export interface CommonProps {
-  /** Custom css classes to pass to the SVG element */
+  /** Custom css classes to apply to the SVG element */
   className?: string
   /** Custom style object to apply to the SVG */
   style?: React.CSSProperties

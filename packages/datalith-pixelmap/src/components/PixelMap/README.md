@@ -3,8 +3,6 @@
 ```jsx
 <PixelMap
   className="pixel-map"
-  width={width}
-  height={height}
   side={5}
   data={data}
   featureCollection={geojson}
@@ -14,7 +12,7 @@
 
 | Name                        | Default              | Type                                                | Description                                                  |
 | :-------------------------- | :------------------- | :-------------------------------------------------- | :----------------------------------------------------------- |
-| className                   |                      | `string`                                            | Custom css classes to pass to the SVG                        |
+| className                   |                      | `string`                                            | Custom css classes to apply to the SVG                       |
 | style                       |                      | `React.CSSProperties`                               | Custom style object to apply to the SVG                      |
 | size                        |                      | `{ width: number; height: number }`                 | Width and Height of the SVG                                  |
 | <b>data \*</b>              |                      | `Array<Datum>` or`Array<[number, number]>`          | Array of data                                                |
