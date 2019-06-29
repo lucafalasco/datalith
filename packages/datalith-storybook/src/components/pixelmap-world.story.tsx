@@ -15,8 +15,6 @@ storiesOf('PixelMapWorld', module)
   .add('natural earth', () => {
     return (
       <PixelMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -27,8 +25,6 @@ storiesOf('PixelMapWorld', module)
   .add('orthographic', () => {
     return (
       <PixelMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -40,8 +36,6 @@ storiesOf('PixelMapWorld', module)
   .add('stroke', () => {
     return (
       <PixelMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -54,8 +48,6 @@ storiesOf('PixelMapWorld', module)
   .add('tooltip', () => {
     return (
       <PixelMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}

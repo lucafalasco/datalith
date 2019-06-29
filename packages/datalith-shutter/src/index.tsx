@@ -1,32 +1,17 @@
-import { callOrGetValue, Color, Datum } from '@datalith/util'
+import { callOrGetValue, Color, CommonProps, Datum, ResponsiveWrapper } from '@datalith/util'
 import { range } from 'lodash'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 
 const DEFAULT_COLOR = '#000000'
-interface Props {
-  /** Custom css classes to pass to the SVG element */
-  className?: string
-  /** Custom style object to apply to the SVG */
-  style?: React.CSSProperties
-  /** Width of the SVG */
-  width: number
-  /** Height of the SVG */
-  height: number
-  /** Data array */
-  data: Datum[]
+interface Props extends CommonProps {
   /** Color Accessor */
   color: Color
-  /** Add the fill color */
-  fill: boolean
-  /** Add the stroke color */
-  stroke: boolean
+
   radiusInner?: number
   radiusOuter?: number
   /** Center of the visualization */
   center?: { x: number; y: number }
-  /** Return HTML or text as a string to show on element mouseover */
-  tooltip?: (d: Datum) => string
 }
 
 interface Coords {
@@ -105,54 +90,53 @@ const Polygon = ({
   )
 }
 
-export class Shutter extends React.Component<Props> {
-  static defaultProps = {
-    color: d => d,
-    fill: true,
-    stroke: false,
-  }
+export const Shutter = ResponsiveWrapper(
+  class Shutter extends React.Component<Props> {
+    static defaultProps = {
+      color: d => d,
+    }
 
-  render() {
-    const defaultRadius = (Math.min(this.props.width, this.props.height) / 2) * 0.7
-    const {
-      className,
-      style,
-      data,
-      color,
-      width,
-      height,
-      fill,
-      stroke,
-      tooltip,
-      radiusInner = defaultRadius * 0.8,
-      radiusOuter = defaultRadius,
-      center = {
-        x: this.props.width / 2,
-        y: this.props.height / 2,
-      },
-    } = this.props
+    render() {
+      const defaultRadius = (Math.min(this.props.size.width, this.props.size.height) / 2) * 0.7
+      const {
+        className,
+        style,
+        data,
+        color,
+        fill,
+        stroke,
+        size: { width, height },
+        tooltip,
+        radiusInner = defaultRadius * 0.8,
+        radiusOuter = defaultRadius,
+        center = {
+          x: width / 2,
+          y: height / 2,
+        },
+      } = this.props
 
-    return (
-      <>
-        <svg className={className} style={style} width={width} height={height}>
-          {data.map((datum, i) => (
-            <Polygon
-              key={i}
-              index={i}
-              center={center}
-              datum={datum}
-              color={color}
-              dataLength={data.length}
-              radiusInner={radiusInner}
-              radiusOuter={radiusOuter}
-              fill={fill}
-              stroke={stroke}
-              tooltip={tooltip}
-            />
-          ))}
-        </svg>
-        <Tooltip html />
-      </>
-    )
-  }
-}
+      return (
+        <>
+          <svg className={className} style={style}>
+            {data.map((datum, i) => (
+              <Polygon
+                key={i}
+                index={i}
+                center={center}
+                datum={datum}
+                color={color}
+                dataLength={data.length}
+                radiusInner={radiusInner}
+                radiusOuter={radiusOuter}
+                fill={fill}
+                stroke={stroke}
+                tooltip={tooltip}
+              />
+            ))}
+          </svg>
+          <Tooltip html />
+        </>
+      )
+    }
+  },
+)

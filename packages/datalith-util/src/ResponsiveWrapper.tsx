@@ -17,7 +17,14 @@ export default function ResponsiveWrapper<P extends CommonProps>(Component: Comp
         <SizeMe monitorWidth monitorHeight>
           {({ size }) => (
             <div style={{ width: '100%', height: '100%' }}>
-              <Component {...this.props} style={{ ...this.props.style, ...size }} size={size} />
+              <Component
+                {...this.props}
+                style={{ ...size, ...this.props.style }}
+                size={{
+                  width: (this.props.style && this.props.style.width) || size.width,
+                  height: (this.props.style && this.props.style.height) || size.height,
+                }}
+              />
             </div>
           )}
         </SizeMe>

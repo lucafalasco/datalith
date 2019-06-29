@@ -13,21 +13,12 @@ storiesOf('HexMapUs', module)
   .addParameters({ notes })
   .add('default', () => {
     return (
-      <HexMapUs
-        width={width}
-        height={height}
-        side={side}
-        data={defaultData}
-        coords={d => [d.lng, d.lat]}
-        value={d => d.value}
-      />
+      <HexMapUs side={side} data={defaultData} coords={d => [d.lng, d.lat]} value={d => d.value} />
     )
   })
   .add('stroke', () => {
     return (
       <HexMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -40,8 +31,6 @@ storiesOf('HexMapUs', module)
   .add('tooltip', () => {
     return (
       <HexMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}

@@ -13,21 +13,12 @@ storiesOf('DotMapUs', module)
   .addParameters({ notes })
   .add('default', () => {
     return (
-      <DotMapUs
-        width={width}
-        height={height}
-        side={side}
-        data={defaultData}
-        coords={d => [d.lng, d.lat]}
-        value={d => d.value}
-      />
+      <DotMapUs side={side} data={defaultData} coords={d => [d.lng, d.lat]} value={d => d.value} />
     )
   })
   .add('stroke', () => {
     return (
       <DotMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -40,8 +31,6 @@ storiesOf('DotMapUs', module)
   .add('tooltip', () => {
     return (
       <DotMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}

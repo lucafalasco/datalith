@@ -28,8 +28,6 @@ storiesOf('GridMap', module)
     return (
       <GridMap
         style={{ backgroundColor: '#303030' }}
-        width={width}
-        height={height}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
@@ -56,8 +54,6 @@ storiesOf('GridMap', module)
     return (
       <GridMap
         style={{ backgroundColor: '#303030' }}
-        width={width}
-        height={height}
         side={side}
         data={data}
         color={d => (d ? '#04FFBF' : '#fff')}
@@ -82,8 +78,6 @@ storiesOf('GridMap', module)
   .add('custom - triangles', () => {
     return (
       <GridMap
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}

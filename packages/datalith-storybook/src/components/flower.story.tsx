@@ -20,33 +20,19 @@ const yScale = scaleLinear()
 storiesOf('Flower', module)
   .addParameters({ notes })
   .add('default', () => {
-    return <Flower width={width} height={height} data={defaultData} value={d => yScale(d.value)} />
+    return <Flower data={defaultData} value={d => yScale(d.value)} />
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
     return (
-      <Flower
-        style={{ backgroundColor: '#303030' }}
-        width={width}
-        height={height}
-        data={data}
-        color="#fff"
-        stroke
-        fill={false}
-      />
+      <Flower style={{ backgroundColor: '#303030' }} data={data} color="#fff" stroke fill={false} />
     )
   })
   .add('sorted', () => {
     const data = [...defaultData].sort((a, b) => b.value - a.value)
 
     return (
-      <Flower
-        width={width}
-        height={height}
-        data={data}
-        value={d => yScale(d.value)}
-        color={(d, i) => `rgba(0,0,0,0.${i + 1})`}
-      />
+      <Flower data={data} value={d => yScale(d.value)} color={(d, i) => `rgba(0,0,0,0.${i + 1})`} />
     )
   })
   .add('animated', () => {
@@ -55,8 +41,6 @@ storiesOf('Flower', module)
         {props => {
           return (
             <Flower
-              width={width}
-              height={height}
               data={defaultData}
               value={(d, i) => yScale(props.value[i])}
               color={(d, i) => (i % 2 ? '#04FFBF' : '#00d09b')}
@@ -69,8 +53,6 @@ storiesOf('Flower', module)
   .add('tooltip', () => {
     return (
       <Flower
-        width={width}
-        height={height}
         data={defaultData}
         value={d => yScale(d.value)}
         color="#04FFBF"

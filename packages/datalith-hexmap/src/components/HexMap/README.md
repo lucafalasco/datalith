@@ -16,8 +16,7 @@
 | :-------------------------- | :------------------- | :-------------------------------------------------- | :----------------------------------------------------------- |
 | className                   |                      | `string`                                            | Custom css classes to pass to the SVG                        |
 | style                       |                      | `React.CSSProperties`                               | Custom style object to apply to the SVG                      |
-| <b>width \*</b>             |                      | `number`                                            | Width of the SVG                                             |
-| <b>height \*</b>            |                      | `number`                                            | Height of the SVG                                            |
+| size                        |                      | `{ width: number; height: number }`                 | Width and Height of the SVG                                  |
 | <b>data \*</b>              |                      | `Array<Datum>` or`Array<[number, number]>`          | Array of data                                                |
 | coords                      | `(Datum) => Datum`   | `(Datum) => [number, number]` or `[number, number]` | Coords accessor                                              |
 | value                       | 10                   | `(Datum) => number` or`number`                      | Value accessor                                               |

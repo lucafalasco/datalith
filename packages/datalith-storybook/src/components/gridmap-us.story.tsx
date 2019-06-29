@@ -14,8 +14,6 @@ storiesOf('GridMapUs', module)
   .add('custom - cross', () => {
     return (
       <GridMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -37,8 +35,6 @@ storiesOf('GridMapUs', module)
   .add('custom - text', () => {
     return (
       <GridMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -62,8 +58,6 @@ storiesOf('GridMapUs', module)
   .add('custom - triangles', () => {
     return (
       <GridMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}

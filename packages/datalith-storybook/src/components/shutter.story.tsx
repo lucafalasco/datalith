@@ -20,31 +20,16 @@ const zScale = scaleLinear()
 storiesOf('Shutter', module)
   .addParameters({ notes })
   .add('default', () => {
-    return (
-      <Shutter
-        width={width}
-        height={height}
-        data={defaultData}
-        color={d => `rgba(0,0,0,${zScale(d.value)})`}
-      />
-    )
+    return <Shutter data={defaultData} color={d => `rgba(0,0,0,${zScale(d.value)})`} />
   })
   .add('stroke', () => {
     const data = defaultData.map(d => `rgba(0,0,0,${zScale(d.value)})`)
-    return <Shutter width={width} height={height} data={data} stroke fill={false} />
+    return <Shutter data={data} stroke fill={false} />
   })
   .add('sorted', () => {
     const data = [...defaultData].sort((a, b) => b.value - a.value)
 
-    return (
-      <Shutter
-        width={width}
-        height={height}
-        data={data}
-        color={d => `rgba(0,0,0,${zScale(d.value)})`}
-        stroke
-      />
-    )
+    return <Shutter data={data} color={d => `rgba(0,0,0,${zScale(d.value)})`} stroke />
   })
   .add('animated', () => {
     const data = defaultData.map(d => `rgba(4, 255, 191, ${zScale(d.value).toFixed(2)}`)
@@ -56,8 +41,6 @@ storiesOf('Shutter', module)
           return (
             <Shutter
               style={{ backgroundColor: '#303030' }}
-              width={width}
-              height={height}
               data={data}
               radiusInner={props.radius}
             />
@@ -69,8 +52,6 @@ storiesOf('Shutter', module)
   .add('tooltip', () => {
     return (
       <Shutter
-        width={width}
-        height={height}
         data={defaultData}
         color={d => `rgba(0,0,0,${zScale(d.value)})`}
         tooltip={({ date, value }) =>

@@ -15,8 +15,6 @@ storiesOf('DotMapWorld', module)
   .add('natural earth', () => {
     return (
       <DotMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -27,8 +25,6 @@ storiesOf('DotMapWorld', module)
   .add('orthographic', () => {
     return (
       <DotMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -40,8 +36,6 @@ storiesOf('DotMapWorld', module)
   .add('stroke', () => {
     return (
       <DotMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -54,8 +48,6 @@ storiesOf('DotMapWorld', module)
   .add('tooltip', () => {
     return (
       <DotMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}

@@ -22,13 +22,11 @@ storiesOf('Ripple', module)
   .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => yScale(d.value))
-    return <Ripple width={width} height={height} data={data} />
+    return <Ripple data={data} />
   })
   .add('colors', () => {
     return (
       <Ripple
-        width={width}
-        height={height}
         data={defaultData}
         value={d => yScale(d.value)}
         color={(d, i) => (i % 2 ? '#04ffbf' : '#f7f7f7')}
@@ -37,7 +35,7 @@ storiesOf('Ripple', module)
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
-    return <Ripple width={width} height={height} data={data} stroke fill={false} />
+    return <Ripple data={data} stroke fill={false} />
   })
   .add('animated', () => {
     const maxY = Math.max(...defaultData.map(d => yScale(d.value)))
@@ -52,14 +50,7 @@ storiesOf('Ripple', module)
         {props => {
           const data = sortedData.slice(0, props.index)
 
-          return (
-            <Ripple
-              width={width}
-              height={height}
-              data={data}
-              value={(d, i) => yScale(props.value[i])}
-            />
-          )
+          return <Ripple data={data} value={(d, i) => yScale(props.value[i])} />
         }}
       </Spring>
     )
@@ -67,8 +58,6 @@ storiesOf('Ripple', module)
   .add('tooltip', () => {
     return (
       <Ripple
-        width={width}
-        height={height}
         data={defaultData}
         value={d => yScale(d.value)}
         color={(d, i) => `rgba(4, 255, 191, ${normalize(i, 0, defaultData.length)}`}

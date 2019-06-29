@@ -1,32 +1,17 @@
-import { callOrGetValue, Color, Datum, Value } from '@datalith/util'
+import { callOrGetValue, Color, CommonProps, Datum, ResponsiveWrapper, Value } from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 import generatePack from './generatePack'
 
 const DEFAULT_COLOR = '#000000'
-interface Props {
-  /** Custom css classes to pass to the SVG element */
-  className?: string
-  /** Custom style object to apply to the SVG */
-  style?: React.CSSProperties
-  /** Width of the SVG */
-  width: number
-  /** Height of the SVG */
-  height: number
-  /** Data array */
-  data: Datum[]
+interface Props extends CommonProps {
   /** Value Accessor */
   value: Value
   /** Color Accessor */
   color: Color
-  /** Whether to add the fill color */
-  fill: boolean
-  /** Whether to add the stroke color */
-  stroke: boolean
+
   /** Center of the dataviz */
   center?: { x: number; y: number }
-  /** Return HTML or text as a string to show on element mouseover */
-  tooltip?: (d: Datum) => string
 }
 
 interface Box {
@@ -60,65 +45,64 @@ const Box = ({ datum, box, index, fill, stroke, color: colorAccessor, tooltip }:
   )
 }
 
-export class Pack extends React.Component<Props> {
-  static defaultProps = {
-    value: d => d,
-    color: DEFAULT_COLOR,
-    fill: true,
-    stroke: false,
-  }
+export const Pack = ResponsiveWrapper(
+  class Pack extends React.Component<Props> {
+    static defaultProps = {
+      value: d => d,
+      color: DEFAULT_COLOR,
+    }
 
-  render() {
-    const {
-      className,
-      style,
-      data,
-      value,
-      color,
-      width,
-      height,
-      fill,
-      stroke,
-      tooltip,
-      center = {
-        x: this.props.width / 2,
-        y: this.props.height / 2,
-      },
-    } = this.props
+    render() {
+      const {
+        className,
+        style,
+        data,
+        value,
+        color,
+        fill,
+        stroke,
+        size: { width, height },
+        tooltip,
+        center = {
+          x: width / 2,
+          y: height / 2,
+        },
+      } = this.props
 
-    const boxes = data.map((datum, i) => {
-      const sideLength = callOrGetValue(value, datum, i)
-      return { w: sideLength, h: sideLength, i }
-    })
-    const pack = generatePack(boxes)
+      const boxes = data.map((datum, i) => {
+        const sideLength = callOrGetValue(value, datum, i)
+        return { w: sideLength, h: sideLength, i }
+      })
+      const pack = generatePack(boxes)
 
-    return (
-      <>
-        <svg className={className} style={style} width={width} height={height}>
-          <g
-            transform={`translate(
+      return (
+        <>
+          <svg className={className} style={style}>
+            <g
+              transform={`translate(
               ${center.x - pack.boundingBox.w / 2},
               ${center.y - pack.boundingBox.h / 2}
             )`}
-          >
-            {pack.packBoxes.map((box, i) => {
-              return (
-                <Box
-                  key={i}
-                  index={i}
-                  datum={data[box.i]}
-                  color={color}
-                  box={box}
-                  fill={fill}
-                  stroke={stroke}
-                  tooltip={tooltip}
-                />
-              )
-            })}
-          </g>
-        </svg>
-        <Tooltip html />
-      </>
-    )
-  }
-}
+            >
+              {pack.packBoxes.map((box, i) => {
+                return (
+                  <Box
+                    key={i}
+                    index={i}
+                    datum={data[box.i]}
+                    color={color}
+                    box={box}
+                    fill={fill}
+                    stroke={stroke}
+                    tooltip={tooltip}
+                  />
+                )
+              })}
+            </g>
+          </svg>
+          <Tooltip html />
+        </>
+      )
+    }
+  },
+)

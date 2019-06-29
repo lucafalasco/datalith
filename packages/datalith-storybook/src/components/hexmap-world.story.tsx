@@ -15,8 +15,6 @@ storiesOf('HexMapWorld', module)
   .add('natural earth', () => {
     return (
       <HexMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -28,8 +26,6 @@ storiesOf('HexMapWorld', module)
   .add('orthographic', () => {
     return (
       <HexMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -41,8 +37,6 @@ storiesOf('HexMapWorld', module)
   .add('stroke', () => {
     return (
       <HexMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -55,8 +49,6 @@ storiesOf('HexMapWorld', module)
   .add('tooltip', () => {
     return (
       <HexMapWorld
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}

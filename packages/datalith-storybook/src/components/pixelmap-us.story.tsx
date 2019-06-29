@@ -14,8 +14,6 @@ storiesOf('PixelMapUs', module)
   .add('default', () => {
     return (
       <PixelMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -26,8 +24,6 @@ storiesOf('PixelMapUs', module)
   .add('stroke', () => {
     return (
       <PixelMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -40,8 +36,6 @@ storiesOf('PixelMapUs', module)
   .add('tooltip', () => {
     return (
       <PixelMapUs
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}

@@ -27,8 +27,6 @@ storiesOf('HexMap', module)
   .add('default', () => {
     return (
       <HexMap
-        width={width}
-        height={height}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
@@ -41,8 +39,6 @@ storiesOf('HexMap', module)
   .add('stroke', () => {
     return (
       <HexMap
-        width={width}
-        height={height}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
@@ -57,8 +53,6 @@ storiesOf('HexMap', module)
   .add('tooltip', () => {
     return (
       <HexMap
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}

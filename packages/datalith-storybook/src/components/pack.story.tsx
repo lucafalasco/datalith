@@ -28,8 +28,6 @@ storiesOf('Pack', module)
   .add('default', () => {
     return (
       <Pack
-        width={width}
-        height={height}
         data={defaultData}
         value={d => yScale(d.value)}
         color={d => `rgba(0,0,0,${zScale(d.value2)})`}
@@ -40,8 +38,6 @@ storiesOf('Pack', module)
     return (
       <Pack
         style={{ backgroundColor: '#303030' }}
-        width={width}
-        height={height}
         data={defaultData}
         value={d => yScale(d.value)}
         color={() => {
@@ -53,15 +49,7 @@ storiesOf('Pack', module)
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
     return (
-      <Pack
-        style={{ backgroundColor: '#303030' }}
-        width={width}
-        height={height}
-        data={data}
-        color="#fff"
-        stroke
-        fill={false}
-      />
+      <Pack style={{ backgroundColor: '#303030' }} data={data} color="#fff" stroke fill={false} />
     )
   })
   .add('animated', () => {
@@ -77,8 +65,6 @@ storiesOf('Pack', module)
 
           return (
             <Pack
-              width={width}
-              height={height}
               data={data}
               value={d => yScale(d.value)}
               color={d => `rgba(0,0,0,${zScale(d.value2)})`}
@@ -91,8 +77,6 @@ storiesOf('Pack', module)
   .add('tooltip', () => {
     return (
       <Pack
-        width={width}
-        height={height}
         data={defaultData}
         value={d => yScale(d.value)}
         color={d => `rgba(0,0,0,${zScale(d.value)})`}

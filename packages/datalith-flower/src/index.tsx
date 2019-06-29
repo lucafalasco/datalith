@@ -1,33 +1,17 @@
-import { callOrGetValue, Color, Datum, Value } from '@datalith/util'
+import { callOrGetValue, Color, CommonProps, Datum, ResponsiveWrapper, Value } from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 
 const DEFAULT_COLOR = '#000000'
-interface Props {
-  /** Custom css classes to pass to the SVG element */
-  className?: string
-  /** Custom style object to apply to the SVG */
-  style?: React.CSSProperties
-  /** Width of the SVG */
-  width: number
-  /** Height of the SVG */
-  height: number
-  /** Data array */
-  data: Datum[]
+interface Props extends CommonProps {
   /** Value Accessor */
   value: Value
   /** Color Accessor */
   color: Color
   /** Padding between elements */
   padding: number
-  /** Add the fill color */
-  fill: boolean
-  /** Add the stroke color */
-  stroke: boolean
   /** Center of the dataviz */
   center?: { x: number; y: number }
-  /** Return HTML or text as a string to show on element mouseover */
-  tooltip?: (d: Datum) => string
 }
 
 interface PolygonProps {
@@ -105,55 +89,54 @@ const Polygon = ({
   )
 }
 
-export class Flower extends React.Component<Props> {
-  static defaultProps = {
-    value: d => d,
-    color: DEFAULT_COLOR,
-    fill: true,
-    stroke: false,
-    padding: 40,
-  }
+export const Flower = ResponsiveWrapper(
+  class Flower extends React.Component<Props> {
+    static defaultProps = {
+      value: d => d,
+      color: DEFAULT_COLOR,
+      padding: 40,
+    }
 
-  render() {
-    const {
-      className,
-      style,
-      data,
-      value,
-      color,
-      width,
-      height,
-      fill,
-      stroke,
-      padding,
-      tooltip,
-      center = {
-        x: this.props.width / 2,
-        y: this.props.height / 2,
-      },
-    } = this.props
+    render() {
+      const {
+        className,
+        style,
+        data,
+        value,
+        color,
+        fill,
+        stroke,
+        padding,
+        tooltip,
+        size: { width, height },
+        center = {
+          x: width / 2,
+          y: height / 2,
+        },
+      } = this.props
 
-    return (
-      <>
-        <svg className={className} style={style} width={width} height={height}>
-          {data.map((datum, i) => (
-            <Polygon
-              key={i}
-              index={i}
-              center={center}
-              datum={datum}
-              value={value}
-              color={color}
-              dataLength={data.length}
-              padding={padding}
-              fill={fill}
-              stroke={stroke}
-              tooltip={tooltip}
-            />
-          ))}
-        </svg>
-        <Tooltip html />
-      </>
-    )
-  }
-}
+      return (
+        <>
+          <svg className={className} style={style}>
+            {data.map((datum, i) => (
+              <Polygon
+                key={i}
+                index={i}
+                center={center}
+                datum={datum}
+                value={value}
+                color={color}
+                dataLength={data.length}
+                padding={padding}
+                fill={fill}
+                stroke={stroke}
+                tooltip={tooltip}
+              />
+            ))}
+          </svg>
+          <Tooltip html />
+        </>
+      )
+    }
+  },
+)

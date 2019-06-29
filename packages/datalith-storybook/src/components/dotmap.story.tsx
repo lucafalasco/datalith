@@ -27,8 +27,6 @@ storiesOf('DotMap', module)
   .add('default', () => {
     return (
       <DotMap
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -41,8 +39,6 @@ storiesOf('DotMap', module)
   .add('stroke', () => {
     return (
       <DotMap
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
@@ -57,8 +53,6 @@ storiesOf('DotMap', module)
   .add('tooltip', () => {
     return (
       <DotMap
-        width={width}
-        height={height}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
