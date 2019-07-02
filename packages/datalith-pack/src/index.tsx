@@ -56,13 +56,14 @@ export const Pack = ResponsiveWrapper(
       const {
         className,
         style,
+        defs,
         data,
         value,
         color,
         fill,
         stroke,
-        size: { width, height },
         tooltip,
+        size: { width, height },
         center = {
           x: width / 2,
           y: height / 2,
@@ -78,6 +79,7 @@ export const Pack = ResponsiveWrapper(
       return (
         <>
           <svg className={className} style={style}>
+            {defs}
             <g
               transform={`translate(
               ${center.x - pack.boundingBox.w / 2},

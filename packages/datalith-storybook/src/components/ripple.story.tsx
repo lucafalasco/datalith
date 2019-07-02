@@ -13,6 +13,15 @@ const defaultData = genDateValue(20)
 
 const y = d => d.value
 
+const defs = (
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#238ab0" />
+      <stop offset="100%" stop-color="#04ffbf" />
+    </linearGradient>
+  </defs>
+)
+
 // scales
 const yScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
@@ -59,12 +68,23 @@ storiesOf('Ripple', module)
     return (
       <Ripple
         data={defaultData}
+        defs={defs}
         value={d => yScale(d.value)}
         color={(d, i) => `rgba(4, 255, 191, ${normalize(i, 0, defaultData.length)}`}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
         }
+      />
+    )
+  })
+  .add('gradient', () => {
+    return (
+      <Ripple
+        data={defaultData}
+        defs={defs}
+        value={d => yScale(d.value)}
+        color="url('#gradient')"
       />
     )
   })

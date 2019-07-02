@@ -15,12 +15,19 @@ interface ItalyAtlas extends TopoJSON.Topology {
 
 const italyAtlas = italyTopology as any
 
-const width = window.innerWidth
-const height = window.innerHeight
 const defaultData = genCoordsValueIt(2000)
 const side = 5
 const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)
 const projection = geoNaturalEarth1()
+
+const defs = (
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#238ab0" />
+      <stop offset="100%" stop-color="#04ffbf" />
+    </linearGradient>
+  </defs>
+)
 
 storiesOf('GridMap', module)
   .addParameters({ notes })
@@ -29,9 +36,10 @@ storiesOf('GridMap', module)
       <GridMap
         style={{ backgroundColor: '#303030' }}
         data={defaultData}
+        defs={defs}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
-        color="#04FFBF"
+        color="url('#gradient')"
         featureCollection={italy}
         projection={projection}
         stroke

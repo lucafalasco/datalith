@@ -80,6 +80,7 @@ export const GridMap = ResponsiveWrapper(
       const {
         className,
         style,
+        defs,
         data,
         coords,
         value,
@@ -87,11 +88,11 @@ export const GridMap = ResponsiveWrapper(
         featureCollection,
         projection,
         side,
-        size: { width, height },
         fill,
         stroke,
         tooltip,
         customRender,
+        size: { width, height },
       } = this.props
 
       const gridMapData = gridMap({
@@ -116,6 +117,7 @@ export const GridMap = ResponsiveWrapper(
       return (
         <>
           <svg className={className} style={style}>
+            {defs}
             <g>
               {/* DEBUG */}
               {/* {features.map((f, i) => (

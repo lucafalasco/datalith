@@ -15,8 +15,6 @@ interface ItalyAtlas extends TopoJSON.Topology {
 
 const italyAtlas = italyTopology as any
 
-const width = window.innerWidth
-const height = window.innerHeight
 const defaultData = genCoordsValueIt(2000)
 const side = 5
 const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)

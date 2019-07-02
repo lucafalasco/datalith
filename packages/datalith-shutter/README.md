@@ -14,6 +14,7 @@ yarn add @datalith/shutter
 | :------------- | :------------------------------------ | :---------------------------------- | :----------------------------------------------------------- |
 | className      |                                       | `string`                            | Custom css classes to apply to the SVG                       |
 | style          |                                       | `React.CSSProperties`               | Custom style object to apply to the SVG                      |
+| defs           |                                       | `JSX.Element`                       | Optional `<defs />` element to include in the SVG            |
 | size           |                                       | `{ width: number; height: number }` | Width and Height of the SVG                                  |
 | <b>data \*</b> |                                       | `Array<Datum>` or `Array<string>`   | Array of data                                                |
 | color          | `(Datum) => Datum`                    | `(Datum) => string` or `string`     | Color accessor                                               |

@@ -101,14 +101,15 @@ export const Shutter = ResponsiveWrapper(
       const {
         className,
         style,
+        defs,
         data,
         color,
         fill,
         stroke,
-        size: { width, height },
         tooltip,
         radiusInner = defaultRadius * 0.8,
         radiusOuter = defaultRadius,
+        size: { width, height },
         center = {
           x: width / 2,
           y: height / 2,
@@ -118,6 +119,7 @@ export const Shutter = ResponsiveWrapper(
       return (
         <>
           <svg className={className} style={style}>
+            {defs}
             {data.map((datum, i) => (
               <Polygon
                 key={i}

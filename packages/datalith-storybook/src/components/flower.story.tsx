@@ -12,6 +12,15 @@ const defaultData = genDateValue(20)
 
 const y = d => d.value
 
+const defs = (
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#f51268" />
+      <stop offset="100%" stop-color="#ffdb4b" />
+    </linearGradient>
+  </defs>
+)
+
 // scales
 const yScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
@@ -60,6 +69,16 @@ storiesOf('Flower', module)
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
         }
+      />
+    )
+  })
+  .add('gradient', () => {
+    return (
+      <Flower
+        data={defaultData}
+        defs={defs}
+        value={d => yScale(d.value)}
+        color="url('#gradient')"
       />
     )
   })

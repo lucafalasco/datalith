@@ -4,8 +4,6 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import { genCoordsValue } from '../scripts'
 
-const width = window.innerWidth
-const height = window.innerHeight
 const defaultData = genCoordsValue(2000)
 const side = 5
 

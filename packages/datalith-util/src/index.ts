@@ -11,18 +11,13 @@ export type Value = ContinuousAccessor | number
 export type Color = DiscreteAccessor | string
 export type Coords = CoordsAccessor | [number, number]
 
-export function callOrGetValue<T>(funcOrValue: ((...args: any) => T) | T, ...args: any) {
-  return isFunction(funcOrValue) ? funcOrValue(...args) : funcOrValue
-}
-
-export function normalize(n: number, min: number, max: number) {
-  return (n - min) / (max - min)
-}
 export interface CommonProps {
   /** Custom css classes to apply to the SVG element */
   className?: string
   /** Custom style object to apply to the SVG */
   style?: React.CSSProperties
+  /** Optional <defs /> element to include in the SVG */
+  defs?: JSX.Element
   /** Data array */
   data: Datum[]
   /** Width and Height of the SVG */
@@ -36,3 +31,11 @@ export interface CommonProps {
 }
 
 export { ResponsiveWrapper }
+
+export function callOrGetValue<T>(funcOrValue: ((...args: any) => T) | T, ...args: any) {
+  return isFunction(funcOrValue) ? funcOrValue(...args) : funcOrValue
+}
+
+export function normalize(n: number, min: number, max: number) {
+  return (n - min) / (max - min)
+}

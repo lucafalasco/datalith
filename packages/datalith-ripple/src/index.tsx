@@ -69,12 +69,13 @@ export const Ripple = ResponsiveWrapper(
       const {
         className,
         style,
-        tooltip,
+        defs,
         data,
         value,
         color,
         fill,
         stroke,
+        tooltip,
         size: { width, height },
         center = {
           x: width / 2,
@@ -85,6 +86,7 @@ export const Ripple = ResponsiveWrapper(
       return (
         <>
           <svg className={className} style={style}>
+            {defs}
             {data
               .sort((a, b) => callOrGetValue(value, b) - callOrGetValue(value, a, 0))
               .map((datum, i) => (

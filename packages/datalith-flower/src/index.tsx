@@ -101,6 +101,7 @@ export const Flower = ResponsiveWrapper(
       const {
         className,
         style,
+        defs,
         data,
         value,
         color,
@@ -118,6 +119,7 @@ export const Flower = ResponsiveWrapper(
       return (
         <>
           <svg className={className} style={style}>
+            {defs}
             {data.map((datum, i) => (
               <Polygon
                 key={i}
