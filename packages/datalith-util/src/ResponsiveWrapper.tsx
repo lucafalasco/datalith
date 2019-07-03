@@ -4,11 +4,7 @@ import { CommonProps } from '.'
 
 export default function ResponsiveWrapper<P extends CommonProps>(Component: ComponentType<P>) {
   return class Wrapper extends React.Component<P> {
-    static defaultProps = {
-      fill: true,
-      stroke: false,
-      ...(Component.defaultProps as Partial<P>),
-    }
+    static defaultProps = Component.defaultProps as Partial<P>
 
     render() {
       return this.props.size ? (

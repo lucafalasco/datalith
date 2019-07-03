@@ -38,8 +38,8 @@ storiesOf('DotMapWorld', module)
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
-        stroke
-        fill={false}
+        stroke="#000"
+        fill="transparent"
       />
     )
   })

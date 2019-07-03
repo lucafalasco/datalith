@@ -34,14 +34,14 @@ storiesOf('Flower', module)
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
     return (
-      <Flower style={{ backgroundColor: '#303030' }} data={data} color="#fff" stroke fill={false} />
+      <Flower style={{ backgroundColor: '#303030' }} data={data} stroke="#fff" fill="transparent" />
     )
   })
   .add('sorted', () => {
     const data = [...defaultData].sort((a, b) => b.value - a.value)
 
     return (
-      <Flower data={data} value={d => yScale(d.value)} color={(d, i) => `rgba(0,0,0,0.${i + 1})`} />
+      <Flower data={data} value={d => yScale(d.value)} fill={(d, i) => `rgba(0,0,0,0.${i + 1})`} />
     )
   })
   .add('animated', () => {
@@ -52,7 +52,7 @@ storiesOf('Flower', module)
             <Flower
               data={defaultData}
               value={(d, i) => yScale(props.value[i])}
-              color={(d, i) => (i % 2 ? '#04FFBF' : '#00d09b')}
+              fill={(d, i) => (i % 2 ? '#04FFBF' : '#00d09b')}
             />
           )
         }}
@@ -64,7 +64,7 @@ storiesOf('Flower', module)
       <Flower
         data={defaultData}
         value={d => yScale(d.value)}
-        color="#04FFBF"
+        fill="#04FFBF"
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
@@ -78,7 +78,8 @@ storiesOf('Flower', module)
         data={defaultData}
         defs={defs}
         value={d => yScale(d.value)}
-        color="url('#gradient')"
+        fill="url('#gradient')"
+        stroke="black"
       />
     )
   })

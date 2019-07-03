@@ -43,8 +43,8 @@ storiesOf('PixelMap', module)
         value={d => d.value}
         featureCollection={italy}
         projection={projection}
-        stroke
-        fill={false}
+        stroke="#000"
+        fill="transparent"
       />
     )
   })

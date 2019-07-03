@@ -20,12 +20,12 @@ export interface CommonProps {
   defs?: JSX.Element
   /** Data array */
   data: Datum[]
+  /** Fill color accessor */
+  fill: Color
+  /** Stroke color accessor */
+  stroke: Color
   /** Width and Height of the SVG */
   size: { width: number; height: number }
-  /** Add the fill color */
-  fill: boolean
-  /** Add the stroke color */
-  stroke: boolean
   /** Return HTML or text as a string to show on element mouseover */
   tooltip?: (d: Datum) => string
 }

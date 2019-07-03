@@ -38,13 +38,13 @@ storiesOf('Ripple', module)
       <Ripple
         data={defaultData}
         value={d => yScale(d.value)}
-        color={(d, i) => (i % 2 ? '#04ffbf' : '#f7f7f7')}
+        fill={(d, i) => (i % 2 ? '#04ffbf' : '#f7f7f7')}
       />
     )
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
-    return <Ripple data={data} stroke fill={false} />
+    return <Ripple data={data} stroke="#000" fill="transparent" />
   })
   .add('animated', () => {
     const maxY = Math.max(...defaultData.map(d => yScale(d.value)))
@@ -70,21 +70,12 @@ storiesOf('Ripple', module)
         data={defaultData}
         defs={defs}
         value={d => yScale(d.value)}
-        color={(d, i) => `rgba(4, 255, 191, ${normalize(i, 0, defaultData.length)}`}
+        fill={(d, i) => `rgba(4, 255, 191, ${normalize(i, 0, defaultData.length)}`}
+        stroke="#fff"
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
         }
-      />
-    )
-  })
-  .add('gradient', () => {
-    return (
-      <Ripple
-        data={defaultData}
-        defs={defs}
-        value={d => yScale(d.value)}
-        color="url('#gradient')"
       />
     )
   })

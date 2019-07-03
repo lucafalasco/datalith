@@ -5,9 +5,6 @@ import Tooltip from 'react-tooltip'
 
 const DEFAULT_COLOR = '#000000'
 interface Props extends CommonProps {
-  /** Color Accessor */
-  color: Color
-
   radiusInner?: number
   radiusOuter?: number
   /** Center of the visualization */
@@ -27,11 +24,10 @@ interface Polygon {
 
 interface PolygonProps {
   datum: Datum
-  color: Color
   index: number
   dataLength: number
-  fill: boolean
-  stroke: boolean
+  fill: Color
+  stroke: Color
   radiusInner: number
   radiusOuter: number
   center: { x: number; y: number }
@@ -55,7 +51,6 @@ const getPolygonPoints = (polygon: Polygon): string => {
 
 const Polygon = ({
   datum,
-  color: colorAccessor,
   dataLength,
   index,
   center,
@@ -75,10 +70,9 @@ const Polygon = ({
   const j = index === dataLength - 1 ? 0 : index + 1
   const d = { p0: polygonBig[index], p1: polygonBig[j], p2: polygonSmall[index] }
 
-  const color = callOrGetValue(colorAccessor, datum, index)
   const polygonStyle = {
-    fill: fill ? color : 'transparent',
-    stroke: stroke ? color : 'transparent',
+    fill: callOrGetValue(fill, datum, index),
+    stroke: callOrGetValue(stroke, datum, index),
   }
 
   const points = getPolygonPoints(d)
@@ -93,7 +87,7 @@ const Polygon = ({
 export const Shutter = ResponsiveWrapper(
   class Shutter extends React.Component<Props> {
     static defaultProps = {
-      color: d => d,
+      fill: DEFAULT_COLOR,
     }
 
     render() {
@@ -103,7 +97,6 @@ export const Shutter = ResponsiveWrapper(
         style,
         defs,
         data,
-        color,
         fill,
         stroke,
         tooltip,
@@ -126,7 +119,6 @@ export const Shutter = ResponsiveWrapper(
                 index={i}
                 center={center}
                 datum={datum}
-                color={color}
                 dataLength={data.length}
                 radiusInner={radiusInner}
                 radiusOuter={radiusOuter}

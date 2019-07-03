@@ -7,8 +7,6 @@ const DEFAULT_COLOR = '#000000'
 interface Props extends CommonProps {
   /** Value Accessor */
   value: Value
-  /** Color Accessor */
-  color: Color
   /** Center of the dataviz */
   center?: { x: number; y: number }
 }
@@ -21,18 +19,17 @@ interface Center {
 interface CircleProps {
   datum: Datum
   value: Value
-  color: Color
+
   dataLength: number
   index: number
   center: Center
-  fill: boolean
-  stroke: boolean
+  fill: Color
+  stroke: Color
   tooltip?: (d: Datum) => string
 }
 
 const Circle = ({
   datum,
-  color: colorAccessor,
   value: valueAccessor,
   dataLength,
   index,
@@ -41,12 +38,13 @@ const Circle = ({
   stroke,
   tooltip,
 }: CircleProps) => {
-  const color = callOrGetValue(colorAccessor, datum, index)
-
   const style = {
-    fill: fill ? color : 'transparent',
-    stroke: stroke ? color : 'transparent',
-    fillOpacity: color === DEFAULT_COLOR ? normalize(index, 0, dataLength) : undefined,
+    fill: callOrGetValue(fill, datum, index),
+    stroke: callOrGetValue(stroke, datum, index),
+    fillOpacity:
+      callOrGetValue(fill, datum, index) === DEFAULT_COLOR
+        ? normalize(index, 0, dataLength)
+        : undefined,
   }
 
   const radius = callOrGetValue(valueAccessor, datum, index)
@@ -62,7 +60,7 @@ export const Ripple = ResponsiveWrapper(
   class Ripple extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
-      color: DEFAULT_COLOR,
+      fill: DEFAULT_COLOR,
     }
 
     render() {
@@ -72,7 +70,6 @@ export const Ripple = ResponsiveWrapper(
         defs,
         data,
         value,
-        color,
         fill,
         stroke,
         tooltip,
@@ -95,7 +92,6 @@ export const Ripple = ResponsiveWrapper(
                   index={i}
                   datum={datum}
                   value={value}
-                  color={color}
                   dataLength={data.length}
                   fill={fill}
                   stroke={stroke}

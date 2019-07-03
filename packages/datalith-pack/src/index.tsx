@@ -7,9 +7,6 @@ const DEFAULT_COLOR = '#000000'
 interface Props extends CommonProps {
   /** Value Accessor */
   value: Value
-  /** Color Accessor */
-  color: Color
-
   /** Center of the dataviz */
   center?: { x: number; y: number }
 }
@@ -23,19 +20,17 @@ interface Box {
 
 interface BoxProps {
   datum: Datum
-  color: Color
   box: Box
   index: number
-  fill: boolean
-  stroke: boolean
+  fill: Color
+  stroke: Color
   tooltip?: (d: Datum) => string
 }
 
-const Box = ({ datum, box, index, fill, stroke, color: colorAccessor, tooltip }: BoxProps) => {
-  const color = callOrGetValue(colorAccessor, datum, index)
+const Box = ({ datum, box, index, fill, stroke, tooltip }: BoxProps) => {
   const style = {
-    fill: fill ? color : 'transparent',
-    stroke: stroke ? color : 'transparent',
+    fill: callOrGetValue(fill, datum, index),
+    stroke: callOrGetValue(stroke, datum, index),
   }
 
   return (
@@ -49,7 +44,7 @@ export const Pack = ResponsiveWrapper(
   class Pack extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
-      color: DEFAULT_COLOR,
+      fill: DEFAULT_COLOR,
     }
 
     render() {
@@ -59,7 +54,6 @@ export const Pack = ResponsiveWrapper(
         defs,
         data,
         value,
-        color,
         fill,
         stroke,
         tooltip,
@@ -92,7 +86,6 @@ export const Pack = ResponsiveWrapper(
                     key={i}
                     index={i}
                     datum={data[box.i]}
-                    color={color}
                     box={box}
                     fill={fill}
                     stroke={stroke}

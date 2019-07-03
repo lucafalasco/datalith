@@ -43,8 +43,8 @@ storiesOf('HexMap', module)
         side={side}
         featureCollection={italy}
         projection={projection}
-        stroke
-        fill={false}
+        stroke="#000"
+        fill="transparent"
       />
     )
   })

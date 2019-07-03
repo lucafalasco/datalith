@@ -21,8 +21,6 @@ const DEFAULT_VALUE = 10
 interface Props extends CommonProps {
   /** Value Accessor */
   value: Value
-  /** Color Accessor */
-  color: Color
   /** Coords Accessor */
   coords: Coords
   /** GeoJson */
@@ -42,25 +40,16 @@ export type GridMapProps = Props & CommonProps
 
 interface VisualElementProps {
   datum?: Datum
-  color: Color
-  fill: boolean
-  stroke: boolean
+  fill: Color
+  stroke: Color
   tooltip?: (d: Datum) => string
   render: (props: any) => JSX.Element
 }
 
-const VisualElement = ({
-  datum,
-  color: colorAccessor,
-  stroke,
-  fill,
-  tooltip,
-  render: Element,
-}: VisualElementProps) => {
-  const color = callOrGetValue(colorAccessor, datum)
+const VisualElement = ({ datum, stroke, fill, tooltip, render: Element }: VisualElementProps) => {
   const style = {
-    fill: fill ? color : 'transparent',
-    stroke: stroke ? color : 'transparent',
+    fill: callOrGetValue(fill, datum),
+    stroke: callOrGetValue(stroke, datum),
   }
 
   return <g data-tip={tooltip && datum && tooltip(datum)}>{Element(style)}</g>
@@ -70,7 +59,7 @@ export const GridMap = ResponsiveWrapper(
   class GridMap extends React.Component<GridMapProps> {
     static defaultProps: Partial<GridMapProps> = {
       value: DEFAULT_VALUE,
-      color: DEFAULT_COLOR,
+      fill: DEFAULT_COLOR,
       coords: d => d,
       side: 5,
       projection: geoNaturalEarth1(),
@@ -84,7 +73,6 @@ export const GridMap = ResponsiveWrapper(
         data,
         coords,
         value,
-        color,
         featureCollection,
         projection,
         side,
@@ -137,7 +125,6 @@ export const GridMap = ResponsiveWrapper(
                 return (
                   <VisualElement
                     datum={d.datum}
-                    color={color}
                     key={i}
                     fill={fill}
                     stroke={stroke}

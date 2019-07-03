@@ -20,16 +20,16 @@ const zScale = scaleLinear()
 storiesOf('Shutter', module)
   .addParameters({ notes })
   .add('default', () => {
-    return <Shutter data={defaultData} color={d => `rgba(0,0,0,${zScale(d.value)})`} />
+    return <Shutter data={defaultData} fill={d => `rgba(0,0,0,${zScale(d.value)})`} />
   })
   .add('stroke', () => {
     const data = defaultData.map(d => `rgba(0,0,0,${zScale(d.value)})`)
-    return <Shutter data={data} stroke fill={false} />
+    return <Shutter data={data} stroke="#000" fill="transparent" />
   })
   .add('sorted', () => {
     const data = [...defaultData].sort((a, b) => b.value - a.value)
 
-    return <Shutter data={data} color={d => `rgba(0,0,0,${zScale(d.value)})`} stroke />
+    return <Shutter data={data} fill={d => `rgba(0,0,0,${zScale(d.value)})`} />
   })
   .add('animated', () => {
     const data = defaultData.map(d => `rgba(4, 255, 191, ${zScale(d.value).toFixed(2)}`)
@@ -53,7 +53,7 @@ storiesOf('Shutter', module)
     return (
       <Shutter
         data={defaultData}
-        color={d => `rgba(0,0,0,${zScale(d.value)})`}
+        fill={d => `rgba(0,0,0,${zScale(d.value)})`}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${parseFloat(zScale(value).toFixed(2))}</p>

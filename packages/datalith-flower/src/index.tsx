@@ -6,8 +6,6 @@ const DEFAULT_COLOR = '#000000'
 interface Props extends CommonProps {
   /** Value Accessor */
   value: Value
-  /** Color Accessor */
-  color: Color
   /** Padding between elements */
   padding: number
   /** Center of the dataviz */
@@ -17,12 +15,11 @@ interface Props extends CommonProps {
 interface PolygonProps {
   datum: Datum
   value: Value
-  color: Color
   index: number
   dataLength: number
   padding: number
-  fill: boolean
-  stroke: boolean
+  fill: Color
+  stroke: Color
   center: { x: number; y: number }
   tooltip?: (d: Datum) => string
 }
@@ -59,7 +56,6 @@ const getPolygonPoints = ({ index, value, center: { x, y }, padding, dataLength 
 const Polygon = ({
   datum,
   value: valueAccessor,
-  color: colorAccessor,
   dataLength,
   index,
   center,
@@ -68,11 +64,9 @@ const Polygon = ({
   stroke,
   tooltip,
 }: PolygonProps) => {
-  const color = callOrGetValue(colorAccessor, datum, index)
-
   const style = {
-    fill: fill ? color : 'transparent',
-    stroke: stroke ? color : 'transparent',
+    fill: callOrGetValue(fill, datum, index),
+    stroke: callOrGetValue(stroke, datum, index),
   }
   const polygonPoints = getPolygonPoints({
     index,
@@ -93,7 +87,7 @@ export const Flower = ResponsiveWrapper(
   class Flower extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
-      color: DEFAULT_COLOR,
+      fill: DEFAULT_COLOR,
       padding: 40,
     }
 
@@ -104,7 +98,6 @@ export const Flower = ResponsiveWrapper(
         defs,
         data,
         value,
-        color,
         fill,
         stroke,
         padding,
@@ -127,7 +120,6 @@ export const Flower = ResponsiveWrapper(
                 center={center}
                 datum={datum}
                 value={value}
-                color={color}
                 dataLength={data.length}
                 padding={padding}
                 fill={fill}

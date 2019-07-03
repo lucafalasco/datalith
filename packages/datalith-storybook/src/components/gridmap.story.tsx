@@ -39,10 +39,9 @@ storiesOf('GridMap', module)
         defs={defs}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
-        color="url('#gradient')"
+        stroke="url('#gradient')"
         featureCollection={italy}
         projection={projection}
-        stroke
         customRender={({ x, y, value }, defaultProps) => (
           <path
             strokeWidth={value * 0.5}
@@ -64,7 +63,7 @@ storiesOf('GridMap', module)
         style={{ backgroundColor: '#303030' }}
         side={side}
         data={data}
-        color={d => (d ? '#04FFBF' : '#fff')}
+        fill={d => (d ? '#04FFBF' : '#fff')}
         featureCollection={italy}
         projection={projection}
         customRender={({ x, y, datum }, defaultProps) => (
@@ -90,15 +89,15 @@ storiesOf('GridMap', module)
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
+        fill="#000"
         featureCollection={italy}
         projection={projection}
-        stroke
         customRender={({ x, y, value }, defaultProps) => (
           <path
             strokeWidth={value * 0.5}
-            d={`M${x - value / 2} ${y + value / 2} 
-                L${x + value / 2} ${y + value / 2} 
-                L${x} ${y - value / 2} 
+            d={`M${x - value} ${y + value} 
+                L${x + value} ${y + value} 
+                L${x} ${y - value} 
                 Z`}
             {...defaultProps}
           />
