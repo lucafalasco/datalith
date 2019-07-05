@@ -40,7 +40,7 @@ const Box = ({ datum, box, index, fill, stroke, tooltip }: BoxProps) => {
   )
 }
 
-export const Pack = ResponsiveWrapper(
+export const Pack: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class Pack extends React.Component<Props> {
     static defaultProps = {
       value: d => d,

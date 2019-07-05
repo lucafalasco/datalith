@@ -83,7 +83,7 @@ const Polygon = ({
   )
 }
 
-export const Flower = ResponsiveWrapper(
+export const Flower: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class Flower extends React.Component<Props> {
     static defaultProps = {
       value: d => d,

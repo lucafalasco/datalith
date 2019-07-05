@@ -55,7 +55,7 @@ const VisualElement = ({ datum, stroke, fill, tooltip, render: Element }: Visual
   return <g data-tip={tooltip && datum && tooltip(datum)}>{Element(style)}</g>
 }
 
-export const GridMap = ResponsiveWrapper(
+export const GridMap: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class GridMap extends React.Component<GridMapProps> {
     static defaultProps: Partial<GridMapProps> = {
       value: DEFAULT_VALUE,

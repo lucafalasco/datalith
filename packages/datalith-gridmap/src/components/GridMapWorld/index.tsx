@@ -9,7 +9,7 @@ const worldAtlas = feature(worldTopology, worldTopology.objects.countries)
 type GridMapWorldProps = Omit<GridMapProps, 'featureCollection'>
 
 export class GridMapWorld extends React.Component<GridMapWorldProps> {
-  static defaultProps = GridMap.defaultProps
+  static defaultProps = GridMap.defaultProps as Partial<GridMapWorldProps>
 
   render() {
     return <GridMap {...this.props} featureCollection={worldAtlas} />

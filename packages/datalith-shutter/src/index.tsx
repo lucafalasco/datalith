@@ -84,7 +84,7 @@ const Polygon = ({
   )
 }
 
-export const Shutter = ResponsiveWrapper(
+export const Shutter: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class Shutter extends React.Component<Props> {
     static defaultProps = {
       fill: DEFAULT_COLOR,

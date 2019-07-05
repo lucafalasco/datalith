@@ -56,7 +56,7 @@ const Circle = ({
   )
 }
 
-export const Ripple = ResponsiveWrapper(
+export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class Ripple extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
