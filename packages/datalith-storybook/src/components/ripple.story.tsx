@@ -38,7 +38,6 @@ storiesOf('Ripple', module)
     return <Ripple data={data} stroke="#000" fill="transparent" />
   })
   .add('animated', () => {
-    const maxY = Math.max(...defaultData.map(d => yScale(d.value)))
     const sortedData = [...defaultData].sort((a, b) => b.value - a.value)
 
     return (

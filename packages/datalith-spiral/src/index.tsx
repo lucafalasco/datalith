@@ -13,36 +13,30 @@ interface Props extends CommonProps {
 interface CircleProps {
   datum: Datum
   value: Value
-  dataLength: number
-  maxRadius: number
+  coords: { x: number; y: number }
   index: number
   fill: Color
   stroke: Color
   tooltip?: (d: Datum) => string
 }
 
-function getSpiralCoords(index: number, total: number, maxSide: number) {
-  // const a = total / maxSide
-  // const angle = (Math.PI / a) * Math.sqrt(index) * a
-  // return {
-  //   x: a * angle * Math.cos(angle),
-  //   y: a * angle * Math.sin(angle),
-  // }
-  const d = maxSide
-  const radius = Math.sqrt(index + 1)
-  const angle = Math.asin(1 / radius) * index
-  return {
-    x: radius * d * Math.cos(angle),
-    y: radius * d * Math.sin(angle),
-  }
+function getSpiralCoords(data: Datum[], maxSide: number) {
+  let angle = 0
+  return data.map((d, i) => {
+    const radius = Math.sqrt(i + 1)
+    angle += Math.asin(1 / radius)
+    return {
+      x: radius * maxSide * Math.cos(angle),
+      y: radius * maxSide * Math.sin(angle),
+    }
+  })
 }
 
 const Circle = ({
   datum,
   value: valueAccessor,
-  dataLength,
-  maxRadius,
   index,
+  coords,
   fill,
   stroke,
   tooltip,
@@ -50,11 +44,9 @@ const Circle = ({
   const style = {
     fill: callOrGetValue(fill, datum, index),
     stroke: callOrGetValue(stroke, datum, index),
-    fillOpacity: callOrGetValue(fill, datum, index) === DEFAULT_COLOR ? 0.7 : undefined,
   }
 
   const radius = callOrGetValue(valueAccessor, datum, index)
-  const coords = getSpiralCoords(index, dataLength, maxRadius * 2)
 
   return (
     <g data-tip={tooltip && tooltip(datum)}>
@@ -63,7 +55,7 @@ const Circle = ({
   )
 }
 
-export const Spiral = ResponsiveWrapper(
+export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class Spiral extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
@@ -88,6 +80,7 @@ export const Spiral = ResponsiveWrapper(
       } = this.props
 
       const maxRadius = Math.max(...data.map((d, i) => callOrGetValue(value, d, i)))
+      const coords = getSpiralCoords(data, maxRadius * 2)
 
       return (
         <>
@@ -99,9 +92,8 @@ export const Spiral = ResponsiveWrapper(
                   key={i}
                   index={i}
                   datum={datum}
+                  coords={coords[i]}
                   value={value}
-                  dataLength={data.length}
-                  maxRadius={maxRadius}
                   fill={fill}
                   stroke={stroke}
                   tooltip={tooltip}

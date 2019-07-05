@@ -7,7 +7,7 @@ import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
 import { genDateValue } from '../scripts'
 
-const defaultData = genDateValue(300)
+const defaultData = genDateValue(100)
 
 const y = d => d.value
 
@@ -17,13 +17,17 @@ const defs = (
       <stop offset="0%" stop-color="#238ab0" />
       <stop offset="100%" stop-color="#04ffbf" />
     </linearGradient>
+    <linearGradient id="gradient2">
+      <stop offset="0%" stop-color="#f51268" />
+      <stop offset="100%" stop-color="#ffdb4b" />
+    </linearGradient>
   </defs>
 )
 
 // scales
 const yScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
-  .range([5, 20])
+  .range([1, 15])
 
 storiesOf('Spiral', module)
   .addParameters({ notes })
@@ -35,40 +39,43 @@ storiesOf('Spiral', module)
     return (
       <Spiral
         data={defaultData}
+        defs={defs}
         value={d => yScale(d.value)}
-        fill={(d, i) => (i % 2 ? '#04ffbf' : '#f7f7f7')}
+        // stroke="#000"
+        fill={(d, i) => (i % 2 ? 'url("#gradient")' : 'url("#gradient2")')}
       />
     )
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
-    return <Spiral data={data} stroke="#000" fill="transparent" />
+    return (
+      <Spiral style={{ backgroundColor: '#303030' }} data={data} stroke="#fff" fill="transparent" />
+    )
   })
   .add('animated', () => {
-    const maxY = Math.max(...defaultData.map(d => yScale(d.value)))
-    const sortedData = [...defaultData].sort((a, b) => b.value - a.value)
-
     return (
       <Spring
         config={{ duration: 1000, easing: t => t * (2 - t) }}
-        from={{ value: sortedData.map(d => 0), index: 0 }}
-        to={{ value: sortedData.map(y), index: sortedData.length - 1 }}
+        from={{ index: 0 }}
+        to={{ index: defaultData.length - 1 }}
       >
         {props => {
-          const data = sortedData.slice(0, props.index)
+          const data = defaultData.slice(0, props.index)
 
-          return <Spiral data={data} value={(d, i) => yScale(props.value[i])} />
+          return <Spiral data={data} value={(d, i) => yScale(d.value)} />
         }}
       </Spring>
     )
   })
   .add('tooltip', () => {
+    const sortedData = [...defaultData].sort((a, b) => a.date.getTime() - b.date.getTime())
     return (
       <Spiral
-        data={defaultData}
-        defs={defs}
+        data={sortedData}
         value={d => yScale(d.value)}
-        fill={(d, i) => `rgba(4, 255, 191, ${normalize(i, 0, defaultData.length)}`}
+        fill={(d, i) =>
+          `rgba(4, 255, 191, ${normalize(d.value, yScale.domain()[0], yScale.domain()[1])}`
+        }
         stroke="#000"
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
