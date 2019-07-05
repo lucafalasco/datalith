@@ -41,6 +41,7 @@
     "@datalith/util": "^0.6.0"
   },
   "devDependencies": {
+    "@types/react": "^16.8.23",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "typescript": "^3.5.1"

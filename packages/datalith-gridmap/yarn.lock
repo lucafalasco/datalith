@@ -2,13 +2,6 @@
 # yarn lockfile v1
 
 
-"@datalith/util@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@datalith/util/-/util-0.2.0.tgz#7d378fe5a6a9d8743a23f57b6c9f72041dfb69f1"
-  integrity sha512-kmrXJdPNVXTYYKVGGrG55vDOva2RJQyMJGAR3oRkV6c7h3O/EevDI4eM735EEdzuYsAxWNsrWTNr3bgU8BjgPw==
-  dependencies:
-    lodash "^4.17.11"
-
 "@turf/flatten@^5.1.5":
   version "5.1.5"
   resolved "https://registry.yarnpkg.com/@turf/flatten/-/flatten-5.1.5.tgz#da2927067133ed6169b0b9d607b9215688aa1358"
@@ -79,6 +72,14 @@
   version "16.8.20"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.20.tgz#4f633ecbd0a4d56d0ccc50fff6f9321bbcd7d583"
   integrity sha512-ZLmI+ubSJpfUIlQuULDDrdyuFQORBuGOvNnMue8HeA0GVrAJbWtZQhcBvnBPNRBI/GrfSfrKPFhthzC2SLEtLQ==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@^16.8.23":
+  version "16.8.23"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.23.tgz#ec6be3ceed6353a20948169b6cb4c97b65b97ad2"
+  integrity sha512-abkEOIeljniUN9qB5onp++g0EY38h7atnDHxwKUFz1r3VH1+yG1OKi2sNPTyObL40goBmfKFpdii2lEzwLX1cA==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
