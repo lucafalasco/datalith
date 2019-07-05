@@ -25,6 +25,7 @@
     "@datalith/pixelmap": "^0.6.0",
     "@datalith/ripple": "^0.6.0",
     "@datalith/shutter": "^0.6.0",
+    "@datalith/spiral": "^0.6.0",
     "@datalith/util": "^0.6.0",
     "d3-array": "^2.0.3",
     "d3-geo": "^1.11.6",
