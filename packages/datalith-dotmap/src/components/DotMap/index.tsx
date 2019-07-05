@@ -3,7 +3,7 @@ import * as React from 'react'
 
 export type DotMapProps = Omit<GridMapProps, 'customRender'>
 export class DotMap extends React.Component<DotMapProps> {
-  static defaultProps = GridMap.defaultProps
+  static defaultProps = GridMap.defaultProps as Partial<GridMapProps>
 
   render() {
     return (

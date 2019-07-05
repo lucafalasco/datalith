@@ -3,7 +3,7 @@ import * as React from 'react'
 
 export type PixelMapProps = Omit<GridMapProps, 'customRender'>
 export class PixelMap extends React.Component<PixelMapProps> {
-  static defaultProps = GridMap.defaultProps
+  static defaultProps = GridMap.defaultProps as Partial<GridMapProps>
 
   render() {
     return (

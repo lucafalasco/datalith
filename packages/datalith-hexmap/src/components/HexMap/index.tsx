@@ -3,7 +3,7 @@ import * as React from 'react'
 
 export type HexMapProps = Omit<GridMapProps, 'customRender'>
 export class HexMap extends React.Component<HexMapProps> {
-  static defaultProps = GridMap.defaultProps
+  static defaultProps = GridMap.defaultProps as Partial<GridMapProps>
 
   render() {
     return (
