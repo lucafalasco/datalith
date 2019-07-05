@@ -1,5 +1,4 @@
 import { callOrGetValue, Color, CommonProps, Datum, ResponsiveWrapper, Value } from '@datalith/util'
-import { normalize } from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 
@@ -11,28 +10,33 @@ interface Props extends CommonProps {
   center?: { x: number; y: number }
 }
 
-interface Center {
-  x: number
-  y: number
-}
-
 interface CircleProps {
   datum: Datum
   value: Value
-  dataLength: number
+  coords: { x: number; y: number }
   index: number
-  center: Center
   fill: Color
   stroke: Color
   tooltip?: (d: Datum) => string
 }
 
+function getSpiralCoords(data: Datum[], maxSide: number) {
+  let angle = 0
+  return data.map((d, i) => {
+    const radius = Math.sqrt(i + 1)
+    angle += Math.asin(1 / radius)
+    return {
+      x: radius * maxSide * Math.cos(angle),
+      y: radius * maxSide * Math.sin(angle),
+    }
+  })
+}
+
 const Circle = ({
   datum,
   value: valueAccessor,
-  dataLength,
   index,
-  center,
+  coords,
   fill,
   stroke,
   tooltip,
@@ -40,23 +44,19 @@ const Circle = ({
   const style = {
     fill: callOrGetValue(fill, datum, index),
     stroke: callOrGetValue(stroke, datum, index),
-    fillOpacity:
-      callOrGetValue(fill, datum, index) === DEFAULT_COLOR
-        ? normalize(index, 0, dataLength)
-        : undefined,
   }
 
   const radius = callOrGetValue(valueAccessor, datum, index)
 
   return (
     <g data-tip={tooltip && tooltip(datum)}>
-      <circle style={style} cx={center.x} cy={center.y} r={radius} />
+      <circle style={style} cx={coords.x} cy={coords.y} r={radius} />
     </g>
   )
 }
 
-export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
-  class Ripple extends React.Component<Props> {
+export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
+  class Spiral extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
       fill: DEFAULT_COLOR,
@@ -79,25 +79,27 @@ export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         },
       } = this.props
 
+      const maxRadius = Math.max(...data.map((d, i) => callOrGetValue(value, d, i)))
+      const coords = getSpiralCoords(data, maxRadius * 2)
+
       return (
         <>
           <svg className={className} style={style}>
             {defs}
-            {data
-              .sort((a, b) => callOrGetValue(value, b) - callOrGetValue(value, a, 0))
-              .map((datum, i) => (
+            <g transform={`translate(${center.x}, ${center.y})`}>
+              {data.map((datum, i) => (
                 <Circle
                   key={i}
                   index={i}
                   datum={datum}
+                  coords={coords[i]}
                   value={value}
-                  dataLength={data.length}
                   fill={fill}
                   stroke={stroke}
-                  center={center}
                   tooltip={tooltip}
                 />
               ))}
+            </g>
           </svg>
           <Tooltip html />
         </>

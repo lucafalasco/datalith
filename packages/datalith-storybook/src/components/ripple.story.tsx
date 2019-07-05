@@ -13,15 +13,6 @@ const defaultData = genDateValue(20)
 
 const y = d => d.value
 
-const defs = (
-  <defs>
-    <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stop-color="#238ab0" />
-      <stop offset="100%" stop-color="#04ffbf" />
-    </linearGradient>
-  </defs>
-)
-
 // scales
 const yScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
@@ -47,7 +38,6 @@ storiesOf('Ripple', module)
     return <Ripple data={data} stroke="#000" fill="transparent" />
   })
   .add('animated', () => {
-    const maxY = Math.max(...defaultData.map(d => yScale(d.value)))
     const sortedData = [...defaultData].sort((a, b) => b.value - a.value)
 
     return (
@@ -68,7 +58,6 @@ storiesOf('Ripple', module)
     return (
       <Ripple
         data={defaultData}
-        defs={defs}
         value={d => yScale(d.value)}
         fill={(d, i) => `rgba(4, 255, 191, ${normalize(i, 0, defaultData.length)}`}
         stroke="#fff"
