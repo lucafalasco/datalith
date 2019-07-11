@@ -20,11 +20,18 @@ const zScale = scaleLinear()
 storiesOf('Shutter', module)
   .addParameters({ notes })
   .add('default', () => {
-    return <Shutter data={defaultData} fill={d => `rgba(0,0,0,${zScale(d.value)})`} />
+    const data = defaultData.map(d => `rgba(0,0,0,${zScale(d.value)})`)
+    return <Shutter data={data} />
   })
   .add('stroke', () => {
-    const data = defaultData.map(d => `rgba(0,0,0,${zScale(d.value)})`)
-    return <Shutter data={data} stroke="#000" fill="transparent" />
+    return (
+      <Shutter
+        style={{ backgroundColor: '#303030' }}
+        data={defaultData}
+        stroke={d => `rgba(255, 255, 255, ${zScale(d.value)})`}
+        fill="transparent"
+      />
+    )
   })
   .add('sorted', () => {
     const data = [...defaultData].sort((a, b) => b.value - a.value)
