@@ -84,7 +84,13 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
 
       return (
         <>
-          <svg className={className} style={style}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className={className}
+            style={style}
+            width={width}
+            height={height}
+          >
             {defs}
             <g transform={`translate(${center.x}, ${center.y})`}>
               {data.map((datum, i) => (
