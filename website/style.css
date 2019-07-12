@@ -1,0 +1,37 @@
+html,
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 14px;
+  width: 100%;
+  background: #333333;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e6e6e6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e6e6e6;
+}
+
+@media only screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}

@@ -8,6 +8,7 @@ coverage
 
 # production
 dist
+storybook
 
 # IDEs and editors
 /.idea
