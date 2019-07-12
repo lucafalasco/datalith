@@ -14,7 +14,7 @@
     "prebuild": "yarn del-dist",
     "build": "tsc",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook -s ./public -o ../../docs"
+    "build-storybook": "build-storybook -s ./public -o ../../storybook"
   },
   "dependencies": {
     "@datalith/dotmap": "^0.6.0",
