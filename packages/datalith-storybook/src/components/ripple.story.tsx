@@ -15,7 +15,7 @@ const y = d => d.value
 
 // scales
 const yScale = scaleLinear()
-  .domain([0, Math.max(...defaultData.map(y))])
+  .domain([Math.min(...defaultData.map(y)), Math.max(...defaultData.map(y))])
   .range([0, Math.min(width, height) * 0.3])
 
 storiesOf('Ripple', module)
