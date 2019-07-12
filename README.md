@@ -1,10 +1,12 @@
 <p align="center">
-  <img src="./assets/logo.svg" width="500px" style="margin: 100px;"/>
+  <img src="./assets/logo.svg" width="300px" />
 </p>
 
-#### A Collection of React components to build beautiful data visualizations
+---
 
-#### ⚠️ This project is at an early stage
+### Datalith is a collection of React components to build beautiful data visualizations
+
+#### The project is still at an early stage
 
 ## Installation
 
@@ -24,7 +26,7 @@ yarn add datalith
 
 ```bash
 $ yarn
-$ ./node_modules/.bin/lerna bootstrap
+$ yarn bootstrap
 ```
 
 ### Start dev environment (Storybook)
