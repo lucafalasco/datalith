@@ -4,7 +4,7 @@ body {
   text-rendering: optimizeLegibility;
   font-size: 14px;
   width: 100%;
-  background: #333333;
+  background: #000000;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,7 +16,7 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #333333;
+  background: #000000;
 }
 
 /* Handle */
