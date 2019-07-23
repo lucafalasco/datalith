@@ -44,6 +44,7 @@ const Circle = ({
   const style = {
     fill: callOrGetValue(fill, datum, index),
     stroke: callOrGetValue(stroke, datum, index),
+    fillOpacity: callOrGetValue(fill, datum, index) === DEFAULT_COLOR ? 0.8 : undefined,
   }
 
   const radius = callOrGetValue(valueAccessor, datum, index)
@@ -80,7 +81,7 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
       } = this.props
 
       const maxRadius = Math.max(...data.map((d, i) => callOrGetValue(value, d, i)))
-      const coords = getSpiralCoords(data, maxRadius * 2)
+      const coords = getSpiralCoords(data, maxRadius * 2 * 0.7)
 
       return (
         <>
