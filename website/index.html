@@ -17,12 +17,16 @@
     <title>DATALITH</title>
     <link rel="icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:500,700" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
     <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div class="flex justify-center items-center bg-yellow h5">
+    <div class="flex justify-center items-center h5">
       <a
         href="https://github.com/lucafalasco/datalith"
         target="_blank"
@@ -32,140 +36,271 @@
       </a>
     </div>
 
-    <div class="flex flex-wrap items-center justify-center w-100 ph4 center">
-      <a
-        class="link relative flex justify-center items-center w5 h5 ma2 pointer black"
-        style="width: 14rem; height: 14rem"
-        href="https://docs.datalith.xyz/?path=/story/flower--default"
-        target="_blank"
-      >
-        <div
-          style="background-image: url('assets/flower.svg')"
-          class="absolute absolute--fit cover w-100 h-100"
-        ></div>
-        <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
-          FLOWER
-        </div>
-      </a>
-      <a
-        class="link relative flex justify-center items-center ma2 pointer black"
-        style="width: 18rem; height: 18rem"
-        href="https://docs.datalith.xyz/?path=/story/gridmap--default"
-        target="_blank"
-      >
-        <div
-          style="background-image: url('assets/gridmap.svg')"
-          class="absolute absolute--fit cover w-100 h-100"
-        ></div>
-        <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
-          GRIDMAP
-        </div>
-      </a>
-      <a
-        class="link relative flex justify-center items-center ma2 pointer black"
-        style="width: 12rem; height: 12rem"
-        href="https://docs.datalith.xyz/?path=/story/shutter--default"
-        target="_blank"
-      >
-        <div
-          style="background-image: url('assets/shutter.svg')"
-          class="absolute absolute--fit cover w-100 h-100"
-        ></div>
-        <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
-          SHUTTER
-        </div>
-      </a>
-      <a
-        class="link relative flex justify-center items-center w5 h5 ma2 pointer black"
-        style="width: 14rem; height: 14rem"
-        href="https://docs.datalith.xyz/?path=/story/pixelmap--default"
-        target="_blank"
-      >
-        <div
-          style="background-image: url('assets/pixelmap.svg')"
-          class="absolute absolute--fit cover w-100 h-100"
-        ></div>
-        <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
-          PIXELMAP
-        </div>
-      </a>
-      <a
-        class="link relative flex justify-center items-center w5 h5 ma2 pointer black"
-        style="width: 10rem; height: 10rem"
-        href="https://docs.datalith.xyz/?path=/story/spiral--default"
-        target="_blank"
-      >
-        <div
-          style="background-image: url('assets/spiral.svg')"
-          class="absolute absolute--fit cover w-100 h-100"
-        ></div>
-        <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
-          SPIRAL
-        </div>
-      </a>
-      <a
-        class="link relative flex justify-center items-center w5 h5 ma4 pointer black"
-        style="width: 12rem; height: 12rem"
-        href="https://docs.datalith.xyz/?path=/story/pack--default"
-        target="_blank"
-      >
-        <div
-          style="background-image: url('assets/pack.svg')"
-          class="absolute absolute--fit cover w-100 h-100"
-        ></div>
-        <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
-          PACK
-        </div>
-      </a>
-      <a
-        class="link relative flex justify-center items-center ma2 pointer black"
-        style="width: 10rem; height: 10rem"
-        href="https://docs.datalith.xyz/?path=/story/dotmap--default"
-        target="_blank"
-      >
-        <div
-          style="background-image: url('assets/dotmap.svg')"
-          class="absolute absolute--fit cover w-100 h-100"
-        ></div>
-        <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
-          DOTMAP
-        </div>
-      </a>
-      <a
-        class="link relative flex justify-center items-center w5 h5 ma2 pointer black"
-        style="width: 14rem; height: 14rem"
-        href="https://docs.datalith.xyz/?path=/story/ripple--default"
-        target="_blank"
-      >
-        <div
-          style="background-image: url('assets/ripple.svg')"
-          class="absolute absolute--fit cover w-100 h-100"
-        ></div>
-        <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
-          RIPPLE
-        </div>
-      </a>
-      <a
-        class="link relative flex justify-center items-center ma2 pointer black"
-        style="width: 10rem; height: 10rem"
-        href="https://docs.datalith.xyz/?path=/story/hexmap--default"
-        target="_blank"
-      >
-        <div
-          style="background-image: url('assets/hexmap.svg')"
-          class="absolute absolute--fit cover w-100 h-100"
-        ></div>
-        <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
-          HEXMAP
-        </div>
-      </a>
+    <div class="flex flex-column items-center justify-center w-100 mv5 center white">
+      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+        <a
+          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2"
+          style="width: 25rem; height: 25rem;"
+          href="https://docs.datalith.xyz/?path=/story/flower--default"
+          target="_blank"
+        >
+          <div
+            style="background-image: url('assets/flower.svg')"
+            class="absolute absolute--fit cover w-100 h-100"
+          ></div>
+          <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
+            FLOWER
+          </div>
+        </a>
+        <pre class="w5">
+  <code>
+    &#60;Flower 
+      class="flower" 
+      data={data} 
+      padding={50} 
+      value={d => d.value} 
+      fill={d => d.color} 
+    /&#62;
+  </code>
+  </pre>
+      </div>
+      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+        <a
+          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2"
+          style="width: 25rem; height: 25rem;"
+          href="https://docs.datalith.xyz/?path=/story/gridmap--default"
+          target="_blank"
+        >
+          <div
+            style="background-image: url('assets/gridmap.svg')"
+            class="absolute absolute--fit cover w-100 h-100"
+          ></div>
+          <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
+            GRIDMAP
+          </div>
+        </a>
+        <pre class="w5">
+  <code>
+    &#60;Gridmap 
+      class="gridmap" 
+      data={data} 
+      featureCollection={geojson}
+      projection={geoNaturalEarth1()}
+      side={5}
+      coords={d => [d.lng, d.lat]}
+      value={d => d.value} 
+      fill={d => d.color} 
+      customRender={
+        ({ x, y, value, datum }, props) => 
+          &#60;Element {..props} /&#62;
+      }
+    /&#62;
+  </code>
+  </pre>
+      </div>
+      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+        <a
+          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2"
+          style="width: 25rem; height: 25rem;"
+          href="https://docs.datalith.xyz/?path=/story/shutter--default"
+          target="_blank"
+        >
+          <div
+            style="background-image: url('assets/shutter.svg')"
+            class="absolute absolute--fit cover w-100 h-100"
+          ></div>
+          <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
+            SHUTTER
+          </div>
+        </a>
+        <pre class="w5">
+  <code>
+    &#60;Shutter 
+      class="shutter" 
+      data={data} 
+      radiusOuter={100} 
+      radiusInner={80}
+      fill={d => d.color} 
+      stroke={d => d.colorSecondary} 
+    /&#62;
+  </code>
+  </pre>
+      </div>
+      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+        <a
+          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2"
+          style="width: 25rem; height: 25rem;"
+          href="https://docs.datalith.xyz/?path=/story/pixelmap--default"
+          target="_blank"
+        >
+          <div
+            style="background-image: url('assets/pixelmap.svg')"
+            class="absolute absolute--fit cover w-75 h-75"
+          ></div>
+          <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
+            PIXELMAP
+          </div>
+        </a>
+        <pre class="w5">
+  <code>
+    &#60;Pixelmap 
+      class="pixelmap" 
+      data={data} 
+      featureCollection={geojson}
+      projection={geoAlbersUsa()}
+      side={5}
+      coords={d => [d.lng, d.lat]}
+      value={d => d.value} 
+      fill={d => d.color} 
+    /&#62;
+  </code>
+  </pre>
+      </div>
+      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+        <a
+          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2"
+          style="width: 25rem; height: 25rem;"
+          href="https://docs.datalith.xyz/?path=/story/spiral--default"
+          target="_blank"
+        >
+          <div
+            style="background-image: url('assets/spiral.svg')"
+            class="absolute absolute--fit cover w-100 h-100"
+          ></div>
+          <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
+            SPIRAL
+          </div>
+        </a>
+        <pre class="w5">
+  <code>
+    &#60;Spiral 
+      class="spiral" 
+      data={data} 
+      value={d => d.value} 
+      fill={d => d.color} 
+    /&#62;
+  </code>
+  </pre>
+      </div>
+      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+        <a
+          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2"
+          style="width: 25rem; height: 25rem;"
+          href="https://docs.datalith.xyz/?path=/story/pack--default"
+          target="_blank"
+        >
+          <div
+            style="background-image: url('assets/pack.svg')"
+            class="absolute absolute--fit cover w-100 h-100"
+          ></div>
+          <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
+            PACK
+          </div>
+        </a>
+        <pre class="w5">
+  <code>
+    &#60;Pack 
+      class="pack" 
+      data={data} 
+      value={d => d.value} 
+      fill={d => d.color} 
+    /&#62;
+  </code>
+  </pre>
+      </div>
+      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+        <a
+          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2"
+          style="width: 25rem; height: 25rem;"
+          href="https://docs.datalith.xyz/?path=/story/dotmap--default"
+          target="_blank"
+        >
+          <div
+            style="background-image: url('assets/dotmap.svg')"
+            class="absolute absolute--fit cover w-75 h-75"
+          ></div>
+          <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
+            DOTMAP
+          </div>
+        </a>
+        <pre class="w5">
+  <code>
+    &#60;Dotmap 
+      class="dotmap" 
+      data={data} 
+      featureCollection={geojson}
+      projection={geoNaturalEarth1()}
+      side={5}
+      coords={d => [d.lng, d.lat]}
+      value={d => d.value} 
+      fill={d => d.color} 
+    /&#62;
+  </code>
+  </pre>
+      </div>
+      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+        <a
+          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2"
+          style="width: 25rem; height: 25rem;"
+          href="https://docs.datalith.xyz/?path=/story/ripple--default"
+          target="_blank"
+        >
+          <div
+            style="background-image: url('assets/ripple.svg')"
+            class="absolute absolute--fit cover w-100 h-100"
+          ></div>
+          <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
+            RIPPLE
+          </div>
+        </a>
+        <pre class="w5">
+  <code>
+    &#60;Ripple 
+      class="ripple" 
+      data={data} 
+      value={d => d.value} 
+      fill={d => d.color} 
+    /&#62;
+  </code>
+  </pre>
+      </div>
+      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+        <a
+          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2"
+          style="width: 25rem; height: 25rem;"
+          href="https://docs.datalith.xyz/?path=/story/hexmap--default"
+          target="_blank"
+        >
+          <div
+            style="background-image: url('assets/hexmap.svg')"
+            class="absolute absolute--fit cover w-75 h-75"
+          ></div>
+          <div class="w-100 h-100 flex justify-center items-center o-0 glow white f5 fw7">
+            HEXMAP
+          </div>
+        </a>
+        <pre class="w5">
+  <code>
+    &#60;Hexmap 
+      class="hexmap" 
+      data={data} 
+      featureCollection={geojson}
+      projection={geoOrthographic()}
+      side={5}
+      coords={d => [d.lng, d.lat]}
+      value={d => d.value} 
+      fill={d => d.color} 
+    /&#62;
+  </code>
+  </pre>
+      </div>
     </div>
     <a
       href="https://docs.datalith.xyz"
       target="_blank"
-      class="link fixed left-2 bottom-2 f6 fw7 white"
+      class="link fixed left-2 bottom-2 f5 fw7 white"
     >
-      storybook
+      STORYBOOK
     </a>
     <a
       href="https://github.com/lucafalasco/datalith"
