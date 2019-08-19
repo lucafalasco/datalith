@@ -4,6 +4,9 @@
 
 ---
 
+[![npm](https://img.shields.io/badge/npm-datalith-black.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/org/datalith)
+[![npm version](https://img.shields.io/npm/v/datalith.svg?style=for-the-badge&label)](https://www.npmjs.com/org/datalith)
+
 ### **Datalith** is a collection of clean, lightweight and easily customizable React components for data visualization.
 
 The purpose is to provide an easy way to integrate custom data visualizations in any React
@@ -71,13 +74,13 @@ $ yarn build
 
 ## F.A.Q.
 
-- The components don't have axis or labels or legends, what if I need those?
+- Axis, labels or legends are not included, what if I need those?
 
-  > The purpose of the project is to provide an easy way to display data in a very straightforward and engaging way, that's why _datalith_ focuses on the shapes and the visual patterns rather then axis and labels. However, if you need to display them you can easily create your own components or integrate a library like [vx](https://github.com/hshoff/vx) which is great for that.
+  > The purpose of the project is to provide an easy way to display data in a very straightforward and engaging way, that's why the focus of _datalith_ is on the shapes and the visual patterns rather then axis and labels. However, if you need to display those you can easily create your own components (or use a library like [vx](https://github.com/hshoff/vx)) and render those elements as an additional layer of the visualization.
 
 - Which packages do I have to use?
 
-  > _datalith_ is meant to be extremly modular, so you can install only the charts you need by using the scoped package install:
+  > _datalith_ is meant to be extremely modular, so you can install only the charts you need by using the scoped package install:
 
   > > ```sh
   > > yarn add @datalith/hexmap
@@ -95,6 +98,6 @@ $ yarn build
 
 - Does it come with types?
 
-  > yes it does.
+  > Yes it does.
 
 #### The project is still at an early stage
