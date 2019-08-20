@@ -10,6 +10,7 @@
     "url": ""
   },
   "scripts": {
+    "postinstall": "yarn bootstrap",
     "bootstrap": "lerna bootstrap",
     "del-dist": "lerna exec --parallel -- del-cli dist",
     "prebuild": "yarn del-dist",
