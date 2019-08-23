@@ -19,6 +19,14 @@ Some key features:
 - Simple, shared API
 - Easy to integrate, customize, and enhance
 
+---
+
+<p align="center">
+  <img src="./website/assets/gallery.svg" width="100%" />
+</p>
+
+---
+
 ## Installation
 
 ```sh
@@ -78,19 +86,23 @@ $ yarn build
 
   > The purpose of the project is to provide an easy way to display data in a very straightforward and engaging way, that's why the focus of _datalith_ is on the shapes and the visual patterns rather then axis and labels. However, if you need to display those you can easily create your own components (or use a library like [vx](https://github.com/hshoff/vx)) and render those elements as an additional layer of the visualization.
 
+- I need a simple [barchart | scatterplot | piechart | ... ], why is it not included?
+
+  > _datalith_ differs from other data-viz libraries by providing unconventional yet clear and easy-to-read data visualizations, that's why you won't find barcharts or piecharts, there are already a lot of libraries which let you create basic charts like those. This also means ideas about new unique visual models are strongly welcomed, feel free to open an issue to discuss ;)
+
 - Which packages do I have to use?
 
   > _datalith_ is meant to be extremely modular, so you can install only the charts you need by using the scoped package install:
 
-  > > ```sh
-  > > yarn add @datalith/hexmap
-  > > ```
+  > ```sh
+  > yarn add @datalith/hexmap
+  > ```
 
   > Optionally, you can also choose to insall the complete collection of charts:
 
-  > > ```sh
-  > > yarn add datalith
-  > > ```
+  > ```sh
+  > yarn add datalith
+  > ```
 
 - What about animations/transitions?
 
