@@ -69,7 +69,7 @@ export const GridMap: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
       const {
         className,
         style,
-        defs,
+        additionalElements,
         data,
         coords,
         value,
@@ -111,7 +111,7 @@ export const GridMap: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
             width={width}
             height={height}
           >
-            {defs}
+            {additionalElements}
             <g>
               {/* DEBUG */}
               {/* {features.map((f, i) => (

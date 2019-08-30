@@ -66,7 +66,7 @@ export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
       const {
         className,
         style,
-        defs,
+        additionalElements,
         data,
         value,
         fill,
@@ -88,7 +88,7 @@ export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
             width={width}
             height={height}
           >
-            {defs}
+            {additionalElements}
             {data
               .sort((a, b) => callOrGetValue(value, b) - callOrGetValue(value, a, 0))
               .map((datum, i) => (

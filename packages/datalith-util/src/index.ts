@@ -12,12 +12,12 @@ export type Color = DiscreteAccessor | string
 export type Coords = CoordsAccessor | [number, number]
 
 export interface CommonProps {
-  /** Custom css classes to apply to the SVG element */
+  /** Custom css classes to apply to the SVG */
   className?: string
   /** Custom style object to apply to the SVG */
   style?: React.CSSProperties
-  /** Optional <defs /> element to include in the SVG */
-  defs?: JSX.Element
+  /** Optional elements to add to the SVG */
+  additionalElements?: JSX.Element
   /** Data array */
   data: Datum[]
   /** Fill color accessor */

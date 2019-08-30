@@ -39,7 +39,7 @@ storiesOf('Spiral', module)
     return (
       <Spiral
         data={defaultData}
-        defs={defs}
+        additionalElements={defs}
         value={d => yScale(d.value)}
         // stroke="#000"
         fill={(d, i) => (i % 2 ? 'url("#gradient")' : 'url("#gradient2")')}

@@ -95,7 +95,7 @@ export const Flower: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
       const {
         className,
         style,
-        defs,
+        additionalElements,
         data,
         value,
         fill,
@@ -118,7 +118,7 @@ export const Flower: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
             width={width}
             height={height}
           >
-            {defs}
+            {additionalElements}
             {data.map((datum, i) => (
               <Polygon
                 key={i}

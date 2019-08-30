@@ -76,7 +76,7 @@ storiesOf('Flower', module)
     return (
       <Flower
         data={defaultData}
-        defs={defs}
+        additionalElements={defs}
         value={d => yScale(d.value)}
         fill="url('#gradient')"
         stroke="black"

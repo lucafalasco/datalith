@@ -51,7 +51,7 @@ export const Pack: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
       const {
         className,
         style,
-        defs,
+        additionalElements,
         data,
         value,
         fill,
@@ -79,7 +79,7 @@ export const Pack: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
             width={width}
             height={height}
           >
-            {defs}
+            {additionalElements}
             <g
               transform={`translate(
               ${center.x - pack.boundingBox.w / 2},

@@ -36,7 +36,7 @@ storiesOf('GridMap', module)
       <GridMap
         style={{ backgroundColor: '#303030' }}
         data={defaultData}
-        defs={defs}
+        additionalElements={defs}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
         stroke="url('#gradient')"

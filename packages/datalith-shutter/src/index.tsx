@@ -95,7 +95,7 @@ export const Shutter: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
       const {
         className,
         style,
-        defs,
+        additionalElements,
         data,
         fill,
         stroke,
@@ -118,7 +118,7 @@ export const Shutter: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
             width={width}
             height={height}
           >
-            {defs}
+            {additionalElements}
             {data.map((datum, i) => (
               <Polygon
                 key={i}

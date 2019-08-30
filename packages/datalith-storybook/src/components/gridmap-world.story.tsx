@@ -24,7 +24,7 @@ storiesOf('GridMapWorld', module)
         style={{ backgroundColor: '#303030' }}
         side={side}
         data={defaultData}
-        defs={defs}
+        additionalElements={defs}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
         stroke="url('#gradient')"
