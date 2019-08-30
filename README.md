@@ -21,9 +21,9 @@ Some key features:
 
 ---
 
-<p align="center">
+<a href="https://docs.datalith.xyz">
   <img src="./website/assets/gallery.svg" width="100%" />
-</p>
+</a>
 
 ---
 
@@ -84,9 +84,9 @@ $ yarn build
 
 - Axis, labels or legends are not included, what if I need those?
 
-  > The purpose of the project is to provide an easy way to display data in a very straightforward and engaging way, that's why the focus of _datalith_ is on the shapes and the visual patterns rather then axis and labels. However, if you need to display those you can easily create your own components (or use a library like [vx](https://github.com/hshoff/vx)) and render those elements as an additional layer of the visualization.
+  > The purpose of the project is to provide an easy way to display data in a very straightforward and engaging way, so the focus of _datalith_ is on the shapes and the visual patterns, and that's why axis, labels or legends are not included by default. However, if you need to display them, you can easily create your own components (or use a library like [vx](https://github.com/hshoff/vx)) and include those elements as an additional layer by passing them to the `additionalElements` prop.
 
-- I need a simple [barchart | scatterplot | piechart | ... ], why is it not included?
+- I need a simple [barchart | scatterplot | piechart | ... ], why is it missing?
 
   > _datalith_ differs from other data-viz libraries by providing unconventional yet clear and easy-to-read data visualizations, that's why you won't find barcharts or piecharts, there are already a lot of libraries which let you create basic charts like those. This also means ideas about new unique visual models are strongly welcomed, feel free to open an issue to discuss ;)
 
