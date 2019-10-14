@@ -44,7 +44,7 @@ Then in you React app:
 ```tsx
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { DotMap } from '@datalith/hexmap'
+import { HexMap } from '@datalith/hexmap'
 
 ReactDOM.render(
   <HexMap
