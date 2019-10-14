@@ -10,7 +10,7 @@
 ### **Datalith** is a collection of clean, lightweight and easily customizable React components for data visualization.
 
 The purpose is to provide an easy way to integrate custom data visualizations in any React
-project. The components were disigned with simplicity in mind, so the only thing required
+project. The components were designed with simplicity in mind, so the only thing required
 for the charts to work is the actual _data_.
 
 Some key features:
