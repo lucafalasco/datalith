@@ -8,6 +8,8 @@ interface Props extends CommonProps {
   value: Value
   /** Center of the dataviz */
   center?: { x: number; y: number }
+  /** Spacing between points on spiral */
+  spacing: number
 }
 
 interface CircleProps {
@@ -20,15 +22,22 @@ interface CircleProps {
   tooltip?: (d: Datum) => string
 }
 
-function getSpiralCoords(data: Datum[], maxSide: number) {
+function getSpiralCoords(data: Datum[], spacing: number) {
   let angle = 0
-  return data.map((d, i) => {
-    const radius = Math.sqrt(i + 1)
-    angle += Math.asin(1 / radius)
-    return {
-      x: radius * maxSide * Math.cos(angle),
-      y: radius * maxSide * Math.sin(angle),
+
+  return data.map(d => {
+    const radius = Math.pow(angle, 2)
+    // using quadratic formula as suggested here: https://stackoverflow.com/questions/13894715/draw-equidistant-points-on-a-spiral
+    const delta = (-2 * radius + Math.sqrt(4 * radius * radius + 16 * spacing)) / 4
+
+    const coords = {
+      x: radius * Math.cos(angle),
+      y: radius * Math.sin(angle),
     }
+
+    angle += delta
+
+    return coords
   })
 }
 
@@ -61,6 +70,7 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
     static defaultProps = {
       value: d => d,
       fill: DEFAULT_COLOR,
+      spacing: 20,
     }
 
     render() {
@@ -73,6 +83,7 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         fill,
         stroke,
         tooltip,
+        spacing,
         size: { width, height },
         center = {
           x: width / 2,
@@ -81,7 +92,7 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
       } = this.props
 
       const maxRadius = Math.max(...data.map((d, i) => callOrGetValue(value, d, i)))
-      const coords = getSpiralCoords(data, maxRadius * 2 * 0.7)
+      const coords = getSpiralCoords(data, spacing)
 
       return (
         <>

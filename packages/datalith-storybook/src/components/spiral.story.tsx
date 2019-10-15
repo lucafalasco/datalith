@@ -7,22 +7,9 @@ import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
 import { genDateValue } from '../scripts'
 
-const defaultData = genDateValue(100)
+const defaultData = genDateValue(110)
 
 const y = d => d.value
-
-const defs = (
-  <defs>
-    <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stop-color="#238ab0" />
-      <stop offset="100%" stop-color="#04ffbf" />
-    </linearGradient>
-    <linearGradient id="gradient2">
-      <stop offset="0%" stop-color="#f51268" />
-      <stop offset="100%" stop-color="#ffdb4b" />
-    </linearGradient>
-  </defs>
-)
 
 // scales
 const yScale = scaleLinear()
@@ -34,17 +21,6 @@ storiesOf('Spiral', module)
   .add('default', () => {
     const data = defaultData.map(d => yScale(d.value))
     return <Spiral data={data} />
-  })
-  .add('colors', () => {
-    return (
-      <Spiral
-        data={defaultData}
-        additionalElements={defs}
-        value={d => yScale(d.value)}
-        // stroke="#000"
-        fill={(d, i) => (i % 2 ? 'url("#gradient")' : 'url("#gradient2")')}
-      />
-    )
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
