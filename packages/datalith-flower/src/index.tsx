@@ -24,13 +24,13 @@ interface PolygonProps {
   tooltip?: (d: Datum) => string
 }
 
-const getPolygonPoints = ({ index, value, center: { x, y }, padding, dataLength }): string => {
+const getShapePoints = ({ index, value, center: { x, y }, padding, dataLength }): string => {
   const baseAngle = (Math.PI * 2) / dataLength
   const startAngle = Math.PI / 2 + index * baseAngle
   const middleAngle = startAngle + baseAngle / 2
   const endAngle = startAngle + baseAngle
   const complementarAngle = Math.PI - baseAngle / 2 - Math.PI / 2
-  const longSide = value * (Math.sin(complementarAngle) + Math.cos(complementarAngle))
+  const side = value * (Math.sin(complementarAngle) + Math.cos(complementarAngle))
 
   const p0 = {
     x: x + padding * Math.cos(middleAngle),
@@ -40,17 +40,20 @@ const getPolygonPoints = ({ index, value, center: { x, y }, padding, dataLength 
     x: p0.x + value * Math.cos(startAngle),
     y: p0.y + value * Math.sin(startAngle),
   }
-  const p2 = {
-    x: p0.x + longSide * Math.cos(middleAngle),
-    y: p0.y + longSide * Math.sin(middleAngle),
-  }
   const p3 = {
     x: p0.x + value * Math.cos(endAngle),
     y: p0.y + value * Math.sin(endAngle),
   }
 
-  const points = [p0, p1, p2, p3]
-  return points.map(p => `${p.x},${p.y}`).join(' ')
+  const CP = {
+    x1: p0.x + side * Math.cos(startAngle),
+    y1: p0.y + side * Math.sin(startAngle),
+    x2: p0.x + side * Math.cos(endAngle),
+    y2: p0.y + side * Math.sin(endAngle),
+  }
+
+  return `M ${[p0, p1].map(p => `${p.x} ${p.y}`).join(' L ')} 
+    C ${CP.x1} ${CP.y1} ${CP.x2} ${CP.y2} ${p3.x} ${p3.y} Z`
 }
 
 const Polygon = ({
@@ -68,7 +71,7 @@ const Polygon = ({
     fill: callOrGetValue(fill, datum, index),
     stroke: callOrGetValue(stroke, datum, index),
   }
-  const polygonPoints = getPolygonPoints({
+  const points = getShapePoints({
     index,
     dataLength,
     value: callOrGetValue(valueAccessor, datum, index),
@@ -78,7 +81,7 @@ const Polygon = ({
 
   return (
     <g data-tip={tooltip && tooltip(datum)}>
-      <polygon points={polygonPoints} style={style} />
+      <path d={points} style={style} />
     </g>
   )
 }
@@ -88,7 +91,7 @@ export const Flower: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
     static defaultProps = {
       value: d => d,
       fill: DEFAULT_COLOR,
-      padding: 40,
+      padding: 20,
     }
 
     render() {

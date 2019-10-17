@@ -21,5 +21,5 @@ yarn add @datalith/flower
 | fill               | `rgb(0,0,0)`                    | `(Datum) => string` or `string`     | Fill color accessor                                          |
 | stroke             |                                 | `(Datum) => string` or `string`     | Stroke color accessor                                        |
 | center             | `{x: width / 2, y: height / 2}` | `{x: number, y: number}`            | Center of the dataviz                                        |
-| padding            | `40`                            | `number`                            | Padding between elements                                     |
+| padding            | `20`                            | `number`                            | Padding between elements                                     |
 | tooltip            |                                 | `(Datum) => string`                 | Return HTML or text as a string to show on element mouseover |
