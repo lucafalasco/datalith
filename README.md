@@ -22,7 +22,7 @@ Some key features:
 ---
 
 <a href="https://docs.datalith.xyz">
-  <img src="./website/assets/gallery.svg" width="100%" />
+  <img src="./assets/gallery.svg" width="100%" />
 </a>
 
 ---
