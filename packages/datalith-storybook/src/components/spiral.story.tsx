@@ -20,7 +20,7 @@ storiesOf('Spiral', module)
   .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => yScale(d.value))
-    return <Spiral data={data} />
+    return <Spiral data={data} fill={d => `rgba(0,0,0,${Math.random()})`} />
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
