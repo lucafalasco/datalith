@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
+import { easeInOutCubic } from '../lib'
 import { genDateValue } from '../scripts'
 
 const defaultData = genDateValue(700)
@@ -54,9 +55,9 @@ storiesOf('Pack', module)
     const sortedData = [...defaultData].sort((a, b) => b.value - a.value)
     return (
       <Spring
-        config={{ duration: 2000 }}
         from={{ index: 0 }}
         to={{ index: defaultData.length - 1 }}
+        config={{ duration: 1500, easing: easeInOutCubic }}
       >
         {props => {
           const data = sortedData.slice(0, props.index)
@@ -65,7 +66,7 @@ storiesOf('Pack', module)
             <Pack
               data={data}
               value={d => yScale(d.value)}
-              fill={d => `rgba(0,0,0,${zScale(d.value2)})`}
+              fill={d => `rgba(0, 0, 255, ${zScale(d.value2)})`}
             />
           )
         }}
@@ -77,7 +78,8 @@ storiesOf('Pack', module)
       <Pack
         data={defaultData}
         value={d => yScale(d.value)}
-        fill={d => `rgba(0,0,0,${zScale(d.value)})`}
+        fill={d => `rgba(0, 0, 235, ${zScale(d.value)})`}
+        stroke="rgb(0, 0, 255)"
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`

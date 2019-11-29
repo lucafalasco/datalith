@@ -14,13 +14,13 @@ const y = d => d.value
 // scales
 const yScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
-  .range([1, 15])
+  .range([1, 20])
 
 storiesOf('Spiral', module)
   .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => yScale(d.value))
-    return <Spiral data={data} fill={d => `rgba(0,0,0,${Math.random()})`} />
+    return <Spiral data={data} fill={d => `rgba(0, 0, 0, ${Math.random()})`} />
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
@@ -50,9 +50,8 @@ storiesOf('Spiral', module)
         data={sortedData}
         value={d => yScale(d.value)}
         fill={(d, i) =>
-          `rgba(4, 255, 191, ${normalize(d.value, yScale.domain()[0], yScale.domain()[1])}`
+          `rgba(0, 0, 255, ${normalize(d.value, yScale.domain()[0], yScale.domain()[1])}`
         }
-        stroke="#000"
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`

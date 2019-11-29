@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
+import { easeInOutCubic } from '../lib'
 import { genDateValue } from '../scripts'
 
 const width = window.innerWidth
@@ -29,7 +30,7 @@ storiesOf('Ripple', module)
       <Ripple
         data={defaultData}
         value={d => yScale(d.value)}
-        fill={(d, i) => (i % 2 ? '#04ffbf' : '#f7f7f7')}
+        fill={(d, i) => (i % 2 ? 'rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 255, 0.2)')}
       />
     )
   })
@@ -42,7 +43,7 @@ storiesOf('Ripple', module)
 
     return (
       <Spring
-        config={{ duration: 1000, easing: t => t * (2 - t) }}
+        config={{ duration: 1000, easing: easeInOutCubic }}
         from={{ value: sortedData.map(d => 0), index: 0 }}
         to={{ value: sortedData.map(y), index: sortedData.length - 1 }}
       >
@@ -60,7 +61,7 @@ storiesOf('Ripple', module)
         data={defaultData}
         value={d => yScale(d.value)}
         fill={(d, i) => `rgba(4, 255, 191, ${normalize(i, 0, defaultData.length)}`}
-        stroke="#fff"
+        stroke="rgba(0, 0, 0, 0.1)"
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`

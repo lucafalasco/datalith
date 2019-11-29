@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
+import { easeInOutCubic } from '../lib'
 import { genDateValue } from '../scripts'
 
 const width = window.innerWidth
@@ -15,8 +16,8 @@ const y = d => d.value
 const defs = (
   <defs>
     <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stop-color="#f51268" />
-      <stop offset="100%" stop-color="#ffdb4b" />
+      <stop offset="0%" stopColor="#04FFBF" />
+      <stop offset="100%" stopColor="#8004ff" />
     </linearGradient>
   </defs>
 )
@@ -46,7 +47,11 @@ storiesOf('Flower', module)
   })
   .add('animated', () => {
     return (
-      <Spring from={{ value: defaultData.map(d => 0) }} to={{ value: defaultData.map(y) }}>
+      <Spring
+        from={{ value: defaultData.map(d => 0) }}
+        to={{ value: defaultData.map(y) }}
+        config={{ duration: 1000, easing: easeInOutCubic }}
+      >
         {props => {
           return (
             <Flower
@@ -69,6 +74,7 @@ storiesOf('Flower', module)
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
         }
+        style={{ backgroundColor: '#303030' }}
       />
     )
   })
@@ -79,7 +85,6 @@ storiesOf('Flower', module)
         additionalElements={defs}
         value={d => yScale(d.value)}
         fill="url('#gradient')"
-        stroke="black"
       />
     )
   })
