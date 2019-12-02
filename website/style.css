@@ -1,25 +1,36 @@
+@font-face {
+  font-family: 'Akkurat Mono';
+  src: url('./assets/fonts/Akkurat-Mono.ttf') format('truetype');
+}
+
 html,
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Akkurat Mono', sans-serif;
   text-rendering: optimizeLegibility;
   font-size: 14px;
   width: 100%;
-  background: #333;
+  background: #1d2936;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Akkurat Mono', monospace;
 }
 
-.bg-yellow {
+b {
   background-color: #ffd828;
+  color: #1d2936;
+}
+
+::selection {
+  background: transparent;
+  color: #ffd828;
 }
 
 .bg-dark {
-  background-color: #333;
+  background-color: #1d2936;
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +39,7 @@ code {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #333;
+  background: #1d2936;
 }
 
 /* Handle */
