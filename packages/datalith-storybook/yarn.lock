@@ -972,13 +972,13 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
-"@datalith/dotmap@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/dotmap/-/dotmap-0.7.0.tgz#f57fbbcc9d4d91573b8f2e1942cad56129cbb3ca"
-  integrity sha512-qSStqbw8R8n0XFXC99gedP3ix60VGJvIn4cVDR5hRJAuVriCNOXi4Tk07M0LO29XjJxLAvpRxVvLP+GPhCYkxA==
+"@datalith/dotmap@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/dotmap/-/dotmap-0.8.0.tgz#90245464db8405fe58bb2fb9d932d0fc360c9cd0"
+  integrity sha512-R9JNYtVYn+1nNx6VpAsu4fD1kXAH3EiJU7sRhdNVWEa3N3e7VviOBSiGimVzfHTRpAbV9u/1QZfJGwoebCB0KQ==
   dependencies:
-    "@datalith/gridmap" "^0.7.0"
-    "@datalith/util" "^0.7.0"
+    "@datalith/gridmap" "^0.8.0"
+    "@datalith/util" "^0.8.0"
     d3-array "^2.1.0"
     d3-geo "^1.11.3"
     d3-scale "^3.0.0"
@@ -987,22 +987,22 @@
     topojson "^3.0.2"
     us-atlas "^2.1.0"
 
-"@datalith/flower@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/flower/-/flower-0.7.0.tgz#2a846c459be33621f6be182e0b5747b086108970"
-  integrity sha512-44P+kxhOjw2spd03mnfGF2cGHl9FqOektyv6BxSgHJ1q2AvE90Yy2erS4+9tf08skM9Kp2heaj/T4+Ka0LA3gQ==
+"@datalith/flower@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/flower/-/flower-0.8.0.tgz#ffa9b3e284e0e7aa68772e078a4c9a84a7528258"
+  integrity sha512-Q0TBQz6MsUcE9U0pjGmFYGGYvPWQCn/flTSswFBR0odyDwOZKIz+X8Y3g3SacA9yz6ubXO5X3kIxQGeD09D6AQ==
   dependencies:
-    "@datalith/util" "^0.7.0"
+    "@datalith/util" "^0.8.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/gridmap@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/gridmap/-/gridmap-0.7.0.tgz#50e78886bf62c88e85c2adbf7c1a5098e4fb61a9"
-  integrity sha512-drbnc9leiU0+fPL+sCXEU2J7qxRXnDzX7xN1lPefrITYCjMAZu+JpSSabdyHSUdBuNiFtQJjO26nVWDnDnBW7A==
+"@datalith/gridmap@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/gridmap/-/gridmap-0.8.0.tgz#c1fc466dec17c8f18445de0f19737de747bef612"
+  integrity sha512-UnB3TwtCeCM+fzZKQVDwprcokEF3DmblQSmMxGsVfRLUmagMdKh7QvjtU8cspTTVKoaqJVMtBAC7RlOsqoNefw==
   dependencies:
-    "@datalith/util" "^0.7.0"
+    "@datalith/util" "^0.8.0"
     "@turf/flatten" "^5.1.5"
     d3-array "^2.1.0"
     d3-geo "^1.11.3"
@@ -1012,13 +1012,13 @@
     topojson "^3.0.2"
     us-atlas "^2.1.0"
 
-"@datalith/hexmap@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/hexmap/-/hexmap-0.7.0.tgz#d5e9719f86034fddbe0665f06ca1512a74fb1008"
-  integrity sha512-IQ2cJEx7tYeYWYCYgkaHK5di719/S0LmwSmzY4TRQciizH4n/SX8Ih9WDlqSUbZYiXRjZ19m7js+brTf7Q7y4A==
+"@datalith/hexmap@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/hexmap/-/hexmap-0.8.0.tgz#173e4e545fff365762459cd31fd3ae3e12a23287"
+  integrity sha512-IFHbBGDiix/GmaboSwWJxpfJBBM1W7C5pVpETrTniAmyL1QGTY5cxrvvQ1JcCv19Q9y1opiTtMAWscmieZsEig==
   dependencies:
-    "@datalith/gridmap" "^0.7.0"
-    "@datalith/util" "^0.7.0"
+    "@datalith/gridmap" "^0.8.0"
+    "@datalith/util" "^0.8.0"
     d3-array "^2.1.0"
     d3-geo "^1.11.3"
     d3-scale "^3.0.0"
@@ -1027,23 +1027,23 @@
     topojson "^3.0.2"
     us-atlas "^2.1.0"
 
-"@datalith/pack@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/pack/-/pack-0.7.0.tgz#d244045c405a769353c9614ebc2d187e797752d1"
-  integrity sha512-cQhYVXTvuqePHof8g4pBKhgSP0/nUZKrcw+kiUqCz1MuWVVBwx/DH0lDD/d3+pcC8NSYeW4biHHtqWI8IfskzA==
+"@datalith/pack@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/pack/-/pack-0.8.0.tgz#c1ebfb8c46ba4073b1d2ea9a9a82749f3a0a3380"
+  integrity sha512-YQ5kH+6NYp4/PBRNZ/5w/XomDxJRkesAq2ICegbKtPXmJJNvoSmrE3IBMNHHm4CyDmhhvZv3YjAtzLzJ9zqpSQ==
   dependencies:
-    "@datalith/util" "^0.7.0"
+    "@datalith/util" "^0.8.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/pixelmap@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/pixelmap/-/pixelmap-0.7.0.tgz#a661d9d6a4c05557d27b6f1f54233db2baff4c52"
-  integrity sha512-gUzJLKYnFCDyO8c6jbWuKZ90TLVjX4G3gXW0y9NfNBYv7qbj+/hexxmiXzT61U4TSdnVhDXLn2eU8ddMZ06jUA==
+"@datalith/pixelmap@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/pixelmap/-/pixelmap-0.8.0.tgz#243ff7626eec2a62dbee601ef68f2344f93e36ff"
+  integrity sha512-9L9+1hymUe3zrQ9p7fsUYYgLtGa3/68yCDg7ZmxgJS65ajrf7uimyYOGM3M7jgksgkclwtKB6iUn4ENGpaTc9w==
   dependencies:
-    "@datalith/gridmap" "^0.7.0"
-    "@datalith/util" "^0.7.0"
+    "@datalith/gridmap" "^0.8.0"
+    "@datalith/util" "^0.8.0"
     d3-array "^2.1.0"
     d3-geo "^1.11.3"
     d3-scale "^3.0.0"
@@ -1052,40 +1052,40 @@
     topojson "^3.0.2"
     us-atlas "^2.1.0"
 
-"@datalith/ripple@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/ripple/-/ripple-0.7.0.tgz#1353e251a427e27a283342ae2ad39cfb2f7db989"
-  integrity sha512-HYYPja3XPTT99dvwdIdaLGAdIFLf0GtG+W4iRDEhDLJsTBhOBdLxIxryQiP4IQUlF53CZInbrfWTp8vViwctdw==
+"@datalith/ripple@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/ripple/-/ripple-0.8.0.tgz#1e103a5bd52bd4052d670a0bab30a9550bc8d3b0"
+  integrity sha512-Lp+Vhp3Xcu7bdK+QRW96nfow9fH4lJhgaY5uoPZGWYe7N7lgb+5wNkmyLKRBEfL/zEXvfaWqjKUA3CS2Y9q/jA==
   dependencies:
-    "@datalith/util" "^0.7.0"
+    "@datalith/util" "^0.8.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/shutter@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/shutter/-/shutter-0.7.0.tgz#e06095d84641c7241c13eeb8b24e02af58b1b08a"
-  integrity sha512-zYYwDCVYjZFFP1+EkA1ViT9K+jDJVTvzcdhn6CZtGA2xUDzK6D/gphbTEixamLXjJ2GcUr497r2mEFtahSVvLg==
+"@datalith/shutter@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/shutter/-/shutter-0.8.0.tgz#596a962256b8e4eba98a17029e86d66f44dd127a"
+  integrity sha512-MmbecN1rGhBeq3dm18Wz3JPZQd+RsnM7YzBE9sdMZgz4hw2IZ7XqJwcHWwbJb56QPfNq6vG4+xTvvU37xCNuiA==
   dependencies:
-    "@datalith/util" "^0.7.0"
+    "@datalith/util" "^0.8.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/spiral@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/spiral/-/spiral-0.7.0.tgz#c31137d4cd11fedd9a2b1f9aa594d723a9d7137a"
-  integrity sha512-zq2fHdj1A/pHyC4KJEwBdP+DfL8emN2YcGIhUkA5a6NPFkbCf48gkRJX3Gp6fb2hN2nDdnCPY1tX0phwSpgbPA==
+"@datalith/spiral@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/spiral/-/spiral-0.8.0.tgz#00bbf42f8a12d33e774d055c8bd360f598e2ec6f"
+  integrity sha512-Ia7xgiSGntEGQhjpUlda4E7zynAJ2SZconQc15iMyh1qGWuedZAH3F20cahpRQ4XL4psx6Lm90Flb6rYn8evHQ==
   dependencies:
-    "@datalith/util" "^0.7.0"
+    "@datalith/util" "^0.8.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/util@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@datalith/util/-/util-0.7.0.tgz#553bc6f3c97ae812b6da5243c4c533eeb0d898a3"
-  integrity sha512-uDV8Y06bnp1NWxB9/79Umvk+SO8FfHd1x4Hi+Bi83g4LQSiUoSzZW6P96m1VaVS6Pr9EWiJ2+3bkxsPQq1D4ig==
+"@datalith/util@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@datalith/util/-/util-0.8.0.tgz#51dab4b5474ca9388ccec99f915b5dbe49840eef"
+  integrity sha512-tbrvQu42vV7QPP0GCi9YOVkBPr9Bf9R/YUDWmtDQkbRt401uIbSOBGaYYUdEuluCLNEBlUv2iugjSbz5OtUhcg==
   dependencies:
     lodash "^4.17.11"
     react-sizeme "^2.6.7"
@@ -6204,6 +6204,7 @@ is-extendable@^0.1.0, is-extendable@^0.1.1:
 is-extendable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-1.0.1.tgz#a7470f9e426733d81bd81e1155264e3a3507cab4"
+  integrity sha512-arnXMxT1hhoKo9k1LZdmlNyJdDDfy2v0fXjFlmok4+i8ul/6WlbVge9bhM74OpNPQPMGUToDtz+KXa1PneJxOA==
   dependencies:
     is-plain-object "^2.0.4"
 
@@ -6414,6 +6415,7 @@ isobject@^2.0.0:
 isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
+  integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
 isobject@^4.0.0:
   version "4.0.0"
@@ -7535,8 +7537,9 @@ mississippi@^3.0.0:
     through2 "^2.0.0"
 
 mixin-deep@^1.2.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/mixin-deep/-/mixin-deep-1.3.1.tgz#a49e7268dce1a0d9698e45326c5626df3543d0fe"
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/mixin-deep/-/mixin-deep-1.3.2.tgz#1120b43dc359a785dce65b55b82e257ccf479566"
+  integrity sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==
   dependencies:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
