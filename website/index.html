@@ -14,13 +14,18 @@
       content="datalith, typescript, javascript, react, component, data, visualization"
     />
     <meta name="theme-color" content="#1d2936" />
-    <title>DATALITH</title>
+    <title>D A T A L I T H</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
     <link href="style.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body class="overflow-x-hidden">
+      <div class="absolute top-0 top--2-ns left-0 w-25 h4 h5-ns bb bw1 rotate-45 b--blue"></div>
+      <div class="absolute top-2 left-0 w-25 h4 h5-ns bb bw1 rotate-45 b--blue"></div>
+      <div class="absolute top-0 top--2-ns right-0 w-25 h4 h5-ns bb bw1 b--blue reflect"></div>
+      <div class="absolute top-2 right-0 w-25 h4 h5-ns bb bw1 b--blue reflect"></div>
+    </div>
     <div class="flex justify-center items-center h5">
       <a
         href="https://github.com/lucafalasco/datalith"
@@ -34,20 +39,19 @@
     <div class="w-50-l ph4 center white f5-l f4 br2">
       <div class="tc lh-copy">
         <p>
-          <b>Datalith</b> is a collection of <b>clean</b>, <b>lightweight</b> and easily
-          <b>customizable</b> <br />
+          <b>Datalith</b> is a collection of clean, lightweight and easily customizable <br />
           <b>React components for data visualization.</b>
         </p>
 
         <p>
           The purpose is to provide an easy way to integrate custom data visualizations in any React
-          project. The components were disigned with simplicity in mind, so the only thing required
-          for the charts to work is the actual <i>data</i>.
+          project. <br/> The components were disigned with simplicity in mind, <br/> so the only requirement
+          is the actual <i>data</i>.
         </p>
       </div>
 
       <div class="mt5 nested-list-reset">
-        <h4>Some key features:</h4>
+        <h4>Key features:</h4>
         <ul class="list">
           <li>> Typed React components for optimal DX</li>
           <li>> Simple, shared API</li>
@@ -63,9 +67,9 @@
     </div>
 
     <div class="flex flex-column items-center justify-center w-100 mv5 center white">
-      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+      <div class="flex flex-wrap items-center justify-center-ns w-80 mv3">
         <a
-          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2 o-90 glow"
+          class="link relative flex justify-center items-center mv4 pointer black bg-white-90 br2 pa3 mr5-l shadow hover-bg-white"
           style="width: 25rem; height: 25rem;"
           href="https://docs.datalith.xyz/?path=/story/flower--default"
           target="_blank"
@@ -75,7 +79,7 @@
             class="absolute absolute--fit cover w-100 h-100"
           ></div>
         </a>
-        <pre class="w5">
+        <pre class="dn db-l ba bw1 b--blue bg-dark-blue" style="width: 400px">
   <code>
     &#60;Flower 
       class="flower" 
@@ -87,9 +91,9 @@
   </code>
   </pre>
       </div>
-      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+      <div class="flex flex-wrap items-center justify-center-ns w-80 mv3">
         <a
-          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2 o-90 glow"
+          class="link relative flex justify-center items-center mv4 pointer black bg-white-90 br2 pa3 mr5-l shadow hover-bg-white card"
           style="width: 25rem; height: 25rem;"
           href="https://docs.datalith.xyz/?path=/story/gridmapworld--custom-cross"
           target="_blank"
@@ -99,7 +103,7 @@
             class="absolute absolute--fit cover w-100 h-100"
           ></div>
         </a>
-        <pre class="w5">
+        <pre class="w5 dn db-l ba bw1 b--blue bg-dark-blue" style="width: 400px">
   <code>
     &#60;Gridmap 
       class="gridmap" 
@@ -118,9 +122,9 @@
   </code>
   </pre>
       </div>
-      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+      <div class="flex flex-wrap items-center justify-center-ns w-80 mv3">
         <a
-          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2 o-90 glow"
+          class="link relative flex justify-center items-center mv4 pointer black bg-white-90 br2 pa3 mr5-l shadow hover-bg-white card"
           style="width: 25rem; height: 25rem;"
           href="https://docs.datalith.xyz/?path=/story/shutter--default"
           target="_blank"
@@ -130,7 +134,7 @@
             class="absolute absolute--fit cover w-100 h-100"
           ></div>
         </a>
-        <pre class="w5">
+        <pre class="w5 dn db-l ba bw1 b--blue bg-dark-blue" style="width: 400px">
   <code>
     &#60;Shutter 
       class="shutter" 
@@ -143,9 +147,9 @@
   </code>
   </pre>
       </div>
-      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+      <div class="flex flex-wrap items-center justify-center-ns w-80 mv3">
         <a
-          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2 o-90 glow"
+          class="link relative flex justify-center items-center mv4 pointer black bg-white-90 br2 pa3 mr5-l shadow hover-bg-white card"
           style="width: 25rem; height: 25rem;"
           href="https://docs.datalith.xyz/?path=/story/pixelmapus--default"
           target="_blank"
@@ -155,7 +159,7 @@
             class="absolute absolute--fit cover w-75 h-75"
           ></div>
         </a>
-        <pre class="w5">
+        <pre class="w5 dn db-l ba bw1 b--blue bg-dark-blue" style="width: 400px">
   <code>
     &#60;Pixelmap 
       class="pixelmap" 
@@ -170,9 +174,9 @@
   </code>
   </pre>
       </div>
-      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+      <div class="flex flex-wrap items-center justify-center-ns w-80 mv3">
         <a
-          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2 o-90 glow"
+          class="link relative flex justify-center items-center mv4 pointer black bg-white-90 br2 pa3 mr5-l shadow hover-bg-white card"
           style="width: 25rem; height: 25rem;"
           href="https://docs.datalith.xyz/?path=/story/spiral--default"
           target="_blank"
@@ -182,7 +186,7 @@
             class="absolute absolute--fit cover w-100 h-100"
           ></div>
         </a>
-        <pre class="w5">
+        <pre class="w5 dn db-l ba bw1 b--blue bg-dark-blue" style="width: 400px">
   <code>
     &#60;Spiral 
       class="spiral" 
@@ -193,9 +197,9 @@
   </code>
   </pre>
       </div>
-      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+      <div class="flex flex-wrap items-center justify-center-ns w-80 mv3">
         <a
-          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2 o-90 glow"
+          class="link relative flex justify-center items-center mv4 pointer black bg-white-90 br2 pa3 mr5-l shadow hover-bg-white card"
           style="width: 25rem; height: 25rem;"
           href="https://docs.datalith.xyz/?path=/story/pack--default"
           target="_blank"
@@ -205,7 +209,7 @@
             class="absolute absolute--fit cover w-100 h-100"
           ></div>
         </a>
-        <pre class="w5">
+        <pre class="w5 dn db-l ba bw1 b--blue bg-dark-blue" style="width: 400px">
   <code>
     &#60;Pack 
       class="pack" 
@@ -216,9 +220,9 @@
   </code>
   </pre>
       </div>
-      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+      <div class="flex flex-wrap items-center justify-center-ns w-80 mv3">
         <a
-          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2 o-90 glow"
+          class="link relative flex justify-center items-center mv4 pointer black bg-white-90 br2 pa3 mr5-l shadow hover-bg-white card"
           style="width: 25rem; height: 25rem;"
           href="https://docs.datalith.xyz/?path=/story/dotmap--default"
           target="_blank"
@@ -228,7 +232,7 @@
             class="absolute absolute--fit cover w-75 h-75"
           ></div>
         </a>
-        <pre class="w5">
+        <pre class="w5 dn db-l ba bw1 b--blue bg-dark-blue" style="width: 400px">
   <code>
     &#60;Dotmap 
       class="dotmap" 
@@ -243,9 +247,9 @@
   </code>
   </pre>
       </div>
-      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+      <div class="flex flex-wrap items-center justify-center-ns w-80 mv3">
         <a
-          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2 o-90 glow"
+          class="link relative flex justify-center items-center mv4 pointer black bg-white-90 br2 pa3 mr5-l shadow hover-bg-white card"
           style="width: 25rem; height: 25rem;"
           href="https://docs.datalith.xyz/?path=/story/ripple--default"
           target="_blank"
@@ -255,7 +259,7 @@
             class="absolute absolute--fit cover w-100 h-100"
           ></div>
         </a>
-        <pre class="w5">
+        <pre class="w5 dn db-l ba bw1 b--blue bg-dark-blue" style="width: 400px">
   <code>
     &#60;Ripple 
       class="ripple" 
@@ -266,9 +270,9 @@
   </code>
   </pre>
       </div>
-      <div class="flex flex-wrap items-center justify-center-l w-80 mv3">
+      <div class="flex flex-wrap items-center justify-center-ns w-80 mv3">
         <a
-          class="link relative flex justify-center items-center mv4 pointer black bg-white br2 pa3 mr5-l shadow-2 o-90 glow"
+          class="link relative flex justify-center items-center mv4 pointer black bg-white-90 br2 pa3 mr5-l shadow hover-bg-white card"
           style="width: 25rem; height: 25rem;"
           href="https://docs.datalith.xyz/?path=/story/hexmapworld--orthographic"
           target="_blank"
@@ -278,7 +282,7 @@
             class="absolute absolute--fit cover w-75 h-75"
           ></div>
         </a>
-        <pre class="w5">
+        <pre class="w5 dn db-l ba bw1 b--blue bg-dark-blue" style="width: 400px">
   <code>
     &#60;Hexmap 
       class="hexmap" 
@@ -294,23 +298,23 @@
   </pre>
       </div>
     </div>
-    <div class="white tc center mv4 pv2">
-      <span class="f6 fw7">&#60;/&#62;</span> with <span>♥</span> in
-      <span class="f6 fw7 ba b--white pa1">TS</span> by
-      <a href="https://lucafalasco.com" target="_blank" class="link white fw7 bb">Luca Falasco</a>
+    <div class="tc center mv4 pv2 white f7">
+      <span class="fw7 blue">&#60;/&#62;</span> with <span class="blue">♥</span> in
+      <span class="fw7 ba b--white pl1 pt1 blue tracked">TS</span> by
+      <a href="https://lucafalasco.com" target="_blank" class="link blue fw7 bb">Luca Falasco</a>
     </div>
     <a
       href="https://docs.datalith.xyz"
       target="_blank"
-      class="link fixed left-2 bottom-2 f2 fw7 white"
+      class="link fixed left-2 bottom-2 f3 fw7 blue"
     >
       ⇱
     </a>
     <a
       href="https://github.com/lucafalasco/datalith"
       target="_blank"
-      class="fixed right-2 bottom-2 f6 flex db fw7 w2 h2 white cover"
-      style="background-image: url('assets/images/github.svg')"
+      class="fixed right-2 bottom-2 flex db cover"
+      style="background-image: url('assets/images/github.svg'); width: 1.5rem;; height: 1.5rem;"
     >
     </a>
   </body>

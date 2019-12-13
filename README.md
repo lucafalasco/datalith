@@ -21,8 +21,8 @@ Some key features:
 
 ---
 
-<a href="https://docs.datalith.xyz">
-  <img src="./assets/gallery.svg" width="100%" />
+<a href="https://docs.datalith.xyz" style="display: block" align="center">
+  <img src="./assets/gallery.svg" width="80%"/>
 </a>
 
 ---

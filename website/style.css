@@ -20,13 +20,42 @@ code {
 }
 
 b {
-  background-color: #ffd828;
+  background-color: #6dc8be;
   color: #1d2936;
 }
 
 ::selection {
   background: transparent;
-  color: #ffd828;
+  color: #6dc8be;
+}
+
+.card::before {
+  content: '';
+  border-right: 2px solid #6dc8be;
+  height: 6rem;
+  width: 1px;
+  top: -6rem;
+  position: absolute;
+}
+
+.reflect {
+  transform: scaleX(-1) rotate(45deg);
+}
+
+.b--blue {
+  border-color: #6dc8be;
+}
+
+.blue {
+  color: #6dc8be;
+}
+
+.bg-dark-blue {
+  background-color: #141c25;
+}
+
+.shadow {
+  box-shadow: 4px 4px 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .bg-dark {
