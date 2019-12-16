@@ -38,6 +38,10 @@ b {
   position: absolute;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .reflect {
   transform: scaleX(-1) rotate(45deg);
 }
