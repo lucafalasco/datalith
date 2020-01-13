@@ -10,8 +10,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts*'",
-    "del-dist": "del-cli dist",
-    "prebuild": "yarn del-dist",
+    "prebuild": "rm -rf dist",
     "build": "tsc",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s ./public -o ../../storybook"
