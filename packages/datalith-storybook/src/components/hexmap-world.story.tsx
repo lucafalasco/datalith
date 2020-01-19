@@ -17,7 +17,6 @@ storiesOf('HexMapWorld', module)
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
-        fill="blue"
       />
     )
   })
