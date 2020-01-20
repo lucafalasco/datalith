@@ -7,13 +7,13 @@ export default create({
 
   // Color palette
   colorPrimary: '#FFFFFF', // primary color
-  colorSecondary: '#333333', // secondary color
+  colorSecondary: '#181818', // secondary color
 
   // UI
-  appBg: '#333333',
+  appBg: '#181818',
   appContentBg: '#F2F2F2',
-  appBorderColor: 'rgba(0,0,0,.1)',
-  appBorderRadius: 4,
+  appBorderColor: '#181818',
+  appBorderRadius: 2,
 
   // Fonts
   fontBase:
@@ -25,8 +25,8 @@ export default create({
   textInverseColor: '#FFFFFF',
 
   // Toolbar default and active colors
-  barTextColor: '#333333',
-  barSelectedColor: '#333333',
+  barTextColor: '#181818',
+  barSelectedColor: '#181818',
   barBg: '#FFFFFF',
 
   // Form colors
