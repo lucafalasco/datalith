@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming'
-import Logo from './logo.svg'
+import Logo from './logo-white.svg'
 
 export default create({
   // Is this a 'light' or 'dark' theme?

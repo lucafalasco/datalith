@@ -5,10 +5,12 @@ addParameters({
   options: {
     theme,
     showPanel: false,
+    isToolshown: true,
   },
 })
 
 function loadStories() {
+  require('./intro')
   require('glob-loader!./stories.pattern')
 }
 
