@@ -27,6 +27,8 @@ Some key features:
 
 ---
 
+## **[ Getting started](https://medium.com/@lucafalasco/turn-your-data-into-beautiful-dataliths-f25bae8bd438?source=friends_link&sk=2cbc67534d9361bfec3e86ad22ac5d1d)**
+
 ## Installation
 
 ```sh
