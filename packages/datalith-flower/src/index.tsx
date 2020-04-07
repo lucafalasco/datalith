@@ -1,25 +1,29 @@
-import { callOrGetValue, Color, CommonProps, Datum, ResponsiveWrapper, Value } from '@datalith/util'
+import {
+  callOrGetValue,
+  CommonProps,
+  Datum,
+  ResponsiveWrapper,
+  CommonAccessors,
+  NumberAccessor,
+} from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 
-const DEFAULT_COLOR = '#000000'
 interface Props extends CommonProps {
   /** Value Accessor */
-  value: Value
+  value: NumberAccessor
   /** Padding between elements */
   padding: number
   /** Center of the dataviz */
   center?: { x: number; y: number }
 }
 
-interface PolygonProps {
+interface PolygonProps extends CommonAccessors {
   datum: Datum
-  value: Value
+  value: NumberAccessor
   index: number
   dataLength: number
   padding: number
-  fill: Color
-  stroke: Color
   center: { x: number; y: number }
   tooltip?: (d: Datum) => string
 }
@@ -64,12 +68,16 @@ const Polygon = ({
   center,
   padding,
   fill,
+  fillOpacity,
   stroke,
+  strokeOpacity,
   tooltip,
 }: PolygonProps) => {
   const style = {
     fill: callOrGetValue(fill, datum, index),
+    fillOpacity: callOrGetValue(fillOpacity, datum, index),
     stroke: callOrGetValue(stroke, datum, index),
+    strokeOpacity: callOrGetValue(strokeOpacity, datum, index),
   }
   const points = getShapePoints({
     index,
@@ -90,7 +98,6 @@ export const Flower: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class Flower extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
-      fill: DEFAULT_COLOR,
       padding: 20,
     }
 
@@ -102,7 +109,9 @@ export const Flower: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         data,
         value,
         fill,
+        fillOpacity,
         stroke,
+        strokeOpacity,
         padding,
         tooltip,
         size: { width, height },
@@ -132,7 +141,9 @@ export const Flower: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
                 dataLength={data.length}
                 padding={padding}
                 fill={fill}
+                fillOpacity={fillOpacity}
                 stroke={stroke}
+                strokeOpacity={strokeOpacity}
                 tooltip={tooltip}
               />
             ))}

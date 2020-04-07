@@ -63,7 +63,8 @@ storiesOf('GridMap', module)
         style={{ backgroundColor: '#303030' }}
         side={side}
         data={data}
-        fill={d => (d ? '#04FFBF' : '#fff')}
+        fill="#fff"
+        fillOpacity={d => (d ? 1 : 0.2)}
         featureCollection={italy}
         projection={projection}
         customRender={({ x, y, datum }, defaultProps) => (

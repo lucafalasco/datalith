@@ -1,5 +1,6 @@
 import notes from '@datalith/flower/README.md'
 import { Flower } from '@datalith/flower/src'
+import { normalize } from '@datalith/util'
 import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
@@ -42,7 +43,11 @@ storiesOf('Flower', module)
     const data = [...defaultData].sort((a, b) => b.value - a.value)
 
     return (
-      <Flower data={data} value={d => yScale(d.value)} fill={(d, i) => `rgba(0,0,0,0.${i + 1})`} />
+      <Flower
+        data={data}
+        value={d => yScale(d.value)}
+        fillOpacity={(d, i) => normalize(i + 1, 1, data.length)}
+      />
     )
   })
   .add('animated', () => {

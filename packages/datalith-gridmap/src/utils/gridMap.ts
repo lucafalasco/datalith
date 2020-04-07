@@ -1,4 +1,4 @@
-import { callOrGetValue, Coords, Datum, Value } from '@datalith/util'
+import { callOrGetValue, CoordsAccessor, Datum, NumberAccessor } from '@datalith/util'
 import flatten from '@turf/flatten'
 import { GeometryCollection } from '@turf/helpers'
 import { sum } from 'd3-array'
@@ -11,8 +11,8 @@ function getFeatureIdToValues(
   feature: Feature,
   featureIdToValues: Map<string, number>,
   featureIdToDatum: Map<string, Datum>,
-  coordsAccessor: Coords,
-  valueAccessor: Value,
+  coordsAccessor: CoordsAccessor,
+  valueAccessor: NumberAccessor,
 ) {
   const res = data.find((d, i) => {
     const coords = callOrGetValue(coordsAccessor, d, i)
@@ -56,8 +56,8 @@ const subGrid = (box: [[number, number], [number, number]], side: number) => {
 interface GridMapConfig {
   projection: GeoProjection // d3.geo projection
   data: Datum[] // d3.map() mapping key to data
-  coords: Coords
-  value: Value
+  coords: CoordsAccessor
+  value: NumberAccessor
   featureCollection: FeatureCollection // array of map features
   isDensity?: boolean // set to `true` if data define a density
   width?: number
