@@ -1,6 +1,6 @@
 {
   "name": "@datalith/flower",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "datalith flower",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/lucafalasco/datalith#readme",
   "dependencies": {
-    "@datalith/util": "^0.8.0",
+    "@datalith/util": "^0.9.0",
     "d3-scale": "^3.0.0",
     "lodash": "^4.17.11",
     "react-tooltip": "^3.10.0"
