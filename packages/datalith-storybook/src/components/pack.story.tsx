@@ -2,35 +2,31 @@ import notes from '@datalith/pack/README.md'
 import { Pack } from '@datalith/pack/src'
 import { normalize } from '@datalith/util'
 import { storiesOf } from '@storybook/react'
-import { scaleLinear } from 'd3-scale'
+import { scaleLinear, scaleQuantize } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
 import { easeInOutCubic } from '../lib'
 import { genDateValue } from '../scripts'
 
-const defaultData = genDateValue(700)
+const defaultData = genDateValue(300)
 
 const y = d => d.value
 
 // scales
-const yScale = scaleLinear()
+const yScale = scaleQuantize()
   .domain([0, Math.max(...defaultData.map(y))])
-  .range([5, 30])
+  .range([5, 7, 10, 12, 15, 18, 20, 30, 40])
 
 const zScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
-  .range([0, 1])
+  .range([0.1, 0.9])
   .nice()
 
 storiesOf('Pack', module)
   .addParameters({ notes })
   .add('default', () => {
     return (
-      <Pack
-        data={defaultData}
-        value={d => yScale(d.value)}
-        fill={d => `rgba(0,0,0,${zScale(d.value2)})`}
-      />
+      <Pack data={defaultData} value={d => yScale(d.value)} fillOpacity={d => zScale(d.value2)} />
     )
   })
   .add('colors', () => {
@@ -39,9 +35,8 @@ storiesOf('Pack', module)
         style={{ backgroundColor: '#303030' }}
         data={defaultData}
         value={d => yScale(d.value)}
-        fill={() => {
-          return `rgba(4, 255, 191, ${normalize(Math.random(), 0, 1)}`
-        }}
+        fill="rgb(4, 255, 191)"
+        fillOpacity={() => Math.random()}
       />
     )
   })
@@ -66,7 +61,8 @@ storiesOf('Pack', module)
             <Pack
               data={data}
               value={d => yScale(d.value)}
-              fill={d => `rgba(0, 0, 255, ${zScale(d.value2)})`}
+              fill="blue"
+              fillOpacity={d => zScale(d.value2)}
             />
           )
         }}
@@ -78,11 +74,13 @@ storiesOf('Pack', module)
       <Pack
         data={defaultData}
         value={d => yScale(d.value)}
-        fill={d => `rgba(0, 0, 235, ${zScale(d.value)})`}
-        stroke="rgb(0, 0, 255)"
+        fill="blue"
+        fillOpacity={d => zScale(d.value)}
+        stroke="white"
+        strokeOpacity={0.5}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
-          <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
+          <p><b>Value: </b>${Number(value).toFixed(2)}</p>`
         }
       />
     )

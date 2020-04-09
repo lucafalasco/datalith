@@ -20,7 +20,7 @@ storiesOf('Spiral', module)
   .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => yScale(d.value))
-    return <Spiral data={data} fill={d => `rgba(0, 0, 0, ${Math.random()})`} />
+    return <Spiral data={data} />
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
@@ -49,9 +49,8 @@ storiesOf('Spiral', module)
       <Spiral
         data={sortedData}
         value={d => yScale(d.value)}
-        fill={(d, i) =>
-          `rgba(0, 0, 255, ${normalize(d.value, yScale.domain()[0], yScale.domain()[1])}`
-        }
+        fill="blue"
+        fillOpacity={d => normalize(d.value, yScale.domain()[0], yScale.domain()[1])}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`

@@ -1,9 +1,14 @@
-import { callOrGetValue, Color, CommonProps, Datum, ResponsiveWrapper } from '@datalith/util'
+import {
+  callOrGetValue,
+  CommonProps,
+  Datum,
+  ResponsiveWrapper,
+  CommonAccessors,
+} from '@datalith/util'
 import { range } from 'lodash'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 
-const DEFAULT_COLOR = '#000000'
 interface Props extends CommonProps {
   radiusInner?: number
   radiusOuter?: number
@@ -22,12 +27,10 @@ interface Polygon {
   p2: Coords
 }
 
-interface PolygonProps {
+interface PolygonProps extends CommonAccessors {
   datum: Datum
   index: number
   dataLength: number
-  fill: Color
-  stroke: Color
   radiusInner: number
   radiusOuter: number
   center: { x: number; y: number }
@@ -57,7 +60,9 @@ const Polygon = ({
   radiusInner,
   radiusOuter,
   fill,
+  fillOpacity,
   stroke,
+  strokeOpacity,
   tooltip,
 }: PolygonProps) => {
   const theta = 0 // Angle (deg) that determines how the entire shutter is rotated: increasing theta will rotate the entire shutter counterclockwise
@@ -70,16 +75,18 @@ const Polygon = ({
   const j = index === dataLength - 1 ? 0 : index + 1
   const d = { p0: polygonBig[index], p1: polygonBig[j], p2: polygonSmall[index] }
 
-  const polygonStyle = {
+  const style = {
     fill: callOrGetValue(fill, datum, index),
+    fillOpacity: callOrGetValue(fillOpacity, datum, index),
     stroke: callOrGetValue(stroke, datum, index),
+    strokeOpacity: callOrGetValue(strokeOpacity, datum, index),
   }
 
   const points = getPolygonPoints(d)
 
   return (
     <g data-tip={tooltip && tooltip(datum)}>
-      <polygon points={points} style={polygonStyle} />
+      <polygon points={points} style={style} />
     </g>
   )
 }
@@ -98,7 +105,9 @@ export const Shutter: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         additionalElements,
         data,
         fill,
+        fillOpacity,
         stroke,
+        strokeOpacity,
         tooltip,
         radiusInner = defaultRadius,
         radiusOuter = defaultRadius + 50,
@@ -129,7 +138,9 @@ export const Shutter: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
                 radiusInner={radiusInner}
                 radiusOuter={radiusOuter}
                 fill={fill}
+                fillOpacity={fillOpacity}
                 stroke={stroke}
+                strokeOpacity={strokeOpacity}
                 tooltip={tooltip}
               />
             ))}

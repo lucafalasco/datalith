@@ -1,12 +1,18 @@
-import { callOrGetValue, Color, CommonProps, Datum, ResponsiveWrapper, Value } from '@datalith/util'
+import {
+  callOrGetValue,
+  CommonProps,
+  Datum,
+  ResponsiveWrapper,
+  NumberAccessor,
+  CommonAccessors,
+} from '@datalith/util'
 import { normalize } from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 
-const DEFAULT_COLOR = 'hsl(0, 0%, 0%)'
 interface Props extends CommonProps {
   /** Value Accessor */
-  value: Value
+  value: NumberAccessor
   /** Center of the dataviz */
   center?: { x: number; y: number }
 }
@@ -16,14 +22,12 @@ interface Center {
   y: number
 }
 
-interface CircleProps {
+interface CircleProps extends CommonAccessors {
   datum: Datum
-  value: Value
+  value: NumberAccessor
   dataLength: number
   index: number
   center: Center
-  fill: Color
-  stroke: Color
   tooltip?: (d: Datum) => string
 }
 
@@ -34,16 +38,19 @@ const Circle = ({
   index,
   center,
   fill,
+  fillOpacity,
   stroke,
+  strokeOpacity,
   tooltip,
 }: CircleProps) => {
   const style = {
     fill: callOrGetValue(fill, datum, index),
-    stroke: callOrGetValue(stroke, datum, index),
     fillOpacity:
-      callOrGetValue(fill, datum, index) === DEFAULT_COLOR
+      !fill && !fillOpacity
         ? normalize(index, 0, dataLength)
-        : undefined,
+        : callOrGetValue(fillOpacity, datum, index),
+    stroke: callOrGetValue(stroke, datum, index),
+    strokeOpacity: callOrGetValue(strokeOpacity, datum, index),
   }
 
   const radius = callOrGetValue(valueAccessor, datum, index)
@@ -59,7 +66,6 @@ export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class Ripple extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
-      fill: DEFAULT_COLOR,
     }
 
     render() {
@@ -70,7 +76,9 @@ export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         data,
         value,
         fill,
+        fillOpacity,
         stroke,
+        strokeOpacity,
         tooltip,
         size: { width, height },
         center = {
@@ -99,7 +107,9 @@ export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
                   value={value}
                   dataLength={data.length}
                   fill={fill}
+                  fillOpacity={fillOpacity}
                   stroke={stroke}
+                  strokeOpacity={strokeOpacity}
                   center={center}
                   tooltip={tooltip}
                 />

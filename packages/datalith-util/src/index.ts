@@ -3,15 +3,25 @@ import ResponsiveWrapper from './ResponsiveWrapper'
 
 export type Datum = any
 
-type ContinuousAccessor = (d: Datum, i: number) => number
-type DiscreteAccessor = (d: Datum, i: number) => string
-type CoordsAccessor = (d: Datum, i: number) => [number, number]
+type AccessorFunction<T> = (d: Datum, i: number) => T
+export type Accessor<T> = AccessorFunction<T> | T
 
-export type Value = ContinuousAccessor | number
-export type Color = DiscreteAccessor | string
-export type Coords = CoordsAccessor | [number, number]
+export type CoordsAccessor = Accessor<[number, number]>
+export type StringAccessor = Accessor<string>
+export type NumberAccessor = Accessor<number>
 
-export interface CommonProps {
+export interface CommonAccessors {
+  /** Fill color accessor */
+  fill: StringAccessor
+  /** Fill opacity accessor */
+  fillOpacity: NumberAccessor
+  /** Stroke color accessor */
+  stroke: StringAccessor
+  /** Stroke opacity accessor */
+  strokeOpacity: NumberAccessor
+}
+
+export interface CommonProps extends CommonAccessors {
   /** Custom css classes to apply to the SVG */
   className?: string
   /** Custom style object to apply to the SVG */
@@ -20,10 +30,6 @@ export interface CommonProps {
   additionalElements?: JSX.Element
   /** Data array */
   data: Datum[]
-  /** Fill color accessor */
-  fill: Color
-  /** Stroke color accessor */
-  stroke: Color
   /** Width and Height of the SVG */
   size: { width: number; height: number }
   /** Return HTML or text as a string to show on element mouseover */

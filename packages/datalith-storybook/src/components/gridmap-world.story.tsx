@@ -46,6 +46,7 @@ storiesOf('GridMapWorld', module)
       <GridMapWorld
         side={side}
         data={defaultData}
+        fillOpacity={d => (d ? 1 : 0.4)}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
         customRender={({ x, y, datum }, defaultProps) => (

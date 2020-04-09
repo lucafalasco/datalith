@@ -1,6 +1,5 @@
 import notes from '@datalith/ripple/README.md'
 import { Ripple } from '@datalith/ripple/src'
-import { normalize } from '@datalith/util'
 import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
@@ -30,13 +29,21 @@ storiesOf('Ripple', module)
       <Ripple
         data={defaultData}
         value={d => yScale(d.value)}
-        fill={(d, i) => (i % 2 ? 'rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 255, 0.2)')}
+        fill="blue"
+        fillOpacity={() => Math.random() / 5}
       />
     )
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
-    return <Ripple data={data} stroke="#000" fill="transparent" />
+    return (
+      <Ripple
+        style={{ backgroundColor: '#303030' }}
+        data={data}
+        stroke="white"
+        fill="transparent"
+      />
+    )
   })
   .add('animated', () => {
     const sortedData = [...defaultData].sort((a, b) => b.value - a.value)
@@ -60,8 +67,10 @@ storiesOf('Ripple', module)
       <Ripple
         data={defaultData}
         value={d => yScale(d.value)}
-        fill={(d, i) => `rgba(4, 255, 191, ${normalize(i, 0, defaultData.length)}`}
-        stroke="rgba(0, 0, 0, 0.1)"
+        fill="blue"
+        fillOpacity={() => Math.random() / 5}
+        stroke="blue"
+        strokeOpacity={() => Math.random() / 5}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`

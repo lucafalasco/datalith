@@ -21,15 +21,15 @@ const zScale = scaleLinear()
 storiesOf('Shutter', module)
   .addParameters({ notes })
   .add('default', () => {
-    const data = defaultData.map(d => `rgba(0, 0, 0, ${zScale(d.value)})`)
-    return <Shutter data={data} />
+    return <Shutter data={defaultData} fillOpacity={d => zScale(d.value)} />
   })
   .add('stroke', () => {
     return (
       <Shutter
         style={{ backgroundColor: '#303030' }}
         data={defaultData}
-        stroke={d => `rgba(255, 255, 255, ${zScale(d.value)})`}
+        stroke="white"
+        strokeOpacity={d => zScale(d.value)}
         fill="transparent"
       />
     )
@@ -37,10 +37,9 @@ storiesOf('Shutter', module)
   .add('sorted', () => {
     const data = [...defaultData].sort((a, b) => b.value - a.value)
 
-    return <Shutter data={data} fill={d => `rgba(0, 0, 255, ${zScale(d.value)})`} />
+    return <Shutter data={data} fill="blue" fillOpacity={d => zScale(d.value)} />
   })
   .add('animated', () => {
-    const data = defaultData.map(d => `rgba(0, 0, 255, ${zScale(d.value).toFixed(2)}`)
     const radiusTo = (Math.min(width, height) / 2) * 0.5
 
     return (
@@ -50,7 +49,15 @@ storiesOf('Shutter', module)
         config={{ duration: 1000, easing: easeInOutCubic }}
       >
         {props => {
-          return <Shutter data={data} radiusInner={props.radius} radiusOuter={radiusTo + 50} />
+          return (
+            <Shutter
+              data={defaultData}
+              fill="blue"
+              fillOpacity={d => zScale(d.value)}
+              radiusInner={props.radius}
+              radiusOuter={radiusTo + 50}
+            />
+          )
         }}
       </Spring>
     )
@@ -59,7 +66,8 @@ storiesOf('Shutter', module)
     return (
       <Shutter
         data={defaultData}
-        fill={d => `rgba(0, 0, 255, ${zScale(d.value)})`}
+        fill="blue"
+        fillOpacity={d => zScale(d.value)}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${parseFloat(zScale(value).toFixed(2))}</p>

@@ -1,12 +1,18 @@
-import { callOrGetValue, Color, CommonProps, Datum, ResponsiveWrapper, Value } from '@datalith/util'
+import {
+  callOrGetValue,
+  CommonProps,
+  Datum,
+  ResponsiveWrapper,
+  CommonAccessors,
+  NumberAccessor,
+} from '@datalith/util'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 import generatePack from './generatePack'
 
-const DEFAULT_COLOR = '#000000'
 interface Props extends CommonProps {
   /** Value Accessor */
-  value: Value
+  value: NumberAccessor
   /** Center of the dataviz */
   center?: { x: number; y: number }
 }
@@ -18,19 +24,28 @@ interface Box {
   h: number
 }
 
-interface BoxProps {
+interface BoxProps extends CommonAccessors {
   datum: Datum
   box: Box
   index: number
-  fill: Color
-  stroke: Color
   tooltip?: (d: Datum) => string
 }
 
-const Box = ({ datum, box, index, fill, stroke, tooltip }: BoxProps) => {
+const Box = ({
+  datum,
+  box,
+  index,
+  fill,
+  fillOpacity,
+  stroke,
+  strokeOpacity,
+  tooltip,
+}: BoxProps) => {
   const style = {
     fill: callOrGetValue(fill, datum, index),
+    fillOpacity: callOrGetValue(fillOpacity, datum, index),
     stroke: callOrGetValue(stroke, datum, index),
+    strokeOpacity: callOrGetValue(strokeOpacity, datum, index),
   }
 
   return (
@@ -44,7 +59,6 @@ export const Pack: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class Pack extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
-      fill: DEFAULT_COLOR,
     }
 
     render() {
@@ -55,7 +69,9 @@ export const Pack: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         data,
         value,
         fill,
+        fillOpacity,
         stroke,
+        strokeOpacity,
         tooltip,
         size: { width, height },
         center = {
@@ -94,7 +110,9 @@ export const Pack: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
                     datum={data[box.i]}
                     box={box}
                     fill={fill}
+                    fillOpacity={fillOpacity}
                     stroke={stroke}
+                    strokeOpacity={strokeOpacity}
                     tooltip={tooltip}
                   />
                 )
