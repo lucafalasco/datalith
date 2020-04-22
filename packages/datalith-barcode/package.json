@@ -1,7 +1,7 @@
 {
-  "name": "datalith",
+  "name": "@datalith/barcode",
   "version": "0.9.0",
-  "description": "Collection of React components to build cool data visualizations",
+  "description": "datalith barcode",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -31,21 +31,16 @@
   },
   "homepage": "https://github.com/lucafalasco/datalith#readme",
   "dependencies": {
-    "@datalith/barcode": "^0.9.0",
-    "@datalith/dotmap": "^0.9.0",
-    "@datalith/flower": "^0.9.0",
-    "@datalith/gridmap": "^0.9.0",
-    "@datalith/hexmap": "^0.9.0",
-    "@datalith/pack": "^0.9.0",
-    "@datalith/pixelmap": "^0.9.0",
-    "@datalith/ripple": "^0.9.0",
-    "@datalith/shutter": "^0.9.0",
-    "@datalith/util": "^0.9.0"
+    "@datalith/util": "^0.9.0",
+    "react-tooltip": "^3.10.0"
   },
   "devDependencies": {
     "@types/react": "^16.8.5",
+    "@types/react-tooltip": "^3.9.2",
+    "raf": "^3.4.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-test-renderer": "^16.8.5",
     "typescript": "^3.5.1"
   },
   "peerDependencies": {
