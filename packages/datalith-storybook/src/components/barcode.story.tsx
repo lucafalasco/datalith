@@ -1,7 +1,7 @@
 import notes from '@datalith/barcode/README.md'
 import { BarCode } from '@datalith/barcode/src'
 import { storiesOf } from '@storybook/react'
-import { scaleLinear, scaleQuantize } from 'd3-scale'
+import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { Spring } from 'react-spring/renderprops'
 import { easeInOutCubic } from '../lib'
@@ -61,7 +61,7 @@ storiesOf('BarCode', module)
     return (
       <Spring
         from={{ index: 0 }}
-        to={{ index: defaultData.length - 1 }}
+        to={{ index: defaultData.length }}
         config={{ duration: 1500, easing: easeInOutCubic }}
       >
         {props => {
