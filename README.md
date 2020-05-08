@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="./assets/logo.svg" width="300px" />
+  <img src="https://raw.githubusercontent.com/lucafalasco/datalith/master/assets/logo.svg?sanitize=true" width="150px" style="margin: 50px;"/>
 </p>
-
----
 
 [![npm](https://img.shields.io/badge/npm-datalith-black.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/org/datalith)
 [![npm version](https://img.shields.io/npm/v/datalith.svg?style=for-the-badge&label)](https://www.npmjs.com/org/datalith)
@@ -10,24 +8,18 @@
 ### **Datalith** is a collection of clean, lightweight and easily customizable React components for data visualization.
 
 The purpose is to provide an easy way to integrate custom data visualizations in any React
-project. The components were designed with simplicity in mind, so the only thing required
-for the charts to work is the actual _data_.
+project. The components were designed with simplicity in mind,
+the dataset is the only requirement.
 
-Some key features:
+Key features:
 
 - Typed React components for optimal DX
 - Simple, shared API
 - Easy to integrate, customize, and enhance
 
----
-
-<a href="https://docs.datalith.xyz" style="display: block" align="center">
-  <img src="./assets/gallery.svg" width="100%"/>
-</a>
+#### **[Read the introduction to the project](https://medium.com/@lucafalasco/turn-your-data-into-beautiful-dataliths-f25bae8bd438?source=friends_link&sk=2cbc67534d9361bfec3e86ad22ac5d1d)**
 
 ---
-
-## **[ Getting started](https://medium.com/@lucafalasco/turn-your-data-into-beautiful-dataliths-f25bae8bd438?source=friends_link&sk=2cbc67534d9361bfec3e86ad22ac5d1d)**
 
 ## Installation
 
