@@ -1,1 +1,2605 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" style="width: 300px; height: 300px;"><g><g><circle cx="40" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="45" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="50" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="45" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="50" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="50" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="40" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="20" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="40" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="45" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="15" cy="60" r="1" fill="#000000"></circle></g><g><circle cx="20" cy="60" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="60" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="60" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="60" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="40" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="20" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="40" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="45" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="20" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="40" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="45" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="20" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="40" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="45" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="20" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="20" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="30" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="35" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="20" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="25" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="40" cy="85" r="1.5962540375536207" fill="#000000"></circle></g><g><circle cx="35" cy="90" r="1.5962540375536207" fill="#000000"></circle></g><g><circle cx="40" cy="90" r="1.5962540375536207" fill="#000000"></circle></g><g><circle cx="45" cy="90" r="1.5962540375536207" fill="#000000"></circle></g><g><circle cx="40" cy="60" r="1.7697482778982037" fill="#000000"></circle></g><g><circle cx="45" cy="60" r="1.7697482778982037" fill="#000000"></circle></g><g><circle cx="50" cy="60" r="1.7697482778982037" fill="#000000"></circle></g><g><circle cx="45" cy="65" r="1.7697482778982037" fill="#000000"></circle></g><g><circle cx="50" cy="65" r="1.7697482778982037" fill="#000000"></circle></g><g><circle cx="50" cy="70" r="1.7697482778982037" fill="#000000"></circle></g><g><circle cx="50" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="60" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="60" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="25" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="30" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="50" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="50" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="45" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="30" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="50" r="1.6414192734742343" fill="#000000"></circle></g><g><circle cx="55" cy="55" r="1.6414192734742343" fill="#000000"></circle></g><g><circle cx="60" cy="55" r="1.6414192734742343" fill="#000000"></circle></g><g><circle cx="65" cy="55" r="1.6414192734742343" fill="#000000"></circle></g><g><circle cx="70" cy="55" r="1.6414192734742343" fill="#000000"></circle></g><g><circle cx="75" cy="55" r="1.6414192734742343" fill="#000000"></circle></g><g><circle cx="65" cy="60" r="1.6414192734742343" fill="#000000"></circle></g><g><circle cx="70" cy="60" r="1.6414192734742343" fill="#000000"></circle></g><g><circle cx="70" cy="65" r="1.6414192734742343" fill="#000000"></circle></g><g><circle cx="80" cy="30" r="1.4875755472320185" fill="#000000"></circle></g><g><circle cx="85" cy="30" r="1.4875755472320185" fill="#000000"></circle></g><g><circle cx="90" cy="30" r="1.4875755472320185" fill="#000000"></circle></g><g><circle cx="80" cy="35" r="1.4875755472320185" fill="#000000"></circle></g><g><circle cx="85" cy="35" r="1.4875755472320185" fill="#000000"></circle></g><g><circle cx="75" cy="40" r="1.4875755472320185" fill="#000000"></circle></g><g><circle cx="80" cy="40" r="1.4875755472320185" fill="#000000"></circle></g><g><circle cx="85" cy="40" r="1.4875755472320185" fill="#000000"></circle></g><g><circle cx="80" cy="45" r="1.4875755472320185" fill="#000000"></circle></g><g><circle cx="95" cy="25" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="30" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="15" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="20" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="20" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="20" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="25" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="25" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="25" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="25" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="5" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="115" cy="5" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="120" cy="5" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="125" cy="5" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="130" cy="5" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="95" cy="10" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="100" cy="10" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="105" cy="10" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="110" cy="10" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="115" cy="10" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="120" cy="10" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="125" cy="10" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="130" cy="10" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="135" cy="10" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="100" cy="15" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="105" cy="15" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="110" cy="15" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="115" cy="15" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="120" cy="15" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="125" cy="15" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="130" cy="15" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="115" cy="20" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="120" cy="20" r="1.9356465151517892" fill="#000000"></circle></g><g><circle cx="80" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="60" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="50" r="1.7530425659758222" fill="#000000"></circle></g><g><circle cx="100" cy="55" r="1.7530425659758222" fill="#000000"></circle></g><g><circle cx="105" cy="55" r="1.7530425659758222" fill="#000000"></circle></g><g><circle cx="110" cy="55" r="1.7530425659758222" fill="#000000"></circle></g><g><circle cx="100" cy="60" r="1.7530425659758222" fill="#000000"></circle></g><g><circle cx="105" cy="60" r="1.7530425659758222" fill="#000000"></circle></g><g><circle cx="110" cy="60" r="1.7530425659758222" fill="#000000"></circle></g><g><circle cx="115" cy="60" r="1.7530425659758222" fill="#000000"></circle></g><g><circle cx="135" cy="15" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="140" cy="15" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="145" cy="15" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="130" cy="20" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="135" cy="20" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="140" cy="20" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="130" cy="25" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="135" cy="25" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="140" cy="25" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="125" cy="30" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="130" cy="30" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="135" cy="30" r="1.727143188440095" fill="#000000"></circle></g><g><circle cx="100" cy="20" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="105" cy="20" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="110" cy="20" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="125" cy="20" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="100" cy="25" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="105" cy="25" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="110" cy="25" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="115" cy="25" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="120" cy="25" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="125" cy="25" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="100" cy="30" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="105" cy="30" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="110" cy="30" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="115" cy="30" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="120" cy="30" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="100" cy="35" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="105" cy="35" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="110" cy="35" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="110" cy="40" r="1.995952674461885" fill="#000000"></circle></g><g><circle cx="105" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="60" r="1.8088063020467584" fill="#000000"></circle></g><g><circle cx="125" cy="60" r="1.8088063020467584" fill="#000000"></circle></g><g><circle cx="130" cy="60" r="1.8088063020467584" fill="#000000"></circle></g><g><circle cx="135" cy="60" r="1.8088063020467584" fill="#000000"></circle></g><g><circle cx="140" cy="60" r="1.8088063020467584" fill="#000000"></circle></g><g><circle cx="140" cy="30" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="155" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="15" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="155" cy="15" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="160" cy="15" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="145" cy="20" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="150" cy="20" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="155" cy="20" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="160" cy="20" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="155" cy="25" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="160" cy="25" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="155" cy="30" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="160" cy="30" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="155" cy="35" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="160" cy="35" r="2.3145412582148115" fill="#000000"></circle></g><g><circle cx="165" cy="30" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="60" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="60" r="2.305874998770186" fill="#000000"></circle></g><g><circle cx="80" cy="60" r="2.305874998770186" fill="#000000"></circle></g><g><circle cx="85" cy="60" r="2.305874998770186" fill="#000000"></circle></g><g><circle cx="75" cy="65" r="2.305874998770186" fill="#000000"></circle></g><g><circle cx="80" cy="65" r="2.305874998770186" fill="#000000"></circle></g><g><circle cx="85" cy="65" r="2.305874998770186" fill="#000000"></circle></g><g><circle cx="70" cy="70" r="2.305874998770186" fill="#000000"></circle></g><g><circle cx="75" cy="70" r="2.305874998770186" fill="#000000"></circle></g><g><circle cx="135" cy="80" r="1.8031928273732076" fill="#000000"></circle></g><g><circle cx="130" cy="85" r="1.8031928273732076" fill="#000000"></circle></g><g><circle cx="135" cy="85" r="1.8031928273732076" fill="#000000"></circle></g><g><circle cx="140" cy="85" r="1.8031928273732076" fill="#000000"></circle></g><g><circle cx="130" cy="90" r="1.8031928273732076" fill="#000000"></circle></g><g><circle cx="135" cy="90" r="1.8031928273732076" fill="#000000"></circle></g><g><circle cx="140" cy="90" r="1.8031928273732076" fill="#000000"></circle></g><g><circle cx="135" cy="95" r="1.8031928273732076" fill="#000000"></circle></g><g><circle cx="110" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="65" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="70" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="160" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="155" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="155" cy="110" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="85" r="1.4611682031181785" fill="#000000"></circle></g><g><circle cx="105" cy="90" r="1.4611682031181785" fill="#000000"></circle></g><g><circle cx="110" cy="90" r="1.4611682031181785" fill="#000000"></circle></g><g><circle cx="120" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="90" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="90" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="160" cy="105" r="2.5" fill="#000000"></circle></g><g><circle cx="170" cy="105" r="2.5" fill="#000000"></circle></g><g><circle cx="160" cy="110" r="2.5" fill="#000000"></circle></g><g><circle cx="165" cy="110" r="2.5" fill="#000000"></circle></g><g><circle cx="170" cy="110" r="2.5" fill="#000000"></circle></g><g><circle cx="160" cy="115" r="2.5" fill="#000000"></circle></g><g><circle cx="165" cy="115" r="2.5" fill="#000000"></circle></g><g><circle cx="170" cy="120" r="1" fill="#000000"></circle></g><g><circle cx="175" cy="120" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="125" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="75" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="80" r="1" fill="#000000"></circle></g><g><circle cx="90" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="90" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="90" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="155" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="160" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="155" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="110" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="110" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="115" r="1" fill="#000000"></circle></g><g><circle cx="95" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="100" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="100" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="105" cy="110" r="1" fill="#000000"></circle></g><g><circle cx="110" cy="110" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="100" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="140" cy="105" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="145" cy="105" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="150" cy="105" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="140" cy="110" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="145" cy="110" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="150" cy="110" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="135" cy="115" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="140" cy="115" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="145" cy="115" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="150" cy="115" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="155" cy="115" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="135" cy="120" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="145" cy="120" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="150" cy="120" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="155" cy="120" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="160" cy="120" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="145" cy="125" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="150" cy="125" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="155" cy="125" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="160" cy="125" r="1.8574359968207197" fill="#000000"></circle></g><g><circle cx="110" cy="115" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="115" cy="115" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="120" cy="115" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="110" cy="120" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="115" cy="120" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="120" cy="120" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="125" cy="120" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="115" cy="125" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="120" cy="125" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="125" cy="125" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="130" cy="125" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="120" cy="130" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="125" cy="130" r="2.4084069437984237" fill="#000000"></circle></g><g><circle cx="115" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="105" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="110" r="1" fill="#000000"></circle></g><g><circle cx="120" cy="110" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="110" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="115" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="115" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="120" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="140" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="150" cy="140" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="135" cy="145" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="140" cy="145" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="145" cy="145" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="150" cy="145" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="155" cy="145" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="160" cy="145" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="145" cy="150" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="150" cy="150" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="155" cy="150" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="160" cy="150" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="150" cy="155" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="155" cy="155" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="160" cy="155" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="150" cy="160" r="2.4265155588978584" fill="#000000"></circle></g><g><circle cx="140" cy="120" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="125" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="125" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="155" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="125" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="135" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="130" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="160" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="155" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="160" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="155" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="160" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="155" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="160" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="160" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="170" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="170" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="170" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="170" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="170" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="175" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="180" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="170" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="175" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="180" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="175" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="180" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="185" cy="165" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="190" cy="165" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="180" cy="170" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="185" cy="170" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="190" cy="170" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="185" cy="175" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="190" cy="175" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="165" cy="130" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="165" cy="135" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="170" cy="135" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="175" cy="135" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="170" cy="140" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="175" cy="140" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="165" cy="145" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="170" cy="145" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="175" cy="145" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="180" cy="145" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="170" cy="150" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="175" cy="150" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="180" cy="150" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="185" cy="150" r="1.4879211629123466" fill="#000000"></circle></g><g><circle cx="195" cy="175" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="180" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="170" r="1.9027885049527602" fill="#000000"></circle></g><g><circle cx="200" cy="175" r="1.9027885049527602" fill="#000000"></circle></g><g><circle cx="205" cy="175" r="1.9027885049527602" fill="#000000"></circle></g><g><circle cx="210" cy="175" r="1.9027885049527602" fill="#000000"></circle></g><g><circle cx="215" cy="175" r="1.9027885049527602" fill="#000000"></circle></g><g><circle cx="205" cy="180" r="1.9027885049527602" fill="#000000"></circle></g><g><circle cx="210" cy="180" r="1.9027885049527602" fill="#000000"></circle></g><g><circle cx="200" cy="180" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="180" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="225" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="180" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="185" cy="135" r="1" fill="#000000"></circle></g><g><circle cx="180" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="225" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="230" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="225" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="225" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="225" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="230" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="170" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="170" r="1" fill="#000000"></circle></g><g><circle cx="225" cy="170" r="1" fill="#000000"></circle></g><g><circle cx="185" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="190" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="140" r="1" fill="#000000"></circle></g><g><circle cx="185" cy="145" r="1" fill="#000000"></circle></g><g><circle cx="190" cy="145" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="145" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="145" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="170" cy="125" r="1" fill="#000000"></circle></g><g><circle cx="175" cy="125" r="1" fill="#000000"></circle></g><g><circle cx="180" cy="125" r="1" fill="#000000"></circle></g><g><circle cx="170" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="175" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="180" cy="130" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="180" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="195" r="2.149405731740763" fill="#000000"></circle></g><g><circle cx="60" cy="200" r="2.149405731740763" fill="#000000"></circle></g><g><circle cx="65" cy="200" r="2.149405731740763" fill="#000000"></circle></g><g><circle cx="60" cy="205" r="2.149405731740763" fill="#000000"></circle></g><g><circle cx="65" cy="205" r="2.149405731740763" fill="#000000"></circle></g><g><circle cx="60" cy="210" r="2.149405731740763" fill="#000000"></circle></g><g><circle cx="65" cy="210" r="2.149405731740763" fill="#000000"></circle></g><g><circle cx="70" cy="210" r="2.149405731740763" fill="#000000"></circle></g><g><circle cx="40" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="45" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="40" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="45" cy="45" r="1" fill="#000000"></circle></g><g><circle cx="255" cy="220" r="1.4458755974445803" fill="#000000"></circle></g><g><circle cx="250" cy="225" r="1.4458755974445803" fill="#000000"></circle></g><g><circle cx="255" cy="225" r="1.4458755974445803" fill="#000000"></circle></g><g><circle cx="250" cy="230" r="1.4458755974445803" fill="#000000"></circle></g><g><circle cx="255" cy="230" r="1.4458755974445803" fill="#000000"></circle></g><g><circle cx="60" cy="220" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="225" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="230" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="230" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="40" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="30" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="30" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="240" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="245" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="245" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="170" r="2.0767109102192234" fill="#000000"></circle></g><g><circle cx="70" cy="175" r="2.0767109102192234" fill="#000000"></circle></g><g><circle cx="75" cy="175" r="2.0767109102192234" fill="#000000"></circle></g><g><circle cx="80" cy="175" r="2.0767109102192234" fill="#000000"></circle></g><g><circle cx="70" cy="180" r="2.0767109102192234" fill="#000000"></circle></g><g><circle cx="75" cy="180" r="2.0767109102192234" fill="#000000"></circle></g><g><circle cx="80" cy="180" r="2.0767109102192234" fill="#000000"></circle></g><g><circle cx="75" cy="185" r="2.0767109102192234" fill="#000000"></circle></g><g><circle cx="80" cy="185" r="2.0767109102192234" fill="#000000"></circle></g><g><circle cx="175" cy="110" r="1" fill="#000000"></circle></g><g><circle cx="170" cy="115" r="1" fill="#000000"></circle></g><g><circle cx="175" cy="115" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="120" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="50" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="55" r="1" fill="#000000"></circle></g><g><circle cx="50" cy="20" r="1.7607336193626615" fill="#000000"></circle></g><g><circle cx="45" cy="25" r="1.7607336193626615" fill="#000000"></circle></g><g><circle cx="50" cy="25" r="1.7607336193626615" fill="#000000"></circle></g><g><circle cx="45" cy="30" r="1.7607336193626615" fill="#000000"></circle></g><g><circle cx="50" cy="30" r="1.7607336193626615" fill="#000000"></circle></g><g><circle cx="55" cy="30" r="1.7607336193626615" fill="#000000"></circle></g><g><circle cx="50" cy="35" r="1.7607336193626615" fill="#000000"></circle></g><g><circle cx="85" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="205" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="205" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="210" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="210" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="215" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="85" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="90" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="90" r="1" fill="#000000"></circle></g><g><circle cx="140" cy="95" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="215" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="215" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="215" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="220" r="1" fill="#000000"></circle></g><g><circle cx="115" cy="90" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="255" r="2.4878732493475866" fill="#000000"></circle></g><g><circle cx="205" cy="260" r="2.4878732493475866" fill="#000000"></circle></g><g><circle cx="210" cy="260" r="2.4878732493475866" fill="#000000"></circle></g><g><circle cx="215" cy="260" r="2.4878732493475866" fill="#000000"></circle></g><g><circle cx="220" cy="260" r="2.4878732493475866" fill="#000000"></circle></g><g><circle cx="195" cy="265" r="2.4878732493475866" fill="#000000"></circle></g><g><circle cx="200" cy="265" r="2.4878732493475866" fill="#000000"></circle></g><g><circle cx="205" cy="265" r="2.4878732493475866" fill="#000000"></circle></g><g><circle cx="215" cy="265" r="2.4878732493475866" fill="#000000"></circle></g><g><circle cx="210" cy="280" r="2.2789673407133537" fill="#000000"></circle></g><g><circle cx="210" cy="285" r="2.2789673407133537" fill="#000000"></circle></g><g><circle cx="215" cy="285" r="2.2789673407133537" fill="#000000"></circle></g><g><circle cx="210" cy="290" r="2.2789673407133537" fill="#000000"></circle></g><g><circle cx="215" cy="290" r="2.2789673407133537" fill="#000000"></circle></g><g><circle cx="215" cy="295" r="2.2789673407133537" fill="#000000"></circle></g><g><circle cx="240" cy="170" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="245" cy="170" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="240" cy="175" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="245" cy="175" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="250" cy="175" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="255" cy="175" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="240" cy="180" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="245" cy="180" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="250" cy="180" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="255" cy="180" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="260" cy="180" r="2.3700297067980562" fill="#000000"></circle></g><g><circle cx="230" cy="205" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="205" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="205" r="1" fill="#000000"></circle></g><g><circle cx="230" cy="210" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="210" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="210" r="1" fill="#000000"></circle></g><g><circle cx="230" cy="215" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="215" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="215" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="215" r="1" fill="#000000"></circle></g><g><circle cx="250" cy="215" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="220" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="220" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="220" r="1" fill="#000000"></circle></g><g><circle cx="250" cy="220" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="225" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="225" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="225" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="230" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="270" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="170" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="175" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="180" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="175" cy="280" r="1" fill="#000000"></circle></g><g><circle cx="180" cy="280" r="1" fill="#000000"></circle></g><g><circle cx="185" cy="280" r="1" fill="#000000"></circle></g><g><circle cx="185" cy="285" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="180" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="180" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="180" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="55" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="60" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="250" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="255" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="260" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="250" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="260" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="265" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="270" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="230" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="230" r="1" fill="#000000"></circle></g><g><circle cx="240" cy="235" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="235" r="1" fill="#000000"></circle></g><g><circle cx="250" cy="235" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="240" r="1" fill="#000000"></circle></g><g><circle cx="245" cy="245" r="1" fill="#000000"></circle></g><g><circle cx="265" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="270" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="275" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="270" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="275" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="250" r="2.4725824753952996" fill="#000000"></circle></g><g><circle cx="240" cy="250" r="2.4725824753952996" fill="#000000"></circle></g><g><circle cx="245" cy="250" r="2.4725824753952996" fill="#000000"></circle></g><g><circle cx="230" cy="255" r="2.4725824753952996" fill="#000000"></circle></g><g><circle cx="235" cy="255" r="2.4725824753952996" fill="#000000"></circle></g><g><circle cx="240" cy="255" r="2.4725824753952996" fill="#000000"></circle></g><g><circle cx="230" cy="260" r="2.4725824753952996" fill="#000000"></circle></g><g><circle cx="235" cy="260" r="2.4725824753952996" fill="#000000"></circle></g><g><circle cx="185" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="190" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="190" cy="280" r="1" fill="#000000"></circle></g><g><circle cx="190" cy="285" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="285" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="185" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="65" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="85" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="80" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="70" cy="205" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="205" r="1" fill="#000000"></circle></g><g><circle cx="280" cy="190" r="1" fill="#000000"></circle></g><g><circle cx="275" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="280" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="285" cy="195" r="1" fill="#000000"></circle></g><g><circle cx="280" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="285" cy="200" r="1" fill="#000000"></circle></g><g><circle cx="280" cy="205" r="1" fill="#000000"></circle></g><g><circle cx="285" cy="205" r="1" fill="#000000"></circle></g><g><circle cx="160" cy="260" r="2.042946485462474" fill="#000000"></circle></g><g><circle cx="155" cy="265" r="2.042946485462474" fill="#000000"></circle></g><g><circle cx="160" cy="265" r="2.042946485462474" fill="#000000"></circle></g><g><circle cx="165" cy="265" r="2.042946485462474" fill="#000000"></circle></g><g><circle cx="155" cy="270" r="2.042946485462474" fill="#000000"></circle></g><g><circle cx="160" cy="270" r="2.042946485462474" fill="#000000"></circle></g><g><circle cx="195" cy="270" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="270" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="270" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="195" cy="280" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="280" r="1" fill="#000000"></circle></g><g><circle cx="75" cy="210" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="75" cy="215" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="80" cy="215" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="70" cy="220" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="75" cy="220" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="80" cy="220" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="65" cy="225" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="70" cy="225" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="75" cy="225" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="80" cy="225" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="70" cy="230" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="65" cy="235" r="2.2519882917567213" fill="#000000"></circle></g><g><circle cx="145" cy="25" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="25" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="30" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="30" r="1" fill="#000000"></circle></g><g><circle cx="145" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="150" cy="35" r="1" fill="#000000"></circle></g><g><circle cx="165" cy="260" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="170" cy="260" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="175" cy="260" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="170" cy="265" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="175" cy="265" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="180" cy="265" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="185" cy="265" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="190" cy="265" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="170" cy="270" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="175" cy="270" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="180" cy="270" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="185" cy="270" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="190" cy="270" r="1.44587559744458" fill="#000000"></circle></g><g><circle cx="210" cy="265" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="270" r="1" fill="#000000"></circle></g><g><circle cx="215" cy="270" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="275" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="280" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="285" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="285" r="1" fill="#000000"></circle></g><g><circle cx="220" cy="175" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="225" cy="175" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="230" cy="175" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="220" cy="180" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="225" cy="180" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="230" cy="180" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="220" cy="185" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="225" cy="185" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="230" cy="185" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="225" cy="190" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="230" cy="190" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="230" cy="195" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="235" cy="195" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="225" cy="200" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="230" cy="200" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="235" cy="200" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="235" cy="205" r="2.473712779173586" fill="#000000"></circle></g><g><circle cx="200" cy="290" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="290" r="1" fill="#000000"></circle></g><g><circle cx="200" cy="295" r="1" fill="#000000"></circle></g><g><circle cx="205" cy="295" r="1" fill="#000000"></circle></g><g><circle cx="210" cy="295" r="1" fill="#000000"></circle></g><g><circle cx="190" cy="150" r="1" fill="#000000"></circle></g><g><circle cx="185" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="190" cy="155" r="1" fill="#000000"></circle></g><g><circle cx="185" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="190" cy="160" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="165" r="1" fill="#000000"></circle></g><g><circle cx="230" cy="170" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="170" r="1" fill="#000000"></circle></g><g><circle cx="235" cy="175" r="1" fill="#000000"></circle></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" style="width: 300px; height: 300px;">
+  <g fill="#3800ff">
+    <g>
+      <circle cx="40" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="20" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="15" cy="60" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="20" cy="60" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="60" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="60" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="60" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="20" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="20" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="20" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="20" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="20" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="30" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="20" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="25" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="85" r="1.5962540375536207"></circle>
+    </g>
+    <g>
+      <circle cx="35" cy="90" r="1.5962540375536207"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="90" r="1.5962540375536207"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="90" r="1.5962540375536207"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="60" r="1.7697482778982037"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="60" r="1.7697482778982037"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="60" r="1.7697482778982037"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="65" r="1.7697482778982037"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="65" r="1.7697482778982037"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="70" r="1.7697482778982037"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="60" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="60" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="25" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="30" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="30" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="50" r="1.6414192734742343"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="55" r="1.6414192734742343"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="55" r="1.6414192734742343"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="55" r="1.6414192734742343"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="55" r="1.6414192734742343"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="55" r="1.6414192734742343"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="60" r="1.6414192734742343"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="60" r="1.6414192734742343"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="65" r="1.6414192734742343"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="30" r="1.4875755472320185"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="30" r="1.4875755472320185"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="30" r="1.4875755472320185"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="35" r="1.4875755472320185"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="35" r="1.4875755472320185"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="40" r="1.4875755472320185"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="40" r="1.4875755472320185"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="40" r="1.4875755472320185"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="45" r="1.4875755472320185"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="25" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="30" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="15" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="20" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="20" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="20" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="25" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="25" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="25" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="25" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="5" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="5" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="5" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="5" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="5" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="10" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="10" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="10" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="10" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="10" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="10" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="10" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="10" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="10" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="15" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="15" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="15" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="15" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="15" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="15" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="15" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="20" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="20" r="1.9356465151517892"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="60" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="50" r="1.7530425659758222"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="55" r="1.7530425659758222"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="55" r="1.7530425659758222"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="55" r="1.7530425659758222"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="60" r="1.7530425659758222"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="60" r="1.7530425659758222"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="60" r="1.7530425659758222"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="60" r="1.7530425659758222"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="15" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="15" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="15" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="20" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="20" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="20" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="25" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="25" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="25" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="30" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="30" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="30" r="1.727143188440095"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="20" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="20" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="20" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="20" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="25" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="25" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="25" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="25" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="25" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="25" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="30" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="30" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="30" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="30" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="30" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="35" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="35" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="35" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="40" r="1.995952674461885"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="60" r="1.8088063020467584"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="60" r="1.8088063020467584"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="60" r="1.8088063020467584"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="60" r="1.8088063020467584"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="60" r="1.8088063020467584"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="30" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="15" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="15" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="15" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="20" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="20" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="20" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="20" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="25" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="25" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="30" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="30" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="35" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="35" r="2.3145412582148115"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="30" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="60" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="60" r="2.305874998770186"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="60" r="2.305874998770186"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="60" r="2.305874998770186"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="65" r="2.305874998770186"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="65" r="2.305874998770186"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="65" r="2.305874998770186"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="70" r="2.305874998770186"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="70" r="2.305874998770186"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="80" r="1.8031928273732076"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="85" r="1.8031928273732076"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="85" r="1.8031928273732076"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="85" r="1.8031928273732076"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="90" r="1.8031928273732076"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="90" r="1.8031928273732076"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="90" r="1.8031928273732076"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="95" r="1.8031928273732076"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="65" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="70" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="110" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="85" r="1.4611682031181785"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="90" r="1.4611682031181785"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="90" r="1.4611682031181785"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="90" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="90" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="105" r="2.5"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="105" r="2.5"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="110" r="2.5"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="110" r="2.5"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="110" r="2.5"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="115" r="2.5"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="115" r="2.5"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="120" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="120" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="125" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="75" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="80" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="90" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="90" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="90" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="110" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="110" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="115" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="95" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="100" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="100" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="105" cy="110" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="110" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="100" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="105" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="105" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="105" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="110" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="110" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="110" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="115" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="115" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="115" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="115" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="115" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="120" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="120" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="120" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="120" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="120" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="125" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="125" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="125" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="125" r="1.8574359968207197"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="115" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="115" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="115" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="110" cy="120" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="120" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="120" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="120" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="125" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="125" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="125" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="125" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="130" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="130" r="2.4084069437984237"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="105" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="110" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="120" cy="110" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="110" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="115" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="115" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="120" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="140" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="140" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="145" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="145" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="145" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="145" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="145" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="145" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="150" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="150" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="150" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="150" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="155" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="155" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="155" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="160" r="2.4265155588978584"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="120" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="125" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="125" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="125" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="135" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="130" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="170" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="170" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="170" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="165" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="165" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="170" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="170" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="170" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="175" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="175" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="130" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="135" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="135" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="135" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="140" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="140" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="145" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="145" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="145" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="145" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="150" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="150" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="150" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="150" r="1.4879211629123466"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="175" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="180" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="170" r="1.9027885049527602"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="175" r="1.9027885049527602"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="175" r="1.9027885049527602"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="175" r="1.9027885049527602"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="175" r="1.9027885049527602"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="180" r="1.9027885049527602"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="180" r="1.9027885049527602"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="180" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="180" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="135" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="170" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="170" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="170" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="140" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="145" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="145" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="145" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="145" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="125" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="125" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="125" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="130" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="180" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="195" r="2.149405731740763"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="200" r="2.149405731740763"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="200" r="2.149405731740763"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="205" r="2.149405731740763"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="205" r="2.149405731740763"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="210" r="2.149405731740763"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="210" r="2.149405731740763"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="210" r="2.149405731740763"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="40" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="45" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="255" cy="220" r="1.4458755974445803"></circle>
+    </g>
+    <g>
+      <circle cx="250" cy="225" r="1.4458755974445803"></circle>
+    </g>
+    <g>
+      <circle cx="255" cy="225" r="1.4458755974445803"></circle>
+    </g>
+    <g>
+      <circle cx="250" cy="230" r="1.4458755974445803"></circle>
+    </g>
+    <g>
+      <circle cx="255" cy="230" r="1.4458755974445803"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="220" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="225" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="230" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="230" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="40" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="30" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="30" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="240" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="245" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="245" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="170" r="2.0767109102192234"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="175" r="2.0767109102192234"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="175" r="2.0767109102192234"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="175" r="2.0767109102192234"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="180" r="2.0767109102192234"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="180" r="2.0767109102192234"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="180" r="2.0767109102192234"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="185" r="2.0767109102192234"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="185" r="2.0767109102192234"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="110" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="115" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="115" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="120" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="50" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="55" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="20" r="1.7607336193626615"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="25" r="1.7607336193626615"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="25" r="1.7607336193626615"></circle>
+    </g>
+    <g>
+      <circle cx="45" cy="30" r="1.7607336193626615"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="30" r="1.7607336193626615"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="30" r="1.7607336193626615"></circle>
+    </g>
+    <g>
+      <circle cx="50" cy="35" r="1.7607336193626615"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="205" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="205" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="210" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="210" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="215" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="85" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="90" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="90" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="140" cy="95" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="215" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="215" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="215" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="220" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="115" cy="90" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="255" r="2.4878732493475866"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="260" r="2.4878732493475866"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="260" r="2.4878732493475866"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="260" r="2.4878732493475866"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="260" r="2.4878732493475866"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="265" r="2.4878732493475866"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="265" r="2.4878732493475866"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="265" r="2.4878732493475866"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="265" r="2.4878732493475866"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="280" r="2.2789673407133537"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="285" r="2.2789673407133537"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="285" r="2.2789673407133537"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="290" r="2.2789673407133537"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="290" r="2.2789673407133537"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="295" r="2.2789673407133537"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="170" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="170" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="175" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="175" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="250" cy="175" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="255" cy="175" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="180" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="180" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="250" cy="180" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="255" cy="180" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="260" cy="180" r="2.3700297067980562"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="205" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="205" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="205" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="210" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="210" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="210" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="215" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="215" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="215" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="215" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="250" cy="215" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="220" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="220" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="220" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="250" cy="220" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="225" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="225" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="225" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="230" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="270" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="280" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="280" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="280" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="285" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="180" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="180" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="180" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="55" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="60" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="250" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="255" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="260" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="250" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="260" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="265" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="270" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="230" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="230" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="235" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="235" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="250" cy="235" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="240" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="245" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="265" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="270" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="275" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="270" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="275" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="250" r="2.4725824753952996"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="250" r="2.4725824753952996"></circle>
+    </g>
+    <g>
+      <circle cx="245" cy="250" r="2.4725824753952996"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="255" r="2.4725824753952996"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="255" r="2.4725824753952996"></circle>
+    </g>
+    <g>
+      <circle cx="240" cy="255" r="2.4725824753952996"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="260" r="2.4725824753952996"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="260" r="2.4725824753952996"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="280" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="285" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="285" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="185" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="85" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="205" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="205" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="280" cy="190" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="275" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="280" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="285" cy="195" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="280" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="285" cy="200" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="280" cy="205" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="285" cy="205" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="260" r="2.042946485462474"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="265" r="2.042946485462474"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="265" r="2.042946485462474"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="265" r="2.042946485462474"></circle>
+    </g>
+    <g>
+      <circle cx="155" cy="270" r="2.042946485462474"></circle>
+    </g>
+    <g>
+      <circle cx="160" cy="270" r="2.042946485462474"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="270" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="270" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="270" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="195" cy="280" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="280" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="210" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="215" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="215" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="220" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="220" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="220" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="225" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="225" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="75" cy="225" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="80" cy="225" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="70" cy="230" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="65" cy="235" r="2.2519882917567213"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="25" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="25" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="30" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="30" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="145" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="150" cy="35" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="165" cy="260" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="260" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="260" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="265" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="265" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="265" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="265" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="265" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="170" cy="270" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="175" cy="270" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="180" cy="270" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="270" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="270" r="1.44587559744458"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="265" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="270" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="215" cy="270" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="275" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="280" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="285" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="285" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="175" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="175" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="175" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="180" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="180" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="180" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="220" cy="185" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="185" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="185" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="190" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="190" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="195" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="195" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="225" cy="200" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="200" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="200" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="205" r="2.473712779173586"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="290" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="290" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="200" cy="295" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="205" cy="295" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="210" cy="295" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="150" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="155" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="185" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="190" cy="160" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="165" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="230" cy="170" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="170" r="1"></circle>
+    </g>
+    <g>
+      <circle cx="235" cy="175" r="1"></circle>
+    </g>
+  </g>
+</svg>

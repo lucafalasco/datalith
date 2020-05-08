@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
-<style type="text/css">
+<svg version="1.1" id="Layer_1" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+	<linearGradient id="gradient" gradientTransform="rotate(45)">
+		<stop offset="0%" stop-color="#FF00C7" />
+		<stop offset="100%" stop-color="#3800ff" />
+	</linearGradient>
+	<style type="text/css">
 	.st0{fill-opacity:0.81;}
 	.st1{fill-opacity:0.77;}
 	.st2{fill-opacity:0.847;}
@@ -86,313 +91,313 @@
 	.st80{fill-opacity:0.776;}
 	.st81{fill-opacity:0.584;}
 	.st82{fill-opacity:0.424;}
-</style>
-<g transform="translate(488.5, 410.5)">
-	<g>
-		<circle class="st0" cx="-251" cy="-127.9" r="2"/>
+	</style>
+	<g transform="translate(488.5, 410.5)" fill="url(#gradient)">
+		<g>
+			<circle class="st0" cx="-251" cy="-127.9" r="2"/>
+		</g>
+		<g>
+			<circle class="st1" cx="-254" cy="-140.4" r="7"/>
+		</g>
+		<g>
+			<circle class="st2" cx="-238.6" cy="-142.2" r="1.4"/>
+		</g>
+		<g>
+			<circle class="st3" cx="-227.6" cy="-132.5" r="6.1"/>
+		</g>
+		<g>
+			<circle class="st4" cx="-224.4" cy="-118.5" r="7.8"/>
+		</g>
+		<g>
+			<circle class="st5" cx="-228.3" cy="-105.1" r="4.4"/>
+		</g>
+		<g>
+			<circle class="st6" cx="-237.5" cy="-94.7" r="2.7"/>
+		</g>
+		<g>
+			<circle class="st7" cx="-249.9" cy="-88.6" r="6.1"/>
+		</g>
+		<g>
+			<circle class="st8" cx="-263.5" cy="-87.1" r="4.5"/>
+		</g>
+		<g>
+			<circle class="st9" cx="-276.7" cy="-90" r="6.4"/>
+		</g>
+		<g>
+			<circle class="st10" cx="-288.6" cy="-96.5" r="4.5"/>
+		</g>
+		<g>
+			<circle class="st11" cx="-298.1" cy="-106.1" r="9.3"/>
+		</g>
+		<g>
+			<circle class="st12" cx="-304.8" cy="-117.7" r="9.2"/>
+		</g>
+		<g>
+			<circle class="st13" cx="-308.5" cy="-130.6" r="6.1"/>
+		</g>
+		<g>
+			<circle class="st14" cx="-309.2" cy="-144" r="2.2"/>
+		</g>
+		<g>
+			<circle class="st15" cx="-306.8" cy="-157.1" r="8.2"/>
+		</g>
+		<g>
+			<circle class="st16" cx="-301.8" cy="-169.4" r="9.2"/>
+		</g>
+		<g>
+			<circle class="st17" cx="-294.4" cy="-180.5" r="8.1"/>
+		</g>
+		<g>
+			<circle class="st18" cx="-285" cy="-189.9" r="3.2"/>
+		</g>
+		<g>
+			<circle class="st19" cx="-274.1" cy="-197.4" r="4.8"/>
+		</g>
+		<g>
+			<circle class="st20" cx="-262" cy="-202.7" r="4.6"/>
+		</g>
+		<g>
+			<circle class="st21" cx="-249.1" cy="-205.9" r="2.9"/>
+		</g>
+		<g>
+			<circle class="st22" cx="-235.9" cy="-206.8" r="2"/>
+		</g>
+		<g>
+			<circle class="st23" cx="-222.8" cy="-205.6" r="4"/>
+		</g>
+		<g>
+			<circle class="st24" cx="-210" cy="-202.3" r="2.8"/>
+		</g>
+		<g>
+			<circle class="st25" cx="-197.9" cy="-197.1" r="1.9"/>
+		</g>
+		<g>
+			<circle class="st10" cx="-186.7" cy="-190.1" r="1.8"/>
+		</g>
+		<g>
+			<circle class="st13" cx="-176.7" cy="-181.5" r="5.2"/>
+		</g>
+		<g>
+			<circle class="st26" cx="-168" cy="-171.7" r="7.6"/>
+		</g>
+		<g>
+			<circle class="st27" cx="-160.8" cy="-160.7" r="5.7"/>
+		</g>
+		<g>
+			<circle class="st28" cx="-155.2" cy="-148.8" r="7.4"/>
+		</g>
+		<g>
+			<circle class="st29" cx="-151.2" cy="-136.3" r="9.4"/>
+		</g>
+		<g>
+			<circle class="st30" cx="-148.9" cy="-123.4" r="8.6"/>
+		</g>
+		<g>
+			<circle class="st31" cx="-148.3" cy="-110.3" r="2.5"/>
+		</g>
+		<g>
+			<circle class="st32" cx="-149.3" cy="-97.2" r="7.8"/>
+		</g>
+		<g>
+			<circle class="st11" cx="-151.9" cy="-84.3" r="3.5"/>
+		</g>
+		<g>
+			<circle class="st33" cx="-156" cy="-71.9" r="8.7"/>
+		</g>
+		<g>
+			<circle class="st34" cx="-161.6" cy="-60.1" r="6.6"/>
+		</g>
+		<g>
+			<circle class="st35" cx="-168.5" cy="-49" r="1.4"/>
+		</g>
+		<g>
+			<circle class="st36" cx="-176.6" cy="-38.7" r="3.9"/>
+		</g>
+		<g>
+			<circle class="st37" cx="-185.9" cy="-29.5" r="2"/>
+		</g>
+		<g>
+			<circle class="st38" cx="-196.1" cy="-21.3" r="1.4"/>
+		</g>
+		<g>
+			<circle class="st39" cx="-207.1" cy="-14.3" r="6.5"/>
+		</g>
+		<g>
+			<circle class="st40" cx="-218.8" cy="-8.5" r="8"/>
+		</g>
+		<g>
+			<circle class="st41" cx="-231.1" cy="-4" r="6"/>
+		</g>
+		<g>
+			<circle class="st42" cx="-243.8" cy="-0.7" r="8.3"/>
+		</g>
+		<g>
+			<circle class="st29" cx="-256.7" cy="1.2" r="5.2"/>
+		</g>
+		<g>
+			<circle class="st43" cx="-269.7" cy="1.8" r="1.4"/>
+		</g>
+		<g>
+			<circle class="st44" cx="-282.7" cy="1.1" r="8.4"/>
+		</g>
+		<g>
+			<circle class="st28" cx="-295.6" cy="-0.9" r="8.7"/>
+		</g>
+		<g>
+			<circle class="st45" cx="-308.3" cy="-4.1" r="5.5"/>
+		</g>
+		<g>
+			<circle class="st46" cx="-320.6" cy="-8.6" r="4.9"/>
+		</g>
+		<g>
+			<circle class="st47" cx="-332.4" cy="-14.1" r="3.2"/>
+		</g>
+		<g>
+			<circle class="st48" cx="-343.6" cy="-20.7" r="4.4"/>
+		</g>
+		<g>
+			<circle class="st49" cx="-354.2" cy="-28.3" r="5.8"/>
+		</g>
+		<g>
+			<circle class="st50" cx="-364" cy="-36.9" r="4.8"/>
+		</g>
+		<g>
+			<circle class="st51" cx="-373" cy="-46.3" r="7.2"/>
+		</g>
+		<g>
+			<circle class="st17" cx="-381.2" cy="-56.4" r="1.8"/>
+		</g>
+		<g>
+			<circle class="st52" cx="-388.4" cy="-67.3" r="4.2"/>
+		</g>
+		<g>
+			<circle class="st53" cx="-394.7" cy="-78.7" r="7"/>
+		</g>
+		<g>
+			<circle class="st44" cx="-399.9" cy="-90.6" r="9.6"/>
+		</g>
+		<g>
+			<circle class="st54" cx="-404.2" cy="-102.9" r="7.4"/>
+		</g>
+		<g>
+			<circle class="st55" cx="-407.4" cy="-115.5" r="8"/>
+		</g>
+		<g>
+			<circle class="st5" cx="-409.5" cy="-128.3" r="7.7"/>
+		</g>
+		<g>
+			<circle class="st53" cx="-410.6" cy="-141.3" r="8.4"/>
+		</g>
+		<g>
+			<circle class="st56" cx="-410.6" cy="-154.3" r="1.4"/>
+		</g>
+		<g>
+			<circle class="st57" cx="-409.6" cy="-167.3" r="1.4"/>
+		</g>
+		<g>
+			<circle class="st19" cx="-407.6" cy="-180.1" r="7.2"/>
+		</g>
+		<g>
+			<circle class="st58" cx="-404.5" cy="-192.8" r="5.6"/>
+		</g>
+		<g>
+			<circle class="st9" cx="-400.5" cy="-205.1" r="3.9"/>
+		</g>
+		<g>
+			<circle class="st59" cx="-395.5" cy="-217.1" r="5.9"/>
+		</g>
+		<g>
+			<circle class="st60" cx="-389.6" cy="-228.7" r="1.4"/>
+		</g>
+		<g>
+			<circle class="st61" cx="-382.9" cy="-239.8" r="2.5"/>
+		</g>
+		<g>
+			<circle class="st62" cx="-375.3" cy="-250.4" r="7.9"/>
+		</g>
+		<g>
+			<circle class="st63" cx="-367" cy="-260.4" r="9.2"/>
+		</g>
+		<g>
+			<circle class="st64" cx="-358" cy="-269.8" r="8.4"/>
+		</g>
+		<g>
+			<circle class="st65" cx="-348.3" cy="-278.4" r="5"/>
+		</g>
+		<g>
+			<circle class="st66" cx="-338" cy="-286.3" r="5.7"/>
+		</g>
+		<g>
+			<circle class="st67" cx="-327.2" cy="-293.5" r="8.2"/>
+		</g>
+		<g>
+			<circle class="st9" cx="-315.9" cy="-299.9" r="7.3"/>
+		</g>
+		<g>
+			<circle class="st68" cx="-304.2" cy="-305.5" r="3.7"/>
+		</g>
+		<g>
+			<circle class="st35" cx="-292.1" cy="-310.2" r="9.6"/>
+		</g>
+		<g>
+			<circle class="st31" cx="-279.7" cy="-314.1" r="2.5"/>
+		</g>
+		<g>
+			<circle class="st69" cx="-267.1" cy="-317.1" r="3.3"/>
+		</g>
+		<g>
+			<circle class="st70" cx="-254.3" cy="-319.3" r="5"/>
+		</g>
+		<g>
+			<circle class="st38" cx="-241.4" cy="-320.6" r="3.5"/>
+		</g>
+		<g>
+			<circle class="st23" cx="-228.4" cy="-321" r="9.5"/>
+		</g>
+		<g>
+			<circle class="st71" cx="-215.4" cy="-320.5" r="6.7"/>
+		</g>
+		<g>
+			<circle class="st25" cx="-202.5" cy="-319.2" r="7.3"/>
+		</g>
+		<g>
+			<circle class="st72" cx="-189.7" cy="-317" r="9.5"/>
+		</g>
+		<g>
+			<circle class="st73" cx="-177.1" cy="-314.1" r="6.2"/>
+		</g>
+		<g>
+			<circle class="st74" cx="-164.7" cy="-310.3" r="1.4"/>
+		</g>
+		<g>
+			<circle class="st75" cx="-152.6" cy="-305.7" r="4.6"/>
+		</g>
+		<g>
+			<circle class="st76" cx="-140.7" cy="-300.3" r="5.4"/>
+		</g>
+		<g>
+			<circle class="st77" cx="-129.3" cy="-294.2" r="8.8"/>
+		</g>
+		<g>
+			<circle class="st78" cx="-118.3" cy="-287.4" r="9.5"/>
+		</g>
+		<g>
+			<circle class="st5" cx="-107.7" cy="-280" r="5.5"/>
+		</g>
+		<g>
+			<circle class="st79" cx="-97.5" cy="-271.8" r="9.4"/>
+		</g>
+		<g>
+			<circle class="st73" cx="-87.9" cy="-263.1" r="3"/>
+		</g>
+		<g>
+			<circle class="st80" cx="-78.9" cy="-253.8" r="6.1"/>
+		</g>
+		<g>
+			<circle class="st81" cx="-70.5" cy="-244" r="4.2"/>
+		</g>
+		<g>
+			<circle class="st82" cx="-62.6" cy="-233.7" r="4.6"/>
+		</g>
 	</g>
-	<g>
-		<circle class="st1" cx="-254" cy="-140.4" r="7"/>
-	</g>
-	<g>
-		<circle class="st2" cx="-238.6" cy="-142.2" r="1.4"/>
-	</g>
-	<g>
-		<circle class="st3" cx="-227.6" cy="-132.5" r="6.1"/>
-	</g>
-	<g>
-		<circle class="st4" cx="-224.4" cy="-118.5" r="7.8"/>
-	</g>
-	<g>
-		<circle class="st5" cx="-228.3" cy="-105.1" r="4.4"/>
-	</g>
-	<g>
-		<circle class="st6" cx="-237.5" cy="-94.7" r="2.7"/>
-	</g>
-	<g>
-		<circle class="st7" cx="-249.9" cy="-88.6" r="6.1"/>
-	</g>
-	<g>
-		<circle class="st8" cx="-263.5" cy="-87.1" r="4.5"/>
-	</g>
-	<g>
-		<circle class="st9" cx="-276.7" cy="-90" r="6.4"/>
-	</g>
-	<g>
-		<circle class="st10" cx="-288.6" cy="-96.5" r="4.5"/>
-	</g>
-	<g>
-		<circle class="st11" cx="-298.1" cy="-106.1" r="9.3"/>
-	</g>
-	<g>
-		<circle class="st12" cx="-304.8" cy="-117.7" r="9.2"/>
-	</g>
-	<g>
-		<circle class="st13" cx="-308.5" cy="-130.6" r="6.1"/>
-	</g>
-	<g>
-		<circle class="st14" cx="-309.2" cy="-144" r="2.2"/>
-	</g>
-	<g>
-		<circle class="st15" cx="-306.8" cy="-157.1" r="8.2"/>
-	</g>
-	<g>
-		<circle class="st16" cx="-301.8" cy="-169.4" r="9.2"/>
-	</g>
-	<g>
-		<circle class="st17" cx="-294.4" cy="-180.5" r="8.1"/>
-	</g>
-	<g>
-		<circle class="st18" cx="-285" cy="-189.9" r="3.2"/>
-	</g>
-	<g>
-		<circle class="st19" cx="-274.1" cy="-197.4" r="4.8"/>
-	</g>
-	<g>
-		<circle class="st20" cx="-262" cy="-202.7" r="4.6"/>
-	</g>
-	<g>
-		<circle class="st21" cx="-249.1" cy="-205.9" r="2.9"/>
-	</g>
-	<g>
-		<circle class="st22" cx="-235.9" cy="-206.8" r="2"/>
-	</g>
-	<g>
-		<circle class="st23" cx="-222.8" cy="-205.6" r="4"/>
-	</g>
-	<g>
-		<circle class="st24" cx="-210" cy="-202.3" r="2.8"/>
-	</g>
-	<g>
-		<circle class="st25" cx="-197.9" cy="-197.1" r="1.9"/>
-	</g>
-	<g>
-		<circle class="st10" cx="-186.7" cy="-190.1" r="1.8"/>
-	</g>
-	<g>
-		<circle class="st13" cx="-176.7" cy="-181.5" r="5.2"/>
-	</g>
-	<g>
-		<circle class="st26" cx="-168" cy="-171.7" r="7.6"/>
-	</g>
-	<g>
-		<circle class="st27" cx="-160.8" cy="-160.7" r="5.7"/>
-	</g>
-	<g>
-		<circle class="st28" cx="-155.2" cy="-148.8" r="7.4"/>
-	</g>
-	<g>
-		<circle class="st29" cx="-151.2" cy="-136.3" r="9.4"/>
-	</g>
-	<g>
-		<circle class="st30" cx="-148.9" cy="-123.4" r="8.6"/>
-	</g>
-	<g>
-		<circle class="st31" cx="-148.3" cy="-110.3" r="2.5"/>
-	</g>
-	<g>
-		<circle class="st32" cx="-149.3" cy="-97.2" r="7.8"/>
-	</g>
-	<g>
-		<circle class="st11" cx="-151.9" cy="-84.3" r="3.5"/>
-	</g>
-	<g>
-		<circle class="st33" cx="-156" cy="-71.9" r="8.7"/>
-	</g>
-	<g>
-		<circle class="st34" cx="-161.6" cy="-60.1" r="6.6"/>
-	</g>
-	<g>
-		<circle class="st35" cx="-168.5" cy="-49" r="1.4"/>
-	</g>
-	<g>
-		<circle class="st36" cx="-176.6" cy="-38.7" r="3.9"/>
-	</g>
-	<g>
-		<circle class="st37" cx="-185.9" cy="-29.5" r="2"/>
-	</g>
-	<g>
-		<circle class="st38" cx="-196.1" cy="-21.3" r="1.4"/>
-	</g>
-	<g>
-		<circle class="st39" cx="-207.1" cy="-14.3" r="6.5"/>
-	</g>
-	<g>
-		<circle class="st40" cx="-218.8" cy="-8.5" r="8"/>
-	</g>
-	<g>
-		<circle class="st41" cx="-231.1" cy="-4" r="6"/>
-	</g>
-	<g>
-		<circle class="st42" cx="-243.8" cy="-0.7" r="8.3"/>
-	</g>
-	<g>
-		<circle class="st29" cx="-256.7" cy="1.2" r="5.2"/>
-	</g>
-	<g>
-		<circle class="st43" cx="-269.7" cy="1.8" r="1.4"/>
-	</g>
-	<g>
-		<circle class="st44" cx="-282.7" cy="1.1" r="8.4"/>
-	</g>
-	<g>
-		<circle class="st28" cx="-295.6" cy="-0.9" r="8.7"/>
-	</g>
-	<g>
-		<circle class="st45" cx="-308.3" cy="-4.1" r="5.5"/>
-	</g>
-	<g>
-		<circle class="st46" cx="-320.6" cy="-8.6" r="4.9"/>
-	</g>
-	<g>
-		<circle class="st47" cx="-332.4" cy="-14.1" r="3.2"/>
-	</g>
-	<g>
-		<circle class="st48" cx="-343.6" cy="-20.7" r="4.4"/>
-	</g>
-	<g>
-		<circle class="st49" cx="-354.2" cy="-28.3" r="5.8"/>
-	</g>
-	<g>
-		<circle class="st50" cx="-364" cy="-36.9" r="4.8"/>
-	</g>
-	<g>
-		<circle class="st51" cx="-373" cy="-46.3" r="7.2"/>
-	</g>
-	<g>
-		<circle class="st17" cx="-381.2" cy="-56.4" r="1.8"/>
-	</g>
-	<g>
-		<circle class="st52" cx="-388.4" cy="-67.3" r="4.2"/>
-	</g>
-	<g>
-		<circle class="st53" cx="-394.7" cy="-78.7" r="7"/>
-	</g>
-	<g>
-		<circle class="st44" cx="-399.9" cy="-90.6" r="9.6"/>
-	</g>
-	<g>
-		<circle class="st54" cx="-404.2" cy="-102.9" r="7.4"/>
-	</g>
-	<g>
-		<circle class="st55" cx="-407.4" cy="-115.5" r="8"/>
-	</g>
-	<g>
-		<circle class="st5" cx="-409.5" cy="-128.3" r="7.7"/>
-	</g>
-	<g>
-		<circle class="st53" cx="-410.6" cy="-141.3" r="8.4"/>
-	</g>
-	<g>
-		<circle class="st56" cx="-410.6" cy="-154.3" r="1.4"/>
-	</g>
-	<g>
-		<circle class="st57" cx="-409.6" cy="-167.3" r="1.4"/>
-	</g>
-	<g>
-		<circle class="st19" cx="-407.6" cy="-180.1" r="7.2"/>
-	</g>
-	<g>
-		<circle class="st58" cx="-404.5" cy="-192.8" r="5.6"/>
-	</g>
-	<g>
-		<circle class="st9" cx="-400.5" cy="-205.1" r="3.9"/>
-	</g>
-	<g>
-		<circle class="st59" cx="-395.5" cy="-217.1" r="5.9"/>
-	</g>
-	<g>
-		<circle class="st60" cx="-389.6" cy="-228.7" r="1.4"/>
-	</g>
-	<g>
-		<circle class="st61" cx="-382.9" cy="-239.8" r="2.5"/>
-	</g>
-	<g>
-		<circle class="st62" cx="-375.3" cy="-250.4" r="7.9"/>
-	</g>
-	<g>
-		<circle class="st63" cx="-367" cy="-260.4" r="9.2"/>
-	</g>
-	<g>
-		<circle class="st64" cx="-358" cy="-269.8" r="8.4"/>
-	</g>
-	<g>
-		<circle class="st65" cx="-348.3" cy="-278.4" r="5"/>
-	</g>
-	<g>
-		<circle class="st66" cx="-338" cy="-286.3" r="5.7"/>
-	</g>
-	<g>
-		<circle class="st67" cx="-327.2" cy="-293.5" r="8.2"/>
-	</g>
-	<g>
-		<circle class="st9" cx="-315.9" cy="-299.9" r="7.3"/>
-	</g>
-	<g>
-		<circle class="st68" cx="-304.2" cy="-305.5" r="3.7"/>
-	</g>
-	<g>
-		<circle class="st35" cx="-292.1" cy="-310.2" r="9.6"/>
-	</g>
-	<g>
-		<circle class="st31" cx="-279.7" cy="-314.1" r="2.5"/>
-	</g>
-	<g>
-		<circle class="st69" cx="-267.1" cy="-317.1" r="3.3"/>
-	</g>
-	<g>
-		<circle class="st70" cx="-254.3" cy="-319.3" r="5"/>
-	</g>
-	<g>
-		<circle class="st38" cx="-241.4" cy="-320.6" r="3.5"/>
-	</g>
-	<g>
-		<circle class="st23" cx="-228.4" cy="-321" r="9.5"/>
-	</g>
-	<g>
-		<circle class="st71" cx="-215.4" cy="-320.5" r="6.7"/>
-	</g>
-	<g>
-		<circle class="st25" cx="-202.5" cy="-319.2" r="7.3"/>
-	</g>
-	<g>
-		<circle class="st72" cx="-189.7" cy="-317" r="9.5"/>
-	</g>
-	<g>
-		<circle class="st73" cx="-177.1" cy="-314.1" r="6.2"/>
-	</g>
-	<g>
-		<circle class="st74" cx="-164.7" cy="-310.3" r="1.4"/>
-	</g>
-	<g>
-		<circle class="st75" cx="-152.6" cy="-305.7" r="4.6"/>
-	</g>
-	<g>
-		<circle class="st76" cx="-140.7" cy="-300.3" r="5.4"/>
-	</g>
-	<g>
-		<circle class="st77" cx="-129.3" cy="-294.2" r="8.8"/>
-	</g>
-	<g>
-		<circle class="st78" cx="-118.3" cy="-287.4" r="9.5"/>
-	</g>
-	<g>
-		<circle class="st5" cx="-107.7" cy="-280" r="5.5"/>
-	</g>
-	<g>
-		<circle class="st79" cx="-97.5" cy="-271.8" r="9.4"/>
-	</g>
-	<g>
-		<circle class="st73" cx="-87.9" cy="-263.1" r="3"/>
-	</g>
-	<g>
-		<circle class="st80" cx="-78.9" cy="-253.8" r="6.1"/>
-	</g>
-	<g>
-		<circle class="st81" cx="-70.5" cy="-244" r="4.2"/>
-	</g>
-	<g>
-		<circle class="st82" cx="-62.6" cy="-233.7" r="4.6"/>
-	</g>
-</g>
 </svg>

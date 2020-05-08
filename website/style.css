@@ -1,93 +1,61 @@
-@font-face {
-  font-family: 'Akkurat Mono';
-  src: url('./assets/fonts/Akkurat-Mono.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=Roboto+Mono&display=swap');
 
 html,
 body {
-  font-family: 'Akkurat Mono', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   text-rendering: optimizeLegibility;
   font-size: 14px;
   width: 100%;
-  background: #1d2936;
+  background: #fff;
+  color: #1d2936;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'Akkurat Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
 }
 
-b {
-  background-color: #6dc8be;
-  color: #1d2936;
+pre code {
+  font-size: 0.85rem !important;
 }
 
-::selection {
-  background: transparent;
-  color: #6dc8be;
+header {
+  mix-blend-mode: difference;
 }
 
-.card::before {
-  content: '';
-  border-right: 2px solid #6dc8be;
-  height: 6rem;
-  width: 1px;
-  top: -6rem;
-  position: absolute;
+.sticky {
+  position: sticky;
 }
 
 .pointer-events-none {
   pointer-events: none;
 }
 
-.reflect {
-  transform: scaleX(-1) rotate(45deg);
-}
-
-.b--blue {
-  border-color: #6dc8be;
-}
-
-.blue {
-  color: #6dc8be;
-}
-
-.bg-dark-blue {
-  background-color: #141c25;
-}
-
-.shadow {
-  box-shadow: 4px 4px 1px 0 rgba(255, 255, 255, 0.4);
-}
-
 .bg-dark {
   background-color: #1d2936;
 }
 
-::-webkit-scrollbar {
-  width: 2px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #1d2936;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #e6e6e6;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #e6e6e6;
+::selection {
+  background: #3800ff;
+  color: #fff;
 }
 
 @media only screen and (max-width: 480px) {
   html,
   body {
     font-size: 12px;
+  }
+
+  header {
+    position: relative !important;
+  }
+
+  .card {
+    max-width: 100%;
+    max-height: 300px;
+    overflow: hidden;
   }
 }

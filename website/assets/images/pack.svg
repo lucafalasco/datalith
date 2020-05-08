@@ -1,8 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" style="width: 500px; height: 500px;">
+  <linearGradient id="gradient" gradientTransform="rotate(45)">
+    <stop offset="0%" stop-color="#FF00C7" />
+    <stop offset="100%" stop-color="#3800ff" />
+  </linearGradient>
   <g transform="translate(
               74,
               78.5
-            )">
+            )" fill="url(#gradient)">
     <g>
       <rect x="0" y="0" width="40" height="40" style="fill-opacity: 0.604522;"></rect>
     </g>
