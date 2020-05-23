@@ -7,10 +7,10 @@ storiesOf('DATALITH', module).add(
   () => {
     return (
       <div style={{ width: '100%', height: '100%' }}>
-        <div style={{ width: '100%', height: '60%', position: 'relative' }}>
+        <div style={{ width: '100%', height: '40%', position: 'relative' }}>
           <img
             src={Logo}
-            width="400"
+            width="150"
             style={{
               position: 'absolute',
               left: 0,
@@ -21,26 +21,46 @@ storiesOf('DATALITH', module).add(
             }}
           />
         </div>
-        <div style={{ textAlign: 'center' }}>
+        <div
+          style={{
+            textAlign: 'center',
+            height: '60%',
+            padding: '0 2rem 2rem 2rem',
+            fontSize: 18,
+            lineHeight: 1.5,
+          }}
+        >
           <p>
             <b>Datalith</b> is a collection of clean, lightweight and easily customizable <br />
             <b>React components for data visualization.</b>
           </p>
-
+          <br />
+          <span style={{ fontSize: 16 }}>single install:</span>
+          <br />
+          <code>yarn add datalith</code>
+          <br />
+          <br />
+          <span style={{ fontSize: 16 }}>scoped packages install:</span>
+          <br />
+          <code>yarn add @datalith/flower @datalith/hexmap</code>
+          <br />
+          <br />
           <p>
-            <u>
-              Select a <b>datalith</b> from the sidebar
-            </u>{' '}
-            to see example usage. <br />
-            You can read the documentation for each component by clicking on the <i>Notes</i> tab on
-            the top toolbar. <br />
-            Code for the stories is available on{' '}
-            <a
-              target="_blank"
-              href="https://github.com/lucafalasco/datalith/tree/master/packages/datalith-storybook/src/components"
-            >
-              Github
-            </a>
+            Select a <b>datalith</b> from the sidebar to see example usage. <br />
+            You can read the documentation for each component by clicking on the <b>Notes</b> tab on
+            the top toolbar.
+            <br />
+            <br />
+            <span style={{ color: '#5a768a', fontSize: 16 }}>
+              Code for the stories is available on{' '}
+              <a
+                target="_blank"
+                href="https://github.com/lucafalasco/datalith/tree/master/packages/datalith-storybook/src/components"
+                style={{ color: '#5a768a' }}
+              >
+                <b>Github</b>
+              </a>
+            </span>
           </p>
         </div>
       </div>

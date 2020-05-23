@@ -1,5 +1,11 @@
 # \<GridMapUs \/>
 
+```sh
+yarn add @datalith/gridmap
+```
+
+## Docs
+
 ```jsx
 <GridMapUs className="grid-map-us" side={5} data={data} projection={projection} />
 ```

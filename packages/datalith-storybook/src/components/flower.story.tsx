@@ -17,8 +17,8 @@ const y = d => d.value
 const defs = (
   <defs>
     <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stopColor="#04FFBF" />
-      <stop offset="100%" stopColor="#8004ff" />
+      <stop offset="0%" stopColor="#FF00C7" />
+      <stop offset="100%" stopColor="#3800FF" />
     </linearGradient>
   </defs>
 )
@@ -36,7 +36,7 @@ storiesOf('Flower', module)
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
     return (
-      <Flower style={{ backgroundColor: '#303030' }} data={data} stroke="#fff" fill="transparent" />
+      <Flower style={{ backgroundColor: '#082e3a' }} data={data} stroke="#fff" fill="transparent" />
     )
   })
   .add('sorted', () => {
@@ -75,11 +75,12 @@ storiesOf('Flower', module)
         data={defaultData}
         value={d => yScale(d.value)}
         fill="#04FFBF"
+        fillOpacity={() => Math.random()}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
         }
-        style={{ backgroundColor: '#303030' }}
+        style={{ backgroundColor: '#082e3a' }}
       />
     )
   })

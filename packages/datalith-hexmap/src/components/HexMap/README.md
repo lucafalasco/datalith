@@ -1,5 +1,11 @@
 # \<HexMap \/>
 
+```sh
+yarn add @datalith/hexmap
+```
+
+## Docs
+
 ```jsx
 <HexMap
   className="hex-map"

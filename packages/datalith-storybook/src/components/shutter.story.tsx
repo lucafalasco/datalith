@@ -26,7 +26,7 @@ storiesOf('Shutter', module)
   .add('stroke', () => {
     return (
       <Shutter
-        style={{ backgroundColor: '#303030' }}
+        style={{ backgroundColor: '#082e3a' }}
         data={defaultData}
         stroke="white"
         strokeOpacity={d => zScale(d.value)}

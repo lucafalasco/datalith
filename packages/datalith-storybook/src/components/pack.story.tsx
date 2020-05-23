@@ -32,10 +32,10 @@ storiesOf('Pack', module)
   .add('colors', () => {
     return (
       <Pack
-        style={{ backgroundColor: '#303030' }}
+        style={{ backgroundColor: '#082e3a' }}
         data={defaultData}
         value={d => yScale(d.value)}
-        fill="rgb(4, 255, 191)"
+        fill="#04FFBF"
         fillOpacity={() => Math.random()}
       />
     )
@@ -43,7 +43,7 @@ storiesOf('Pack', module)
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
     return (
-      <Pack style={{ backgroundColor: '#303030' }} data={data} stroke="#fff" fill="transparent" />
+      <Pack style={{ backgroundColor: '#082e3a' }} data={data} stroke="#fff" fill="transparent" />
     )
   })
   .add('animated', () => {

@@ -11,6 +11,15 @@ const defaultData = genDateValue(100)
 
 const y = d => d.value
 
+const defs = (
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#FF00C7" />
+      <stop offset="100%" stop-color="#3800FF" />
+    </linearGradient>
+  </defs>
+)
+
 // scales
 const yScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
@@ -31,10 +40,10 @@ storiesOf('BarCode', module)
   .add('colors', () => {
     return (
       <BarCode
-        style={{ backgroundColor: '#303030' }}
+        style={{ backgroundColor: '#082e3a' }}
         data={defaultData}
         value={d => yScale(d.value)}
-        fill="rgb(4, 255, 191)"
+        fill="#04FFBF"
         fillOpacity={() => Math.random()}
       />
     )
@@ -48,7 +57,7 @@ storiesOf('BarCode', module)
     const data = defaultData.map(d => yScale(d.value))
     return (
       <BarCode
-        style={{ backgroundColor: '#303030' }}
+        style={{ backgroundColor: '#082e3a' }}
         data={defaultData}
         value={d => yScale(d.value)}
         stroke="#fff"
@@ -60,8 +69,8 @@ storiesOf('BarCode', module)
   .add('animated', () => {
     return (
       <Spring
-        from={{ index: 0 }}
-        to={{ index: defaultData.length }}
+        from={{ index: 0, opacity: defaultData.map(d => 0) }}
+        to={{ index: defaultData.length, opacity: defaultData.map(d => zScale(d.value)) }}
         config={{ duration: 1500, easing: easeInOutCubic }}
       >
         {props => {
@@ -72,7 +81,7 @@ storiesOf('BarCode', module)
               data={data}
               value={d => yScale(d.value)}
               fill="blue"
-              fillOpacity={d => zScale(d.value)}
+              fillOpacity={(d, i) => props.opacity[i]}
             />
           )
         }}
@@ -83,8 +92,9 @@ storiesOf('BarCode', module)
     return (
       <BarCode
         data={defaultData}
+        additionalElements={defs}
         value={d => yScale(d.value)}
-        fill="blue"
+        fill="url(#gradient)"
         fillOpacity={d => zScale(d.value)}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>

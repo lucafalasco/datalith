@@ -1,5 +1,11 @@
 # \<PixelMap \/>
 
+```sh
+yarn add @datalith/pixelmap
+```
+
+## Docs
+
 ```jsx
 <PixelMap
   className="pixel-map"

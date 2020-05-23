@@ -20,26 +20,16 @@ const side = 5
 const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)
 const projection = geoNaturalEarth1()
 
-const defs = (
-  <defs>
-    <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stop-color="#238ab0" />
-      <stop offset="100%" stop-color="#04ffbf" />
-    </linearGradient>
-  </defs>
-)
-
 storiesOf('GridMap', module)
   .addParameters({ notes })
   .add('custom - cross', () => {
     return (
       <GridMap
-        style={{ backgroundColor: '#303030' }}
+        style={{ backgroundColor: '#082e3a' }}
         data={defaultData}
-        additionalElements={defs}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
-        stroke="url('#gradient')"
+        stroke="#04FFBF"
         featureCollection={italy}
         projection={projection}
         customRender={({ x, y, value }, defaultProps) => (
@@ -60,7 +50,7 @@ storiesOf('GridMap', module)
 
     return (
       <GridMap
-        style={{ backgroundColor: '#303030' }}
+        style={{ backgroundColor: '#082e3a' }}
         side={side}
         data={data}
         fill="#fff"

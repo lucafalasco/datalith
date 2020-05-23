@@ -38,7 +38,7 @@ storiesOf('Ripple', module)
     const data = defaultData.map(d => yScale(d.value))
     return (
       <Ripple
-        style={{ backgroundColor: '#303030' }}
+        style={{ backgroundColor: '#082e3a' }}
         data={data}
         stroke="white"
         fill="transparent"

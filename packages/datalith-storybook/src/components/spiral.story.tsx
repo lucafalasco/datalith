@@ -25,7 +25,7 @@ storiesOf('Spiral', module)
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
     return (
-      <Spiral style={{ backgroundColor: '#303030' }} data={data} stroke="#fff" fill="transparent" />
+      <Spiral style={{ backgroundColor: '#082e3a' }} data={data} stroke="#fff" fill="transparent" />
     )
   })
   .add('animated', () => {

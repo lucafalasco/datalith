@@ -1,5 +1,11 @@
 # \<DotMap \/>
 
+```sh
+yarn add @datalith/dotmap
+```
+
+## Docs
+
 ```jsx
 <DotMap
   className="dot-map"

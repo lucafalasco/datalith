@@ -1,5 +1,11 @@
 # \<PixelMapWorld \/>
 
+```sh
+yarn add @datalith/pixelmap
+```
+
+## Docs
+
 ```jsx
 <PixelMapWorld className="pixel-map-world" side={5} data={data} projection={projection} />
 ```
@@ -13,8 +19,10 @@
 | <b>data\*</b>      |                      | `Array<Datum>` or`Array<[number, number]>`          | Array of data                                                |
 | coords             | `(Datum) => Datum`   | `(Datum) => [number, number]` or `[number, number]` | Coords accessor                                              |
 | value              | 10                   | `(Datum) => number` or`number`                      | Value accessor                                               |
-| fill               | `rgb(0,0,0)`         | `(Datum) => string` or `string`                     | Fill color accessor                                          |
+| fill               |                      | `(Datum) => string` or `string`                     | Fill color accessor                                          |
+| fillOpacity        |                      | `(Datum) => number` or `number`                     | Fill opacity accessor                                        |
 | stroke             |                      | `(Datum) => string` or `string`                     | Stroke color accessor                                        |
+| strokeOpacity      |                      | `(Datum) => number` or `number`                     | Stroke opacity accessor                                      |
 | projection         | `geoNaturalEarth1()` | `GeoProjection`                                     | D3 GeoProjection to map coordinates                          |
 | side               | `5`                  | `number`                                            | Grid cell dimension                                          |
 | tooltip            |                      | `(Datum) => string`                                 | Return HTML or text as a string to show on element mouseover |

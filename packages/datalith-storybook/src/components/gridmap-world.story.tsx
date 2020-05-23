@@ -7,27 +7,17 @@ import { genCoordsValue } from '../scripts'
 const defaultData = genCoordsValue(2000)
 const side = 5
 
-const defs = (
-  <defs>
-    <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stop-color="#238ab0" />
-      <stop offset="100%" stop-color="#04ffbf" />
-    </linearGradient>
-  </defs>
-)
-
 storiesOf('GridMapWorld', module)
   .addParameters({ notes })
   .add('custom - cross', () => {
     return (
       <GridMapWorld
-        style={{ backgroundColor: '#303030' }}
+        style={{ backgroundColor: '#082e3a' }}
         side={side}
         data={defaultData}
-        additionalElements={defs}
         coords={d => [d.lng, d.lat]}
         value={d => d.value}
-        stroke="url('#gradient')"
+        stroke="#04FFBF"
         customRender={({ x, y, value }, defaultProps) => (
           <path
             strokeWidth={value * 0.5}
