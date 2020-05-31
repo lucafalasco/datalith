@@ -40,6 +40,7 @@
     "@datalith/pixelmap": "^0.10.0",
     "@datalith/ripple": "^0.10.0",
     "@datalith/shutter": "^0.10.0",
+    "@datalith/spiral": "^0.10.0",
     "@datalith/util": "^0.10.0"
   },
   "devDependencies": {
