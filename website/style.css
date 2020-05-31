@@ -15,15 +15,19 @@ body {
 
 code {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 pre code {
   font-size: 0.85rem !important;
 }
 
-header {
-  mix-blend-mode: difference;
+.w6 {
+  width: 32rem;
+}
+
+.h6 {
+  height: 32rem;
 }
 
 .sticky {
@@ -49,8 +53,8 @@ header {
     font-size: 12px;
   }
 
-  header {
-    position: relative !important;
+  code {
+    font-size: 1.3rem;
   }
 
   .card {

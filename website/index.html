@@ -13,15 +13,17 @@
       name="keywords"
       content="datalith, typescript, javascript, react, component, data, visualization"
     />
-    <meta name="theme-color" content="#3800ff" />
-    <title>D A T A L I T H</title>
+    <meta name="theme-color" content="#000000" />
+    <title>DATALITH | Beautiful data visualization components</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
     <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <header class="w-100 sticky top-0 h4 flex justify-between items-center ph4 ph7-l z-999">
+    <header
+      class="w-100 sticky top-0 pv4 flex justify-between items-center ph4 ph7-l z-999 bg-white"
+    >
       <div class="flex justify-center items-center h3 w3">
         <a
           href="https://datalith.xyz"
@@ -31,41 +33,38 @@
         </a>
       </div>
 
-      <div class="flex items-center f4 f5-l fw6 white">
-        <a href="#components" class="color-inherit link mh2 mh3-l underline-hover">
-          Dataliths
-        </a>
+      <div class="flex items-center f4 fw6">
         <a
           href="https://docs.datalith.xyz"
           target="_blank"
-          class="color-inherit link mh2 mh3-l underline-hover"
+          class="color-inherit link mh3 underline-hover"
         >
-          Storybook
+          Dataliths
         </a>
         <a
           href="https://github.com/lucafalasco/datalith"
           target="_blank"
-          class="color-inherit link mh2 mh3-l underline-hover"
+          class="color-inherit link mh3 underline-hover"
         >
           Github
         </a>
         <a
           target="_blank"
           href="https://github.com/lucafalasco/datalith/#faq"
-          class="color-inherit link mh2 mh3-l underline-hover"
+          class="color-inherit link mh3 underline-hover"
           >FAQ</a
         >
       </div>
     </header>
 
-    <div class="center f5-l f4 br2 mv5">
-      <div class="tc lh-copy ph4">
+    <div class="center f5-l f4 br2 mt5">
+      <div class="tc lh-copy ph3 ph4-ns">
         <p class="f1 fw7 lh-title">
           Simple React components to create<br />
           beautiful data visualizations.
         </p>
 
-        <div class="f4">
+        <div class="f3">
           <p>
             Datalith is a collection of
             <b>clean, lightweight and easily customizable</b> components.
@@ -79,13 +78,13 @@
         </div>
       </div>
 
-      <div class="mv6">
+      <div class="mt6">
         <div class="w-100 pa5 bg-light-gray">
           <div class="w-90 w-50-l center h5-l">
-            <h2>
+            <h1>
               Typed React components for optimal DX
-            </h2>
-            <p class="f4 lh-copy">
+            </h1>
+            <p class="f3 f4-ns lh-copy">
               All of the components are statically typed.<br />
               If you use Typescript you can get live type checking with intellisense <br />
               as well as the awesome tooling ts comes with.
@@ -94,10 +93,10 @@
         </div>
         <div class="w-100 pa5 bg-gold">
           <div class="w-90 w-50-l center h5-l">
-            <h2>
+            <h1>
               Simple, shared API
-            </h2>
-            <p class="f4 lh-copy">
+            </h1>
+            <p class="f3 f4-ns lh-copy">
               Each React component share a common set of configurations,<br />
               as well as data accessor functions provided as
               <code class="bg-black-10 pa1">props</code>, to associate <br />
@@ -107,10 +106,10 @@
         </div>
         <div class="w-100 pa5 bg-dark white">
           <div class="w-90 w-50-l center h5-l">
-            <h2>
+            <h1>
               Easy to integrate, customize, and enhance
-            </h2>
-            <p class="f4 lh-copy">
+            </h1>
+            <p class="f3 f4-ns lh-copy">
               The scoped package install allows to only plug in the packages you need for your
               project. <br />
               The charts are quickly customizable, and may be easily extended with additional svg
@@ -121,268 +120,9 @@
         </div>
       </div>
     </div>
-
-    <div
-      id="components"
-      class="flex flex-column items-center justify-center w-100 mv5 center white"
-    >
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 40rem; height: 40rem;"
-          href="https://docs.datalith.xyz/?path=/story/flower--default"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/flower.svg')"
-            class="absolute absolute--fit cover w-100 h-100"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;Flower</b>
-    class="flower" 
-    data={data} 
-    padding={50} 
-    value={d => d.value} 
-    fill={d => d.color} 
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 40rem; height: 30rem;"
-          href="https://docs.datalith.xyz/?path=/story/barcode--default"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/barcode.svg')"
-            class="absolute absolute--fit cover w-100 h-100"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;BarCode</b>
-    class="barcode" 
-    data={data} 
-    value={d => d.value} 
-    fill={d => d.color} 
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 50rem; height: 42rem;"
-          href="https://docs.datalith.xyz/?path=/story/gridmapworld--custom-cross"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/gridmap.svg')"
-            class="absolute absolute--fit cover w-100 h-100"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;Gridmap</b>
-    class="gridmap" 
-    data={data} 
-    featureCollection={geojson}
-    projection={geoNaturalEarth1()}
-    side={5}
-    coords={d => [d.lng, d.lat]}
-    value={d => d.value} 
-    fill={d => d.color} 
-    customRender={
-      ({ x, y, value, datum }, props) => 
-        <b>&#60;Element {..props} /&#62;</b>
-    }
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 35rem; height: 35rem;"
-          href="https://docs.datalith.xyz/?path=/story/shutter--default"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/shutter.svg')"
-            class="absolute absolute--fit cover w-100 h-100"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;Shutter</b>
-    class="shutter" 
-    data={data} 
-    radiusOuter={100} 
-    radiusInner={80}
-    fill={d => d.color} 
-    stroke={d => d.colorSecondary} 
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 50rem; height: 40rem;"
-          href="https://docs.datalith.xyz/?path=/story/pixelmapus--default"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/pixelmap.svg')"
-            class="absolute absolute--fit cover w-75 h-75"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;Pixelmap</b>
-    class="pixelmap" 
-    data={data} 
-    featureCollection={geojson}
-    projection={geoAlbersUsa()}
-    side={5}
-    coords={d => [d.lng, d.lat]}
-    value={d => d.value} 
-    fill={d => d.color} 
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 40rem; height: 40rem;"
-          href="https://docs.datalith.xyz/?path=/story/spiral--default"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/spiral.svg')"
-            class="absolute absolute--fit cover w-100 h-100"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;Spiral</b>
-    class="spiral" 
-    data={data} 
-    value={d => d.value} 
-    fill={d => d.color} 
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 35rem; height: 35rem;"
-          href="https://docs.datalith.xyz/?path=/story/pack--default"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/pack.svg')"
-            class="absolute absolute--fit cover w-100 h-100"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;Pack</b>
-    class="pack" 
-    data={data} 
-    value={d => d.value} 
-    fill={d => d.color} 
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 40rem; height: 40rem;"
-          href="https://docs.datalith.xyz/?path=/story/dotmap--default"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/dotmap.svg')"
-            class="absolute absolute--fit cover w-75 h-75"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;Dotmap</b>
-    class="dotmap" 
-    data={data} 
-    featureCollection={geojson}
-    projection={geoNaturalEarth1()}
-    side={5}
-    coords={d => [d.lng, d.lat]}
-    value={d => d.value} 
-    fill={d => d.color} 
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 45rem; height: 40rem;"
-          href="https://docs.datalith.xyz/?path=/story/ripple--default"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/ripple.svg')"
-            class="absolute absolute--fit cover w-100 h-100"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;Ripple</b>
-    class="ripple" 
-    data={data} 
-    value={d => d.value} 
-    fill={d => d.color} 
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-      <div class="flex flex-column flex-wrap items-center justify-center-ns w-90 mv5">
-        <a
-          class="link relative flex justify-center items-center pointer pa3 card"
-          style="width: 40rem; height: 40rem;"
-          href="https://docs.datalith.xyz/?path=/story/hexmapworld--orthographic"
-          target="_blank"
-        >
-          <div
-            style="background-image: url('assets/images/hexmap.svg')"
-            class="absolute absolute--fit cover w-75 h-75"
-          ></div>
-        </a>
-        <pre class="pv2 pl3 pr4 ba b--black black br2 shadow-4">
-<code>
-  <b>&#60;Hexmap</b>
-    class="hexmap" 
-    data={data} 
-    featureCollection={geojson}
-    projection={geoOrthographic()}
-    side={5}
-    coords={d => [d.lng, d.lat]}
-    value={d => d.value} 
-    fill={d => d.color} 
-  <b>/&#62;</b>
-</code>
-</pre>
-      </div>
-    </div>
-    <div class="tc center mv4 pv2 f5 fw7 f6-ns">
+    <div class="tc center mv3 pv2 f4 f5-ns fw7 f6-ns">
       <b>&#60;/&#62; with ♥</b> by
-      <a href="https://lucafalasco.com" target="_blank" class="link bb">Luca Falasco</a>
+      <a href="https://lucafalasco.com" target="_blank" class="link black bb">Luca Falasco</a>
     </div>
   </body>
 </html>
