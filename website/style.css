@@ -38,6 +38,14 @@ pre code {
   pointer-events: none;
 }
 
+.blue {
+  color: #3800ff;
+}
+
+.hover-blue:hover {
+  color: #3800ff;
+}
+
 .bg-dark {
   background-color: #1d2936;
 }
