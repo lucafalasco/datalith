@@ -1026,13 +1026,21 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
-"@datalith/dotmap@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/dotmap/-/dotmap-0.8.0.tgz#90245464db8405fe58bb2fb9d932d0fc360c9cd0"
-  integrity sha512-R9JNYtVYn+1nNx6VpAsu4fD1kXAH3EiJU7sRhdNVWEa3N3e7VviOBSiGimVzfHTRpAbV9u/1QZfJGwoebCB0KQ==
+"@datalith/barcode@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@datalith/barcode/-/barcode-0.10.0.tgz#7ffb549c828b6e8a693c8c7b4f3ce98714ef8b2d"
+  integrity sha512-bjge2ID58cYIYJea83isVsD3t6EETUrRWMPknM4VCugg9tEj0Mh0dWQXj7I5hpOSUJuQNAZdaNep68aUIogbmg==
   dependencies:
-    "@datalith/gridmap" "^0.8.0"
-    "@datalith/util" "^0.8.0"
+    "@datalith/util" "^0.10.0"
+    react-tooltip "^3.10.0"
+
+"@datalith/dotmap@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@datalith/dotmap/-/dotmap-0.10.1.tgz#60be28468024f2e0442e173ac28ddc227ff36981"
+  integrity sha512-YxBxrIcXUUNpGKcHnWBy8qgkPrI/I9UCeFMtqFNidu9A+Lx1emszHLbYWo0J/dj8LxTU9cpVCT8y20kfdLDFXQ==
+  dependencies:
+    "@datalith/gridmap" "^0.10.1"
+    "@datalith/util" "^0.10.0"
     d3-array "^2.1.0"
     d3-geo "^1.11.3"
     d3-scale "^3.0.0"
@@ -1041,22 +1049,22 @@
     topojson "^3.0.2"
     us-atlas "^2.1.0"
 
-"@datalith/flower@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/flower/-/flower-0.8.0.tgz#ffa9b3e284e0e7aa68772e078a4c9a84a7528258"
-  integrity sha512-Q0TBQz6MsUcE9U0pjGmFYGGYvPWQCn/flTSswFBR0odyDwOZKIz+X8Y3g3SacA9yz6ubXO5X3kIxQGeD09D6AQ==
+"@datalith/flower@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@datalith/flower/-/flower-0.10.0.tgz#20c2cadef2d6f9621498d6ba0ed9375b67ed9c09"
+  integrity sha512-jC+TfSxa0R3eGkOi9QM3/2xh3+TUgxI+Z7+n+55UV+GDh6kZv30RcXFpJ1Ctggi24h6PljXH5ewXzXYYTpF1gw==
   dependencies:
-    "@datalith/util" "^0.8.0"
+    "@datalith/util" "^0.10.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/gridmap@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/gridmap/-/gridmap-0.8.0.tgz#c1fc466dec17c8f18445de0f19737de747bef612"
-  integrity sha512-UnB3TwtCeCM+fzZKQVDwprcokEF3DmblQSmMxGsVfRLUmagMdKh7QvjtU8cspTTVKoaqJVMtBAC7RlOsqoNefw==
+"@datalith/gridmap@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@datalith/gridmap/-/gridmap-0.10.1.tgz#953c7d723048d8b6148d9b003b7e4a60ee2e0380"
+  integrity sha512-YgjoOrWh7arv+QNgF9WdTG7ANRgnnrz8JDLsNvyD/Dr/b7Cuw1BLM741pmjylMk0/TFwXxinOHjkcBo0JdPQEg==
   dependencies:
-    "@datalith/util" "^0.8.0"
+    "@datalith/util" "^0.10.0"
     "@turf/flatten" "^5.1.5"
     d3-array "^2.1.0"
     d3-geo "^1.11.3"
@@ -1066,13 +1074,13 @@
     topojson "^3.0.2"
     us-atlas "^2.1.0"
 
-"@datalith/hexmap@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/hexmap/-/hexmap-0.8.0.tgz#173e4e545fff365762459cd31fd3ae3e12a23287"
-  integrity sha512-IFHbBGDiix/GmaboSwWJxpfJBBM1W7C5pVpETrTniAmyL1QGTY5cxrvvQ1JcCv19Q9y1opiTtMAWscmieZsEig==
+"@datalith/hexmap@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@datalith/hexmap/-/hexmap-0.10.1.tgz#a500b994447bf44361eba6821252333c73d455df"
+  integrity sha512-TA2od0wqgtm2pK/S/YNQcxGPyBAjo53tP/CtHZhLi4W5b/iAjbfP2b2cCJSA4mhQ6OiKFAeRxUdJw1OuaUyFkA==
   dependencies:
-    "@datalith/gridmap" "^0.8.0"
-    "@datalith/util" "^0.8.0"
+    "@datalith/gridmap" "^0.10.1"
+    "@datalith/util" "^0.10.0"
     d3-array "^2.1.0"
     d3-geo "^1.11.3"
     d3-scale "^3.0.0"
@@ -1081,23 +1089,23 @@
     topojson "^3.0.2"
     us-atlas "^2.1.0"
 
-"@datalith/pack@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/pack/-/pack-0.8.0.tgz#c1ebfb8c46ba4073b1d2ea9a9a82749f3a0a3380"
-  integrity sha512-YQ5kH+6NYp4/PBRNZ/5w/XomDxJRkesAq2ICegbKtPXmJJNvoSmrE3IBMNHHm4CyDmhhvZv3YjAtzLzJ9zqpSQ==
+"@datalith/pack@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@datalith/pack/-/pack-0.10.0.tgz#9d44bbf7772f7bff64e5869659c0cf55ba640e23"
+  integrity sha512-0muVyrslJR6iZiIK0HXmxbG0q1Z2z8/I8pQ+KDZuWIlMwshgIlNZ8dJQ+XAm6JPYBfWoNvwWmiN7iUFS3NzW+Q==
   dependencies:
-    "@datalith/util" "^0.8.0"
+    "@datalith/util" "^0.10.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/pixelmap@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/pixelmap/-/pixelmap-0.8.0.tgz#243ff7626eec2a62dbee601ef68f2344f93e36ff"
-  integrity sha512-9L9+1hymUe3zrQ9p7fsUYYgLtGa3/68yCDg7ZmxgJS65ajrf7uimyYOGM3M7jgksgkclwtKB6iUn4ENGpaTc9w==
+"@datalith/pixelmap@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@datalith/pixelmap/-/pixelmap-0.10.1.tgz#0a3e690aa67682768af1abb8fa7dbf9d2ade0971"
+  integrity sha512-dvGF5sRwPAiqzs2HUp3C9TUnKaoEjEHJJcOEJpQUGt1O8Gt/9vCLQq+Axtlp0UJ2DMf/BoPzHDky4Cc8uNHxnQ==
   dependencies:
-    "@datalith/gridmap" "^0.8.0"
-    "@datalith/util" "^0.8.0"
+    "@datalith/gridmap" "^0.10.1"
+    "@datalith/util" "^0.10.0"
     d3-array "^2.1.0"
     d3-geo "^1.11.3"
     d3-scale "^3.0.0"
@@ -1106,40 +1114,40 @@
     topojson "^3.0.2"
     us-atlas "^2.1.0"
 
-"@datalith/ripple@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/ripple/-/ripple-0.8.0.tgz#1e103a5bd52bd4052d670a0bab30a9550bc8d3b0"
-  integrity sha512-Lp+Vhp3Xcu7bdK+QRW96nfow9fH4lJhgaY5uoPZGWYe7N7lgb+5wNkmyLKRBEfL/zEXvfaWqjKUA3CS2Y9q/jA==
+"@datalith/ripple@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@datalith/ripple/-/ripple-0.10.0.tgz#3019ab902cc87056bdea4cc0c1d66e1f38e71d93"
+  integrity sha512-uh1B/jlMLNN3jgRnhIvI4GfcpJGDXWGCe8Z4WsFLNmhH8KlRndbud350Oo5TGA0iVAerpcCacaOAsfAcm4jk4g==
   dependencies:
-    "@datalith/util" "^0.8.0"
+    "@datalith/util" "^0.10.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/shutter@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/shutter/-/shutter-0.8.0.tgz#596a962256b8e4eba98a17029e86d66f44dd127a"
-  integrity sha512-MmbecN1rGhBeq3dm18Wz3JPZQd+RsnM7YzBE9sdMZgz4hw2IZ7XqJwcHWwbJb56QPfNq6vG4+xTvvU37xCNuiA==
+"@datalith/shutter@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@datalith/shutter/-/shutter-0.10.0.tgz#756403b10f00ecb85bee2f6be44389079c404c1e"
+  integrity sha512-NWJE2yZ1ejOlLkCj+wn9DYOB2fSy9UycezkpFuZyNrvTSI7dwgbDGiW3kWRV38nV6Rp2BBYjLALO+R9OEjX13Q==
   dependencies:
-    "@datalith/util" "^0.8.0"
+    "@datalith/util" "^0.10.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/spiral@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/spiral/-/spiral-0.8.0.tgz#00bbf42f8a12d33e774d055c8bd360f598e2ec6f"
-  integrity sha512-Ia7xgiSGntEGQhjpUlda4E7zynAJ2SZconQc15iMyh1qGWuedZAH3F20cahpRQ4XL4psx6Lm90Flb6rYn8evHQ==
+"@datalith/spiral@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@datalith/spiral/-/spiral-0.10.0.tgz#ada3d8b4e227f0a4bddb36ed3dca1545ca046066"
+  integrity sha512-d6CXX+7KxqsbEjtJFec4njXhEWCE4P1AKPtahNUW8X9IvEcHR9NPZt2TIl61Af+iaKRGiOkE+sMv87hQhGI9GQ==
   dependencies:
-    "@datalith/util" "^0.8.0"
+    "@datalith/util" "^0.10.0"
     d3-scale "^3.0.0"
     lodash "^4.17.11"
     react-tooltip "^3.10.0"
 
-"@datalith/util@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/util/-/util-0.8.0.tgz#51dab4b5474ca9388ccec99f915b5dbe49840eef"
-  integrity sha512-tbrvQu42vV7QPP0GCi9YOVkBPr9Bf9R/YUDWmtDQkbRt401uIbSOBGaYYUdEuluCLNEBlUv2iugjSbz5OtUhcg==
+"@datalith/util@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@datalith/util/-/util-0.10.0.tgz#041870041568aac24dae9b00e8ef735000d08c06"
+  integrity sha512-77c3CuxgemKVDIpernrvPflN1eKUoHKSLo1aoKcBfeAGVVKJ+zQvWHolPWamTikDCG20dyUXcFC0j33uFgHfog==
   dependencies:
     lodash "^4.17.11"
     react-sizeme "^2.6.7"
@@ -12430,8 +12438,9 @@ websocket-driver@>=0.5.1:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
+  integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
 
 whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
   version "1.0.5"
