@@ -1,7 +1,7 @@
 {
   "name": "@datalith/storybook",
   "description": "datalith storybook",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "author": "Luca Falasco",
   "license": "MIT",
   "main": "dist/index.js",
@@ -25,7 +25,7 @@
     "@datalith/pixelmap": "^0.11.0",
     "@datalith/ripple": "^0.11.0",
     "@datalith/shutter": "^0.11.0",
-    "@datalith/spiral": "^0.11.1",
+    "@datalith/spiral": "^0.11.2",
     "@datalith/util": "^0.11.0",
     "d3-array": "^2.0.3",
     "d3-geo": "^1.11.6",
