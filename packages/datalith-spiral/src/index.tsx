@@ -17,15 +17,12 @@ interface Props extends CommonProps {
   /** Spacing between points */
   spacing?: number
   /**
-   * Optional function to compute data points position
-   * @param dataLength length of data points
+   * Optional function to manually compute data points position.
+   * Passing this function overrides `spacing` prop value
    * @param size container dimensions, defined as an object {width, height}
    * @return Array of xy coordinates starting from center origin <width/2, height/2>, defined as an object {x, y}
    **/
-  getSpiralCoords?: (
-    dataLength: number,
-    size: { width: number; height: number },
-  ) => Array<{ x: number; y: number }>
+  getSpiralCoords?: (size: { width: number; height: number }) => Array<{ x: number; y: number }>
 }
 
 interface CircleProps extends CommonAccessors {
@@ -37,11 +34,11 @@ interface CircleProps extends CommonAccessors {
   tooltip?: (d: Datum) => string
 }
 
-function getDefaultSpiralCoords(dataLength: number, spacing: number) {
+function getDefaultSpiralCoords(data: Datum[], spacing: number) {
   let angle = 0
   const coords: Array<{ x: number; y: number }> = []
 
-  for (let i = 0; i < dataLength; i++) {
+  for (let i = 0; i < data.length; i++) {
     const radius = Math.pow(angle, 2)
 
     // using quadratic formula as suggested here: https://stackoverflow.com/questions/13894715/draw-equidistant-points-on-a-spiral
@@ -114,8 +111,8 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
 
       const { spacing = Math.min(Math.min(width, height), 2000) * 0.015 } = this.props
       const coords = getSpiralCoords
-        ? getSpiralCoords(data.length, { width, height })
-        : getDefaultSpiralCoords(data.length, spacing)
+        ? getSpiralCoords({ width, height })
+        : getDefaultSpiralCoords(data, spacing)
 
       return (
         <>

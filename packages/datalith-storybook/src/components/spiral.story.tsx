@@ -32,13 +32,13 @@ storiesOf('Spiral', module)
         data={defaultData}
         value={d => yScale(d.value)}
         fillOpacity={d => opacityScale(d.value)}
-        getSpiralCoords={(dataLength, { width, height }) => {
+        getSpiralCoords={({ width, height }) => {
           let angle = 0
           const coords: Array<{ x: number; y: number }> = []
           const increment = 0.12
           const aperture = Math.min(width, height) / 10
 
-          for (let i = 0; i < dataLength; i++) {
+          for (let i = 0; i < defaultData.length; i++) {
             const radius = aperture + i * 2
 
             coords.push({
@@ -47,6 +47,7 @@ storiesOf('Spiral', module)
             })
             angle += increment
           }
+
           return coords
         }}
       />
@@ -57,12 +58,12 @@ storiesOf('Spiral', module)
       <Spiral
         data={defaultData}
         value={d => yScale(d.value)}
-        getSpiralCoords={(dataLength, { width, height }) => {
+        getSpiralCoords={({ width, height }) => {
           let angle = 0
           const coords: Array<{ x: number; y: number }> = []
           const aperture = Math.min(width, height) / 20
 
-          for (let i = 0; i < dataLength; i++) {
+          for (let i = 0; i < defaultData.length; i++) {
             const radius = aperture + i * 3
 
             coords.push({
@@ -71,6 +72,7 @@ storiesOf('Spiral', module)
             })
             angle += 1 / radius - 20
           }
+
           return coords
         }}
       />
