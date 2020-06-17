@@ -20,7 +20,7 @@ interface Props extends CommonProps {
    * Optional function to compute data points position
    * @param dataLength length of data points
    * @param size container dimensions, defined as an object {width, height}
-   * @return Array of xy coordinates, defined as an object {x, y}
+   * @return Array of xy coordinates starting from center origin <width/2, height/2>, defined as an object {x, y}
    **/
   getSpiralCoords?: (
     dataLength: number,
@@ -54,6 +54,8 @@ function getDefaultSpiralCoords(dataLength: number, spacing: number) {
 
     angle += delta
   }
+  console.log(coords)
+
   return coords
 }
 
