@@ -54,7 +54,6 @@ function getDefaultSpiralCoords(dataLength: number, spacing: number) {
 
     angle += delta
   }
-  console.log(coords)
 
   return coords
 }
