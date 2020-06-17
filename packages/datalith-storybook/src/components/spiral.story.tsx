@@ -16,11 +16,65 @@ const yScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
   .range([1, 20])
 
+const opacityScale = scaleLinear()
+  .domain([Math.min(...defaultData.map(y)), Math.max(...defaultData.map(y))])
+  .range([0.3, 0.8])
+
 storiesOf('Spiral', module)
   .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => yScale(d.value))
     return <Spiral data={data} />
+  })
+  .add('archimedean', () => {
+    return (
+      <Spiral
+        data={defaultData}
+        value={d => yScale(d.value)}
+        fillOpacity={d => opacityScale(d.value)}
+        getSpiralCoords={(dataLength, { width, height }) => {
+          let angle = 0
+          const coords: Array<{ x: number; y: number }> = []
+          const increment = 0.12
+          const aperture = Math.min(width, height) / 10
+
+          for (let i = 0; i < dataLength; i++) {
+            const radius = aperture + i * 2
+
+            coords.push({
+              x: radius * Math.cos(angle),
+              y: radius * Math.sin(angle),
+            })
+            angle += increment
+          }
+          return coords
+        }}
+      />
+    )
+  })
+  .add('custom spiral', () => {
+    return (
+      <Spiral
+        data={defaultData}
+        value={d => yScale(d.value)}
+        getSpiralCoords={(dataLength, { width, height }) => {
+          let angle = 0
+          const coords: Array<{ x: number; y: number }> = []
+          const aperture = Math.min(width, height) / 20
+
+          for (let i = 0; i < dataLength; i++) {
+            const radius = aperture + i * 3
+
+            coords.push({
+              x: radius * Math.cos(angle),
+              y: radius * Math.sin(angle),
+            })
+            angle += 1 / radius - 20
+          }
+          return coords
+        }}
+      />
+    )
   })
   .add('stroke', () => {
     const data = defaultData.map(d => yScale(d.value))
@@ -33,7 +87,7 @@ storiesOf('Spiral', module)
       <Spring
         config={{ duration: 1000, easing: t => t * (2 - t) }}
         from={{ index: 0 }}
-        to={{ index: defaultData.length - 1 }}
+        to={{ index: defaultData.length }}
       >
         {props => {
           const data = defaultData.slice(0, props.index)
