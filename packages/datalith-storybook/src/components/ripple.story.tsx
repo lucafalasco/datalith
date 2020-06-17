@@ -17,6 +17,7 @@ const y = d => d.value
 const yScale = scaleLinear()
   .domain([Math.min(...defaultData.map(y)), Math.max(...defaultData.map(y))])
   .range([0, Math.min(width, height) * 0.3])
+  .clamp(true)
 
 storiesOf('Ripple', module)
   .addParameters({ notes })
@@ -52,7 +53,7 @@ storiesOf('Ripple', module)
       <Spring
         config={{ duration: 1000, easing: easeInOutCubic }}
         from={{ value: sortedData.map(d => 0), index: 0 }}
-        to={{ value: sortedData.map(y), index: sortedData.length - 1 }}
+        to={{ value: sortedData.map(y), index: sortedData.length }}
       >
         {props => {
           const data = sortedData.slice(0, props.index)

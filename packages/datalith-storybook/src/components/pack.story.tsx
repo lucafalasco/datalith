@@ -51,7 +51,7 @@ storiesOf('Pack', module)
     return (
       <Spring
         from={{ index: 0 }}
-        to={{ index: defaultData.length - 1 }}
+        to={{ index: defaultData.length }}
         config={{ duration: 1500, easing: easeInOutCubic }}
       >
         {props => {

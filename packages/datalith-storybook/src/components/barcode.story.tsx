@@ -14,8 +14,8 @@ const y = d => d.value
 const defs = (
   <defs>
     <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stop-color="#FF00C7" />
-      <stop offset="100%" stop-color="#3800FF" />
+      <stop offset="0%" stopColor="#FF00C7" />
+      <stop offset="100%" stopColor="#3800FF" />
     </linearGradient>
   </defs>
 )
