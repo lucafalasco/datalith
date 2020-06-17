@@ -14,42 +14,55 @@ interface Props extends CommonProps {
   value: NumberAccessor
   /** Center of the dataviz */
   center?: { x: number; y: number }
-  /** Spacing between points on spiral */
-  spacing: number
+  /** Spacing between points */
+  spacing?: number
+  /**
+   * Optional function to compute data points position
+   * @param dataLength length of data points
+   * @param size container dimensions, defined as an object {width, height}
+   * @return Array of xy coordinates, defined as an object {x, y}
+   **/
+  getSpiralCoords?: (
+    dataLength: number,
+    size: { width: number; height: number },
+  ) => Array<{ x: number; y: number }>
 }
 
 interface CircleProps extends CommonAccessors {
   datum: Datum
   value: NumberAccessor
-  coords: { x: number; y: number }
+  x: number
+  y: number
   index: number
   tooltip?: (d: Datum) => string
 }
 
-function getSpiralCoords(data: Datum[], spacing: number) {
+function getDefaultSpiralCoords(dataLength: number, spacing: number) {
   let angle = 0
+  const coords: Array<{ x: number; y: number }> = []
 
-  return data.map(d => {
+  for (let i = 0; i < dataLength; i++) {
     const radius = Math.pow(angle, 2)
-    // using quadratic formula as suggested here: https://stackoverflow.com/questions/13894715/draw-equidistant-points-on-a-spiral
-    const delta = (-2 * radius + Math.sqrt(4 * radius * radius + 16 * spacing)) / 4
 
-    const coords = {
+    // using quadratic formula as suggested here: https://stackoverflow.com/questions/13894715/draw-equidistant-points-on-a-spiral
+    const delta = (-2 * radius + Math.sqrt(4 * radius * radius + 20 * spacing)) / 4
+
+    coords.push({
       x: radius * Math.cos(angle),
       y: radius * Math.sin(angle),
-    }
+    })
 
     angle += delta
-
-    return coords
-  })
+  }
+  return coords
 }
 
 const Circle = ({
   datum,
   value: valueAccessor,
   index,
-  coords,
+  x,
+  y,
   fill,
   fillOpacity,
   stroke,
@@ -67,7 +80,7 @@ const Circle = ({
 
   return (
     <g data-tip={tooltip && tooltip(datum)}>
-      <circle style={style} cx={coords.x} cy={coords.y} r={radius} />
+      <circle style={style} cx={x} cy={y} r={radius} />
     </g>
   )
 }
@@ -76,7 +89,6 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class Spiral extends React.Component<Props> {
     static defaultProps = {
       value: d => d,
-      spacing: 20,
     }
 
     render() {
@@ -91,7 +103,7 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         stroke,
         strokeOpacity,
         tooltip,
-        spacing,
+        getSpiralCoords,
         size: { width, height },
         center = {
           x: width / 2,
@@ -99,8 +111,10 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         },
       } = this.props
 
-      const maxRadius = Math.max(...data.map((d, i) => callOrGetValue(value, d, i)))
-      const coords = getSpiralCoords(data, spacing)
+      const { spacing = Math.min(Math.min(width, height), 2000) * 0.015 } = this.props
+      const coords = getSpiralCoords
+        ? getSpiralCoords(data.length, { width, height })
+        : getDefaultSpiralCoords(data.length, spacing)
 
       return (
         <>
@@ -118,7 +132,8 @@ export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
                   key={i}
                   index={i}
                   datum={datum}
-                  coords={coords[i]}
+                  x={coords[i].x}
+                  y={coords[i].y}
                   value={value}
                   fill={fill}
                   fillOpacity={fillOpacity}
