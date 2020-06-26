@@ -19,7 +19,7 @@ const yScale = scaleLinear()
   .range([0, Math.min(width, height) * 0.3])
   .clamp(true)
 
-storiesOf('Ripple', module)
+storiesOf('DATALITHS|Ripple', module)
   .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => yScale(d.value))

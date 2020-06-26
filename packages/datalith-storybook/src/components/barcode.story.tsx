@@ -30,7 +30,7 @@ const zScale = scaleLinear()
   .range([0.1, 0.9])
   .nice()
 
-storiesOf('BarCode', module)
+storiesOf('DATALITHS|BarCode', module)
   .addParameters({ notes })
   .add('default', () => {
     return (

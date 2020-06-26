@@ -22,7 +22,7 @@ const zScale = scaleLinear()
   .range([0.1, 0.9])
   .nice()
 
-storiesOf('Pack', module)
+storiesOf('DATALITHS|Pack', module)
   .addParameters({ notes })
   .add('default', () => {
     return (

@@ -20,7 +20,7 @@ const side = 5
 const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)
 const projection = geoNaturalEarth1()
 
-storiesOf('DotMap', module)
+storiesOf('DATALITHS|DotMap.DotMap', module)
   .addParameters({ notes })
   .add('default', () => {
     return (

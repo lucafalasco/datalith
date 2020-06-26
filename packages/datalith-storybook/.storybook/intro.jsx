@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import Logo from './logo.svg'
 
-storiesOf('DATALITH', module).add(
-  'intro',
+storiesOf('INTRODUCTION|Getting Started', module).add(
+  'README',
   () => {
     return (
       <div style={{ width: '100%', height: '100%' }}>

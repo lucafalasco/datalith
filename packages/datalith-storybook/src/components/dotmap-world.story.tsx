@@ -8,7 +8,7 @@ import { genCoordsValue } from '../scripts'
 const defaultData = genCoordsValue(2000)
 const side = 5
 
-storiesOf('DotMapWorld', module)
+storiesOf('DATALITHS|DotMap.DotMapWorld', module)
   .addParameters({ notes })
   .add('natural earth', () => {
     return (

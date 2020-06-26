@@ -20,7 +20,7 @@ const opacityScale = scaleLinear()
   .domain([Math.min(...defaultData.map(y)), Math.max(...defaultData.map(y))])
   .range([0.3, 0.8])
 
-storiesOf('Spiral', module)
+storiesOf('DATALITHS|Spiral', module)
   .addParameters({ notes })
   .add('default', () => {
     const data = defaultData.map(d => yScale(d.value))

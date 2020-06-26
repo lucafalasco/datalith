@@ -18,7 +18,7 @@ const zScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
   .range([0.1, 1])
 
-storiesOf('Shutter', module)
+storiesOf('DATALITHS|Shutter', module)
   .addParameters({ notes })
   .add('default', () => {
     return <Shutter data={defaultData} fillOpacity={d => zScale(d.value)} />

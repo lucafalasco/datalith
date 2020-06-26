@@ -7,7 +7,7 @@ import { genCoordsValue } from '../scripts'
 const defaultData = genCoordsValue(2000)
 const side = 5
 
-storiesOf('GridMapWorld', module)
+storiesOf('DATALITHS|GridMap.GridMapWorld', module)
   .addParameters({ notes })
   .add('custom - cross', () => {
     return (

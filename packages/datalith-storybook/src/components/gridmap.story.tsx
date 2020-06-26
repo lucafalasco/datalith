@@ -20,7 +20,7 @@ const side = 5
 const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)
 const projection = geoNaturalEarth1()
 
-storiesOf('GridMap', module)
+storiesOf('DATALITHS|GridMap.GridMap', module)
   .addParameters({ notes })
   .add('custom - cross', () => {
     return (

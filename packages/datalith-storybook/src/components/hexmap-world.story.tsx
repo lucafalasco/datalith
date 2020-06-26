@@ -8,7 +8,7 @@ import { genCoordsValue } from '../scripts'
 const defaultData = genCoordsValue(2000)
 const side = 5
 
-storiesOf('HexMapWorld', module)
+storiesOf('DATALITHS|HexMap.HexMapWorld', module)
   .addParameters({ notes })
   .add('natural earth', () => {
     return (

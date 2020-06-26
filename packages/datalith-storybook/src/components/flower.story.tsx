@@ -28,7 +28,7 @@ const yScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
   .range([0, Math.min(width, height) * 0.3])
 
-storiesOf('Flower', module)
+storiesOf('DATALITHS|Flower', module)
   .addParameters({ notes })
   .add('default', () => {
     return <Flower data={defaultData} value={d => yScale(d.value)} />

@@ -2,6 +2,8 @@ import { configure, addParameters } from '@storybook/react'
 import theme from './theme'
 
 addParameters({
+  hierarchySeparator: /\/|\./,
+  hierarchyRootSeparator: /\|/,
   options: {
     theme,
     showPanel: false,

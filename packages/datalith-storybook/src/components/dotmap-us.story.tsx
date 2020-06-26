@@ -7,7 +7,7 @@ import { genCoordsValueUs } from '../scripts'
 const defaultData = genCoordsValueUs(1000)
 const side = 5
 
-storiesOf('DotMapUs', module)
+storiesOf('DATALITHS|DotMap.DotMapUs', module)
   .addParameters({ notes })
   .add('default', () => {
     return (
