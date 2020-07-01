@@ -26,7 +26,7 @@ storiesOf('INTRODUCTION|Getting Started', module).add(
             textAlign: 'center',
             height: '60%',
             padding: '0 2rem 2rem 2rem',
-            fontSize: 18,
+            fontSize: 20,
             lineHeight: 1.5,
           }}
         >
@@ -45,18 +45,18 @@ storiesOf('INTRODUCTION|Getting Started', module).add(
           <code>yarn add @datalith/flower @datalith/hexmap</code>
           <br />
           <br />
-          <p>
+          <p style={{ fontSize: 18 }}>
             Select a <b>datalith</b> from the sidebar to see example usage. <br />
             You can read the documentation for each component by clicking on the <b>Notes</b> tab on
             the top toolbar.
             <br />
             <br />
-            <span style={{ color: '#5a768a', fontSize: 16 }}>
+            <span style={{ color: '#082e3a', fontSize: 16, fontWeight: 700 }}>
               Code for the stories is available on{' '}
               <a
                 target="_blank"
                 href="https://github.com/lucafalasco/datalith/tree/master/packages/datalith-storybook/src/components"
-                style={{ color: '#5a768a' }}
+                style={{ color: '#082e3a' }}
               >
                 <b>Github</b>
               </a>

@@ -30,10 +30,6 @@ pre code {
   height: 32rem;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .pointer-events-none {
   pointer-events: none;
 }
