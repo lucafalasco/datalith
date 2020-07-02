@@ -24,11 +24,16 @@ yarn add @datalith/dotmap
 | size                        |                      | `{ width: number; height: number }`                 | Width and Height of the SVG. Default is parent node size.    |
 | <b>data \*</b>              |                      | `Array<Datum>` or`Array<[number, number]>`          | Array of data                                                |
 | coords                      | `(Datum) => Datum`   | `(Datum) => [number, number]` or `[number, number]` | Coords accessor                                              |
-| value                       | 10                   | `(Datum) => number` or`number`                      | Value accessor                                               |
+| value                       | `10`                 | `(Datum) => number` or`number`                      | Value accessor                                               |
+| valueInactive               | `1`                  | `number`                                            | Value Inactive accessor                                      |
 | fill                        |                      | `(Datum) => string` or `string`                     | Fill color accessor                                          |
-| fillOpacity                 |                      | `(Datum) => number` or `number`                     | Fill opacity accessor                                        |
+| fillInactive                | `#000`               | `string`                                            | Fill Inactive accessor                                       |
+| fillOpacity                 |                      | `(Datum) => number` or `number`                     | Fill Opacity accessor                                        |
+| fillOpacityInactive         | `0.3`                | `number`                                            | Fill Opacity Inactive accessor                               |
 | stroke                      |                      | `(Datum) => string` or `string`                     | Stroke color accessor                                        |
-| strokeOpacity               |                      | `(Datum) => number` or `number`                     | Stroke opacity accessor                                      |
+| strokeInactive              | `transparent`        | `string`                                            | Stroke Inactive accessor                                     |
+| strokeOpacity               |                      | `(Datum) => number` or `number`                     | Stroke Opacity accessor                                      |
+| strokeOpacityInactive       | `0.3`                | `number`                                            | Stroke Opacity Inactive accessor                             |
 | <b>featureCollection \*</b> |                      | `FeatureCollection`                                 | GeoJson object                                               |
 | projection                  | `geoNaturalEarth1()` | `GeoProjection`                                     | D3 GeoProjection to map coordinates                          |
 | side                        | `5`                  | `number`                                            | Grid cell dimension                                          |
