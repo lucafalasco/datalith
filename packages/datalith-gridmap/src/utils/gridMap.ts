@@ -1,10 +1,11 @@
 import { callOrGetValue, CoordsAccessor, Datum, NumberAccessor } from '@datalith/util'
-import flatten from '@turf/flatten'
+import flattenGeo from '@turf/flatten'
 import { GeometryCollection } from '@turf/helpers'
 import { sum } from 'd3-array'
 import { geoPath, GeoProjection } from 'd3-geo'
 import { Feature, FeatureCollection } from 'geojson'
 import { isPointInsidePolygon } from './geometry'
+import { flatten, some } from 'lodash'
 
 function getFeatureIdToValues(
   data: Datum[],
@@ -16,9 +17,12 @@ function getFeatureIdToValues(
 ) {
   const res = data.find((d, i) => {
     const coords = callOrGetValue(coordsAccessor, d, i)
-    const flattened = flatten(feature as Feature<GeometryCollection>)
-    const polygon = flattened.features[0].geometry.coordinates[0] as Array<[number, number]>
-    return isPointInsidePolygon([coords[0], coords[1]], polygon)
+    const flattened = flattenGeo(feature as Feature<GeometryCollection>)
+    const polygons = flatten(
+      flattened.features.map(feature => feature.geometry.coordinates),
+    ) as Array<Array<[number, number]>>
+
+    return some(polygons, polygon => isPointInsidePolygon([coords[0], coords[1]], polygon))
   })
 
   if (res && feature.id) {

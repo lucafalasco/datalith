@@ -7,19 +7,33 @@ import {
   CommonAccessors,
   NumberAccessor,
 } from '@datalith/util'
-import { max } from 'd3-array'
-import { geoNaturalEarth1, geoPath, GeoProjection } from 'd3-geo'
-import { scaleLinear } from 'd3-scale'
+import { geoNaturalEarth1, GeoProjection } from 'd3-geo'
 import { FeatureCollection } from 'geojson'
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 import gridMap from '../../utils/gridMap'
 
 const DEFAULT_VALUE = 10
+const DEFAULT_VALUE_INACTIVE = 1
+const DEFAULT_FILL_INACTIVE = '#000'
+const DEFAULT_FILL_OPACITY_INACTIVE = 0.3
+const DEFAULT_STROKE_INACTIVE = 'transparent'
+const DEFAULT_STROKE_OPACITY_INACTIVE = 0.3
+const DEFAULT_SIDE = 10
 
 interface Props extends CommonProps {
   /** Value Accessor */
   value: NumberAccessor
+  /** Value Inactive Accessor */
+  valueInactive: number
+  /** Fill Inactive Accessor */
+  fillInactive: string
+  /** Fill Opacity Inactive Accessor */
+  fillOpacityInactive: number
+  /** Stroke Inactive Accessor */
+  strokeInactive: string
+  /** Stroke Opacity Inactive Accessor */
+  strokeOpacityInactive: number
   /** Coords Accessor */
   coords: CoordsAccessor
   /** GeoJson */
@@ -37,8 +51,12 @@ interface Props extends CommonProps {
 
 export type GridMapProps = Props & CommonProps
 
-interface VisualElementProps extends CommonAccessors {
+interface VisualElementProps {
   datum?: Datum
+  fill: string
+  fillOpacity: number
+  stroke: string
+  strokeOpacity: number
   tooltip?: (d: Datum) => string
   render: (props: any) => JSX.Element
 }
@@ -52,12 +70,7 @@ const VisualElement = ({
   tooltip,
   render: Element,
 }: VisualElementProps) => {
-  const style = {
-    fill: callOrGetValue(fill, datum),
-    fillOpacity: callOrGetValue(fillOpacity, datum),
-    stroke: callOrGetValue(stroke, datum),
-    strokeOpacity: callOrGetValue(strokeOpacity, datum),
-  }
+  const style = { fill, fillOpacity, stroke, strokeOpacity }
 
   return <g data-tip={tooltip && datum && tooltip(datum)}>{Element(style)}</g>
 }
@@ -66,8 +79,13 @@ export const GridMap: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
   class GridMap extends React.Component<GridMapProps> {
     static defaultProps: Partial<GridMapProps> = {
       value: DEFAULT_VALUE,
+      valueInactive: DEFAULT_VALUE_INACTIVE,
+      fillInactive: DEFAULT_FILL_INACTIVE,
+      fillOpacityInactive: DEFAULT_FILL_OPACITY_INACTIVE,
+      strokeInactive: DEFAULT_STROKE_INACTIVE,
+      strokeOpacityInactive: DEFAULT_STROKE_OPACITY_INACTIVE,
       coords: d => d,
-      side: 5,
+      side: DEFAULT_SIDE,
       projection: geoNaturalEarth1(),
     }
 
@@ -79,13 +97,18 @@ export const GridMap: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         data,
         coords,
         value,
+        valueInactive,
         featureCollection,
         projection,
         side,
         fill,
+        fillInactive,
         fillOpacity,
+        fillOpacityInactive,
         stroke,
+        strokeInactive,
         strokeOpacity,
+        strokeOpacityInactive,
         tooltip,
         customRender,
         size: { width, height },
@@ -101,10 +124,6 @@ export const GridMap: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
         value,
         featureCollection,
       })
-
-      const yScale = scaleLinear()
-        .domain([0, max(gridMapData, (d, i) => Math.sqrt(callOrGetValue(value, d, i))) as number])
-        .range([1, side * 0.5])
 
       // DEBUG
       // const path = geoPath().projection(projection)
@@ -126,7 +145,9 @@ export const GridMap: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
               <path key={i} d={path(f) as string} fill="none" stroke="black" strokeWidth="0.1" />
             ))} */}
               {gridMapData.map((d, i) => {
-                const dimension = yScale(Math.sqrt(callOrGetValue(value, d)))
+                const dimension =
+                  d.datum !== undefined ? callOrGetValue(value, d.datum, i) : valueInactive
+
                 const defaultRender = props => <circle cx={d.x} cy={d.y} r={dimension} {...props} />
                 const render = customRender
                   ? props =>
@@ -140,10 +161,20 @@ export const GridMap: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
                   <VisualElement
                     datum={d.datum}
                     key={i}
-                    fill={fill}
-                    fillOpacity={fillOpacity}
-                    stroke={stroke}
-                    strokeOpacity={strokeOpacity}
+                    fill={d.datum !== undefined ? callOrGetValue(fill, d.datum, i) : fillInactive}
+                    fillOpacity={
+                      d.datum !== undefined
+                        ? callOrGetValue(fillOpacity, d.datum, i)
+                        : fillOpacityInactive
+                    }
+                    stroke={
+                      d.datum !== undefined ? callOrGetValue(stroke, d.datum, i) : strokeInactive
+                    }
+                    strokeOpacity={
+                      d.datum !== undefined
+                        ? callOrGetValue(strokeOpacity, d.datum, i)
+                        : strokeOpacityInactive
+                    }
                     tooltip={tooltip}
                     render={render}
                   />

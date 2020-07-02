@@ -1,17 +1,38 @@
 import { DotMapUs } from '@datalith/dotmap/src'
 import notes from '@datalith/dotmap/src/components/DotMapUs/README.md'
 import { storiesOf } from '@storybook/react'
+import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { genCoordsValueUs } from '../scripts'
 
+const y = d => d.value
 const defaultData = genCoordsValueUs(1000)
-const side = 5
+const side = 10
+
+const yScale = scaleLinear()
+  .domain([Math.min(...defaultData.map(y)), Math.max(...defaultData.map(y))])
+  .range([1, side * 0.5])
+
+const zScale = scaleLinear()
+  .domain([0, Math.max(...defaultData.map(y))])
+  .range([0.1, 0.9])
+  .nice()
 
 storiesOf('DATALITHS|DotMap.DotMapUs', module)
   .addParameters({ notes })
   .add('default', () => {
     return (
-      <DotMapUs side={side} data={defaultData} coords={d => [d.lng, d.lat]} value={d => d.value} />
+      <DotMapUs
+        side={side}
+        data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={side * 0.4}
+        valueInactive={side * 0.4}
+        fill="#2D886D"
+        fillInactive="#ccc"
+        fillOpacity={d => zScale(d.value)}
+        fillOpacityInactive={0.4}
+      />
     )
   })
   .add('stroke', () => {
@@ -20,8 +41,10 @@ storiesOf('DATALITHS|DotMap.DotMapUs', module)
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
-        value={d => d.value}
+        value={d => yScale(d.value)}
         stroke="#000"
+        strokeInactive="#000"
+        fillInactive="transparent"
         fill="transparent"
       />
     )
@@ -32,7 +55,12 @@ storiesOf('DATALITHS|DotMap.DotMapUs', module)
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
-        value={d => d.value}
+        value={side * 0.4}
+        valueInactive={side * 0.4}
+        fill="#2d7688"
+        fillInactive="#ccc"
+        fillOpacity={d => zScale(d.value)}
+        fillOpacityInactive={0.4}
         tooltip={({ value }) => `<p><b>Value: </b>${value.toFixed(2)}</p>`}
       />
     )
