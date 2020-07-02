@@ -9,14 +9,13 @@ export class HexMap extends React.Component<HexMapProps> {
     return (
       <GridMap
         {...this.props}
-        customRender={({ x, y, j, value }, props) => {
+        customRender={({ x, y, j, value }, defaultProps) => {
           const sqrt3 = Math.sqrt(3)
           // apply offset to x coordinate based on row index (j)
           x = j % 2 ? x : x + this.props.side / 2
 
           return (
             <polygon
-              strokeWidth={value * 0.5}
               points={`
                 ${x - (sqrt3 * value) / 2} ${y + value / 2}
                 ${x - (sqrt3 * value) / 2} ${y - value / 2}
@@ -25,7 +24,7 @@ export class HexMap extends React.Component<HexMapProps> {
                 ${x + (sqrt3 * value) / 2} ${y + value / 2}
                 ${x} ${y + value}
               `}
-              {...props}
+              {...defaultProps}
             />
           )
         }}

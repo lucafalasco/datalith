@@ -1,11 +1,22 @@
 import { GridMapWorld } from '@datalith/gridmap/src'
 import notes from '@datalith/gridmap/src/components/GridMapWorld/README.md'
 import { storiesOf } from '@storybook/react'
+import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { genCoordsValue } from '../scripts'
 
-const defaultData = genCoordsValue(2000)
-const side = 5
+const y = d => d.value
+const defaultData = genCoordsValue(200)
+const side = 10
+
+const yScale = scaleLinear()
+  .domain([Math.min(...defaultData.map(y)), Math.max(...defaultData.map(y))])
+  .range([1, side * 0.8])
+
+const zScale = scaleLinear()
+  .domain([0, Math.max(...defaultData.map(y))])
+  .range([0.1, 0.9])
+  .nice()
 
 storiesOf('DATALITHS|GridMap.GridMapWorld', module)
   .addParameters({ notes })
@@ -16,18 +27,23 @@ storiesOf('DATALITHS|GridMap.GridMapWorld', module)
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
-        value={d => d.value}
+        value={d => yScale(d.value)}
         stroke="#04FFBF"
-        customRender={({ x, y, value }, defaultProps) => (
-          <path
-            strokeWidth={value * 0.5}
-            d={`M${x - value / 2} ${y - value / 2} 
+        customRender={({ x, y, value, datum }, defaultProps) =>
+          datum !== undefined ? (
+            <path
+              strokeWidth={1}
+              strokeLinecap="round"
+              d={`M${x - value / 2} ${y - value / 2} 
                 L${x + value / 2} ${y + value / 2} 
                 M${x + value / 2} ${y - value / 2} 
                 L${x - value / 2} ${y + value / 2}`}
-            {...defaultProps}
-          />
-        )}
+              {...defaultProps}
+            />
+          ) : (
+            <circle cx={x} cy={y} r={2} fill="#ccc" fillOpacity={0.2} />
+          )
+        }
       />
     )
   })
@@ -36,20 +52,20 @@ storiesOf('DATALITHS|GridMap.GridMapWorld', module)
       <GridMapWorld
         side={side}
         data={defaultData}
-        fillOpacity={d => (d ? 1 : 0.4)}
+        fillOpacityInactive={0.2}
         coords={d => [d.lng, d.lat]}
-        value={d => d.value}
         customRender={({ x, y, datum }, defaultProps) => (
           <text
             x={x}
             y={y}
             textAnchor="middle"
-            fontSize={5}
+            fontSize={10}
+            fontFamily="monospace"
             fontWeight={700}
             alignmentBaseline="middle"
             {...defaultProps}
           >
-            {datum ? '|' : '―'}
+            {datum ? '1' : '0'}
           </text>
         )}
       />
@@ -61,17 +77,22 @@ storiesOf('DATALITHS|GridMap.GridMapWorld', module)
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
-        value={d => d.value}
-        customRender={({ x, y, value }, defaultProps) => (
-          <path
-            strokeWidth={value * 0.5}
-            d={`M${x - value} ${y + value} 
+        value={d => yScale(d.value) * 0.7}
+        fill="#2d7688"
+        fillOpacity={d => zScale(d.value)}
+        customRender={({ x, y, value, datum }, defaultProps) =>
+          datum ? (
+            <path
+              d={`M${x - value} ${y + value} 
                 L${x + value} ${y + value} 
                 L${x} ${y - value} 
                 Z`}
-            {...defaultProps}
-          />
-        )}
+              {...defaultProps}
+            />
+          ) : (
+            <circle cx={x} cy={y} r={2} fill="#ccc" fillOpacity={0.5} />
+          )
+        }
       />
     )
   })
