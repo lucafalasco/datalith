@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@datalith/gridmap@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/gridmap/-/gridmap-0.8.0.tgz#c1fc466dec17c8f18445de0f19737de747bef612"
-  integrity sha512-UnB3TwtCeCM+fzZKQVDwprcokEF3DmblQSmMxGsVfRLUmagMdKh7QvjtU8cspTTVKoaqJVMtBAC7RlOsqoNefw==
+"@datalith/gridmap@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/gridmap/-/gridmap-0.12.0.tgz#8260b31b4f204c0f1bbd22afd2f0d095099d9c85"
+  integrity sha512-e/ddcuKndxyUfL65fdY1LOnPBo2ahYm8ax/XGLSVbi4MHQmicj4Gm9BRPKTDDntZw8/+3PRUjwKIz98dXgkhcA==
   dependencies:
-    "@datalith/util" "^0.8.0"
+    "@datalith/util" "^0.12.0"
     "@turf/flatten" "^5.1.5"
     d3-array "^2.1.0"
     d3-geo "^1.11.3"
@@ -17,10 +17,10 @@
     topojson "^3.0.2"
     us-atlas "^2.1.0"
 
-"@datalith/util@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@datalith/util/-/util-0.8.0.tgz#51dab4b5474ca9388ccec99f915b5dbe49840eef"
-  integrity sha512-tbrvQu42vV7QPP0GCi9YOVkBPr9Bf9R/YUDWmtDQkbRt401uIbSOBGaYYUdEuluCLNEBlUv2iugjSbz5OtUhcg==
+"@datalith/util@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/util/-/util-0.12.0.tgz#fcdaab83b57e2766cb68bf34095ea4b6a103f412"
+  integrity sha512-G0JTTdGuwDY4qTLZb0QOsgXxjyoxUvTRar7lgtYVqIpkwJuoZTqu9AHxM3C5emov9wTGpsuuqvax96LoVrbClA==
   dependencies:
     lodash "^4.17.11"
     react-sizeme "^2.6.7"
@@ -246,9 +246,9 @@ invariant@^2.2.4:
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
 lodash@^4.17.11:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
