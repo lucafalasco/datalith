@@ -14,7 +14,7 @@
       name="keywords"
       content="datalith, typescript, javascript, react, component, data, visualization, dataviz"
     />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#1565c0" />
 
     <meta property="og:url" content="https://datalith.xyz" />
     <meta property="og:type" content="website" />
@@ -35,27 +35,27 @@
 
   <body>
     <header
-      class="w-100 flex justify-start justify-end-l items-center pv4 pv5-l ph3 ph6-l z-999 bg-white-90"
+      class="flex justify-end items-center pv4 pv5-l ph3 ph6-l relative z-999"
     >
-      <div class="flex items-center f3 f4-l fw7">
+      <div class="flex items-center f3 f4-l fw7 bg-white pa1">
         <a
           href="https://docs.datalith.xyz"
           target="_blank"
-          class="color-inherit link mh3 underline-hover"
+          class="color-inherit link mr4 underline-hover"
         >
           Dataliths
         </a>
         <a
           href="https://github.com/lucafalasco/datalith"
           target="_blank"
-          class="color-inherit link mh3 underline-hover"
+          class="color-inherit link mr4 underline-hover"
         >
           Github
         </a>
         <a
           target="_blank"
           href="https://github.com/lucafalasco/datalith/#faq"
-          class="color-inherit link mh3 underline-hover"
+          class="color-inherit link mr4 underline-hover"
           >FAQ</a
         >
       </div>
@@ -63,7 +63,7 @@
 
     <div class="center f5-l f4 br2 mt4 mt1-l">
       <div class="flex flex-column justify-center items-center tc lh-copy ph3 ph4-ns">
-        <div class="flex justify-center items-center h5 w5">
+        <div class="flex justify-center items-center h6 w6 mb5" style="margin-top: -300px;">
           <a
             href="https://datalith.xyz"
             class="w-100 h-100 bg-center db contain"
@@ -71,7 +71,7 @@
           >
           </a>
         </div>
-        <p class="f1 fw7 lh-title">
+        <p class="f2 fw7 lh-title">
           Simple React components to create<br />
           beautiful data visualizations.
         </p>
@@ -90,24 +90,24 @@
         </div>
       </div>
 
-      <div class="w-90 w-50-l tc center mv5 f4">
-        <div class="mv4">
-          <div class="mb3">Single install:</div>
-          <code class="bg-black-10 pa2">yarn add datalith</code>
+      <div class="w-90 w-90-l center mv5 f4">
+        <div class="mv4 flex justify-center">
+          <code class="db bw1 pa4 pa4-ns ba b--black br2 shadow-4 f4 f5-ns">
+            <div class="black-30 mb1"># Single install</div>
+            <span class="black-50">$</span> yarn add datalith
+            <br />
+            <br />
+            <div class="black-30 mb1"># Scoped packages install</div>
+            <span class="black-50">$</span> yarn add @datalith/flower @datalith/hexmap
+          </code>
         </div>
-        <div class="mv4">
-          <div class="mb3">Scoped packages install:</div>
-          <code class="bg-black-10 pa2 db di-ns lh-copy"
-            >yarn add @datalith/flower @datalith/hexmap @datalith/...</code
-          >
-        </div>
-        ___
-        <div class="mt4 lh-copy">
+
+        <div class="mt5 tc lh-copy f3 f4-ns">
           Check out the
           <a
             href="https://docs.datalith.xyz"
             target="_blank"
-            class="color-inherit link bb hover-blue fw6"
+            class="color-inherit link bb hover-blue fw7"
             >Storybook</a
           >
           to see available charts and documentation
@@ -116,7 +116,7 @@
 
       <div class="mt6">
         <div class="w-100 pa4 pa5-ns bg-light-gray">
-          <div class="w-90 w-50-l center h5-l">
+          <div class="w-90 w-90-l center h5-l">
             <h1>
               Typed React components for optimal DX
             </h1>
@@ -127,8 +127,8 @@
             </p>
           </div>
         </div>
-        <div class="w-100 pa4 pa5-ns bg-gold">
-          <div class="w-90 w-50-l center h5-l">
+        <div class="w-100 pa4 pa5-ns bg-dark white">
+          <div class="w-90 w-90-l center h5-l tr">
             <h1>
               Simple, shared API
             </h1>
@@ -140,8 +140,8 @@
             </p>
           </div>
         </div>
-        <div class="w-100 pa4 pa5-ns bg-dark white">
-          <div class="w-90 w-50-l center h5-l">
+        <div class="w-100 pa4 pa5-ns bg-darker white">
+          <div class="w-90 w-90-l center h5-l">
             <h1>
               Easy to integrate, customize, and enhance
             </h1>
@@ -149,15 +149,16 @@
               The scoped package install allows to only plug in the packages you need for your
               project. <br />
               The charts are quickly customizable, and may be easily extended with additional svg
-              elements (e.g. to add axis or labels) using the
+              elements <br />
+              (e.g. to add axis or labels) using the
               <code class="bg-black-10 pa1">additionalElements</code> prop.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="tc center mv3 pv2 f4 f5-ns fw7 f6-ns">
-      <b>&#60;/&#62; with &#x2665;&#xFE0E;</b> by
+    <div class="tr center pv3 pr4 f4 f5-ns fw7 f6-ns">
+      <b>&#60;/&#62; by
       <a href="https://lucafalasco.com" target="_blank" class="link black bb">Luca Falasco</a>
     </div>
   </body>

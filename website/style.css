@@ -11,6 +11,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: clip;
 }
 
 code {
@@ -35,19 +36,31 @@ pre code {
 }
 
 .blue {
-  color: #3800ff;
+  color: #1565c0;
 }
 
 .hover-blue:hover {
-  color: #3800ff;
+  color: #1565c0;
+}
+
+.bg-blue {
+  background-color: #1565c0;
+}
+
+.bg-darker {
+  background-color: #003c8f;
+}
+
+.bg-light-gray {
+  background-color: #e0e0e0;
 }
 
 .bg-dark {
-  background-color: #1d2936;
+  background-color: #1565c0;
 }
 
 ::selection {
-  background: #3800ff;
+  background: #1565c0;
   color: #fff;
 }
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/lucafalasco/datalith/master/assets/logo.svg?sanitize=true" width="150px" style="margin: 50px;"/>
+  <img src="https://raw.githubusercontent.com/lucafalasco/datalith/master/assets/logo.svg?sanitize=true" width="200px" style="margin: 50px;"/>
 </p>
  
 ---
