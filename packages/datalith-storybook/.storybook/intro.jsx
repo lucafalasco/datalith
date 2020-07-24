@@ -10,14 +10,14 @@ storiesOf('INTRODUCTION|Getting Started', module).add(
         <div style={{ width: '100%', height: '40%', position: 'relative' }}>
           <img
             src={Logo}
-            width="150"
+            width="400"
             style={{
               position: 'absolute',
               left: 0,
               right: 0,
               top: 0,
               bottom: 0,
-              margin: 'auto',
+              margin: '-250px auto auto auto',
             }}
           />
         </div>
@@ -34,16 +34,35 @@ storiesOf('INTRODUCTION|Getting Started', module).add(
             <b>Datalith</b> is a collection of clean, lightweight and easily customizable <br />
             <b>React components for data visualization.</b>
           </p>
-          <br />
-          <span style={{ fontSize: 16 }}>single install:</span>
-          <br />
-          <code>yarn add datalith</code>
-          <br />
-          <br />
-          <span style={{ fontSize: 16 }}>scoped packages install:</span>
-          <br />
-          <code>yarn add @datalith/flower @datalith/hexmap</code>
-          <br />
+          <div
+            style={{
+              textAlign: 'left',
+              width: 450,
+              margin: 'auto',
+            }}
+          >
+            <div style={{ fontSize: 16, marginBottom: 5 }}>Single install:</div>
+            <code
+              style={{
+                borderRadius: 5,
+                padding: 10,
+                display: 'block',
+              }}
+            >
+              $ yarn add datalith
+            </code>
+            <br />
+            <div style={{ fontSize: 16, marginBottom: 5 }}>Scoped packages install:</div>
+            <code
+              style={{
+                borderRadius: 5,
+                padding: 10,
+                display: 'block',
+              }}
+            >
+              $ yarn add @datalith/flower @datalith/hexmap
+            </code>
+          </div>
           <br />
           <p style={{ fontSize: 18 }}>
             Select a <b>datalith</b> from the sidebar to see example usage. <br />
