@@ -1026,6 +1026,132 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
+"@datalith/barcode@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/barcode/-/barcode-0.12.0.tgz#62a3cabcdf67dd70f4e2af6e8e2355be6e8e6831"
+  integrity sha512-c0VjXcbibbsFkjAW/zwWMAn/ieICPO5rOigaer6ZzO5Ewfq39reX9dTUJet3yqmEd3qMzALe4nWmT6OXctQhNA==
+  dependencies:
+    "@datalith/util" "^0.12.0"
+    react-tooltip "^3.10.0"
+
+"@datalith/dotmap@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/dotmap/-/dotmap-0.12.0.tgz#f999bc86e561e13dd0a75b6824ece2226b338863"
+  integrity sha512-IpYIZdA8boIaa6R+gGp/kTEShzRdyN8yFDYdRpLk0hOP67MBhdZ/9dutkO8odgP66RnuxyxkQMUptSKki3PlFw==
+  dependencies:
+    "@datalith/gridmap" "^0.12.0"
+    "@datalith/util" "^0.12.0"
+    d3-array "^2.1.0"
+    d3-geo "^1.11.3"
+    d3-scale "^3.0.0"
+    lodash "^4.17.11"
+    react-tooltip "^3.10.0"
+    topojson "^3.0.2"
+    us-atlas "^2.1.0"
+
+"@datalith/flower@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/flower/-/flower-0.12.0.tgz#31b132b802aa036e57be06fff155255e8fa8e2c4"
+  integrity sha512-+VFk9qGXWAsizbxA4vs44G98/tt2OzllUETki1Vwc17LU1F16ueOAZrxNfjyjclQqNMinN+EJxNzL4QnXG9pEw==
+  dependencies:
+    "@datalith/util" "^0.12.0"
+    d3-scale "^3.0.0"
+    lodash "^4.17.11"
+    react-tooltip "^3.10.0"
+
+"@datalith/gridmap@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/gridmap/-/gridmap-0.12.0.tgz#8260b31b4f204c0f1bbd22afd2f0d095099d9c85"
+  integrity sha512-e/ddcuKndxyUfL65fdY1LOnPBo2ahYm8ax/XGLSVbi4MHQmicj4Gm9BRPKTDDntZw8/+3PRUjwKIz98dXgkhcA==
+  dependencies:
+    "@datalith/util" "^0.12.0"
+    "@turf/flatten" "^5.1.5"
+    d3-array "^2.1.0"
+    d3-geo "^1.11.3"
+    d3-scale "^3.0.0"
+    lodash "^4.17.11"
+    react-tooltip "^3.10.0"
+    topojson "^3.0.2"
+    us-atlas "^2.1.0"
+
+"@datalith/hexmap@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/hexmap/-/hexmap-0.12.0.tgz#0f25a37c07ec64b11214537301d4215d9f180d6b"
+  integrity sha512-z8VDcLAIwcsKTwcXrVWOfyH9NQ93oc8A1AsrAHZi5rjoEsuedZj/dvX5fALTgLaMYRKG1n6V0CJgPrwD8w1Afw==
+  dependencies:
+    "@datalith/gridmap" "^0.12.0"
+    "@datalith/util" "^0.12.0"
+    d3-array "^2.1.0"
+    d3-geo "^1.11.3"
+    d3-scale "^3.0.0"
+    lodash "^4.17.11"
+    react-tooltip "^3.10.0"
+    topojson "^3.0.2"
+    us-atlas "^2.1.0"
+
+"@datalith/pack@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/pack/-/pack-0.12.0.tgz#ae3786211f5833a0a29a1dbc0ae0779725991d4f"
+  integrity sha512-Dzps5nZ/Qm2Id95Vl/tOGh57If4RMs5R+TxkcH5KFPDyWf9E7aU6yd9ywUCdst1sDcRPfW5t1JLtMuwJDnzltA==
+  dependencies:
+    "@datalith/util" "^0.12.0"
+    d3-scale "^3.0.0"
+    lodash "^4.17.11"
+    react-tooltip "^3.10.0"
+
+"@datalith/pixelmap@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/pixelmap/-/pixelmap-0.12.0.tgz#37c99b3ae4fb2b7a519e0d0240e9be5e2b25079a"
+  integrity sha512-b/byoag0syGCatAikI2wnvM+oqPkDe0cL3VrjeBrnNFeAEyL+aDvJPspU89gntYBYkbtUFxeUK71pRFdROM3Qw==
+  dependencies:
+    "@datalith/gridmap" "^0.12.0"
+    "@datalith/util" "^0.12.0"
+    d3-array "^2.1.0"
+    d3-geo "^1.11.3"
+    d3-scale "^3.0.0"
+    lodash "^4.17.11"
+    react-tooltip "^3.10.0"
+    topojson "^3.0.2"
+    us-atlas "^2.1.0"
+
+"@datalith/ripple@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/ripple/-/ripple-0.12.0.tgz#88000528b67ef637257bf0586528bfb082829fa0"
+  integrity sha512-ZHUgsuzFOg6FODI857v3EMyGSgYa21cTHLYlRES5SW9D2QlbiUd0pVM+TviCWGhFIBgAVVX7Py9ClKzkStXlQg==
+  dependencies:
+    "@datalith/util" "^0.12.0"
+    d3-scale "^3.0.0"
+    lodash "^4.17.11"
+    react-tooltip "^3.10.0"
+
+"@datalith/shutter@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/shutter/-/shutter-0.12.0.tgz#f4ceb29e94aa40c7394b55f33246d4eb931deeb6"
+  integrity sha512-wMZjBvMDRaFVY71+5FrClEJFuGFUhDhn/KA9mY9Q+MqmjiypA+bt8iZV4QHe1/cYIE3uLm8HjDj0fdbuabMA5g==
+  dependencies:
+    "@datalith/util" "^0.12.0"
+    d3-scale "^3.0.0"
+    lodash "^4.17.11"
+    react-tooltip "^3.10.0"
+
+"@datalith/spiral@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/spiral/-/spiral-0.12.0.tgz#971f866d8d2f2e1b664931733d3d3dba3faea352"
+  integrity sha512-8jAJjcFsUQt3GuDZ1KicPP1zom4sr7RAtsedHqfwhsYnvz+3lHLwNW4xWsmnhyAIOsp0EO5wmXBRN3KFml3Ebg==
+  dependencies:
+    "@datalith/util" "^0.12.0"
+    d3-scale "^3.0.0"
+    lodash "^4.17.11"
+    react-tooltip "^3.10.0"
+
+"@datalith/util@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@datalith/util/-/util-0.12.0.tgz#fcdaab83b57e2766cb68bf34095ea4b6a103f412"
+  integrity sha512-G0JTTdGuwDY4qTLZb0QOsgXxjyoxUvTRar7lgtYVqIpkwJuoZTqu9AHxM3C5emov9wTGpsuuqvax96LoVrbClA==
+  dependencies:
+    lodash "^4.17.11"
+    react-sizeme "^2.6.7"
+
 "@emotion/cache@^10.0.27":
   version "10.0.27"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.27.tgz#7895db204e2c1a991ae33d51262a3a44f6737303"
@@ -1625,6 +1751,26 @@
     "@svgr/plugin-jsx" "^4.3.0"
     "@svgr/plugin-svgo" "^4.2.0"
     loader-utils "^1.2.3"
+
+"@turf/flatten@^5.1.5":
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/@turf/flatten/-/flatten-5.1.5.tgz#da2927067133ed6169b0b9d607b9215688aa1358"
+  integrity sha1-2iknBnEz7WFpsLnWB7khVoiqE1g=
+  dependencies:
+    "@turf/helpers" "^5.1.5"
+    "@turf/meta" "^5.1.5"
+
+"@turf/helpers@^5.1.5":
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/@turf/helpers/-/helpers-5.1.5.tgz#153405227ab933d004a5bb9641a9ed999fcbe0cf"
+  integrity sha1-FTQFInq5M9AEpbuWQantmZ/L4M8=
+
+"@turf/meta@^5.1.5":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-5.2.0.tgz#3b1ad485ee0c3b0b1775132a32c384d53e4ba53d"
+  integrity sha1-OxrUhe4MOwsXdRMqMsOE1T5LpT0=
+  dependencies:
+    "@turf/helpers" "^5.1.5"
 
 "@types/cheerio@*":
   version "0.22.11"
@@ -3077,8 +3223,9 @@ bluebird@^3.5.5:
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
-  version "4.11.8"
-  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
+  version "4.11.9"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.9.tgz#26d556829458f9d1e81fc48952493d0ba3507828"
+  integrity sha512-E6QoYqCKZfgatHTdHzs1RRKP7ip4vvm+EyRUeE2RF0NblwVvb0p6jSVeNTOFxPn26QXN2o6SMfNxKp6kU8zQaw==
 
 body-parser@1.19.0:
   version "1.19.0"
@@ -3164,6 +3311,7 @@ braces@^3.0.1:
 brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
+  integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
 
 browser-process-hrtime@^0.1.2:
   version "0.1.3"
@@ -4260,6 +4408,11 @@ d3-array@1:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-2.2.0.tgz#a9e966b8f8d78f0888d98db1fb840fc8da8ac5c7"
 
+d3-array@^2.1.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-2.5.0.tgz#d3f3043aabb75a17e2e78e3723aff4004ede3c5b"
+  integrity sha512-U+CrYn19GmiKeI9qU1RLV1p5ZodBKXw64k9Z3Id6d11LLuZ4JdyCnMT6W/2b84bvqEMFU15zg/JC3/oRYTanVg==
+
 d3-color@1:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/d3-color/-/d3-color-1.2.8.tgz#4eaf9b60ef188c893fcf8b28f3546aafebfbd9f4"
@@ -4267,6 +4420,13 @@ d3-color@1:
 d3-format@1:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/d3-format/-/d3-format-1.3.2.tgz#6a96b5e31bcb98122a30863f7d92365c00603562"
+
+d3-geo@^1.11.3:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/d3-geo/-/d3-geo-1.12.1.tgz#7fc2ab7414b72e59fbcbd603e80d9adc029b035f"
+  integrity sha512-XG4d1c/UJSEX9NfU02KwBL6BYPj8YKHxgBEw5om2ZnTRSbIcego6dhHwcxuSR3clxh0EpE38os1DVPOmnYtTPg==
+  dependencies:
+    d3-array "1"
 
 d3-geo@^1.11.6:
   version "1.11.6"
@@ -4702,8 +4862,9 @@ element-resize-detector@^1.1.15:
     batch-processor "^1.0.0"
 
 elliptic@^6.0.0:
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.4.1.tgz#c2d0b7776911b86722c632c3c06c60f2f819939a"
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.3.tgz#cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6"
+  integrity sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==
   dependencies:
     bn.js "^4.4.0"
     brorand "^1.0.1"
@@ -5996,6 +6157,7 @@ hash-base@^3.0.0:
 hash.js@^1.0.0, hash.js@^1.0.3:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
+  integrity sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA==
   dependencies:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
@@ -6039,6 +6201,7 @@ highlight.js@~9.13.0:
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
+  integrity sha1-0nRXAQJabHdabFRXk+1QL8DGSaE=
   dependencies:
     hash.js "^1.0.3"
     minimalistic-assert "^1.0.0"
@@ -6333,13 +6496,18 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.1, inherits@~2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
+inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.1, inherits@~2.0.3:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
+  integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
 inherits@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.1.tgz#b17d08d326b4423e568eff719f91b0b1cbdf69f1"
+
+inherits@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
 ini@^1.3.5, ini@~1.3.0:
   version "1.3.5"
@@ -7952,10 +8120,12 @@ mini-css-extract-plugin@^0.8.0:
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
+  integrity sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
 
 minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
+  integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
 minimatch@3.0.4, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
@@ -10077,6 +10247,13 @@ react-textarea-autosize@^7.1.0:
     "@babel/runtime" "^7.1.2"
     prop-types "^15.6.0"
 
+react-tooltip@^3.10.0:
+  version "3.11.6"
+  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-3.11.6.tgz#4f9735a2a4aa50580af351ce23e74a56f41afc0c"
+  integrity sha512-nTc1yHHaPCHHURvMpf/VNF17pIZiU4zwUGFJBUVr1fZkezFC7E0VPMMVrCfDjt+IpwTHICyzlyx+1FiQ7lw5LQ==
+  dependencies:
+    prop-types "^15.6.0"
+
 react@^16.8.3, react@^16.8.5:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
@@ -11915,6 +12092,11 @@ url@^0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
+
+us-atlas@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/us-atlas/-/us-atlas-2.1.0.tgz#9a0b4ab96b9466eca4fe1b66fa4e282905f9eaa8"
+  integrity sha512-zn1FiaOpq6KkwTvFZ34jUf8veEL7bqjaN412/BRP1yEyhVCFY2xsA/aFIO63FjAzzmNip2I2TzCjiZNWqd5C7w==
 
 use-callback-ref@^1.2.1:
   version "1.2.1"
