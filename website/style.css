@@ -7,7 +7,7 @@ body {
   font-size: 14px;
   width: 100%;
   background: #fff;
-  color: #1d2936;
+  color: #171f2c;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,6 +23,10 @@ pre code {
   font-size: 0.85rem !important;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 .w6 {
   width: 32rem;
 }
@@ -35,33 +39,49 @@ pre code {
   pointer-events: none;
 }
 
-.blue {
-  color: #1565c0;
-}
-
-.hover-blue:hover {
-  color: #1565c0;
-}
-
-.bg-blue {
-  background-color: #1565c0;
+.bg-dark {
+  background-color: #171f2c;
 }
 
 .bg-darker {
-  background-color: #003c8f;
+  background-color: #101720;
 }
 
-.bg-light-gray {
-  background-color: #e0e0e0;
+.bg-darkest {
+  background-color: #0b1016;
 }
 
-.bg-dark {
-  background-color: #1565c0;
+.blue {
+  color: #12c5e5;
+}
+
+.blue-light {
+  color: #9ff0ff;
+}
+
+.purple {
+  color: #6f42c1;
+}
+
+.purple-light {
+  color: #a08cfc;
+}
+
+.teal {
+  color: #0bbba9;
+}
+
+.teal-light {
+  color: #a7e8e0;
 }
 
 ::selection {
   background: #1565c0;
   color: #fff;
+}
+
+.shadow-alt {
+  box-shadow: 5px 5px 10px #f0f0f0, -5px -5px 10px #f0f0f0;
 }
 
 @media only screen and (max-width: 480px) {
