@@ -1,6 +1,8 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/lucafalasco/datalith/master/assets/logo.svg?sanitize=true" width="100%"/>
+  <img src="https://raw.githubusercontent.com/lucafalasco/datalith/master/assets/logo.svg?sanitize=true" width="400px"/>
 </p>
+
+ ---
 
 [![npm](https://img.shields.io/badge/npm-datalith-black.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/org/datalith)
 [![npm version](https://img.shields.io/npm/v/datalith.svg?style=for-the-badge&label)](https://www.npmjs.com/org/datalith)
