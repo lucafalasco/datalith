@@ -9,7 +9,7 @@ import {
 import * as React from 'react'
 import Tooltip from 'react-tooltip'
 
-const DEFAULT_BAR_WIDTH = 10
+const DEFAULT_BAR_WIDTH = 5
 
 interface Props extends CommonProps {
   /** Value Accessor */

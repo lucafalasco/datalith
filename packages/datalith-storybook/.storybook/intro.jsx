@@ -7,18 +7,10 @@ storiesOf('INTRODUCTION|Getting Started', module).add(
   () => {
     return (
       <div style={{ width: '100%', height: '100%' }}>
-        <div style={{ width: '100%', height: '40%', position: 'relative' }}>
+        <div style={{ width: '100%', height: '40%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <img
             src={Logo}
-            width="400"
-            style={{
-              position: 'absolute',
-              left: 0,
-              right: 0,
-              top: 0,
-              bottom: 0,
-              margin: '-250px auto auto auto',
-            }}
+            width="400px"
           />
         </div>
         <div
