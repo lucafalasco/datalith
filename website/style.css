@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;0,900;1,700&display=swap');
 
 html,
 body {
@@ -6,7 +6,7 @@ body {
   text-rendering: optimizeLegibility;
   font-size: 14px;
   width: 100%;
-  background: #fff;
+  background: url('./assets/images/dotpattern.svg'), linear-gradient(90deg, #6f42c1, #12c5e5);
   color: #171f2c;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -24,6 +24,11 @@ pre code {
 }
 
 h1 {
+  font-size: 6rem !important;
+  line-height: 1 !important;
+}
+
+h2 {
   font-size: 3rem;
 }
 
@@ -76,18 +81,14 @@ h1 {
 }
 
 ::selection {
-  background: #1565c0;
+  background: #000;
   color: #fff;
-}
-
-.shadow-alt {
-  box-shadow: 5px 5px 10px #f0f0f0, -5px -5px 10px #f0f0f0;
 }
 
 @media only screen and (max-width: 480px) {
   html,
   body {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   code {
@@ -98,5 +99,9 @@ h1 {
     max-width: 100%;
     max-height: 300px;
     overflow: hidden;
+  }
+
+  h1 {
+    font-size: 3.2rem !important;
   }
 }

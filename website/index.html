@@ -34,10 +34,16 @@
   </head>
 
   <body>
-    <header
-      class="flex justify-end items-center pv4 pv5-l ph3 ph6-l relative z-999"
-    >
-      <div class="flex items-center f3 f4-l fw7 bg-white pa1">
+    <header class="flex flex-column flex-row-ns justify-between items-center pt4 pb4 ph4 ph6-l relative z-999">
+    <div class="flex justify-center items-center h3 h4-ns w-90 w5-ns mw6 mb4 mb0-ns">
+        <a
+          href="https://datalith.xyz"
+          class="w-100 h-100 bg-center db contain"
+          style="background-image: url('assets/images/logo.svg');"
+        >
+        </a>
+      </div>
+      <div class="flex items-center f3 fw7">
         <a
           href="https://docs.datalith.xyz"
           target="_blank"
@@ -61,44 +67,35 @@
       </div>
     </header>
 
-    <div class="center f5-l f4 br2 mt4 mt1-l">
+    <div class="center f5-l f4 br2 mt1-l">
       <div class="flex flex-column justify-center items-center tc lh-copy ph3 ph4-ns">
-        <div class="flex justify-center items-center h5 w-80 mw6 mb5">
-          <a
-            href="https://datalith.xyz"
-            class="w-100 h-100 bg-center db contain"
-            style="background-image: url('assets/images/logo.svg');"
+        <h1 class="fw9 lh-title">
+          Simple<br/>batteries included</br> <i>components</i> <br />to build beautiful<br /><i>data visualizations</i
           >
-          </a>
-        </div>
-        <p class="f2 fw7 lh-title">
-          Simple React components to create<br />
-          beautiful data visualizations.
-        </p>
-
+        </h1>
         <div class="f3">
           <p>
-            Datalith is a collection of
-            <b>clean, lightweight and easily customizable</b> components.
+            <b>Datalith</b> is a collection of
+            <b>clean, lightweight and easily customizable</b> React components.
           </p>
           <p>
             The purpose is to provide an easy way to integrate custom data visualizations in any
             React project. <br />
             The components were designed with <b>simplicity</b> in mind, <br />
-            the <b>dataset</b> is the only requirement.
+            with <b>data</b> as the only requirement.
           </p>
         </div>
       </div>
 
       <div class="w-90 w-90-l center mv5 f4">
         <div class="mv4 flex justify-center">
-          <code class="db bw1 pa4 pa4-ns ba b--black br2 shadow-alt f4 f5-ns">
-            <div class="black-30 mb1"># Single install</div>
-            <span class="black-50">$</span> yarn add datalith
+          <code class="db bw1 pa4 pa4-ns ba b--black br2 f4 f5-ns bg-darkest white">
+            <div class="white-30 mb1"># Single install</div>
+            <span class="white-50">$</span> yarn add datalith
             <br />
             <br />
-            <div class="black-30 mb1"># Scoped packages install</div>
-            <span class="black-50">$</span> yarn add @datalith/flower @datalith/hexmap
+            <div class="white-30 mb1"># Scoped packages install</div>
+            <span class="white-50">$</span> yarn add @datalith/flower @datalith/hexmap
           </code>
         </div>
 
@@ -107,7 +104,7 @@
           <a
             href="https://docs.datalith.xyz"
             target="_blank"
-            class="color-inherit link bb hover-blue fw7"
+            class="color-inherit link bb hover-white fw7"
             >Storybook</a
           >
           to see available charts and documentation
@@ -117,11 +114,11 @@
       <div class="mt6">
         <div class="w-100 pa4 pa5-ns bg-dark blue-light">
           <div class="w-90 w-90-l center h5-l ">
-            <h1 class="blue">
+            <h2 class="blue">
               Typed React components for optimal DX
-            </h1>
+            </h2>
             <p class="f3 f4-ns lh-copy">
-              All of the components are statically typed.<br />
+              All components are statically typed.<br />
               If you use Typescript you can get live type checking with intellisense <br />
               as well as the awesome tooling ts comes with.
             </p>
@@ -129,11 +126,11 @@
         </div>
         <div class="w-100 pa4 pa5-ns bg-darker purple-light">
           <div class="w-90 w-90-l center h5-l tr">
-            <h1 class="purple">
+            <h2 class="purple">
               Simple, shared API
-            </h1>
+            </h2>
             <p class="f3 f4-ns lh-copy">
-              Each React component share a common set of configurations,<br />
+              The charts have a common set of configurations,<br />
               as well as data accessor functions provided as
               <code class="bg-black-10 pa1">props</code>, to associate <br />
               each chart feature with the correct data point.
@@ -142,9 +139,9 @@
         </div>
         <div class="w-100 pa4 pa5-ns bg-darkest teal-light">
           <div class="w-90 w-90-l center h5-l">
-            <h1 class="teal">
+            <h2 class="teal">
               Easy to integrate, customize, and enhance
-            </h1>
+            </h2>
             <p class="f3 f4-ns lh-copy">
               The scoped package install allows to only plug in the packages you need for your
               project. <br />
@@ -157,9 +154,11 @@
         </div>
       </div>
     </div>
-    <div class="tc center pv4 pr4 f4 fw7 f5-ns tracked bg-darker white">
-      <b>Made by
-      <a href="https://lucafalasco.com" target="_blank" class="link white blue underline-hover">Luca Falasco</a>
+    <div class="tc center pv4 pr4 f4 fw7 f5-ns bg-darker white">
+      Made by
+      <a href="https://lucafalasco.com" target="_blank" class="link white blue underline-hover"
+        >Luca Falasco</a
+      >
     </div>
   </body>
 </html>
