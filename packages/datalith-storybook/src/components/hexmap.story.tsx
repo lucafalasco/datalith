@@ -1,12 +1,12 @@
 import italyTopology from '@datalith/gridmap/src/json/italy.json'
-import { HexMap } from '@datalith/hexmap/src'
-import notes from '@datalith/hexmap/src/components/HexMap/README.md'
+import { HexMap, HexMapUs, HexMapWorld } from '@datalith/hexmap/src'
+import notes from '@datalith/hexmap/src/components/HexMapWorld/README.md'
 import { storiesOf } from '@storybook/react'
-import { geoNaturalEarth1 } from 'd3-geo'
+import { geoNaturalEarth1, geoOrthographic } from 'd3-geo'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { feature } from 'topojson'
-import { genCoordsValueIt } from '../scripts'
+import { genCoordsValue, genCoordsValueIt, genCoordsValueUs } from '../scripts'
 
 interface ItalyAtlas extends TopoJSON.Topology {
   objects: {
@@ -14,13 +14,15 @@ interface ItalyAtlas extends TopoJSON.Topology {
   }
 }
 
-const italyAtlas = italyTopology as any
-
-const defaultData = genCoordsValueIt(200)
+const y = d => d.value
+const defaultData = genCoordsValue(200)
 const side = 12
+
+const defaultDataUs = genCoordsValueUs(1000)
+const defaultDataIt = genCoordsValueIt(200)
+const italyAtlas = italyTopology as any
 const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)
 const projection = geoNaturalEarth1()
-const y = d => d.value
 
 const yScale = scaleLinear()
   .domain([Math.min(...defaultData.map(y)), Math.max(...defaultData.map(y))])
@@ -31,36 +33,48 @@ const zScale = scaleLinear()
   .range([0.1, 0.9])
   .nice()
 
-storiesOf('DATALITHS|HexMap.HexMap', module)
+storiesOf('DATALITHS|HexMap', module)
   .addParameters({ notes })
-  .add('default', () => {
+  .add('natural earth', () => {
     return (
-      <HexMap
+      <HexMapWorld
+        style={{ backgroundColor: '#171f2c' }}
         side={side}
         data={defaultData}
-        featureCollection={italy}
-        projection={projection}
         coords={d => [d.lng, d.lat]}
         value={side * 0.5}
         valueInactive={side * 0.5}
-        fill="#2D886D"
-        fillInactive="#ccc"
+        fill="#0bbba9"
+        fillInactive="#2b3a53"
         fillOpacity={d => zScale(d.value)}
         fillOpacityInactive={0.4}
       />
     )
   })
-  .add('stroke', () => {
+  .add('orthographic', () => {
     return (
-      <HexMap
+      <HexMapWorld
+        style={{ backgroundColor: '#171f2c' }}
+        side={side}
+        data={defaultData}
+        fill="#0bbba9"
+        fillInactive="#2b3a53"
+        coords={d => [d.lng, d.lat]}
+        value={d => yScale(d.value)}
+        projection={geoOrthographic()}
+      />
+    )
+  })
+  .add('outline', () => {
+    return (
+      <HexMapWorld
+        style={{ backgroundColor: '#171f2c' }}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => yScale(d.value)}
-        featureCollection={italy}
-        projection={projection}
-        stroke="#000"
-        strokeInactive="#000"
+        stroke="#12c5e5"
+        strokeInactive="#12c5e5"
         fillInactive="transparent"
         fill="transparent"
       />
@@ -68,16 +82,51 @@ storiesOf('DATALITHS|HexMap.HexMap', module)
   })
   .add('tooltip', () => {
     return (
-      <HexMap
+      <HexMapWorld
+        style={{ backgroundColor: '#171f2c' }}
         side={side}
         data={defaultData}
+        coords={d => [d.lng, d.lat]}
+        value={side * 0.5}
+        valueInactive={side * 0.5}
+        fill="#6f42c1"
+        fillInactive="#2b3a53"
+        fillOpacity={d => zScale(d.value)}
+        fillOpacityInactive={0.4}
+        tooltip={({ value }) => `<p><b>Value: </b>${value.toFixed(2)}</p>`}
+      />
+    )
+  })
+  .add('us', () => {
+    return (
+      <HexMapUs
+        style={{ backgroundColor: '#171f2c' }}
+        side={side}
+        data={defaultDataUs}
+        coords={d => [d.lng, d.lat]}
+        value={side * 0.5}
+        valueInactive={side * 0.5}
+        fill="#0bbba9"
+        fillInactive="#2b3a53"
+        fillOpacity={d => zScale(d.value)}
+        fillOpacityInactive={0.4}
+        tooltip={({ value }) => `<p><b>Value: </b>${value.toFixed(2)}</p>`}
+      />
+    )
+  })
+  .add('custom geojson', () => {
+    return (
+      <HexMap
+        style={{ backgroundColor: '#171f2c' }}
+        side={side}
+        data={defaultDataIt}
         featureCollection={italy}
         projection={projection}
         coords={d => [d.lng, d.lat]}
         value={side * 0.5}
         valueInactive={side * 0.5}
-        fill="#2d7688"
-        fillInactive="#ccc"
+        fill="#6f42c1"
+        fillInactive="#2b3a53"
         fillOpacity={d => zScale(d.value)}
         fillOpacityInactive={0.4}
         tooltip={({ value }) => `<p><b>Value: </b>${value.toFixed(2)}</p>`}

@@ -1,12 +1,12 @@
-import { GridMap } from '@datalith/gridmap/src'
-import notes from '@datalith/gridmap/src/components/GridMap/README.md'
+import { GridMap, GridMapUs, GridMapWorld } from '@datalith/gridmap/src'
+import notes from '@datalith/gridmap/src/components/GridMapWorld/README.md'
 import italyTopology from '@datalith/gridmap/src/json/italy.json'
 import { storiesOf } from '@storybook/react'
 import { geoNaturalEarth1 } from 'd3-geo'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
 import { feature } from 'topojson'
-import { genCoordsValueIt } from '../scripts'
+import { genCoordsValue, genCoordsValueIt, genCoordsValueUs } from '../scripts'
 
 interface ItalyAtlas extends TopoJSON.Topology {
   objects: {
@@ -14,36 +14,36 @@ interface ItalyAtlas extends TopoJSON.Topology {
   }
 }
 
-const italyAtlas = italyTopology as any
-
-const defaultData = genCoordsValueIt(200)
+const y = d => d.value
+const defaultData = genCoordsValue(200)
 const side = 10
+
+const defaultDataUs = genCoordsValueUs(1000)
+const defaultDataIt = genCoordsValueIt(200)
+const italyAtlas = italyTopology as any
 const italy = feature(italyAtlas, (italyAtlas as ItalyAtlas).objects.sub)
 const projection = geoNaturalEarth1()
-const y = d => d.value
 
 const yScale = scaleLinear()
   .domain([Math.min(...defaultData.map(y)), Math.max(...defaultData.map(y))])
-  .range([2, side * 0.8])
+  .range([1, side * 0.8])
 
 const zScale = scaleLinear()
   .domain([0, Math.max(...defaultData.map(y))])
   .range([0.1, 0.9])
   .nice()
 
-storiesOf('DATALITHS|GridMap.GridMap', module)
+storiesOf('DATALITHS|GridMap', module)
   .addParameters({ notes })
-  .add('custom - cross', () => {
+  .add('cross', () => {
     return (
-      <GridMap
-        style={{ backgroundColor: '#082e3a' }}
+      <GridMapWorld
+        style={{ backgroundColor: '#171f2c' }}
         side={side}
         data={defaultData}
         coords={d => [d.lng, d.lat]}
         value={d => yScale(d.value)}
-        stroke="#04FFBF"
-        featureCollection={italy}
-        projection={projection}
+        stroke="#0bbba9"
         customRender={({ x, y, value, datum }, defaultProps) =>
           datum !== undefined ? (
             <path
@@ -56,22 +56,21 @@ storiesOf('DATALITHS|GridMap.GridMap', module)
               {...defaultProps}
             />
           ) : (
-            <circle cx={x} cy={y} r={2} fill="#ccc" fillOpacity={0.2} />
+            <circle cx={x} cy={y} r={2} fill="#2b3a53" />
           )
         }
       />
     )
   })
-  .add('custom - text', () => {
-    const data = defaultData.map(d => [d.lng, d.lat])
-
+  .add('text', () => {
     return (
-      <GridMap
+      <GridMapWorld
+        style={{ backgroundColor: '#171f2c' }}
         side={side}
-        data={data}
-        featureCollection={italy}
-        projection={projection}
-        fillOpacityInactive={0.2}
+        data={defaultData}
+        fill="#12c5e5"
+        fillInactive="#2b3a53"
+        coords={d => [d.lng, d.lat]}
         customRender={({ x, y, datum }, defaultProps) => (
           <text
             x={x}
@@ -89,16 +88,15 @@ storiesOf('DATALITHS|GridMap.GridMap', module)
       />
     )
   })
-  .add('custom - triangles', () => {
+  .add('triangles', () => {
     return (
-      <GridMap
+      <GridMapWorld
+        style={{ backgroundColor: '#171f2c' }}
         side={side}
         data={defaultData}
-        featureCollection={italy}
-        projection={projection}
         coords={d => [d.lng, d.lat]}
         value={d => yScale(d.value) * 0.7}
-        fill="#2d7688"
+        fill="#6f42c1"
         fillOpacity={d => zScale(d.value)}
         customRender={({ x, y, value, datum }, defaultProps) =>
           datum ? (
@@ -110,7 +108,61 @@ storiesOf('DATALITHS|GridMap.GridMap', module)
               {...defaultProps}
             />
           ) : (
-            <circle cx={x} cy={y} r={2} fill="#ccc" fillOpacity={0.5} />
+            <circle cx={x} cy={y} r={2} fill="#2b3a53" />
+          )
+        }
+      />
+    )
+  })
+  .add('us', () => {
+    return (
+      <GridMapUs
+        style={{ backgroundColor: '#171f2c' }}
+        side={side}
+        data={defaultDataUs}
+        coords={d => [d.lng, d.lat]}
+        value={d => yScale(d.value) * 0.7}
+        fill="#0bbba9"
+        fillOpacity={d => zScale(d.value)}
+        customRender={({ x, y, value, datum }, defaultProps) =>
+          datum ? (
+            <path
+              d={`M${x - value} ${y + value} 
+                L${x + value} ${y + value} 
+                L${x} ${y - value} 
+                Z`}
+              {...defaultProps}
+            />
+          ) : (
+            <circle cx={x} cy={y} r={2} fill="#2b3a53" />
+          )
+        }
+      />
+    )
+  })
+  .add('custom geojson', () => {
+    return (
+      <GridMap
+        style={{ backgroundColor: '#171f2c' }}
+        side={side}
+        data={defaultDataIt}
+        featureCollection={italy}
+        projection={projection}
+        coords={d => [d.lng, d.lat]}
+        value={d => yScale(d.value) * 0.7}
+        fill="#6f42c1"
+        fillOpacity={d => zScale(d.value)}
+        customRender={({ x, y, value, datum }, defaultProps) =>
+          datum ? (
+            <path
+              d={`M${x - value} ${y + value} 
+                L${x + value} ${y + value} 
+                L${x} ${y - value} 
+                Z`}
+              {...defaultProps}
+            />
+          ) : (
+            <circle cx={x} cy={y} r={2} fill="#2b3a53" />
           )
         }
       />

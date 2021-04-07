@@ -23,24 +23,20 @@ storiesOf('DATALITHS|Shutter', module)
   .add('default', () => {
     return <Shutter data={defaultData} fillOpacity={d => zScale(d.value)} />
   })
-  .add('stroke', () => {
-    return (
-      <Shutter
-        style={{ backgroundColor: '#082e3a' }}
-        data={defaultData}
-        stroke="white"
-        strokeOpacity={d => zScale(d.value)}
-        fill="transparent"
-      />
-    )
-  })
   .add('sorted', () => {
     const data = [...defaultData].sort((a, b) => b.value - a.value)
 
-    return <Shutter data={data} fill="blue" fillOpacity={d => zScale(d.value)} />
+    return (
+      <Shutter
+        style={{ backgroundColor: '#171f2c' }}
+        data={data}
+        fill="#0bbba9"
+        fillOpacity={d => zScale(d.value)}
+      />
+    )
   })
   .add('animated', () => {
-    const radiusTo = (Math.min(width, height) / 2) * 0.5
+    const radiusTo = (Math.min(width, height) / 2) * 0.4
 
     return (
       <Spring
@@ -51,8 +47,9 @@ storiesOf('DATALITHS|Shutter', module)
         {props => {
           return (
             <Shutter
+              style={{ backgroundColor: '#171f2c' }}
               data={defaultData}
-              fill="blue"
+              fill="#12c5e5"
               fillOpacity={d => zScale(d.value)}
               radiusInner={props.radius}
               radiusOuter={radiusTo + 50}
@@ -65,8 +62,9 @@ storiesOf('DATALITHS|Shutter', module)
   .add('tooltip', () => {
     return (
       <Shutter
+        style={{ backgroundColor: '#171f2c' }}
         data={defaultData}
-        fill="blue"
+        fill="#6f42c1"
         fillOpacity={d => zScale(d.value)}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>

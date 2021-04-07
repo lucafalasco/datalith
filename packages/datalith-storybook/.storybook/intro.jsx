@@ -62,12 +62,12 @@ storiesOf('INTRODUCTION|Getting Started', module).add(
             the top toolbar.
             <br />
             <br />
-            <span style={{ color: '#082e3a', fontSize: 16, fontWeight: 700 }}>
+            <span style={{ color: '#171f2c', fontSize: 16, fontWeight: 700 }}>
               Code for the stories is available on{' '}
               <a
                 target="_blank"
                 href="https://github.com/lucafalasco/datalith/tree/master/packages/datalith-storybook/src/components"
-                style={{ color: '#082e3a' }}
+                style={{ color: '#171f2c' }}
               >
                 <b>Github</b>
               </a>

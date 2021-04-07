@@ -8,14 +8,15 @@ import { easeInOutCubic } from '../lib'
 import { genDateValue } from '../scripts'
 
 const defaultData = genDateValue(100)
+const defaultDataLong = genDateValue(200)
 
 const y = d => d.value
 
 const defs = (
   <defs>
     <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stopColor="#FF00C7" />
-      <stop offset="100%" stopColor="#3800FF" />
+      <stop offset="0%" stopColor="#6f42c1" />
+      <stop offset="100%" stopColor="#0bbba9" />
     </linearGradient>
   </defs>
 )
@@ -37,32 +38,26 @@ storiesOf('DATALITHS|BarCode', module)
       <BarCode data={defaultData} value={d => yScale(d.value)} fillOpacity={d => zScale(d.value)} />
     )
   })
-  .add('colors', () => {
+  .add('large', () => {
     return (
       <BarCode
-        style={{ backgroundColor: '#082e3a' }}
-        data={defaultData}
+        style={{ backgroundColor: '#171f2c' }}
+        data={defaultDataLong}
         value={d => yScale(d.value)}
-        fill="#04FFBF"
-        fillOpacity={() => Math.random()}
+        fill="#12c5e5"
+        fillOpacity={d => zScale(d.value)}
       />
     )
   })
   .add('strip', () => {
     return (
-      <BarCode data={defaultData} value={100} barWidth={7} fillOpacity={d => zScale(d.value)} />
-    )
-  })
-  .add('stroke', () => {
-    const data = defaultData.map(d => yScale(d.value))
-    return (
       <BarCode
-        style={{ backgroundColor: '#082e3a' }}
+        style={{ backgroundColor: '#171f2c' }}
         data={defaultData}
-        value={d => yScale(d.value)}
-        stroke="#fff"
-        strokeOpacity={d => zScale(d.value)}
-        fill="transparent"
+        value={100}
+        barWidth={7}
+        fill="#0bbba9"
+        fillOpacity={d => zScale(d.value)}
       />
     )
   })
@@ -78,9 +73,10 @@ storiesOf('DATALITHS|BarCode', module)
 
           return (
             <BarCode
+              style={{ backgroundColor: '#171f2c' }}
               data={data}
               value={d => yScale(d.value)}
-              fill="blue"
+              fill="#6f42c1"
               fillOpacity={(d, i) => props.opacity[i]}
             />
           )
@@ -91,7 +87,8 @@ storiesOf('DATALITHS|BarCode', module)
   .add('tooltip', () => {
     return (
       <BarCode
-        data={defaultData}
+        style={{ backgroundColor: '#171f2c' }}
+        data={defaultDataLong}
         additionalElements={defs}
         value={d => yScale(d.value)}
         fill="url(#gradient)"

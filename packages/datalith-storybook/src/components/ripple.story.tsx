@@ -19,6 +19,11 @@ const yScale = scaleLinear()
   .range([0, Math.min(width, height) * 0.3])
   .clamp(true)
 
+const zScale = scaleLinear()
+  .domain([0, Math.max(...defaultData.map(y))])
+  .range([0.9, 0.1])
+  .nice()
+
 storiesOf('DATALITHS|Ripple', module)
   .addParameters({ notes })
   .add('default', () => {
@@ -28,20 +33,21 @@ storiesOf('DATALITHS|Ripple', module)
   .add('colors', () => {
     return (
       <Ripple
+        style={{ backgroundColor: '#171f2c' }}
         data={defaultData}
         value={d => yScale(d.value)}
-        fill="blue"
+        fill="#12c5e5"
         fillOpacity={() => Math.random() / 5}
       />
     )
   })
-  .add('stroke', () => {
+  .add('outline', () => {
     const data = defaultData.map(d => yScale(d.value))
     return (
       <Ripple
-        style={{ backgroundColor: '#082e3a' }}
+        style={{ backgroundColor: '#171f2c' }}
         data={data}
-        stroke="white"
+        stroke="#0bbba9"
         fill="transparent"
       />
     )
@@ -58,7 +64,15 @@ storiesOf('DATALITHS|Ripple', module)
         {props => {
           const data = sortedData.slice(0, props.index)
 
-          return <Ripple data={data} value={(d, i) => yScale(props.value[i])} />
+          return (
+            <Ripple
+              style={{ backgroundColor: '#171f2c' }}
+              data={data}
+              fill="#6f42c1"
+              fillOpacity={d => zScale(d.value)}
+              value={(d, i) => yScale(props.value[i])}
+            />
+          )
         }}
       </Spring>
     )
@@ -66,15 +80,16 @@ storiesOf('DATALITHS|Ripple', module)
   .add('tooltip', () => {
     return (
       <Ripple
+        style={{ backgroundColor: '#171f2c' }}
         data={defaultData}
         value={d => yScale(d.value)}
-        fill="blue"
-        fillOpacity={() => Math.random() / 5}
-        stroke="blue"
-        strokeOpacity={() => Math.random() / 5}
+        fill="#12c5e5"
+        fillOpacity={d => zScale(d.value)}
+        stroke="#171f2c"
+        strokeOpacity={d => zScale(d.value)}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
-          <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`
+          <p><b>Value: </b>${value.toFixed(2)}</p>`
         }
       />
     )

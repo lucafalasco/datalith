@@ -6,7 +6,7 @@ export default create({
 
   // // Color palette
   // colorPrimary: '', // primary color
-  colorSecondary: '#082e3a', // secondary color
+  colorSecondary: '#171f2c', // secondary color
 
   // // UI
   // appBg: '',

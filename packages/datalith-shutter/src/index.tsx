@@ -98,7 +98,7 @@ export const Shutter: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
     }
 
     render() {
-      const defaultRadius = (Math.min(this.props.size.width, this.props.size.height) / 2) * 0.5
+      const defaultRadius = (Math.min(this.props.size.width, this.props.size.height) / 2) * 0.4
       const {
         className,
         style,

@@ -1,6 +1,5 @@
 import notes from '@datalith/spiral/README.md'
 import { Spiral } from '@datalith/spiral/src'
-import { normalize } from '@datalith/util'
 import { storiesOf } from '@storybook/react'
 import { scaleLinear } from 'd3-scale'
 import * as React from 'react'
@@ -29,8 +28,10 @@ storiesOf('DATALITHS|Spiral', module)
   .add('archimedean', () => {
     return (
       <Spiral
+        style={{ backgroundColor: '#171f2c' }}
         data={defaultData}
         value={d => yScale(d.value)}
+        fill="#0bbba9"
         fillOpacity={d => opacityScale(d.value)}
         getSpiralCoords={({ width, height }) => {
           let angle = 0
@@ -56,7 +57,10 @@ storiesOf('DATALITHS|Spiral', module)
   .add('custom spiral', () => {
     return (
       <Spiral
+        style={{ backgroundColor: '#171f2c' }}
         data={defaultData}
+        fill="#12c5e5"
+        fillOpacity={d => opacityScale(d.value)}
         value={d => yScale(d.value)}
         getSpiralCoords={({ width, height }) => {
           let angle = 0
@@ -78,10 +82,16 @@ storiesOf('DATALITHS|Spiral', module)
       />
     )
   })
-  .add('stroke', () => {
-    const data = defaultData.map(d => yScale(d.value))
+  .add('outline', () => {
     return (
-      <Spiral style={{ backgroundColor: '#082e3a' }} data={data} stroke="#fff" fill="transparent" />
+      <Spiral
+        style={{ backgroundColor: '#171f2c' }}
+        data={defaultData}
+        value={d => yScale(d.value)}
+        fill="transparent"
+        stroke="#12c5e5"
+        strokeOpacity={d => opacityScale(d.value)}
+      />
     )
   })
   .add('animated', () => {
@@ -94,7 +104,14 @@ storiesOf('DATALITHS|Spiral', module)
         {props => {
           const data = defaultData.slice(0, props.index)
 
-          return <Spiral data={data} value={(d, i) => yScale(d.value)} />
+          return (
+            <Spiral
+              style={{ backgroundColor: '#171f2c' }}
+              fill="#12c5e5"
+              data={data}
+              value={(d, i) => yScale(d.value)}
+            />
+          )
         }}
       </Spring>
     )
@@ -104,9 +121,10 @@ storiesOf('DATALITHS|Spiral', module)
     return (
       <Spiral
         data={sortedData}
+        style={{ backgroundColor: '#171f2c' }}
         value={d => yScale(d.value)}
-        fill="blue"
-        fillOpacity={d => normalize(d.value, yScale.domain()[0], yScale.domain()[1])}
+        fill="#6f42c1"
+        fillOpacity={d => opacityScale(d.value)}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
           <p><b>Value: </b>${yScale.invert(Number(value)).toFixed(2)}</p>`

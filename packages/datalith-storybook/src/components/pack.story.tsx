@@ -32,18 +32,23 @@ storiesOf('DATALITHS|Pack', module)
   .add('colors', () => {
     return (
       <Pack
-        style={{ backgroundColor: '#082e3a' }}
+        style={{ backgroundColor: '#171f2c' }}
         data={defaultData}
         value={d => yScale(d.value)}
-        fill="#04FFBF"
+        fill="#0bbba9"
         fillOpacity={() => Math.random()}
       />
     )
   })
-  .add('stroke', () => {
+  .add('outline', () => {
     const data = defaultData.map(d => yScale(d.value))
     return (
-      <Pack style={{ backgroundColor: '#082e3a' }} data={data} stroke="#fff" fill="transparent" />
+      <Pack
+        style={{ backgroundColor: '#171f2c' }}
+        data={data}
+        stroke="#12c5e5"
+        fill="transparent"
+      />
     )
   })
   .add('animated', () => {
@@ -59,10 +64,12 @@ storiesOf('DATALITHS|Pack', module)
 
           return (
             <Pack
+              style={{ backgroundColor: '#171f2c' }}
               data={data}
               value={d => yScale(d.value)}
-              fill="blue"
-              fillOpacity={d => zScale(d.value2)}
+              fill="#6f42c1"
+              stroke="#171f2c"
+              fillOpacity={d => zScale(d.value)}
             />
           )
         }}
@@ -72,11 +79,12 @@ storiesOf('DATALITHS|Pack', module)
   .add('tooltip', () => {
     return (
       <Pack
+        style={{ backgroundColor: '#171f2c' }}
         data={defaultData}
         value={d => yScale(d.value)}
-        fill="blue"
-        fillOpacity={d => zScale(d.value)}
-        stroke="white"
+        fill="#00d09b"
+        fillOpacity={d => zScale(d.value2)}
+        stroke="#171f2c"
         strokeOpacity={0.5}
         tooltip={({ date, value }) =>
           `<p><b>Date: </b><u>${date.toLocaleDateString()}</u></p>
