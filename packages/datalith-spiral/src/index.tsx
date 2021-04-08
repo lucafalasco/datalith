@@ -83,68 +83,68 @@ const Circle = ({
   )
 }
 
-export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
-  class Spiral extends React.Component<Props> {
-    static defaultProps = {
-      value: d => d,
-    }
+export class SpiralComponent extends React.Component<Props> {
+  static defaultProps = {
+    value: d => d,
+  }
 
-    render() {
-      const {
-        className,
-        style,
-        additionalElements,
-        data,
-        value,
-        fill,
-        fillOpacity,
-        stroke,
-        strokeOpacity,
-        tooltip,
-        getSpiralCoords,
-        size: { width, height },
-        center = {
-          x: width / 2,
-          y: height / 2,
-        },
-      } = this.props
+  render() {
+    const {
+      className,
+      style,
+      additionalElements,
+      data,
+      value,
+      fill,
+      fillOpacity,
+      stroke,
+      strokeOpacity,
+      tooltip,
+      getSpiralCoords,
+      size: { width, height },
+      center = {
+        x: width / 2,
+        y: height / 2,
+      },
+    } = this.props
 
-      const { spacing = Math.min(Math.min(width, height), 2000) * 0.015 } = this.props
-      const coords = getSpiralCoords
-        ? getSpiralCoords({ width, height })
-        : getDefaultSpiralCoords(data, spacing)
+    const { spacing = Math.min(Math.min(width, height), 2000) * 0.015 } = this.props
+    const coords = getSpiralCoords
+      ? getSpiralCoords({ width, height })
+      : getDefaultSpiralCoords(data, spacing)
 
-      return (
-        <>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={className}
-            style={style}
-            width={width}
-            height={height}
-          >
-            {additionalElements}
-            <g transform={`translate(${center.x}, ${center.y})`}>
-              {data.map((datum, i) => (
-                <Circle
-                  key={i}
-                  index={i}
-                  datum={datum}
-                  x={coords[i].x}
-                  y={coords[i].y}
-                  value={value}
-                  fill={fill}
-                  fillOpacity={fillOpacity}
-                  stroke={stroke}
-                  strokeOpacity={strokeOpacity}
-                  tooltip={tooltip}
-                />
-              ))}
-            </g>
-          </svg>
-          <Tooltip html />
-        </>
-      )
-    }
-  },
-)
+    return (
+      <>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+          style={style}
+          width={width}
+          height={height}
+        >
+          {additionalElements}
+          <g transform={`translate(${center.x}, ${center.y})`}>
+            {data.map((datum, i) => (
+              <Circle
+                key={i}
+                index={i}
+                datum={datum}
+                x={coords[i].x}
+                y={coords[i].y}
+                value={value}
+                fill={fill}
+                fillOpacity={fillOpacity}
+                stroke={stroke}
+                strokeOpacity={strokeOpacity}
+                tooltip={tooltip}
+              />
+            ))}
+          </g>
+        </svg>
+        <Tooltip html />
+      </>
+    )
+  }
+}
+
+export const Spiral: React.ComponentType<Partial<Props>> = ResponsiveWrapper(SpiralComponent)
