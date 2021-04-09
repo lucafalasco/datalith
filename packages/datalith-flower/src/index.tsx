@@ -94,63 +94,63 @@ const Polygon = ({
   )
 }
 
-export const Flower: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
-  class Flower extends React.Component<Props> {
-    static defaultProps = {
-      value: d => d,
-      padding: 20,
-    }
+export class FlowerComponent extends React.Component<Props> {
+  static defaultProps = {
+    value: d => d,
+    padding: 20,
+  }
 
-    render() {
-      const {
-        className,
-        style,
-        additionalElements,
-        data,
-        value,
-        fill,
-        fillOpacity,
-        stroke,
-        strokeOpacity,
-        padding,
-        tooltip,
-        size: { width, height },
-        center = {
-          x: width / 2,
-          y: height / 2,
-        },
-      } = this.props
+  render() {
+    const {
+      className,
+      style,
+      additionalElements,
+      data,
+      value,
+      fill,
+      fillOpacity,
+      stroke,
+      strokeOpacity,
+      padding,
+      tooltip,
+      size: { width, height },
+      center = {
+        x: width / 2,
+        y: height / 2,
+      },
+    } = this.props
 
-      return (
-        <>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={className}
-            style={style}
-            width={width}
-            height={height}
-          >
-            {additionalElements}
-            {data.map((datum, i) => (
-              <Polygon
-                key={i}
-                index={i}
-                center={center}
-                datum={datum}
-                value={value}
-                dataLength={data.length}
-                padding={padding}
-                fill={fill}
-                fillOpacity={fillOpacity}
-                stroke={stroke}
-                strokeOpacity={strokeOpacity}
-                tooltip={tooltip}
-              />
-            ))}
-          </svg>
-          <Tooltip html />
-        </>
-      )
-    }
-  },
-)
+    return (
+      <>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+          style={style}
+          width={width}
+          height={height}
+        >
+          {additionalElements}
+          {data.map((datum, i) => (
+            <Polygon
+              key={i}
+              index={i}
+              center={center}
+              datum={datum}
+              value={value}
+              dataLength={data.length}
+              padding={padding}
+              fill={fill}
+              fillOpacity={fillOpacity}
+              stroke={stroke}
+              strokeOpacity={strokeOpacity}
+              tooltip={tooltip}
+            />
+          ))}
+        </svg>
+        <Tooltip html />
+      </>
+    )
+  }
+}
+
+export const Flower: React.ComponentType<Partial<Props>> = ResponsiveWrapper(FlowerComponent)

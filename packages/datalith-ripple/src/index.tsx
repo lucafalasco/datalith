@@ -62,62 +62,62 @@ const Circle = ({
   )
 }
 
-export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
-  class Ripple extends React.Component<Props> {
-    static defaultProps = {
-      value: d => d,
-    }
+export class RippleComponent extends React.Component<Props> {
+  static defaultProps = {
+    value: d => d,
+  }
 
-    render() {
-      const {
-        className,
-        style,
-        additionalElements,
-        data,
-        value,
-        fill,
-        fillOpacity,
-        stroke,
-        strokeOpacity,
-        tooltip,
-        size: { width, height },
-        center = {
-          x: width / 2,
-          y: height / 2,
-        },
-      } = this.props
+  render() {
+    const {
+      className,
+      style,
+      additionalElements,
+      data,
+      value,
+      fill,
+      fillOpacity,
+      stroke,
+      strokeOpacity,
+      tooltip,
+      size: { width, height },
+      center = {
+        x: width / 2,
+        y: height / 2,
+      },
+    } = this.props
 
-      return (
-        <>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={className}
-            style={style}
-            width={width}
-            height={height}
-          >
-            {additionalElements}
-            {data
-              .sort((a, b) => callOrGetValue(value, b) - callOrGetValue(value, a, 0))
-              .map((datum, i) => (
-                <Circle
-                  key={i}
-                  index={i}
-                  datum={datum}
-                  value={value}
-                  dataLength={data.length}
-                  fill={fill}
-                  fillOpacity={fillOpacity}
-                  stroke={stroke}
-                  strokeOpacity={strokeOpacity}
-                  center={center}
-                  tooltip={tooltip}
-                />
-              ))}
-          </svg>
-          <Tooltip html />
-        </>
-      )
-    }
-  },
-)
+    return (
+      <>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+          style={style}
+          width={width}
+          height={height}
+        >
+          {additionalElements}
+          {data
+            .sort((a, b) => callOrGetValue(value, b) - callOrGetValue(value, a, 0))
+            .map((datum, i) => (
+              <Circle
+                key={i}
+                index={i}
+                datum={datum}
+                value={value}
+                dataLength={data.length}
+                fill={fill}
+                fillOpacity={fillOpacity}
+                stroke={stroke}
+                strokeOpacity={strokeOpacity}
+                center={center}
+                tooltip={tooltip}
+              />
+            ))}
+        </svg>
+        <Tooltip html />
+      </>
+    )
+  }
+}
+
+export const Ripple: React.ComponentType<Partial<Props>> = ResponsiveWrapper(RippleComponent)

@@ -55,73 +55,73 @@ const Box = ({
   )
 }
 
-export const Pack: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
-  class Pack extends React.Component<Props> {
-    static defaultProps = {
-      value: d => d,
-    }
+export class PackComponent extends React.Component<Props> {
+  static defaultProps = {
+    value: d => d,
+  }
 
-    render() {
-      const {
-        className,
-        style,
-        additionalElements,
-        data,
-        value,
-        fill,
-        fillOpacity,
-        stroke,
-        strokeOpacity,
-        tooltip,
-        size: { width, height },
-        center = {
-          x: width / 2,
-          y: height / 2,
-        },
-      } = this.props
+  render() {
+    const {
+      className,
+      style,
+      additionalElements,
+      data,
+      value,
+      fill,
+      fillOpacity,
+      stroke,
+      strokeOpacity,
+      tooltip,
+      size: { width, height },
+      center = {
+        x: width / 2,
+        y: height / 2,
+      },
+    } = this.props
 
-      const boxes = data.map((datum, i) => {
-        const sideLength = callOrGetValue(value, datum, i)
-        return { w: sideLength, h: sideLength, i }
-      })
-      const pack = generatePack(boxes)
+    const boxes = data.map((datum, i) => {
+      const sideLength = callOrGetValue(value, datum, i)
+      return { w: sideLength, h: sideLength, i }
+    })
+    const pack = generatePack(boxes)
 
-      return (
-        <>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={className}
-            style={style}
-            width={width}
-            height={height}
-          >
-            {additionalElements}
-            <g
-              transform={`translate(
+    return (
+      <>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+          style={style}
+          width={width}
+          height={height}
+        >
+          {additionalElements}
+          <g
+            transform={`translate(
               ${center.x - pack.boundingBox.w / 2},
               ${center.y - pack.boundingBox.h / 2}
             )`}
-            >
-              {pack.packBoxes.map((box, i) => {
-                return (
-                  <Box
-                    key={i}
-                    index={i}
-                    datum={data[box.i]}
-                    box={box}
-                    fill={fill}
-                    fillOpacity={fillOpacity}
-                    stroke={stroke}
-                    strokeOpacity={strokeOpacity}
-                    tooltip={tooltip}
-                  />
-                )
-              })}
-            </g>
-          </svg>
-          <Tooltip html />
-        </>
-      )
-    }
-  },
-)
+          >
+            {pack.packBoxes.map((box, i) => {
+              return (
+                <Box
+                  key={i}
+                  index={i}
+                  datum={data[box.i]}
+                  box={box}
+                  fill={fill}
+                  fillOpacity={fillOpacity}
+                  stroke={stroke}
+                  strokeOpacity={strokeOpacity}
+                  tooltip={tooltip}
+                />
+              )
+            })}
+          </g>
+        </svg>
+        <Tooltip html />
+      </>
+    )
+  }
+}
+
+export const Pack: React.ComponentType<Partial<Props>> = ResponsiveWrapper(PackComponent)

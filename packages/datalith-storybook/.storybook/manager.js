@@ -1,7 +1,8 @@
 import { create } from '@storybook/theming'
-import Logo from './logo-lettering.svg'
+import { addons } from '@storybook/addons'
+import Logo from '../public/logo-ext.svg'
 
-export default create({
+const theme = create({
   base: 'light',
 
   // // Color palette
@@ -37,3 +38,5 @@ export default create({
   brandImage: Logo,
   brandTitle: 'datalith',
 })
+
+addons.setConfig({ theme })

@@ -91,63 +91,63 @@ const Polygon = ({
   )
 }
 
-export const Shutter: React.ComponentType<Partial<Props>> = ResponsiveWrapper(
-  class Shutter extends React.Component<Props> {
-    static defaultProps = {
-      fill: d => d,
-    }
+export class ShutterComponent extends React.Component<Props> {
+  static defaultProps = {
+    fill: d => d,
+  }
 
-    render() {
-      const defaultRadius = (Math.min(this.props.size.width, this.props.size.height) / 2) * 0.4
-      const {
-        className,
-        style,
-        additionalElements,
-        data,
-        fill,
-        fillOpacity,
-        stroke,
-        strokeOpacity,
-        tooltip,
-        radiusInner = defaultRadius,
-        radiusOuter = defaultRadius + 50,
-        size: { width, height },
-        center = {
-          x: width / 2,
-          y: height / 2,
-        },
-      } = this.props
+  render() {
+    const defaultRadius = (Math.min(this.props.size.width, this.props.size.height) / 2) * 0.4
+    const {
+      className,
+      style,
+      additionalElements,
+      data,
+      fill,
+      fillOpacity,
+      stroke,
+      strokeOpacity,
+      tooltip,
+      radiusInner = defaultRadius,
+      radiusOuter = defaultRadius + 50,
+      size: { width, height },
+      center = {
+        x: width / 2,
+        y: height / 2,
+      },
+    } = this.props
 
-      return (
-        <>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={className}
-            style={style}
-            width={width}
-            height={height}
-          >
-            {additionalElements}
-            {data.map((datum, i) => (
-              <Polygon
-                key={i}
-                index={i}
-                center={center}
-                datum={datum}
-                dataLength={data.length}
-                radiusInner={radiusInner}
-                radiusOuter={radiusOuter}
-                fill={fill}
-                fillOpacity={fillOpacity}
-                stroke={stroke}
-                strokeOpacity={strokeOpacity}
-                tooltip={tooltip}
-              />
-            ))}
-          </svg>
-          <Tooltip html />
-        </>
-      )
-    }
-  },
-)
+    return (
+      <>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+          style={style}
+          width={width}
+          height={height}
+        >
+          {additionalElements}
+          {data.map((datum, i) => (
+            <Polygon
+              key={i}
+              index={i}
+              center={center}
+              datum={datum}
+              dataLength={data.length}
+              radiusInner={radiusInner}
+              radiusOuter={radiusOuter}
+              fill={fill}
+              fillOpacity={fillOpacity}
+              stroke={stroke}
+              strokeOpacity={strokeOpacity}
+              tooltip={tooltip}
+            />
+          ))}
+        </svg>
+        <Tooltip html />
+      </>
+    )
+  }
+}
+
+export const Shutter: React.ComponentType<Partial<Props>> = ResponsiveWrapper(ShutterComponent)

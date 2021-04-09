@@ -12,13 +12,13 @@ export type NumberAccessor = Accessor<number>
 
 export interface CommonAccessors {
   /** Fill color accessor */
-  fill: StringAccessor
+  fill?: StringAccessor
   /** Fill opacity accessor */
-  fillOpacity: NumberAccessor
+  fillOpacity?: NumberAccessor
   /** Stroke color accessor */
-  stroke: StringAccessor
+  stroke?: StringAccessor
   /** Stroke opacity accessor */
-  strokeOpacity: NumberAccessor
+  strokeOpacity?: NumberAccessor
 }
 
 export interface CommonProps extends CommonAccessors {
