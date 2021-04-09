@@ -1,6 +1,6 @@
 {
   "name": "@datalith/gridmap",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "description": "datalith gridmap",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/lucafalasco/datalith#readme",
   "dependencies": {
-    "@datalith/util": "^0.12.0",
+    "@datalith/util": "^0.12.1",
     "@turf/flatten": "^5.1.5",
     "d3-array": "^2.1.0",
     "d3-geo": "^1.11.3",
