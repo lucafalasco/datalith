@@ -1,6 +1,6 @@
 {
   "name": "datalith",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "description": "Collection of React components to build cool data visualizations",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -31,17 +31,17 @@
   },
   "homepage": "https://github.com/lucafalasco/datalith#readme",
   "dependencies": {
-    "@datalith/barcode": "^0.12.0",
-    "@datalith/dotmap": "^0.12.0",
-    "@datalith/flower": "^0.12.0",
-    "@datalith/gridmap": "^0.12.0",
-    "@datalith/hexmap": "^0.12.0",
-    "@datalith/pack": "^0.12.0",
-    "@datalith/pixelmap": "^0.12.0",
-    "@datalith/ripple": "^0.12.0",
-    "@datalith/shutter": "^0.12.0",
-    "@datalith/spiral": "^0.12.0",
-    "@datalith/util": "^0.12.0"
+    "@datalith/barcode": "^0.12.1",
+    "@datalith/dotmap": "^0.12.1",
+    "@datalith/flower": "^0.12.1",
+    "@datalith/gridmap": "^0.12.1",
+    "@datalith/hexmap": "^0.12.1",
+    "@datalith/pack": "^0.12.1",
+    "@datalith/pixelmap": "^0.12.1",
+    "@datalith/ripple": "^0.12.1",
+    "@datalith/shutter": "^0.12.1",
+    "@datalith/spiral": "^0.12.1",
+    "@datalith/util": "^0.12.1"
   },
   "devDependencies": {
     "@types/react": "^16.8.5",
