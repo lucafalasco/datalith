@@ -32,7 +32,7 @@ export const readme = () => {
           alignItems: 'center',
         }}
       >
-        <img src={Logo} width="350px" style={{ margin: '2rem 0' }} />
+        <img src={Logo} width="200px" style={{ margin: '4rem 0 2rem 0' }} />
         <p style={{ marginTop: 50, width: `100%`, maxWidth: 450 }}>
           <b>Datalith</b> is a collection of clean, lightweight and easily customizable{' '}
           <b>React components for data visualization.</b>
