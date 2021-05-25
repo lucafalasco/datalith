@@ -34,8 +34,10 @@
   </head>
 
   <body>
-    <header class="flex flex-column flex-row-ns justify-between items-start pt4 pb4 ph4 ph6-l relative z-999">
-    <div class="flex justify-center items-center h3 h4-ns w-60 w5-ns mw6 mb4 mb0-ns">
+    <header
+      class="flex flex-column flex-row-ns justify-between items-start pa3 pa4-ns relative z-999"
+    >
+      <div class="flex justify-center items-center h3 w5 w5-ns mb3 mb0-ns">
         <a
           href="https://datalith.xyz"
           class="w-100 h-100 bg-center db contain"
@@ -43,13 +45,13 @@
         >
         </a>
       </div>
-      <div class="flex items-center self-center-ns self-start f3 fw7">
+      <div class="flex items-center self-center-ns self-start f3 f4-ns fw9 tracked ttu">
         <a
           href="https://docs.datalith.xyz"
           target="_blank"
           class="color-inherit link mr3 ml3-ns underline-hover"
         >
-          Dataliths
+          Docs
         </a>
         <a
           href="https://github.com/lucafalasco/datalith"
@@ -67,29 +69,27 @@
       </div>
     </header>
 
-    <div class="center f5-l f4 br2 mt1-l">
-      <div class="flex flex-column justify-center items-center tc lh-copy ph3 ph4-ns">
-        <h1 class="fw9 lh-title">
-          Simple<br/>batteries included</br> <i>components</i> <br />to build beautiful<br /><i>data visualizations</i
-          >
+    <div class="center f5-l f4 br2 fw7">
+      <div class="lh-title ph3 ph4-ns">
+        <h1 class="fw9 mw8">
+          Batteries included components<br />
+          to build beautiful <u>data visualizations</u>
         </h1>
         <div class="f3">
-          <p>
-            <b>Datalith</b> is a collection of
-            <b>clean, lightweight and easily customizable</b> React components.
+          <p class="f2">
+            Datalith is a collection of lightweight and easily customizable React components to
+            visualize data on the web.
           </p>
           <p>
-            The purpose is to provide an easy way to integrate custom data visualizations in any
-            React project. <br />
-            The components were designed with <b>simplicity</b> in mind, <br />
-            with <b>data</b> as the only requirement.
+            Designed for simplicity, speed and ease of use. <br />
+            The raw data is the only requirement.
           </p>
         </div>
       </div>
 
       <div class="w-90 w-90-l center mv5 f4">
         <div class="mv4 flex justify-center">
-          <code class="db bw1 pa4 pa4-ns ba b--black br2 f4 f5-ns bg-darkest white">
+          <code class="db bw1 pa4 pa5-ns ba b--black br3 f4 f5-ns bg-dark near-white shadow-5">
             <div class="white-30 mb1"># Single install</div>
             <span class="white-50">$</span> yarn add datalith
             <br />
@@ -100,12 +100,8 @@
         </div>
 
         <div class="mt5 tc lh-copy f3 f4-ns">
-          Check out the
-          <a
-            href="https://docs.datalith.xyz"
-            target="_blank"
-            class="color-inherit link bb hover-white fw7"
-            >Storybook</a
+          <a href="https://docs.datalith.xyz" target="_blank" class="color-inherit link bb fw7">
+            Check out the Storybook</a
           >
           to see available charts and documentation
         </div>
@@ -119,8 +115,8 @@
             </h2>
             <p class="f3 f4-ns lh-copy">
               All components are statically typed.<br />
-              If you use Typescript you can get live type checking with intellisense <br />
-              as well as the awesome tooling ts comes with.
+              If you use Typescript you can get live type checking with intellisense and
+              IDE-specific tooling.
             </p>
           </div>
         </div>
@@ -133,7 +129,7 @@
               The charts have a common set of configurations,<br />
               as well as data accessor functions provided as
               <code class="bg-black-10 pa1">props</code>, to associate <br />
-              each chart feature with the correct data point.
+              each chart feature with the right data point.
             </p>
           </div>
         </div>

@@ -6,7 +6,7 @@ body {
   text-rendering: optimizeLegibility;
   font-size: 14px;
   width: 100%;
-  background: url('./assets/images/dotpattern.svg'), linear-gradient(90deg, #6f42c1, #12c5e5);
+  background: #e6e6e6;
   color: #171f2c;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +23,7 @@ pre code {
 }
 
 h1 {
-  font-size: 6rem !important;
+  font-size: 5rem !important;
   line-height: 1 !important;
 }
 
@@ -37,6 +37,10 @@ h2 {
 
 .h6 {
   height: 32rem;
+}
+
+.min-w5 {
+  min-width: 16rem;
 }
 
 .pointer-events-none {
