@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;0,900;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,700&display=swap');
 
 html,
 body {
@@ -6,7 +6,7 @@ body {
   text-rendering: optimizeLegibility;
   font-size: 14px;
   width: 100%;
-  background: #e6e6e6;
+  background: #efefef;
   color: #171f2c;
   margin: 0;
   -webkit-font-smoothing: antialiased;
